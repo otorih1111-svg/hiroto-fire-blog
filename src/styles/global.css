@@ -1,0 +1,685 @@
+/* ============================================
+   ひろとの副業実録 - グローバルスタイル
+   ============================================ */
+
+:root {
+  --color-primary: #1a73e8;
+  --color-primary-dark: #1557b0;
+  --color-accent: #ff6b35;
+  --color-line: #00b900;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-sub: #f8f9fa;
+  --color-border: #e0e0e0;
+  --font-main: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+  --max-width: 860px;
+  --radius: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   レイアウト
+   ============================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* ============================================
+   ヘッダー
+   ============================================ */
+.site-header {
+  background: var(--color-text);
+  color: #fff;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-logo {
+  text-decoration: none;
+}
+
+.site-logo h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.site-logo .tagline {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ============================================
+   フッター
+   ============================================ */
+.site-footer {
+  background: var(--color-text);
+  color: rgba(255,255,255,0.7);
+  padding: 40px 0 20px;
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-brand h2 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-nav h3 {
+  font-size: 0.85rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin-bottom: 4px;
+}
+
+.footer-nav a {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.82rem;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+/* ============================================
+   LINEバナー
+   ============================================ */
+.line-banner {
+  background: linear-gradient(135deg, #00c300 0%, #00a000 100%);
+  color: #fff;
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.line-banner-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.line-banner .label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(255,255,255,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.line-banner h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.line-banner p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.line-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #00b900;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.line-banner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: #00a000;
+}
+
+.line-banner-btn svg {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   記事カード
+   ============================================ */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.article-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.article-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card-image {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a1a1a 0%, #444 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.article-card-body {
+  padding: 16px;
+}
+
+.article-card-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.category-副業実録 { background: #fff3e0; color: #e65100; }
+.category-AI活用 { background: #e8f5e9; color: #2e7d32; }
+.category-FIRE設計 { background: #e3f2fd; color: #1565c0; }
+.category-シングル父の日常 { background: #fce4ec; color: #880e4f; }
+.category-買ってよかった { background: #f3e5f5; color: #6a1b9a; }
+
+.article-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.article-card-description {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   記事本文
+   ============================================ */
+.prose {
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.prose h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2.5em 0 1em;
+  padding: 0.5em 0 0.5em 1em;
+  border-left: 4px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2em 0 0.8em;
+  color: var(--color-text);
+}
+
+.prose p {
+  margin-bottom: 1.4em;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.4em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-border);
+  padding: 0.5em 1em;
+  margin: 1.5em 0;
+  background: var(--color-bg-sub);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--color-text-muted);
+}
+
+.prose code {
+  background: var(--color-bg-sub);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-family: 'Courier New', monospace;
+}
+
+.prose pre {
+  background: #1a1a1a;
+  color: #f8f8f2;
+  padding: 1.2em;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  margin-bottom: 1.4em;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.prose a {
+  color: var(--color-primary);
+  border-bottom: 1px solid transparent;
+}
+
+.prose a:hover {
+  border-bottom-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.prose img {
+  border-radius: var(--radius);
+  margin: 1.5em auto;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+
+/* ============================================
+   記事ヘッダー
+   ============================================ */
+.post-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post-header .post-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.post-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.post-meta {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   アフィリエイトボックス
+   ============================================ */
+.affiliate-box {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 2em 0;
+}
+
+.affiliate-box .affiliate-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f57c00;
+  background: #ffe0b2;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.affiliate-box h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.affiliate-box p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.affiliate-btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.affiliate-btn:hover {
+  background: #e55a2b;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ============================================
+   ページタイトル
+   ============================================ */
+.page-title {
+  margin-bottom: 32px;
+}
+
+.page-title h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-title p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   プロフィール
+   ============================================ */
+.profile-card {
+  background: var(--color-bg-sub);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a1a1a, #444);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.profile-info h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-info .profile-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   カテゴリリスト
+   ============================================ */
+.category-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.category-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  border: 2px solid transparent;
+}
+
+.category-badge:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.category-badge.active {
+  border-color: currentColor;
+}
+
+/* ============================================
+   パンくずリスト
+   ============================================ */
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-text);
+}
+
+.breadcrumb span {
+  color: var(--color-border);
+}
+
+/* ============================================
+   空状態
+   ============================================ */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-muted);
+}
+
+.empty-state p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* ============================================
+   レスポンシブ
+   ============================================ */
+@media (max-width: 640px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 12px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .post-header h1 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった'];
+  return categories.map(category => ({
+    params: { category },
+    props: { categoryName: category },
+  }));
+}
+
+const { categoryName } = Astro.props;
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts
+  .filter(post => post.data.category === categoryName)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryDescriptions: Record<string, string> = {
+  '副業実録': '副業の過程をありのまま記録しています。成果なしの時期も正直に。',
+  'AI活用': 'Claude・ChatGPTなどAIツールを副業・日常に活用した記録。',
+  'FIRE設計': 'FIREに向けた資産設計・計算・投資の記録と学び。',
+  'シングル父の日常': '10歳の息子との日々と、そこで気づいたお金・仕事・人生のこと。',
+  '買ってよかった': '楽天で実際に購入して本当によかったものを紹介しています。#PR',
+};
+---
+
+<BaseLayout
+  title={`${categoryName}の記事一覧`}
+  description={categoryDescriptions[categoryName] || `${categoryName}に関する記事一覧`}
+>
+  <div class="container">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb">
+      <a href="/">トップ</a>
+      <span>›</span>
+      <span>{categoryName}</span>
+    </nav>
+
+    <div class="page-title">
+      <span class={`category-badge category-${categoryName}`} style="font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">
+        {categoryName}
+      </span>
+      <h1>{categoryName}の記事一覧</h1>
+      <p>{categoryDescriptions[categoryName]}</p>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="article-grid">
+        {posts.map(post => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={post.id}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <p style="font-size: 2rem; margin-bottom: 12px;">📝</p>
+        <p>このカテゴリの記事はまもなく公開します。</p>
+      </div>
+    )}
+
+  </div>
+</BaseLayout>

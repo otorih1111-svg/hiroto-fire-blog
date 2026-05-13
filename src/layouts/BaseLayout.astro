@@ -1,0 +1,140 @@
+---
+import '../styles/global.css';
+import LineBanner from '../components/LineBanner.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  article?: boolean;
+  pubDate?: Date;
+  category?: string;
+}
+
+const {
+  title,
+  description = 'シングル父がAIと副業でFIREを目指す過程をリアルに発信するブログ',
+  ogImage,
+  article = false,
+  pubDate,
+  category,
+} = Astro.props;
+
+const siteTitle = 'ひろとの副業実録';
+const siteUrl = 'https://hiroto-fire.com';
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-default.png`;
+
+const categories = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった'];
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+
+  <!-- OGP -->
+  <meta property="og:type" content={article ? 'article' : 'website'} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:url" content={Astro.url.href} />
+  <meta property="og:site_name" content={siteTitle} />
+  <meta property="og:locale" content="ja_JP" />
+  {article && pubDate && <meta property="article:published_time" content={pubDate.toISOString()} />}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={Astro.url.href} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Analytics（GA_MEASUREMENT_IDを差し替える） -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script> -->
+
+  <title>{fullTitle}</title>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="site-logo">
+          <h1>ひろとの副業実録</h1>
+          <p class="tagline">シングル父がAIと副業でFIREを目指す過程</p>
+        </a>
+        <nav>
+          <ul class="site-nav">
+            <li><a href="/">トップ</a></li>
+            {categories.map(cat => (
+              <li><a href={`/category/${cat}/`}>{cat}</a></li>
+            ))}
+            <li><a href="/profile/">プロフィール</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- LINEバナー（ヘッダー直下） -->
+    <div style="background: #00b900; padding: 8px 0; text-align: center;">
+      <a
+        href="https://lin.ee/XXXXXXXX"
+        style="color: #fff; font-size: 0.82rem; font-weight: 700; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📩 LINE登録で「副業実録レポート」無料プレゼント中 →
+      </a>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- LINEバナー（フッター上） -->
+    <LineBanner />
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h2>ひろとの副業実録</h2>
+            <p>シングル父がAIと副業でFIREを目指す過程をリアルに発信するブログ。失敗も成功も正直に書きます。</p>
+          </div>
+          <div class="footer-nav">
+            <h3>カテゴリ</h3>
+            <ul>
+              {categories.map(cat => (
+                <li><a href={`/category/${cat}/`}>{cat}</a></li>
+              ))}
+              <li><a href="/profile/">プロフィール</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>当サイトはアフィリエイトプログラムに参加しています。記事内のリンクから商品購入・サービス利用すると報酬が発生することがあります。</p>
+          <p style="margin-top: 8px;">&copy; 2026 ひろとの副業実録</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

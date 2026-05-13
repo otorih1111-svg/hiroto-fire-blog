@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  category: string;
+  slug: string;
+  image?: string;
+}
+
+const { title, description, pubDate, category, slug, image } = Astro.props;
+
+const dateStr = pubDate.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const categoryEmoji: Record<string, string> = {
+  '副業実録': '📝',
+  'AI活用': '🤖',
+  'FIRE設計': '🔥',
+  'シングル父の日常': '👨‍👦',
+  '買ってよかった': '🛒',
+};
+const emoji = categoryEmoji[category] || '📄';
+---
+
+<article class="article-card">
+  <a href={`/blog/${slug}/`}>
+    <div class="article-card-image-placeholder" aria-hidden="true">
+      <span>{emoji}</span>
+    </div>
+    <div class="article-card-body">
+      <span class={`article-card-category category-${category}`}>{category}</span>
+      <h2 class="article-card-title">{title}</h2>
+      <p class="article-card-meta">{dateStr}</p>
+      <p class="article-card-description">{description}</p>
+    </div>
+  </a>
+</article>

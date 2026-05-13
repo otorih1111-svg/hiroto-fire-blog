@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LineBanner from '../../components/LineBanner.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const dateStr = post.data.pubDate.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  article={true}
+  pubDate={post.data.pubDate}
+  category={post.data.category}
+>
+  <div class="container">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="/">トップ</a>
+      <span>›</span>
+      <a href={`/category/${post.data.category}/`}>{post.data.category}</a>
+      <span>›</span>
+      <span>{post.data.title}</span>
+    </nav>
+
+    <article style="max-width: 720px; margin: 0 auto;">
+
+      <!-- 記事ヘッダー -->
+      <header class="post-header">
+        <span class={`post-category category-${post.data.category}`}>{post.data.category}</span>
+        <h1>{post.data.title}</h1>
+        <div class="post-meta">
+          <time datetime={post.data.pubDate.toISOString()}>{dateStr}</time>
+          {post.data.updatedDate && (
+            <span>更新: {post.data.updatedDate.toLocaleDateString('ja-JP')}</span>
+          )}
+          {post.data.affiliate && (
+            <span style="background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PR記事</span>
+          )}
+        </div>
+      </header>
+
+      <!-- LINE誘導（記事冒頭） -->
+      <LineBanner variant="article" />
+
+      <!-- 記事本文 -->
+      <div class="prose">
+        <Content />
+      </div>
+
+      <!-- LINE誘導（記事末尾） -->
+      <LineBanner variant="article" />
+
+      <!-- タグ -->
+      {post.data.tags.length > 0 && (
+        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.82rem; color: #666; margin-bottom: 8px;">タグ：</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            {post.data.tags.map(tag => (
+              <span style="background: #f0f0f0; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; color: #444;">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- 著者プロフィール -->
+      <div style="background: #f8f9fa; border-radius: 12px; padding: 24px; margin-top: 40px; display: flex; gap: 16px; align-items: flex-start;">
+        <div style="font-size: 2.5rem; flex-shrink: 0;">👨‍👦</div>
+        <div>
+          <p style="font-weight: 700; margin-bottom: 4px;">ひろと</p>
+          <p style="font-size: 0.82rem; color: #666; line-height: 1.7;">
+            40代・千葉在住・シングル父。10歳の息子のためにFIREを目指し、会社員をしながら副業×AIに挑戦中。
+            成果が出ていない時期も正直に発信しています。
+          </p>
+          <a href="/profile/" style="font-size: 0.82rem; margin-top: 8px; display: inline-block;">詳しいプロフィールを見る →</a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</BaseLayout>
