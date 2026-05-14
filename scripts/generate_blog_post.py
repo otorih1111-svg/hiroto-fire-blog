@@ -1,16 +1,21 @@
 """
-generate_blog_post.py
+scripts/generate_blog_post.py
 SNS投稿（Threads・X）からAstroブログ記事を自動生成するスクリプト
 
 【使い方】
-  python3 generate_blog_post.py                    # 直近SNS投稿から自動生成
-  python3 generate_blog_post.py --theme "AI副業の始め方"  # テーマ指定
-  python3 generate_blog_post.py --category AI活用   # カテゴリ指定
-  python3 generate_blog_post.py --dry-run           # 生成のみ（ファイル保存なし）
-  python3 generate_blog_post.py --from-file post.json  # 投稿JSONから生成
+  python3 scripts/generate_blog_post.py                    # 直近SNS投稿から自動生成
+  python3 scripts/generate_blog_post.py --theme "AI副業の始め方"  # テーマ指定
+  python3 scripts/generate_blog_post.py --category AI活用   # カテゴリ指定
+  python3 scripts/generate_blog_post.py --dry-run           # 生成のみ（ファイル保存なし）
+  python3 scripts/generate_blog_post.py --weekly            # 週次バッチ（3記事同時生成）
 
 【出力】
-  src/content/blog/YYYY-MM-DD-slug.md
+  src/content/blog/YYYY-MM-DD-slug.md  （LINE誘導バナーを末尾に自動挿入）
+
+【note連携】
+  --note オプション付きで実行すると、生成した記事を
+  threads_affiliate_system/generate_note_daily.py に渡すための
+  note_draft.json も同時出力します。
 """
 
 from __future__ import annotations
@@ -24,17 +29,23 @@ import datetime
 import unicodedata
 from pathlib import Path
 
-# プロジェクトルート設定
-BLOG_DIR = Path(__file__).parent
-CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
-SNS_SYSTEM_DIR = Path(__file__).parent.parent / "threads_affiliate_system"
-X_POSTS_FILE = Path(__file__).parent.parent / "x_posts.md"  # X投稿ストックファイル
+# ---- パス設定 ----
+SCRIPT_DIR   = Path(__file__).parent           # scripts/
+BLOG_DIR     = SCRIPT_DIR.parent               # hiroto-fire-blog/
+CONTENT_DIR  = BLOG_DIR / "src" / "content" / "blog"
+SNS_ROOT     = BLOG_DIR.parent                 # claud code/
+SNS_DIR      = SNS_ROOT / "threads_affiliate_system"
+X_POSTS_FILE = SNS_ROOT / "x_posts.md"
+NOTE_DRAFT   = SNS_DIR / "data" / "note_draft.json"
 BLOG_BASE_URL = "https://hiroto-fire.com"
+
+# LINE URL（.envから読む・フォールバックあり）
+LINE_URL = os.environ.get("PUBLIC_LINE_URL", "https://line.me/R/ti/p/%40103khwdx")
 
 
 def _load_env_key() -> str:
-    """親ディレクトリの.envからAPIキーを読む"""
-    env_file = SNS_SYSTEM_DIR / ".env"
+    """threads_affiliate_system/.envからAPIキーを読む"""
+    env_file = SNS_DIR / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
             if line.startswith("ANTHROPIC_API_KEY="):
@@ -42,7 +53,6 @@ def _load_env_key() -> str:
     return ""
 
 
-# Claude API
 try:
     import anthropic
     ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY") or _load_env_key()
@@ -52,29 +62,17 @@ except ImportError:
 
 
 def _slugify(text: str) -> str:
-    """日本語文字列をスラッグ（英数字ハイフン）に変換"""
-    # よく使うキーワードの英語マッピング
     mapping = {
-        "副業": "fukugyo",
-        "AI": "ai",
-        "FIRE": "fire",
-        "シングル父": "single-father",
-        "息子": "musuko",
-        "楽天": "rakuten",
-        "投資": "toshi",
-        "お金": "okane",
-        "始め方": "hajimekata",
-        "実録": "jitsuroku",
-        "活用": "katsuyo",
-        "自動化": "jidoka",
-        "保険": "hoken",
-        "節約": "setsuyaku",
+        "副業": "fukugyo", "AI": "ai", "FIRE": "fire",
+        "シングル父": "single-father", "息子": "musuko",
+        "楽天": "rakuten", "投資": "toshi", "お金": "okane",
+        "始め方": "hajimekata", "実録": "jitsuroku", "活用": "katsuyo",
+        "自動化": "jidoka", "保険": "hoken", "節約": "setsuyaku",
         "収入": "shunyu",
     }
     result = text
     for ja, en in mapping.items():
         result = result.replace(ja, en)
-    # 残った非ASCII文字を除去してハイフンでつなぐ
     result = re.sub(r'[^\w\s-]', '', result, flags=re.ASCII)
     result = re.sub(r'\s+', '-', result.strip())
     result = re.sub(r'-+', '-', result).lower()
@@ -82,12 +80,9 @@ def _slugify(text: str) -> str:
 
 
 def _get_recent_sns_posts(days: int = 7) -> list[dict]:
-    """直近のThreads・X投稿をposted/x_postedディレクトリから取得"""
     posts = []
-    cutoff = datetime.datetime.now() - datetime.timedelta(days=days)
-
     for subdir in ["data/posted", "data/x_posted"]:
-        posted_dir = SNS_SYSTEM_DIR / subdir
+        posted_dir = SNS_DIR / subdir
         if not posted_dir.exists():
             continue
         for json_file in sorted(posted_dir.glob("*.json"), reverse=True)[:10]:
@@ -100,7 +95,6 @@ def _get_recent_sns_posts(days: int = 7) -> list[dict]:
                 })
             except Exception:
                 continue
-
     return posts[:10]
 
 
@@ -116,11 +110,25 @@ CATEGORY_KEYWORDS = {
 
 
 def _detect_category(theme: str) -> str:
-    """テーマからカテゴリを自動判定"""
     for cat, keywords in CATEGORY_KEYWORDS.items():
         if any(kw in theme for kw in keywords):
             return cat
     return '副業実録'
+
+
+def _make_line_banner_md() -> str:
+    """記事末尾に挿入するLINE誘導バナー（Markdown）"""
+    return f"""
+---
+
+## 📩 LINE登録で「副業実録レポート」無料プレゼント中
+
+シングル父がAIと副業で這い上がった実録レポートをLINE登録者に無料配布しています。
+
+[👉 LINEで無料登録する]({LINE_URL})
+
+---
+"""
 
 
 def generate_blog_post(
@@ -128,21 +136,19 @@ def generate_blog_post(
     category: str = "",
     sns_posts: list[dict] | None = None,
     dry_run: bool = False,
-    line_url: str = "https://line.me/R/ti/p/%40103khwdx",
+    with_note: bool = False,
 ) -> dict:
     """
-    Claude APIを呼んでブログ記事を生成する
+    Claude APIでブログ記事を生成し、src/content/blog/ に保存する。
 
     Returns:
-        {"slug": str, "path": Path, "title": str, "content": str}
+        {"slug", "path", "title", "description", "category", "content"}
     """
-    # カテゴリ自動判定
     if not category:
         category = _detect_category(theme) if theme else '副業実録'
     if category not in CATEGORIES:
         category = '副業実録'
 
-    # SNS投稿をコンテキストとして整形
     sns_context = ""
     if sns_posts:
         sns_context = "\n\n【最近のSNS投稿（参考にしてください）】\n"
@@ -151,7 +157,6 @@ def generate_blog_post(
             if text:
                 sns_context += f"\n--- 投稿{i} ---\n{text}\n"
 
-    # プロンプト構築
     system_prompt = """あなたは「ひろと」という人物のブログ記事ライターです。
 
 ## ひろとのキャラクター
@@ -159,28 +164,25 @@ def generate_blog_post(
 - 会社員をしながら副業×AIでFIREを目指している
 - 離婚経験あり・副業収益はまだほぼゼロ
 - 正直・誇張なし・体験したことだけを話すスタイル
-- 神話の法則（試練→成長→変容）を物語として発信
 
 ## 文体
 - ひらがな多め・やわらかい文体
 - 「正直に言う」「本当のことを書く」という語り口
 - 細部まで描写（五感・数字・具体的場面）
-- 抽象的な言葉を使わない
-- 売り込まない・欲しがらせる書き方
 - 1文は短め（20〜30文字）
+- 売り込まない・欲しがらせる書き方
 
 ## 記事構成
 1. 引きのある冒頭（1〜3行）
 2. 具体的な体験・エピソード（見出しH2で区切る）
 3. 気づき・学び
 4. 読者への問いかけまたは次のアクション
-5. 締め（LINE誘導を自然に）
+5. 締め（LINEバナーは後で自動挿入するので書かなくてよい）
 
 ## 出力形式（Markdown）
 frontmatterなしで、H1タイトルから始めてください。
 記事の長さ：1500〜2500文字
-見出し：H2を3〜5個使用
-最後の段落の後に「---」で区切り、LINEへの誘導文を書いてください。"""
+見出し：H2を3〜5個使用"""
 
     user_prompt = f"""以下の条件でブログ記事を書いてください。
 
@@ -192,13 +194,11 @@ frontmatterなしで、H1タイトルから始めてください。
 - PR・アフィリエイト商品は含めない（純粋な体験談・ノウハウ記事）
 - ひろとの「今の状況（収益ほぼゼロ・フォロワー約100人・3ヶ月継続中）」を活かす
 - 読者は「副業したいけど時間がない・何から始めていいかわからない40代」
-- LINEのURLは {line_url}
 
 ## 出力形式
 1行目：記事タイトル（# で始めるMarkdown見出し）
 2行目以降：本文Markdown
-
-descriptionとして使える1〜2文のサマリーをコメント<!-- description: ... -->として冒頭に入れてください。"""
+descriptionとして使える1〜2文のサマリーを <!-- description: ... --> として冒頭に入れてください。"""
 
     print(f"\n🤖 Claude APIで記事生成中...")
     print(f"   カテゴリ：{category}")
@@ -215,25 +215,23 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
 
     raw_content = message.content[0].text
 
-    # タイトル抽出
     title_match = re.search(r'^#\s+(.+)$', raw_content, re.MULTILINE)
     title = title_match.group(1).strip() if title_match else "無題の記事"
 
-    # description抽出
     desc_match = re.search(r'<!--\s*description:\s*(.+?)\s*-->', raw_content)
     description = desc_match.group(1).strip() if desc_match else f"{category}に関するひろとの体験談。"
 
-    # frontmatterなしの本文（#タイトルとdescriptionコメント除去）
     body = raw_content
     if desc_match:
         body = body.replace(desc_match.group(0), "").strip()
 
-    # スラッグ生成
+    # 末尾にLINEバナーを自動挿入
+    body = body.rstrip() + "\n" + _make_line_banner_md()
+
     today = datetime.date.today().isoformat()
     slug_base = _slugify(theme or title)[:40]
     slug = f"{today}-{slug_base}"
 
-    # Markdownファイル生成（frontmatter + 本文）
     tags = _extract_tags(title + " " + body, category)
     title_escaped = title.replace('"', '\\"')
     description_escaped = description.replace('"', '\\"')
@@ -257,6 +255,7 @@ affiliate: false
         "category": category,
         "content": full_content,
         "path": CONTENT_DIR / f"{slug}.md",
+        "blog_url": f"{BLOG_BASE_URL}/blog/{slug}/",
     }
 
     if not dry_run:
@@ -264,6 +263,19 @@ affiliate: false
         result["path"].write_text(full_content, encoding="utf-8")
         print(f"\n✅ 記事を保存しました：")
         print(f"   {result['path'].relative_to(BLOG_DIR)}")
+
+        # note連携：note_draft.jsonを出力
+        if with_note:
+            NOTE_DRAFT.parent.mkdir(parents=True, exist_ok=True)
+            note_draft = {
+                "title": title,
+                "body": body,
+                "category": category,
+                "blog_url": result["blog_url"],
+                "generated_at": datetime.datetime.now().isoformat(),
+            }
+            NOTE_DRAFT.write_text(json.dumps(note_draft, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"   note下書き保存: {NOTE_DRAFT}")
     else:
         print(f"\n[DRY RUN] 記事生成完了（保存なし）")
         print(f"   タイトル：{title}")
@@ -272,51 +284,40 @@ affiliate: false
         print(full_content[:300])
         print("...")
 
-    # X紹介投稿を生成して x_posts.md に追記（X→ブログ→LINE導線）
+    # X紹介投稿を x_posts.md に追記
     _append_x_promo_post(result, dry_run=dry_run)
 
     return result
 
 
 def _extract_tags(text: str, category: str) -> list[str]:
-    """テキストからタグを抽出"""
     keyword_tags = {
-        "AI": ["AI", "自動化", "効率化"],
-        "副業": ["副業", "在宅", "フリーランス"],
-        "FIRE": ["FIRE", "投資", "資産形成"],
-        "楽天": ["楽天", "楽天アフィリ"],
-        "シングル父": ["シングル父", "子育て"],
-        "継続": ["継続", "習慣"],
+        "AI": ["AI"], "副業": ["副業"], "FIRE": ["FIRE"],
+        "楽天": ["楽天"], "シングル父": ["シングル父"], "継続": ["継続"],
     }
     tags = []
     for keyword, tag_list in keyword_tags.items():
         if keyword in text:
             tags.extend(tag_list[:1])
-    # カテゴリ由来のタグ追加
     cat_tags = {
-        '副業実録': ['副業'],
-        'AI活用': ['AI'],
-        'FIRE設計': ['FIRE'],
-        'シングル父の日常': ['シングル父'],
-        '買ってよかった': ['楽天'],
+        '副業実録': ['副業'], 'AI活用': ['AI'], 'FIRE設計': ['FIRE'],
+        'シングル父の日常': ['シングル父'], '買ってよかった': ['楽天'],
     }
     for t in cat_tags.get(category, []):
         if t not in tags:
             tags.append(t)
-    return list(dict.fromkeys(tags))[:5]  # 重複除去・最大5個
+    return list(dict.fromkeys(tags))[:5]
 
 
 def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
     """
-    ブログ記事のX紹介投稿を生成して x_posts.md に追記する。
-    X → ブログ → LINE の導線を作る。
+    ブログ記事のX紹介投稿（URLなし本文 + reply_url行）を x_posts.md に追記する。
+    X通常投稿（URLなし）→ リプライでブログURL の2ステップ導線。
     """
     title = result["title"]
-    slug = result["slug"]
     category = result["category"]
-    blog_url = f"{BLOG_BASE_URL}/blog/{slug}/"
+    blog_url = result["blog_url"]
 
-    # カテゴリ別の文脈ワード
     category_hook = {
         '副業実録': "副業の記録",
         'AI活用': "AIを使った話",
@@ -325,7 +326,6 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
         '買ってよかった': "実際に試してみた話",
     }.get(category, "記録")
 
-    # Claude APIで自然なX紹介投稿を生成（URLなし本文）
     print(f"\n🐦 X紹介投稿を生成中...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     message = client.messages.create(
@@ -341,7 +341,7 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
 ## 条件
 - 80〜120文字（URLは含めない）
 - 自然体・押し付けがましくない
-- 「詳しくはリプライへ」「続きはリプライ欄に」などのCTAで終わる
+- 「詳しくはリプライ欄へ」「続きはリプライ欄に」などのCTAで終わる
 - LINE誘導・宣伝感・「稼げます」・URL直貼りは絶対に書かない
 - ひろとのキャラ（40代シングル父・正直発信）を維持
 - 共感・体験談ベースで書く
@@ -356,12 +356,10 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
         print(f"  ⚠ x_posts.md が見つかりません: {X_POSTS_FILE}")
         return
 
-    # 現在の最大No.を調べる
     current_content = X_POSTS_FILE.read_text(encoding="utf-8")
     nos = re.findall(r'^## No\.(\d+)', current_content, re.MULTILINE)
     next_no = max(int(n) for n in nos) + 1 if nos else 1
 
-    # 「投稿の使い方メモ」の直前に挿入するため、そのセクションを探す
     memo_marker = "## 投稿の使い方メモ"
     entry = f"\n## No.{next_no}【ブログ更新：{title[:20]}】\n{post_text}\nreply_url: {blog_url}\n\n---\n"
 
@@ -377,13 +375,10 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
     else:
         print(f"  [DRY RUN] X投稿プレビュー (No.{next_no}):")
         print(f"  {post_text}")
+        print(f"  reply_url: {blog_url}")
 
 
-def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
-    """
-    週次バッチ：直近1週間のSNS投稿から複数記事を生成
-    テーマが重複しないように3記事を生成する
-    """
+def generate_from_weekly_posts(dry_run: bool = False, with_note: bool = False) -> list[dict]:
     sns_posts = _get_recent_sns_posts(days=7)
     if not sns_posts:
         print("⚠️  直近SNS投稿が見つかりませんでした。デフォルトテーマで生成します。")
@@ -402,50 +397,38 @@ def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
             category=category,
             sns_posts=sns_posts,
             dry_run=dry_run,
+            with_note=with_note,
         )
         results.append(result)
 
     return results
 
 
-# ============================================================
-# エントリポイント
-# ============================================================
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SNS投稿からAstroブログ記事を自動生成")
     parser.add_argument("--theme", type=str, default="", help="記事テーマ")
-    parser.add_argument("--category", type=str, default="", help="カテゴリ（副業実録/AI活用/FIRE設計/シングル父の日常/買ってよかった）")
+    parser.add_argument("--category", type=str, default="", help="カテゴリ")
     parser.add_argument("--dry-run", action="store_true", help="生成のみ・ファイル保存なし")
     parser.add_argument("--weekly", action="store_true", help="週次バッチ（3記事同時生成）")
-    parser.add_argument("--from-file", type=str, default="", help="投稿JSONファイルから生成")
+    parser.add_argument("--note", action="store_true", help="note下書きも同時出力")
     args = parser.parse_args()
 
-    # APIキー確認
     api_key = os.environ.get("ANTHROPIC_API_KEY") or _load_env_key()
     if not api_key:
         print("❌ ANTHROPIC_API_KEYが設定されていません。")
-        print("   .envファイルに ANTHROPIC_API_KEY=sk-ant-... を追加してください。")
+        print("   threads_affiliate_system/.env に ANTHROPIC_API_KEY=sk-ant-... を追加してください。")
         sys.exit(1)
 
     if args.weekly:
-        results = generate_from_weekly_posts(dry_run=args.dry_run)
+        results = generate_from_weekly_posts(dry_run=args.dry_run, with_note=args.note)
         print(f"\n{'='*50}")
         print(f"✅ {len(results)}件の記事を生成しました。")
-    elif args.from_file:
-        post_data = json.loads(Path(args.from_file).read_text(encoding="utf-8"))
-        text = post_data.get("text", post_data.get("content", ""))
-        result = generate_blog_post(
-            theme=text[:50] if text else args.theme,
-            category=args.category,
-            sns_posts=[post_data],
-            dry_run=args.dry_run,
-        )
     else:
         result = generate_blog_post(
             theme=args.theme,
             category=args.category,
             sns_posts=_get_recent_sns_posts(),
             dry_run=args.dry_run,
+            with_note=args.note,
         )
         print(f"\n✅ 完了: /blog/{result['slug']}/")

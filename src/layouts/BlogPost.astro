@@ -1,0 +1,180 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import LineBanner from '../components/LineBanner.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  category: string;
+  tags?: string[];
+  affiliate?: boolean;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  category,
+  tags = [],
+  affiliate = false,
+  ogImage,
+} = Astro.props;
+
+const dateStr = pubDate.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  article={true}
+  pubDate={pubDate}
+  category={category}
+  ogImage={ogImage}
+>
+  <div class="container">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="/">トップ</a>
+      <span>›</span>
+      <a href={`/category/${category}/`}>{category}</a>
+      <span>›</span>
+      <span>{title}</span>
+    </nav>
+
+    <article class="post-article">
+
+      <header class="post-header">
+        <span class={`post-category category-${category}`}>{category}</span>
+        <h1>{title}</h1>
+        <div class="post-meta">
+          <time datetime={pubDate.toISOString()}>{dateStr}</time>
+          {updatedDate && (
+            <span>更新: {updatedDate.toLocaleDateString('ja-JP')}</span>
+          )}
+          {affiliate && (
+            <span class="pr-badge">PR記事</span>
+          )}
+        </div>
+      </header>
+
+      <!-- LINE誘導（冒頭） -->
+      <LineBanner variant="article" />
+
+      <!-- 記事本文 -->
+      <div class="prose">
+        <slot />
+      </div>
+
+      <!-- LINE誘導（末尾） -->
+      <LineBanner variant="article" />
+
+      {tags.length > 0 && (
+        <div class="post-tags">
+          <p class="post-tags-label">タグ：</p>
+          <div class="post-tags-list">
+            {tags.map(tag => (
+              <span class="tag">#{tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- 著者プロフィール -->
+      <div class="author-box">
+        <div class="author-avatar">👨‍👦</div>
+        <div class="author-body">
+          <p class="author-name">ひろと</p>
+          <p class="author-bio">
+            40代・千葉在住・シングル父。10歳の息子のためにFIREを目指し、会社員をしながら副業×AIに挑戦中。
+            成果が出ていない時期も正直に発信しています。
+          </p>
+          <a href="/about/" class="author-link">詳しいプロフィールを見る →</a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+.post-article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.post-header {
+  margin-bottom: 28px;
+}
+.post-header h1 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 10px 0 12px;
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #888;
+}
+.pr-badge {
+  background: #fff3e0;
+  color: #e65100;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.post-tags {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+.post-tags-label {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+.post-tags-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: #444;
+}
+
+.author-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.author-avatar { font-size: 2.5rem; flex-shrink: 0; }
+.author-name { font-weight: 700; margin-bottom: 4px; }
+.author-bio {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.author-link { font-size: 0.82rem; }
+</style>

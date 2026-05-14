@@ -1,0 +1,17 @@
+---
+// PostCard.astro — ArticleCard のエイリアス（後方互換・generate_blog_post.py等から参照）
+import ArticleCard from './ArticleCard.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  category: string;
+  slug: string;
+  image?: string;
+}
+
+const props = Astro.props;
+---
+
+<ArticleCard {...props} />

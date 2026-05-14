@@ -1,0 +1,120 @@
+---
+/**
+ * RakutenLink.astro — 楽天アフィリエイトリンクコンポーネント
+ *
+ * 使い方:
+ *   <RakutenLink
+ *     href="https://hb.afl.rakuten.co.jp/ichiba/..."
+ *     label="商品名"
+ *     price="1,980円"
+ *     image="https://thumbnail.image.rakuten.co.jp/..."
+ *   />
+ */
+
+interface Props {
+  href: string;
+  label: string;
+  price?: string;
+  image?: string;
+  shopName?: string;
+}
+
+const { href, label, price, image, shopName } = Astro.props;
+---
+
+<div class="rakuten-link">
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    class="rakuten-link-inner"
+  >
+    {image && (
+      <div class="rakuten-thumb">
+        <img src={image} alt={label} loading="lazy" width="80" height="80" />
+      </div>
+    )}
+    <div class="rakuten-body">
+      <p class="rakuten-label">{label}</p>
+      {price && <p class="rakuten-price">{price}</p>}
+      {shopName && <p class="rakuten-shop">{shopName}</p>}
+      <span class="rakuten-btn">楽天で見る →</span>
+    </div>
+  </a>
+  <p class="rakuten-pr">※ PR / アフィリエイトリンクです</p>
+</div>
+
+<style>
+.rakuten-link {
+  border: 2px solid #bf0000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 24px 0;
+  background: #fff;
+}
+.rakuten-link-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.rakuten-link-inner:hover {
+  background: #fff5f5;
+}
+.rakuten-thumb {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+.rakuten-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rakuten-body { flex: 1; min-width: 0; }
+.rakuten-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  color: #222;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rakuten-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #bf0000;
+  margin-bottom: 2px;
+}
+.rakuten-shop {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.rakuten-btn {
+  display: inline-block;
+  background: #bf0000;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 4px;
+}
+.rakuten-pr {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-align: right;
+  padding: 4px 14px;
+  background: #fafafa;
+  border-top: 1px solid #f0e0e0;
+}
+</style>
