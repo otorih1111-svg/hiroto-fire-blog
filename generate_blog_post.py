@@ -125,7 +125,7 @@ def generate_blog_post(
     category: str = "",
     sns_posts: list[dict] | None = None,
     dry_run: bool = False,
-    line_url: str = "https://lin.ee/XXXXXXXX",
+    line_url: str = "https://line.me/R/ti/p/%40103khwdx",
 ) -> dict:
     """
     Claude APIを呼んでブログ記事を生成する
