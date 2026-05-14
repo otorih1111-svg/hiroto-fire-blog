@@ -28,14 +28,8 @@ from pathlib import Path
 BLOG_DIR = Path(__file__).parent
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_SYSTEM_DIR = Path(__file__).parent.parent / "threads_affiliate_system"
-
-# Claude API
-try:
-    import anthropic
-    ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY") or _load_env_key()
-except ImportError:
-    print("anthropicライブラリが必要: pip install anthropic")
-    sys.exit(1)
+X_POSTS_FILE = Path(__file__).parent.parent / "x_posts.md"  # X投稿ストックファイル
+BLOG_BASE_URL = "https://hiroto-fire.com"
 
 
 def _load_env_key() -> str:
@@ -46,6 +40,15 @@ def _load_env_key() -> str:
             if line.startswith("ANTHROPIC_API_KEY="):
                 return line.split("=", 1)[1].strip().strip('"\'')
     return ""
+
+
+# Claude API
+try:
+    import anthropic
+    ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY") or _load_env_key()
+except ImportError:
+    print("anthropicライブラリが必要: pip install anthropic")
+    sys.exit(1)
 
 
 def _slugify(text: str) -> str:
@@ -269,6 +272,9 @@ affiliate: false
         print(full_content[:300])
         print("...")
 
+    # X紹介投稿を生成して x_posts.md に追記（X→ブログ→LINE導線）
+    _append_x_promo_post(result, dry_run=dry_run)
+
     return result
 
 
@@ -298,6 +304,80 @@ def _extract_tags(text: str, category: str) -> list[str]:
         if t not in tags:
             tags.append(t)
     return list(dict.fromkeys(tags))[:5]  # 重複除去・最大5個
+
+
+def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
+    """
+    ブログ記事のX紹介投稿を生成して x_posts.md に追記する。
+    X → ブログ → LINE の導線を作る。
+    """
+    title = result["title"]
+    slug = result["slug"]
+    category = result["category"]
+    blog_url = f"{BLOG_BASE_URL}/blog/{slug}/"
+
+    # カテゴリ別の文脈ワード
+    category_hook = {
+        '副業実録': "副業の記録",
+        'AI活用': "AIを使った話",
+        'FIRE設計': "FIREへの設計",
+        'シングル父の日常': "シングル父の日常",
+        '買ってよかった': "実際に試してみた話",
+    }.get(category, "記録")
+
+    # Claude APIで自然なX紹介投稿を生成
+    print(f"\n🐦 X紹介投稿を生成中...")
+    client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+    message = client.messages.create(
+        model="claude-haiku-4-5",
+        max_tokens=300,
+        messages=[{
+            "role": "user",
+            "content": f"""以下のブログ記事を紹介するX（Twitter）投稿を1つ書いてください。
+
+記事タイトル：{title}
+カテゴリ：{category}（{category_hook}）
+ブログURL：{blog_url}
+
+## 条件
+- 100〜140文字（URL含む）
+- 自然体・押し付けがましくない
+- 「副業実録はブログにまとめてます」「ブログに書きました」などの導線で終わる
+- LINE誘導・宣伝感・「稼げます」などは絶対に書かない
+- 投稿末尾にURLを置く
+- ひろとのキャラ（40代シングル父・正直発信）を維持
+
+## 出力
+投稿本文のみ（説明不要）"""
+        }],
+    )
+    post_text = message.content[0].text.strip()
+
+    if not X_POSTS_FILE.exists():
+        print(f"  ⚠ x_posts.md が見つかりません: {X_POSTS_FILE}")
+        return
+
+    # 現在の最大No.を調べる
+    current_content = X_POSTS_FILE.read_text(encoding="utf-8")
+    nos = re.findall(r'^## No\.(\d+)', current_content, re.MULTILINE)
+    next_no = max(int(n) for n in nos) + 1 if nos else 1
+
+    # 「投稿の使い方メモ」の直前に挿入するため、そのセクションを探す
+    memo_marker = "## 投稿の使い方メモ"
+    entry = f"\n## No.{next_no}【ブログ更新：{title[:20]}】\n{post_text}\n\n---\n"
+
+    if memo_marker in current_content:
+        new_content = current_content.replace(memo_marker, entry + memo_marker)
+    else:
+        new_content = current_content.rstrip() + "\n" + entry
+
+    if not dry_run:
+        X_POSTS_FILE.write_text(new_content, encoding="utf-8")
+        print(f"  ✅ X投稿を x_posts.md に追加 (No.{next_no})")
+        print(f"     {post_text[:60]}...")
+    else:
+        print(f"  [DRY RUN] X投稿プレビュー (No.{next_no}):")
+        print(f"  {post_text}")
 
 
 def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
