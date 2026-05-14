@@ -232,9 +232,11 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
 
     # Markdownファイル生成（frontmatter + 本文）
     tags = _extract_tags(title + " " + body, category)
+    title_escaped = title.replace('"', '\\"')
+    description_escaped = description.replace('"', '\\"')
     frontmatter = f"""---
-title: "{title.replace('"', '\\"')}"
-description: "{description.replace('"', '\\"')}"
+title: "{title_escaped}"
+description: "{description_escaped}"
 pubDate: {today}
 category: {category}
 tags: {json.dumps(tags, ensure_ascii=False)}
