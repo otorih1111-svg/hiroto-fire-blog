@@ -16,26 +16,104 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   day: 'numeric',
 });
 
-const categoryEmoji: Record<string, string> = {
-  '副業実録': '📝',
-  'AI活用': '🤖',
-  'FIRE設計': '🔥',
-  'シングル父の日常': '👨‍👦',
-  '買ってよかった': '🛒',
+const categoryConfig: Record<string, { emoji: string; gradient: string }> = {
+  '副業実録':       { emoji: '📝', gradient: 'linear-gradient(135deg, #f97316, #fb923c)' },
+  'AI活用':         { emoji: '🤖', gradient: 'linear-gradient(135deg, #6366f1, #818cf8)' },
+  'FIRE設計':       { emoji: '🔥', gradient: 'linear-gradient(135deg, #ef4444, #f87171)' },
+  'シングル父の日常': { emoji: '👨‍👦', gradient: 'linear-gradient(135deg, #10b981, #34d399)' },
+  '買ってよかった':  { emoji: '🛒', gradient: 'linear-gradient(135deg, #ec4899, #f472b6)' },
 };
-const emoji = categoryEmoji[category] || '📄';
+const config = categoryConfig[category] ?? { emoji: '📄', gradient: 'linear-gradient(135deg, #94a3b8, #cbd5e1)' };
 ---
 
 <article class="article-card">
-  <a href={`/blog/${slug}/`}>
-    <div class="article-card-image-placeholder" aria-hidden="true">
-      <span>{emoji}</span>
+  <a href={`/blog/${slug}/`} class="article-card-link">
+    <!-- サムネイル -->
+    <div class="article-thumb" style={`background: ${config.gradient};`}>
+      {image
+        ? <img src={image} alt={title} loading="lazy" />
+        : <span class="article-thumb-emoji">{config.emoji}</span>
+      }
     </div>
+    <!-- 本文 -->
     <div class="article-card-body">
       <span class={`article-card-category category-${category}`}>{category}</span>
       <h2 class="article-card-title">{title}</h2>
-      <p class="article-card-meta">{dateStr}</p>
       <p class="article-card-description">{description}</p>
+      <p class="article-card-meta">{dateStr}</p>
     </div>
   </a>
 </article>
+
+<style>
+.article-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+}
+.article-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* サムネイル */
+.article-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-thumb-emoji {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+/* 本文 */
+.article-card-body {
+  padding: 16px 18px 18px;
+}
+.article-card-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.article-card-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-card-description {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.article-card-meta {
+  font-size: 0.75rem;
+  color: #999;
+}
+</style>
