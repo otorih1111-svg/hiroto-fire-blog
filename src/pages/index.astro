@@ -5,260 +5,141 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const featuredPosts = posts.slice(0, 6);
 
 const categories = [
-  {
-    name: '副業実録',
-    emoji: '📝',
-    desc: '収益ゼロでも続ける。リアルな過程を全公開。',
-    gradient: 'linear-gradient(135deg, #f97316 0%, #fb923c 100%)',
-  },
-  {
-    name: 'AI活用',
-    emoji: '🤖',
-    desc: 'ClaudeやChatGPTで副業を自動化した記録。',
-    gradient: 'linear-gradient(135deg, #6366f1 0%, #818cf8 100%)',
-  },
-  {
-    name: 'FIRE設計',
-    emoji: '🔥',
-    desc: 'シングル父のFIRE計算と資産設計の実録。',
-    gradient: 'linear-gradient(135deg, #ef4444 0%, #f87171 100%)',
-  },
-  {
-    name: 'シングル父の日常',
-    emoji: '👨‍👦',
-    desc: '10歳の息子との日々で気づいたお金と人生。',
-    gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)',
-  },
-  {
-    name: '買ってよかった',
-    emoji: '🛒',
-    desc: '実際に使って本当によかったものだけ紹介。',
-    gradient: 'linear-gradient(135deg, #ec4899 0%, #f472b6 100%)',
-  },
+  { name: '副業実録',       emoji: '📝' },
+  { name: 'AI活用',         emoji: '🤖' },
+  { name: 'FIRE設計',       emoji: '🔥' },
+  { name: 'シングル父の日常', emoji: '👨‍👦' },
+  { name: '買ってよかった',  emoji: '🛒' },
 ];
 ---
 
 <BaseLayout title="ひろとの副業実録" description="40代シングル父がAIと副業でFIREを目指す過程をリアルに発信するブログ。">
 
-  <!-- ヒーローセクション -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <p class="hero-tag">40代・シングル父・FIRE目指す会社員</p>
-        <h1 class="hero-title">息子に「お金で諦めた」と<br>言わせたくない</h1>
-        <p class="hero-desc">
-          離婚を経て10歳の息子を育てながら、AIと副業でFIREを目指す過程をリアルに発信。
-          失敗も成果なしも正直に書きます。
+  <!-- サイト概要（コンパクト） -->
+  <section class="top-intro">
+    <div class="top-intro-inner">
+      <div class="top-intro-icon">🌱</div>
+      <div>
+        <h2 class="top-intro-title">「子どもに、お金で諦めたと言わせたくない」</h2>
+        <p class="top-intro-desc">
+          40代・シングル父がAIと副業でFIREを目指す過程をリアルに発信。
+          成果なし・失敗も正直に書いています。
         </p>
-        <div class="hero-btns">
-          <a href="/about/" class="btn-white">ひろとについて</a>
-          <a href="https://line.me/R/ti/p/%40103khwdx" target="_blank" rel="noopener noreferrer" class="btn-line">
-            📩 LINE登録（無料レポート）
-          </a>
-        </div>
       </div>
-      <div class="hero-avatar">👨‍👦</div>
     </div>
   </section>
 
-  <!-- カテゴリカード -->
-  <section class="category-section">
-    <div class="container">
-      <h2 class="section-title">カテゴリから読む</h2>
-      <div class="category-cards">
-        {categories.map(cat => (
-          <a href={`/category/${cat.name}/`} class="cat-card" style={`background: ${cat.gradient};`}>
-            <span class="cat-emoji">{cat.emoji}</span>
-            <span class="cat-name">{cat.name}</span>
-            <span class="cat-desc">{cat.desc}</span>
-          </a>
-        ))}
-      </div>
-    </div>
+  <!-- カテゴリ -->
+  <section class="category-nav">
+    {categories.map(cat => (
+      <a href={`/category/${cat.name}/`} class="cat-link">
+        <span class="cat-link-emoji">{cat.emoji}</span>
+        {cat.name}
+      </a>
+    ))}
   </section>
 
   <!-- 新着記事 -->
-  <section class="posts-section">
-    <div class="container">
-      <h2 class="section-title">新着記事</h2>
-      {featuredPosts.length > 0 ? (
-        <div class="article-grid">
-          {featuredPosts.map(post => (
-            <ArticleCard
-              title={post.data.title}
-              description={post.data.description}
-              pubDate={post.data.pubDate}
-              category={post.data.category}
-              slug={post.id}
-            />
-          ))}
-        </div>
-      ) : (
-        <div class="empty-state">
-          <p style="font-size: 2rem; margin-bottom: 12px;">📝</p>
-          <p>まもなく記事を公開します。</p>
-        </div>
-      )}
-    </div>
-  </section>
-
-  <!-- プロフィール紹介 -->
-  <section class="profile-section">
-    <div class="container">
-      <div class="profile-intro">
-        <div class="profile-intro-avatar">👨‍👦</div>
-        <div class="profile-intro-body">
-          <h2>書いている人：ひろと</h2>
-          <p>
-            40代・千葉県在住・シングル父。10歳の息子のためにFIREを目指し、
-            会社員をしながら副業×AIに挑戦中。成果なし・試行錯誤の過程を正直に発信しています。
-          </p>
-          <a href="/about/">詳しいプロフィールを見る →</a>
-        </div>
+  <section>
+    <h2 class="section-title" style="margin-bottom: 0;">新着記事</h2>
+    {posts.length > 0 ? (
+      <div class="article-list">
+        {posts.map(post => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={post.id}
+            image={post.data.image}
+          />
+        ))}
       </div>
-    </div>
+    ) : (
+      <div class="empty-state">
+        <p style="font-size: 2rem; margin-bottom: 10px;">📝</p>
+        <p>まもなく記事を公開します。</p>
+      </div>
+    )}
   </section>
 
 </BaseLayout>
 
 <style>
-/* ヒーロー */
-.hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: #fff;
-  padding: 56px 0 48px;
-}
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.hero-text { flex: 1; }
-.hero-tag {
-  font-size: 0.78rem;
-  background: rgba(255,255,255,0.15);
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 20px;
-  margin-bottom: 14px;
-}
-.hero-title {
-  font-size: 1.9rem;
-  font-weight: 800;
-  line-height: 1.45;
-  margin-bottom: 14px;
-}
-.hero-desc {
-  font-size: 0.9rem;
-  opacity: 0.85;
-  line-height: 1.85;
-  margin-bottom: 24px;
-  max-width: 480px;
-}
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-white {
-  background: #fff;
-  color: #1a1a1a;
-  font-weight: 700;
-  padding: 11px 22px;
-  border-radius: 6px;
-  font-size: 0.88rem;
-  text-decoration: none;
-}
-.btn-line {
-  background: #00b900;
-  color: #fff;
-  font-weight: 700;
-  padding: 11px 22px;
-  border-radius: 6px;
-  font-size: 0.88rem;
-  text-decoration: none;
-}
-.hero-avatar {
-  font-size: 5rem;
-  flex-shrink: 0;
-  display: none;
-}
-@media (min-width: 640px) {
-  .hero-avatar { display: block; }
-}
-
-/* カテゴリカード */
-.category-section {
-  padding: 48px 0 40px;
-  background: #f8f9fa;
-}
-.section-title {
-  font-size: 1.15rem;
-  font-weight: 700;
+/* サイト概要 */
+.top-intro {
+  background: var(--color-accent-light);
+  border: 1px solid rgba(45,122,79,0.15);
+  border-radius: var(--radius);
+  padding: 20px;
   margin-bottom: 20px;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #1a1a1a;
-  display: inline-block;
 }
-.category-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+.top-intro-inner {
+  display: flex;
   gap: 14px;
-}
-@media (min-width: 640px) {
-  .category-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 900px) {
-  .category-cards {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-.cat-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 28px 12px 22px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: #fff;
-  gap: 8px;
-  transition: transform 0.18s, box-shadow 0.18s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-}
-.cat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
-.cat-emoji { font-size: 2.4rem; line-height: 1; }
-.cat-name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.02em; }
-.cat-desc { font-size: 0.72rem; opacity: 0.9; line-height: 1.5; }
-
-/* 新着記事 */
-.posts-section { padding: 48px 0; }
-
-/* プロフィール */
-.profile-section {
-  background: #f8f9fa;
-  padding: 48px 0;
-  border-top: 1px solid #e0e0e0;
-}
-.profile-intro {
-  max-width: 680px;
-  margin: 0 auto;
-  display: flex;
-  gap: 20px;
   align-items: flex-start;
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
-.profile-intro-avatar { font-size: 3.5rem; flex-shrink: 0; }
-.profile-intro-body h2 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-.profile-intro-body p { font-size: 0.88rem; line-height: 1.8; color: #555; margin-bottom: 12px; }
-.profile-intro-body a { font-size: 0.85rem; color: #1a73e8; }
+
+.top-intro-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.top-intro-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+
+.top-intro-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* カテゴリナビ */
+.category-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 13px;
+  border-radius: 3px;
+  background: var(--color-bg-sub);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.cat-link:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.cat-link-emoji {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .top-intro-inner { flex-direction: column; gap: 8px; }
+  .top-intro-icon { font-size: 1.5rem; }
+}
 </style>
