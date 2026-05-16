@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#1a1a1a"/>
-  <text x="16" y="23" text-anchor="middle" font-size="18" fill="white" font-family="sans-serif">🔥</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="32" cy="32" r="30"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="#2d7a4f"/>
+  <image href="/images/hiroto-avatar.png" x="2" y="2" width="60" height="60" clip-path="url(#circle)" preserveAspectRatio="xMidYMin slice"/>
 </svg>

@@ -90,7 +90,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
 
       <!-- 著者プロフィール -->
       <div class="author-box">
-        <div class="author-avatar">👨‍👦</div>
+        <div class="author-avatar"><img src="/images/hiroto-avatar.png" alt="ひろと" /></div>
         <div class="author-body">
           <p class="author-name">ひろと</p>
           <p class="author-bio">
@@ -170,7 +170,21 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   gap: 16px;
   align-items: flex-start;
 }
-.author-avatar { font-size: 2.5rem; flex-shrink: 0; }
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(45,122,79,0.3);
+  flex-shrink: 0;
+}
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
 .author-name { font-weight: 700; margin-bottom: 4px; }
 .author-bio {
   font-size: 0.82rem;
