@@ -16,8 +16,8 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   day: 'numeric',
 });
 
-// OGP自動生成サムネを使用（imageが明示指定されていない場合）
-const thumbImage = image ?? `/og/${slug}.png`;
+// イラスト風サムネ（public/thumbnails/{slug}.png）を優先。なければ指定画像
+const thumbImage = image ?? `/thumbnails/${slug}.png`;
 ---
 
 <a href={`/blog/${slug}/`} class="article-card">
