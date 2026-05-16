@@ -933,3 +933,58 @@ main {
     flex-direction: column;
   }
 }
+
+/* ============================================
+   SNSリンク（フッター・サイドバー）
+   ============================================ */
+.footer-sns {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.footer-sns-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #aaa;
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.footer-sns-link:hover {
+  color: #fff;
+  border-color: #888;
+  text-decoration: none;
+}
+
+.sidebar-sns {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.sidebar-sns-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: var(--color-bg-sub);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sidebar-sns-link:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+}
