@@ -1,0 +1,7 @@
+# サムネイル画像：更新のたびに最新版を返す
+/thumbnails/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# OGP画像：同様
+/og/*
+  Cache-Control: public, max-age=0, must-revalidate
