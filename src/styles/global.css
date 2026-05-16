@@ -656,10 +656,10 @@ main {
 }
 
 .profile-avatar {
-  width: 88px;
-  height: 88px;
-  min-width: 88px;
-  min-height: 88px;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
   border-radius: 50%;
   border: 3px solid var(--color-accent);
   overflow: hidden;
