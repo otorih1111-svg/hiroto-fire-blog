@@ -16,23 +16,14 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   day: 'numeric',
 });
 
-const categoryEmoji: Record<string, string> = {
-  '副業実録':       '📝',
-  'AI活用':         '🤖',
-  'FIRE設計':       '🔥',
-  'シングル父の日常': '👨‍👦',
-  '買ってよかった':  '🛒',
-};
-const emoji = categoryEmoji[category] ?? '📄';
+// OGP自動生成サムネを使用（imageが明示指定されていない場合）
+const thumbImage = image ?? `/og/${slug}.png`;
 ---
 
 <a href={`/blog/${slug}/`} class="article-card">
-  <!-- サムネイル -->
+  <!-- サムネイル（OGP自動生成 or 指定画像） -->
   <div class="article-thumb">
-    {image
-      ? <img src={image} alt={title} loading="lazy" />
-      : <span class="article-thumb-emoji">{emoji}</span>
-    }
+    <img src={thumbImage} alt={title} loading="lazy" />
   </div>
   <!-- 本文 -->
   <div class="article-card-body">
