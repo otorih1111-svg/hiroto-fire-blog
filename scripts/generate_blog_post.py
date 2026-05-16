@@ -291,6 +291,9 @@ affiliate: false
         print(f"\n✅ 記事を保存しました：")
         print(f"   {result['path'].relative_to(BLOG_DIR)}")
 
+        # サムネイル自動生成
+        _generate_thumbnail_for_post(result)
+
         # note連携：note_draft.jsonを出力
         if with_note:
             NOTE_DRAFT.parent.mkdir(parents=True, exist_ok=True)
@@ -334,6 +337,31 @@ def _extract_tags(text: str, category: str) -> list[str]:
         if t not in tags:
             tags.append(t)
     return list(dict.fromkeys(tags))[:5]
+
+
+def _generate_thumbnail_for_post(result: dict) -> None:
+    """生成した記事のサムネイルをgenerate_thumbnail.pyで自動生成する"""
+    import subprocess
+    thumb_script = SNS_DIR / "scripts" / "generate_thumbnail.py"
+    if not thumb_script.exists():
+        print(f"  ⚠ generate_thumbnail.py が見つかりません: {thumb_script}")
+        return
+
+    out_path = BLOG_DIR / "public" / "thumbnails" / f"{result['slug']}.png"
+    cmd = [
+        sys.executable, str(thumb_script),
+        "--title",    result["title"],
+        "--category", result["category"],
+        "--output",   str(out_path),
+    ]
+    print(f"\n🖼 サムネイル生成中...")
+    try:
+        subprocess.run(cmd, check=True, timeout=60)
+        print(f"   → {out_path.name}")
+    except subprocess.TimeoutExpired:
+        print(f"  ⚠ サムネイル生成がタイムアウトしました（スキップ）")
+    except subprocess.CalledProcessError as e:
+        print(f"  ⚠ サムネイル生成エラー: {e}")
 
 
 def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
