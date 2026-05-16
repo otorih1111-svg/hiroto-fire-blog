@@ -116,6 +116,35 @@ def _detect_category(theme: str) -> str:
     return '副業実録'
 
 
+def _get_recent_blog_titles(n: int = 10) -> list[dict]:
+    """直近n件のブログ記事のタイトル・カテゴリを返す"""
+    articles = []
+    for md in sorted(CONTENT_DIR.glob("*.md"), reverse=True)[:n]:
+        text = md.read_text(encoding="utf-8")
+        title_m    = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', text, re.MULTILINE)
+        category_m = re.search(r'^category:\s*(.+?)\s*$',          text, re.MULTILINE)
+        title    = title_m.group(1).strip('"\'')    if title_m    else ""
+        category = category_m.group(1).strip('"\'') if category_m else ""
+        if title:
+            articles.append({"title": title, "category": category})
+    return articles
+
+
+def _pick_next_category(recent: list[dict]) -> str:
+    """直近記事のカテゴリ偏りを見て、次に使うべきカテゴリを返す"""
+    if not recent:
+        return "副業実録"
+    # 直近5件のカテゴリカウント
+    from collections import Counter
+    counts = Counter(a["category"] for a in recent[:5])
+    # 一番使われていないカテゴリを優先
+    for cat in CATEGORIES:
+        if counts.get(cat, 0) == 0:
+            return cat
+    # 全部使われていれば最少のものを返す
+    return min(CATEGORIES, key=lambda c: counts.get(c, 0))
+
+
 def _make_line_banner_md() -> str:
     """記事末尾に挿入するLINE誘導バナー（Markdown）"""
     return f"""
@@ -144,8 +173,15 @@ def generate_blog_post(
     Returns:
         {"slug", "path", "title", "description", "category", "content"}
     """
+    # 直近記事を取得して被り防止に使う
+    recent_articles = _get_recent_blog_titles(10)
+
     if not category:
-        category = _detect_category(theme) if theme else '副業実録'
+        if theme:
+            category = _detect_category(theme)
+        else:
+            # カテゴリ偏りを自動調整
+            category = _pick_next_category(recent_articles)
     if category not in CATEGORIES:
         category = '副業実録'
 
@@ -209,11 +245,19 @@ def generate_blog_post(
 frontmatterなしで、H1タイトルから始めてください。
 記事の長さ：1500〜2500文字"""
 
+    # 直近記事リストを文字列化
+    recent_titles_str = ""
+    if recent_articles:
+        recent_titles_str = "\n\n## ⚠️ 直近の公開済み記事（これらと被らないようにしてください）\n"
+        for a in recent_articles:
+            recent_titles_str += f"- [{a['category']}] {a['title']}\n"
+
     user_prompt = f"""以下の条件でブログ記事を書いてください。
 
 カテゴリ：{category}
 {'テーマ：' + theme if theme else 'テーマは自由に設定してください。ひろとの最近の体験を元に。'}
 {sns_context}
+{recent_titles_str}
 
 ## 注意事項
 - PR・アフィリエイト商品は含めない（純粋な体験談・ノウハウ記事）
@@ -221,6 +265,7 @@ frontmatterなしで、H1タイトルから始めてください。
 - 読者像：副業したいけど時間がない・何から始めていいかわからない40代
 - 「稼げます」「簡単です」は絶対に書かない
 - 失敗・試行錯誤・正直さがひろとの強み。隠さず書く
+- 直近の公開済み記事と同じテーマ・タイトルは絶対に使わない（特に「副業3ヶ月・収益ほぼゼロ」は3記事連続で使用済み）
 
 ## 出力形式
 1行目：記事タイトル（# で始めるMarkdown見出し）
