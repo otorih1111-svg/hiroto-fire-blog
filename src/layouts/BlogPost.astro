@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import LineBanner from '../components/LineBanner.astro';
+import LineCTA from '../components/LineCTA.astro';
 
 interface Props {
   title: string;
@@ -73,8 +74,8 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         <slot />
       </div>
 
-      <!-- LINE誘導（末尾） -->
-      <LineBanner variant="article" />
+      <!-- LINE誘導（末尾）：緑CTA -->
+      <LineCTA />
 
       {tags.length > 0 && (
         <div class="post-tags">
@@ -139,7 +140,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
 .post-tags {
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid #f0dfc0;
+  border-top: 1px solid var(--color-border);
 }
 .post-tags-label {
   font-size: 0.82rem;
@@ -160,9 +161,9 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
 }
 
 .author-box {
-  background: #fff8ee;
-  border: 1px solid #f0dfc0;
-  border-radius: 12px;
+  background: #f0faf4;
+  border: 1px solid rgba(45,122,79,0.15);
+  border-radius: 8px;
   padding: 24px;
   margin-top: 40px;
   display: flex;

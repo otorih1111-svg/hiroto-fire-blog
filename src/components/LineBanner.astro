@@ -1,33 +1,154 @@
 ---
+// 記事上部の小さなLINE誘導バナー（article variant）
+// フッター上のフルバナー（default variant）
 interface Props {
   variant?: 'default' | 'article';
 }
 const { variant = 'default' } = Astro.props;
+const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
 ---
 
-<div class={`line-banner ${variant === 'article' ? 'line-banner--article' : ''}`}>
-  <div class="line-banner-inner">
-    <span class="label">📩 無料プレゼント配布中</span>
-    <h2>シングル父がAIと副業で<br>這い上がった実録レポートを<br>LINE登録者に無料配布中</h2>
-    <p>「忙しくて副業できない」と思っていた自分が、<br>朝1時間で仕組みを作り始めた過程をすべて公開</p>
-    <a
-      href="https://line.me/R/ti/p/%40103khwdx"
-      class="line-banner-btn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.1 13.1c-.2.3-.5.5-.8.6-3.3 1.2-6.9-.4-8.9-3.5-.4-.7-.7-1.4-.9-2.1-.2-.9.3-1.8 1.2-2 .3-.1.7 0 .9.2l1.1 1.3c.2.2.2.5.1.8l-.4.9c-.1.2 0 .5.2.7 1.1 1.3 2.5 2 4 2 .2 0 .4-.1.5-.3l.5-.8c.2-.3.5-.4.8-.3l1.5.5c.4.1.6.5.5.9-.2.4-.3.8-.3 1.1z"/>
-      </svg>
-      LINEで無料登録する
+{variant === 'article' ? (
+  <!-- 記事上部：コンパクトな誘導バー -->
+  <div class="line-article-bar">
+    <span class="line-article-bar-text">📩 <strong>無料</strong>｜LINE登録で「副業実録レポート」プレゼント中</span>
+    <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-article-bar-btn">
+      受け取る →
     </a>
   </div>
-</div>
+) : (
+  <!-- フッター上：フルバナー -->
+  <div class="line-banner-full">
+    <div class="line-banner-full-inner">
+      <div class="line-banner-full-left">
+        <span class="line-banner-badge">📩 無料プレゼント配布中</span>
+        <p class="line-banner-title">LINE登録で「副業実録レポート」を今すぐ受け取る</p>
+        <p class="line-banner-desc">シングル父がAI副業を0から始めた最初の1ヶ月の記録。失敗・費用・試行錯誤を全部正直に公開。</p>
+      </div>
+      <div class="line-banner-full-right">
+        <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-banner-btn">
+          <svg width="20" height="20" viewBox="0 0 48 48" fill="currentColor">
+            <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+          </svg>
+          LINE登録して受け取る（無料）
+        </a>
+        <p class="line-banner-note">登録無料・いつでも解除OK</p>
+      </div>
+    </div>
+  </div>
+)}
 
 <style>
-.line-banner--article {
-  margin: 2.5em 0;
-  border-radius: 12px;
-  overflow: hidden;
+/* 記事上部：コンパクトバー */
+.line-article-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #f0faf4;
+  border: 1px solid rgba(45,122,79,0.2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0 0 24px;
+}
+.line-article-bar-text {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+.line-article-bar-text strong {
+  color: var(--color-accent);
+}
+.line-article-bar-btn {
+  flex-shrink: 0;
+  background: #00b900;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.line-article-bar-btn:hover {
+  background: #009f00;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* フッター上：フルバナー */
+.line-banner-full {
+  background: linear-gradient(135deg, #2d7a4f 0%, #1e5c39 100%);
+  color: #fff;
+  padding: 32px 24px;
+  margin-top: 48px;
+}
+.line-banner-full-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.line-banner-full-left { flex: 1; min-width: 0; }
+.line-banner-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.line-banner-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.line-banner-desc {
+  font-size: 0.82rem;
+  opacity: 0.88;
+  line-height: 1.65;
+}
+.line-banner-full-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.line-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #00a000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 13px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.line-banner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: #009000;
+}
+.line-banner-note {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .line-article-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line-article-bar-btn { align-self: stretch; text-align: center; }
+  .line-banner-full-inner { flex-direction: column; gap: 20px; }
+  .line-banner-full-right { width: 100%; }
+  .line-banner-btn { width: 100%; justify-content: center; }
 }
 </style>

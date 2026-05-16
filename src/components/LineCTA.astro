@@ -1,0 +1,151 @@
+---
+// LINE誘導CTAブロック（記事間・ページ内挿入用）
+const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+---
+
+<div class="line-cta-block">
+  <div class="line-cta-inner">
+    <div class="line-cta-left">
+      <span class="line-cta-badge">📩 無料プレゼント</span>
+      <p class="line-cta-title">LINE登録で「副業実録レポート」を今すぐ受け取る</p>
+      <p class="line-cta-desc">
+        シングル父がAI副業を0から始めた<strong>最初の1ヶ月の記録</strong>をまとめたPDF。<br>
+        失敗・試行錯誤・かかった費用まで全部正直に書きました。
+      </p>
+      <ul class="line-cta-benefits">
+        <li>✅ 登録無料・いつでも解除OK</li>
+        <li>✅ 副業の最新情報も配信</li>
+        <li>✅ 読者限定の途中経過レポートあり</li>
+      </ul>
+    </div>
+    <div class="line-cta-right">
+      <div class="line-cta-report-img">
+        <span class="line-cta-report-emoji">📋</span>
+        <p class="line-cta-report-label">副業実録<br>レポート</p>
+      </div>
+      <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-btn">
+        <svg width="22" height="22" viewBox="0 0 48 48" fill="currentColor">
+          <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+        </svg>
+        LINE登録して受け取る（無料）
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.line-cta-block {
+  background: linear-gradient(135deg, #00c300 0%, #00a500 100%);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 28px 0;
+  color: #fff;
+}
+
+.line-cta-inner {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.line-cta-left { flex: 1; min-width: 0; }
+
+.line-cta-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.line-cta-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.line-cta-desc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  opacity: 0.92;
+  margin-bottom: 10px;
+}
+
+.line-cta-desc strong { color: #fff; font-weight: 700; }
+
+.line-cta-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.line-cta-benefits li {
+  font-size: 0.78rem;
+  opacity: 0.92;
+}
+
+.line-cta-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.line-cta-report-img {
+  width: 90px;
+  height: 110px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.line-cta-report-emoji { font-size: 2rem; }
+
+.line-cta-report-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.line-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #00a500;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 12px 18px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+
+.line-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: #009000;
+}
+
+@media (max-width: 600px) {
+  .line-cta-inner { flex-direction: column; }
+  .line-cta-right { flex-direction: row; gap: 16px; width: 100%; }
+  .line-cta-btn { flex: 1; justify-content: center; font-size: 0.82rem; padding: 11px 14px; }
+  .line-cta-report-img { width: 70px; height: 86px; }
+}
+</style>

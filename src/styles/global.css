@@ -172,6 +172,25 @@ main {
   border-bottom-color: var(--color-accent);
 }
 
+/* ヘッダー内LINEボタン */
+.nav-line-btn {
+  background: #00b900 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 6px 14px !important;
+  height: auto !important;
+  border-bottom: none !important;
+  font-size: 0.8rem !important;
+  margin-left: 4px;
+}
+
+.nav-line-btn:hover {
+  background: #00a000 !important;
+  color: #fff !important;
+  border-bottom: none !important;
+  text-decoration: none;
+}
+
 /* ============================================
    フッター
    ============================================ */

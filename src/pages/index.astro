@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
+const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -17,21 +19,39 @@ const categories = [
 
 <BaseLayout title="ひろとの副業実録" description="40代シングル父がAIと副業でFIREを目指す過程をリアルに発信するブログ。">
 
-  <!-- サイト概要（コンパクト） -->
-  <section class="top-intro">
-    <div class="top-intro-inner">
-      <div class="top-intro-icon">🌱</div>
-      <div>
-        <h2 class="top-intro-title">「子どもに、お金で諦めたと言わせたくない」</h2>
-        <p class="top-intro-desc">
-          40代・シングル父がAIと副業でFIREを目指す過程をリアルに発信。
-          成果なし・失敗も正直に書いています。
-        </p>
+  <!-- ヒーロー：LINE登録に直結したCTA -->
+  <section class="hero-cta">
+    <div class="hero-cta-text">
+      <p class="hero-cta-tag">40代シングル父の副業実録ブログ</p>
+      <h1 class="hero-cta-title">
+        息子に「お金で諦めた」と<br>言わせたくない
+      </h1>
+      <p class="hero-cta-desc">
+        AIと副業でFIREを目指す過程をリアルに発信。<br>
+        <strong>LINE登録で「副業実録レポート」を無料プレゼント中。</strong>
+      </p>
+      <div class="hero-cta-btns">
+        <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="hero-line-btn">
+          <svg width="20" height="20" viewBox="0 0 48 48" fill="currentColor">
+            <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+          </svg>
+          LINE登録してレポートを受け取る（無料）
+        </a>
+        <a href="/about/" class="hero-sub-btn">ひろとについて</a>
+      </div>
+      <p class="hero-cta-note">登録無料・いつでも解除OK</p>
+    </div>
+    <div class="hero-cta-right">
+      <div class="hero-report-card">
+        <span class="hero-report-icon">📋</span>
+        <p class="hero-report-title">副業実録レポート</p>
+        <p class="hero-report-desc">AI副業を0から始めた<br>最初の1ヶ月の全記録</p>
+        <span class="hero-report-free">無料</span>
       </div>
     </div>
   </section>
 
-  <!-- カテゴリ -->
+  <!-- カテゴリナビ -->
   <section class="category-nav">
     {categories.map(cat => (
       <a href={`/category/${cat.name}/`} class="cat-link">
@@ -67,41 +87,153 @@ const categories = [
 
 </BaseLayout>
 
+<!-- スマホ用スティッキーボタン -->
+<div class="sticky-line-bar">
+  <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="sticky-line-btn">
+    <svg width="18" height="18" viewBox="0 0 48 48" fill="currentColor">
+      <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+    </svg>
+    📩 無料レポートをLINEで受け取る
+  </a>
+</div>
+
 <style>
-/* サイト概要 */
-.top-intro {
-  background: var(--color-accent-light);
+/* ヒーローCTA */
+.hero-cta {
+  background: linear-gradient(135deg, #f0faf4 0%, #e8f5ee 100%);
   border: 1px solid rgba(45,122,79,0.15);
-  border-radius: var(--radius);
-  padding: 20px;
+  border-radius: 8px;
+  padding: 28px 24px;
   margin-bottom: 20px;
-}
-
-.top-intro-inner {
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
+  gap: 24px;
+  align-items: center;
 }
 
-.top-intro-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-  line-height: 1;
-  margin-top: 2px;
-}
+.hero-cta-text { flex: 1; min-width: 0; }
 
-.top-intro-title {
-  font-size: 1rem;
+.hero-cta-tag {
+  font-size: 0.72rem;
   font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 5px;
-  color: var(--color-text);
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 3px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.top-intro-desc {
-  font-size: 0.82rem;
+.hero-cta-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.hero-cta-desc {
+  font-size: 0.85rem;
   color: var(--color-text-muted);
   line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.hero-cta-desc strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.hero-cta-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.hero-line-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #00b900;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0,185,0,0.3);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.hero-line-btn:hover {
+  background: #00a000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(0,185,0,0.4);
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero-sub-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.hero-sub-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.hero-cta-note {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.hero-cta-right { flex-shrink: 0; }
+
+.hero-report-card {
+  width: 130px;
+  background: #fff;
+  border: 2px solid rgba(45,122,79,0.2);
+  border-radius: 8px;
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(45,122,79,0.1);
+  position: relative;
+}
+
+.hero-report-icon { font-size: 2rem; display: block; margin-bottom: 8px; }
+
+.hero-report-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.hero-report-desc {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.hero-report-free {
+  display: inline-block;
+  background: #ff4444;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 3px;
 }
 
 /* カテゴリナビ */
@@ -134,12 +266,69 @@ const categories = [
   text-decoration: none;
 }
 
-.cat-link-emoji {
-  font-size: 0.9rem;
+.cat-link-emoji { font-size: 0.9rem; }
+
+/* スマホ用スティッキーボタン */
+.sticky-line-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
 }
 
-@media (max-width: 480px) {
-  .top-intro-inner { flex-direction: column; gap: 8px; }
-  .top-intro-icon { font-size: 1.5rem; }
+.sticky-line-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: #00b900;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0,185,0,0.3);
+}
+
+.sticky-line-btn:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .sticky-line-bar { display: block; }
+}
+
+@media (max-width: 640px) {
+  .hero-cta {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+  .hero-cta-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-report-card {
+    width: 100%;
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    padding: 12px 16px;
+  }
+  .hero-report-icon { font-size: 1.5rem; margin-bottom: 0; }
+  .hero-cta-title { font-size: 1.2rem; }
 }
 </style>

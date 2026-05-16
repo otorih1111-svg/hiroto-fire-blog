@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import LineBanner from '../components/LineBanner.astro';
+import LineBannerSide from '../components/LineBannerSide.astro';
 import { getCollection } from 'astro:content';
 
 interface Props {
@@ -104,7 +105,11 @@ const popularPosts = [
           <ul class="site-nav">
             <li><a href="/">トップ</a></li>
             <li><a href="/about/">プロフィール</a></li>
-            <li><a href={LINE_URL} target="_blank" rel="noopener noreferrer">LINE登録</a></li>
+            <li>
+              <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="nav-line-btn">
+                📩 LINE登録（無料）
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -119,6 +124,9 @@ const popularPosts = [
 
         <!-- サイドバー -->
         <aside class="sidebar-col">
+
+          <!-- LINE CTAウィジェット（最上部・最重要） -->
+          <LineBannerSide />
 
           <!-- プロフィールカード -->
           <div class="sidebar-profile-card">
