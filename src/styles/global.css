@@ -713,7 +713,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover !important;
-  object-position: center 35% !important;
+  object-position: center top !important;
   display: block;
 }
 
