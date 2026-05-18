@@ -57,6 +57,7 @@ const categoryDescriptions: Record<string, string> = {
             pubDate={post.data.pubDate}
             category={post.data.category}
             slug={post.id}
+            image={post.data.ogImage ?? post.data.image}
           />
         ))}
       </div>

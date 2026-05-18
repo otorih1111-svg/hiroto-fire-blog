@@ -3,6 +3,7 @@ title: "副業を始めて3ヶ月。収益ゼロのまま続ける理由"
 description: "シングル父として副業を始めて3ヶ月が経ちました。収益はまだほぼゼロ。でも続ける理由があります。正直に書きます。"
 pubDate: 2026-05-01
 category: 副業実録
+ogImage: '/images/thumbnails/hajimete-no-fukugyo.png'
 tags: [副業, シングル父, FIRE, 継続]
 draft: false
 affiliate: false

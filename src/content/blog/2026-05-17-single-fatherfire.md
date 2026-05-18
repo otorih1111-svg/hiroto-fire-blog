@@ -3,6 +3,7 @@ title: "シングル父のFIRE設計：今の資産状況を正直に書く"
 description: "45歳・シングル父のFIRE設計、現在地を正直に公開。貯金額・月収・支出の実態から、どこに向かっているのかを書く。"
 pubDate: 2026-05-17
 category: FIRE設計
+ogImage: '/images/thumbnails/2026-05-17-single-fatherfire.png'
 tags: ["AI", "副業", "FIRE", "シングル父", "継続"]
 draft: false
 affiliate: false

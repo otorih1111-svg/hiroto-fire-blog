@@ -3,6 +3,7 @@ title: "シングル父がFIREを目指す理由を、正直に書く"
 description: "シングル父がFIREを目指す理由を、離婚後の通帳ゼロから正直に書いた。お金から目を逸らし続けた40代が、息子と2人になって初めて「自由」の意味を考えはじめた話。"
 pubDate: 2026-05-14
 category: FIRE設計
+ogImage: '/images/thumbnails/2026-05-14-single-fatherfire.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false

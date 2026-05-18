@@ -3,6 +3,7 @@ title: "AIを副業に使い始めた最初の夜の話"
 description: "「AIなんて自分には難しい」と1年以上避けていた。でも使い始めたら10分で「これは使える」と確信した話。40代・ITに強くない・時間もない自分の体験談。"
 pubDate: 2026-05-08
 category: AI活用
+ogImage: '/images/thumbnails/ai-fukugyo-hajimekata.png'
 tags: [AI, Claude, ChatGPT, 副業, 初心者]
 draft: false
 affiliate: false

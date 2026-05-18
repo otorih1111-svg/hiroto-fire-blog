@@ -16,12 +16,11 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   day: 'numeric',
 });
 
-// イラスト風サムネ（public/thumbnails/{slug}.png）を優先。なければ指定画像
-const thumbImage = image ?? `/thumbnails/${slug}.png`;
+const thumbImage = image ?? `/images/thumbnails/${slug}.png`;
 ---
 
 <a href={`/blog/${slug}/`} class="article-card">
-  <!-- サムネイル（OGP自動生成 or 指定画像） -->
+  <!-- サムネイル（記事別生成 or 指定画像） -->
   <div class="article-thumb">
     <img src={thumbImage} alt={title} loading="lazy" />
   </div>

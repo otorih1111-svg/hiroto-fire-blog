@@ -13,6 +13,7 @@ const blog = defineCollection({
     draft: z.boolean().default(false),
     affiliate: z.boolean().default(false),
     image: z.string().optional(),
+    ogImage: z.string().optional(),
   }),
 });
 

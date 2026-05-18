@@ -315,6 +315,7 @@ category: {category}
 tags: {json.dumps(tags, ensure_ascii=False)}
 draft: false
 affiliate: false
+ogImage: '/images/thumbnails/{slug}.png'
 ---
 
 """
@@ -392,7 +393,7 @@ def _generate_thumbnail_for_post(result: dict) -> None:
         print(f"  ⚠ generate_thumbnail.py が見つかりません: {thumb_script}")
         return
 
-    out_path = BLOG_DIR / "public" / "thumbnails" / f"{result['slug']}.png"
+    out_path = BLOG_DIR / "public" / "images" / "thumbnails" / f"{result['slug']}.png"
     cmd = [
         sys.executable, str(thumb_script),
         "--title",    result["title"],

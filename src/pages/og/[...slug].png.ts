@@ -33,6 +33,16 @@ export const GET: APIRoute = async ({ params }) => {
   const posts = await getCollection('blog');
   const post = posts.find(p => p.id === slug);
 
+  if (post?.data.ogImage?.startsWith('/')) {
+    const publicDir = fileURLToPath(new URL('../../../public', import.meta.url));
+    const imagePath = path.join(publicDir, post.data.ogImage.replace(/^\//, ''));
+    if (fs.existsSync(imagePath)) {
+      return new Response(fs.readFileSync(imagePath), {
+        headers: { 'Content-Type': 'image/png' },
+      });
+    }
+  }
+
   const title = post?.data.title ?? 'ひろとの副業実録';
   const category = post?.data.category ?? '副業実録';
   const cfg = categoryConfig[category] ?? { bg: '#1a1a1a', accent: '#333', emoji: '📄' };

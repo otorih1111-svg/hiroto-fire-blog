@@ -73,7 +73,7 @@ const categories = [
             pubDate={post.data.pubDate}
             category={post.data.category}
             slug={post.id}
-            image={post.data.image}
+            image={post.data.ogImage ?? post.data.image}
           />
         ))}
       </div>

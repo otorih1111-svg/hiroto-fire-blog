@@ -3,6 +3,7 @@ title: "AIを使い始めたら、副業の「やり方」が変わった話"
 description: "AIを使い始めて副業のやり方がどう変わったか、正直に書く。収益ほぼゼロのシングル父が「時間をどう使うか」を変えた3つの話。"
 pubDate: 2026-05-14
 category: AI活用
+ogImage: '/images/thumbnails/2026-05-14-aifukugyo.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false

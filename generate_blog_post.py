@@ -22,12 +22,15 @@ import re
 import argparse
 import datetime
 import unicodedata
+import subprocess
 from pathlib import Path
 
 # プロジェクトルート設定
 BLOG_DIR = Path(__file__).parent
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_SYSTEM_DIR = Path(__file__).parent.parent / "threads_affiliate_system"
+THUMBNAIL_SCRIPT = SNS_SYSTEM_DIR / "scripts" / "generate_thumbnail.py"
+THUMBNAIL_DIR = BLOG_DIR / "public" / "images" / "thumbnails"
 X_POSTS_FILE = Path(__file__).parent.parent / "x_posts.md"  # X投稿ストックファイル
 BLOG_BASE_URL = "https://hiroto-fire.com"
 
@@ -242,6 +245,7 @@ title: "{title_escaped}"
 description: "{description_escaped}"
 pubDate: {today}
 category: {category}
+ogImage: '/images/thumbnails/{slug}.png'
 tags: {json.dumps(tags, ensure_ascii=False)}
 draft: false
 affiliate: false
@@ -264,6 +268,7 @@ affiliate: false
         result["path"].write_text(full_content, encoding="utf-8")
         print(f"\n✅ 記事を保存しました：")
         print(f"   {result['path'].relative_to(BLOG_DIR)}")
+        generate_thumbnail_for_post(slug, title, category)
     else:
         print(f"\n[DRY RUN] 記事生成完了（保存なし）")
         print(f"   タイトル：{title}")
@@ -276,6 +281,36 @@ affiliate: false
     _append_x_promo_post(result, dry_run=dry_run)
 
     return result
+
+
+def generate_thumbnail_for_post(slug: str, title: str, category: str) -> Path | None:
+    """記事生成後にthreads_affiliate_system側のサムネイル生成を呼び出す。"""
+    if not THUMBNAIL_SCRIPT.exists():
+        print(f"サムネイル生成失敗：スクリプトが見つかりません: {THUMBNAIL_SCRIPT}")
+        return None
+
+    THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
+    output_path = THUMBNAIL_DIR / f"{slug}.png"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(THUMBNAIL_SCRIPT),
+            "--title", title,
+            "--category", category,
+            "--output", str(output_path),
+        ],
+        capture_output=True,
+        text=True,
+    )
+
+    if result.returncode == 0:
+        print(f"サムネイル生成成功：{output_path}")
+        if result.stdout.strip():
+            print(result.stdout.strip())
+        return output_path
+
+    print(f"サムネイル生成失敗：{result.stderr.strip() or result.stdout.strip()}")
+    return None
 
 
 def _extract_tags(text: str, category: str) -> list[str]:
