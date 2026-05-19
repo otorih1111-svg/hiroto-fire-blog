@@ -111,11 +111,13 @@ const popularPosts = [
           <ul class="site-nav">
             <li><a href="/">トップ</a></li>
             <li><a href="/about/">プロフィール</a></li>
-            <li>
+            {/* ADSENSE_REVIEW_START */}
+            {/* <li>
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="nav-line-btn">
                 📩 LINE登録（無料）
               </a>
-            </li>
+            </li> */}
+            {/* ADSENSE_REVIEW_END */}
           </ul>
         </nav>
       </div>
@@ -132,7 +134,9 @@ const popularPosts = [
         <aside class="sidebar-col">
 
           <!-- LINE CTAウィジェット（最上部・最重要） -->
-          <LineBannerSide />
+          {/* ADSENSE_REVIEW_START */}
+          {/* <LineBannerSide /> */}
+          {/* ADSENSE_REVIEW_END */}
 
           <!-- プロフィールカード -->
           <div class="sidebar-profile-card">
@@ -140,7 +144,7 @@ const popularPosts = [
             <div class="sidebar-profile-avatar"><img src="/images/hiroto-avatar.png" alt="ひろと" /></div>
             <p class="sidebar-profile-name">ひろと</p>
             <p class="sidebar-profile-bio">
-              40代・千葉在住のシングル父。10歳の息子のためにAI副業でFIREを目指す実録をThreads・X・note・LINEで発信中。
+              40代・千葉在住のシングル父。10歳の息子のためにAI副業でFIREを目指す実録をThreads・X・noteで発信中。
             </p>
             <div class="sidebar-sns">
               <a href="https://x.com/hiroto00ih" target="_blank" rel="noopener noreferrer" class="sidebar-sns-link">
@@ -193,8 +197,10 @@ const popularPosts = [
       </div>
     </main>
 
-    <!-- LINEバナー（フッター上） -->
-    <LineBanner />
+    {/* ADSENSE_REVIEW_START */}
+    {/* LINEバナー（フッター上） */}
+    {/* <LineBanner /> */}
+    {/* ADSENSE_REVIEW_END */}
 
     <!-- フッター -->
     <footer class="site-footer">
@@ -225,6 +231,7 @@ const popularPosts = [
                 <li><a href={`/category/${cat.name}/`}>{cat.name}</a></li>
               ))}
               <li><a href="/about/">プロフィール</a></li>
+              <li><a href="/contact/">お問い合わせ</a></li>
               <li><a href="/privacy/">プライバシーポリシー</a></li>
             </ul>
           </div>

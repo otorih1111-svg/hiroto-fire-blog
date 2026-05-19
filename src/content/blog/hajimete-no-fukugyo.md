@@ -68,4 +68,4 @@ affiliate: false
 
 ---
 
-*このブログを読んで「自分も同じだ」と思った方は、ぜひLINEを追加してください。副業をゼロから始めた記録を毎日送っています。*
+<!-- ADSENSE_REVIEW_START: CTA hidden during AdSense review. ADSENSE_REVIEW_END -->

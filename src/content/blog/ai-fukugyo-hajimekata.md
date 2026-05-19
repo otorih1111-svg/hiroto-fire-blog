@@ -74,4 +74,4 @@ AIは「答えを出す機械」じゃなかった。
 
 ---
 
-*AIを使った副業の仕組みを一緒に作りたい方はLINEへ。毎日の実録を配信しています。*
+<!-- ADSENSE_REVIEW_START: CTA hidden during AdSense review. ADSENSE_REVIEW_END -->

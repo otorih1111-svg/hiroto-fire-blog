@@ -120,8 +120,4 @@ AIを使ったからといって、すぐ稼げるようにはならなかった
 
 ---
 
-この記事を読んで、「自分も似たような詰まりを感じてる」と思ったら、LINEで話しかけてほしい。
-
-副業の進め方、AIの使い方、何でもいい。シングル父の等身大の話を、そのままできる場所にしたい。
-
-👉 [ひろとのLINEはこちら](https://lin.ee/XXXXXXXX)
+<!-- ADSENSE_REVIEW_START: CTA hidden during AdSense review. ADSENSE_REVIEW_END -->
