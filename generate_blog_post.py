@@ -109,6 +109,12 @@ def _get_recent_sns_posts(days: int = 7) -> list[dict]:
 
 CATEGORIES = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった']
 
+ARTICLE_TYPES = {
+    "solution": "解決系記事（SEO流入・悩み解決）",
+    "record": "実録系記事（共感・信頼構築）",
+    "fun": "楽しい・面白い記事（ファン化・シェア）",
+}
+
 CATEGORY_KEYWORDS = {
     '副業実録': ['副業', '収益', 'アフィリ', '稼ぐ', '仕組み', '継続', 'フォロワー'],
     'AI活用': ['AI', 'Claude', 'ChatGPT', '自動化', '生成', 'プロンプト'],
@@ -126,9 +132,61 @@ def _detect_category(theme: str) -> str:
     return '副業実録'
 
 
+def _detect_article_type(theme: str, category: str) -> str:
+    """テーマとカテゴリから記事タイプを推定する"""
+    solution_keywords = [
+        "方法", "やり方", "始め方", "選び方", "手順", "ガイド",
+        "否認", "ハピタス", "自己アフィリエイト", "NISA", "計算",
+        "最初の1週間", "やること", "ポイント", "完全ガイド",
+    ]
+    fun_keywords = ["失敗談", "困った", "全部実話", "聞かれて", "やってみた", "1週間の記録"]
+    if any(keyword in theme for keyword in solution_keywords):
+        return "solution"
+    if any(keyword in theme for keyword in fun_keywords):
+        return "fun"
+    if category in ("AI活用", "FIRE設計") and any(keyword in theme for keyword in ("方法", "仕組み", "設計")):
+        return "solution"
+    return "record"
+
+
+def _article_type_instructions(article_type: str) -> str:
+    """記事タイプごとの生成ルール"""
+    if article_type == "solution":
+        return """
+## 記事タイプ：解決系記事（SEO流入メイン）
+- 検索されるキーワードで書く
+- 読者の具体的な悩みを解決する
+- 冒頭150文字以内で読者の悩みをそのまま代弁する
+- 構成は「悩み → 原因 → 解決手順 → よくある失敗 → 今日できる一歩」
+- H2「なぜこの悩みが起きるか」を入れる
+- H2「解決策・手順」を核心にして800〜1200文字で具体的に書く
+- H2「よくある失敗・注意点」を入れる
+- H2「まとめ・今日できる一歩」で行動を1つに絞る
+"""
+    if article_type == "fun":
+        return """
+## 記事タイプ：楽しい・面白い記事（エンタメ系）
+- 読んで楽しかった、面白かったと思わせる
+- 短い段落と会話を多めにする
+- 自虐・笑える失敗談・意外なオチを入れる
+- 役に立つ話だけで終わらせず、ひろとの人間味を出す
+- 締めは「こんな父親ですが続けてます」のように親しみやすくする
+"""
+    return """
+## 記事タイプ：実録系記事（共感・信頼構築メイン）
+- ひろとの体験・失敗・途中経過を正直に書く
+- 冒頭は具体的な場面・情景から始める
+- 時系列、または「問題 → 気づき → 変化」の流れで書く
+- 数字を入れる（○日目・○円・○人など）
+- 恥ずかしい話や失敗も入れてリアリティを出す
+- 締めは押しつけず、読者が「自分もそうだった」と思える終わり方にする
+"""
+
+
 def generate_blog_post(
     theme: str = "",
     category: str = "",
+    article_type: str = "",
     sns_posts: list[dict] | None = None,
     dry_run: bool = False,
     line_url: str = "https://line.me/R/ti/p/%40103khwdx",
@@ -144,6 +202,8 @@ def generate_blog_post(
         category = _detect_category(theme) if theme else '副業実録'
     if category not in CATEGORIES:
         category = '副業実録'
+    if article_type not in ARTICLE_TYPES:
+        article_type = _detect_article_type(theme, category)
 
     # SNS投稿をコンテキストとして整形
     sns_context = ""
@@ -173,11 +233,20 @@ def generate_blog_post(
 - 1文は短め（20〜30文字）
 
 ## 記事構成
-1. 引きのある冒頭（1〜3行）
-2. 具体的な体験・エピソード（見出しH2で区切る）
-3. 気づき・学び
-4. 読者への問いかけまたは次のアクション
-5. 締め（LINE誘導を自然に）
+記事を生成する時は以下の3つを必ず入れる：
+1. 読者の悩みを解決する（役に立つ）
+2. 読んで楽しい・面白い（飽きさせない）
+3. LINEに誘導する（成約につなげる）
+
+## 記事生成時の共通ルール
+- 1記事1テーマに絞る
+- 冒頭150文字で読者を引き込む
+- 読者の悩み → 解決策 → 行動指示の流れを守る
+- 自分の体験・数字・エピソードで補強する
+- 末尾には必ずCTA（LINE登録誘導）を入れる
+- CTAは毎回同じ文言のコピペにしない
+- #PRが必要な案件紹介には必ず#PRを入れる
+- 解決策を「頑張る」など抽象論で終わらせない
 
 ## 出力形式（Markdown）
 frontmatterなしで、H1タイトルから始めてください。
@@ -185,11 +254,16 @@ frontmatterなしで、H1タイトルから始めてください。
 見出し：H2を3〜5個使用
 最後の段落の後に「---」で区切り、LINEへの誘導文を書いてください。"""
 
+    article_type_instruction = _article_type_instructions(article_type)
+
     user_prompt = f"""以下の条件でブログ記事を書いてください。
 
 カテゴリ：{category}
+記事タイプ：{ARTICLE_TYPES[article_type]}
 {'テーマ：' + theme if theme else 'テーマは自由に設定してください。ひろとの最近の体験を元に。'}
 {sns_context}
+
+{article_type_instruction}
 
 ## 注意事項
 - PR・アフィリエイト商品は含めない（純粋な体験談・ノウハウ記事）
@@ -205,6 +279,7 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
 
     print(f"\n🤖 Claude APIで記事生成中...")
     print(f"   カテゴリ：{category}")
+    print(f"   記事タイプ：{ARTICLE_TYPES[article_type]}")
     if theme:
         print(f"   テーマ：{theme}")
 
@@ -259,6 +334,7 @@ affiliate: false
         "title": title,
         "description": description,
         "category": category,
+        "article_type": article_type,
         "content": full_content,
         "path": CONTENT_DIR / f"{slug}.md",
     }
@@ -451,6 +527,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SNS投稿からAstroブログ記事を自動生成")
     parser.add_argument("--theme", type=str, default="", help="記事テーマ")
     parser.add_argument("--category", type=str, default="", help="カテゴリ（副業実録/AI活用/FIRE設計/シングル父の日常/買ってよかった）")
+    parser.add_argument("--type", choices=ARTICLE_TYPES.keys(), default="", help="記事タイプ（solution/record/fun）")
     parser.add_argument("--dry-run", action="store_true", help="生成のみ・ファイル保存なし")
     parser.add_argument("--weekly", action="store_true", help="週次バッチ（3記事同時生成）")
     parser.add_argument("--from-file", type=str, default="", help="投稿JSONファイルから生成")
@@ -473,6 +550,7 @@ if __name__ == "__main__":
         result = generate_blog_post(
             theme=text[:50] if text else args.theme,
             category=args.category,
+            article_type=args.type,
             sns_posts=[post_data],
             dry_run=args.dry_run,
         )
@@ -480,6 +558,7 @@ if __name__ == "__main__":
         result = generate_blog_post(
             theme=args.theme,
             category=args.category,
+            article_type=args.type,
             sns_posts=_get_recent_sns_posts(),
             dry_run=args.dry_run,
         )
