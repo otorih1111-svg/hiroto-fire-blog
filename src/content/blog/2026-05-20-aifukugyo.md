@@ -109,10 +109,6 @@ AIは「稼ぐための道具」じゃない。少なくとも今の俺にとっ
 
 ---
 
-## 📩 LINE登録で「副業実録レポート」無料プレゼント中
-
-シングル父がAIと副業で這い上がった実録レポートをLINE登録者に無料配布しています。
-
-[👉 LINEで無料登録する](https://line.me/R/ti/p/%40103khwdx)
+<!-- ADSENSE_REVIEW_START: CTA hidden during AdSense review. ADSENSE_REVIEW_END -->
 
 ---
