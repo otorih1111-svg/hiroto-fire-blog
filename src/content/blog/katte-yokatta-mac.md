@@ -7,11 +7,7 @@ ogImage: '/images/thumbnails/katte-yokatta-mac.png'
 tags: ["買ってよかった", "副業", "MacBook", "40代"]
 draft: false
 affiliate: false
----
-
-# 副業を始めて買ってよかったもの3つ【40代シングル父の実録】
-
-副業を始めると、いろいろ買いたくなる。
+---副業を始めると、いろいろ買いたくなる。
 
 高いパソコン。
 便利そうなアプリ。

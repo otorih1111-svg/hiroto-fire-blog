@@ -7,11 +7,7 @@ ogImage: '/images/thumbnails/2026-05-17-single-fatherfire.png'
 tags: ["AI", "副業", "FIRE", "シングル父", "継続"]
 draft: false
 affiliate: false
----
-
-# シングル父のFIRE設計：今の資産状況を正直に書く
-
-かっこ悪いけど、書く。
+---かっこ悪いけど、書く。
 数字を隠したままFIREを語っても、誰の役にも立たないから。
 
 ---

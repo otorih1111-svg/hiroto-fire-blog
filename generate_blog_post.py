@@ -249,7 +249,10 @@ def generate_blog_post(
 - 解決策を「頑張る」など抽象論で終わらせない
 
 ## 出力形式（Markdown）
-frontmatterなしで、H1タイトルから始めてください。
+frontmatterなしで出力してください。
+本文の冒頭にタイトルのH1見出しを入れないこと。
+タイトルはフロントマターに含めるため、本文内の「# タイトル」は不要です。
+タイトルはコメント `<!-- title: ... -->` として冒頭に入れてください。
 記事の長さ：1500〜2500文字
 見出し：H2を3〜5個使用
 最後の段落の後に「---」で区切り、LINEへの誘導文を書いてください。"""
@@ -272,8 +275,11 @@ frontmatterなしで、H1タイトルから始めてください。
 - LINEのURLは {line_url}
 
 ## 出力形式
-1行目：記事タイトル（# で始めるMarkdown見出し）
-2行目以降：本文Markdown
+1行目：<!-- title: 記事タイトル -->
+2行目：<!-- description: 1〜2文のサマリー -->
+3行目以降：本文Markdown
+本文の冒頭にタイトルのH1見出しを入れないこと。
+本文はリード文またはH2見出しから始めること。
 
 descriptionとして使える1〜2文のサマリーをコメント<!-- description: ... -->として冒頭に入れてください。"""
 
@@ -293,18 +299,27 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
 
     raw_content = message.content[0].text
 
-    # タイトル抽出
-    title_match = re.search(r'^#\s+(.+)$', raw_content, re.MULTILINE)
-    title = title_match.group(1).strip() if title_match else "無題の記事"
+    # タイトル抽出。本文にH1を残さないため、コメント形式を優先する。
+    title_comment_match = re.search(r'<!--\s*title:\s*(.+?)\s*-->', raw_content)
+    title_h1_match = re.search(r'^#\s+(.+)$', raw_content, re.MULTILINE)
+    if title_comment_match:
+        title = title_comment_match.group(1).strip()
+    elif title_h1_match:
+        title = title_h1_match.group(1).strip()
+    else:
+        title = theme.strip() or "無題の記事"
 
     # description抽出
     desc_match = re.search(r'<!--\s*description:\s*(.+?)\s*-->', raw_content)
     description = desc_match.group(1).strip() if desc_match else f"{category}に関するひろとの体験談。"
 
-    # frontmatterなしの本文（#タイトルとdescriptionコメント除去）
+    # frontmatterなしの本文（title/descriptionコメントと先頭H1を除去）
     body = raw_content
+    if title_comment_match:
+        body = body.replace(title_comment_match.group(0), "").strip()
     if desc_match:
         body = body.replace(desc_match.group(0), "").strip()
+    body = re.sub(r'^\s*#[^#].*\n+', '', body, count=1).strip()
 
     # スラッグ生成
     today = datetime.date.today().isoformat()

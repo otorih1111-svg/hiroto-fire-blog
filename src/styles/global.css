@@ -136,7 +136,7 @@ main {
   line-height: 1;
 }
 
-.site-logo h1 {
+.site-logo-title {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-text);

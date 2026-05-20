@@ -7,11 +7,7 @@ ogImage: '/images/thumbnails/2026-05-17-aifukugyo.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false
----
-
-# AIを使い始めて、副業のやり方が変わった。稼げた話じゃないけど、書く。
-
-正直に言う。
+---正直に言う。
 AIを使っても、収益はほぼゼロのままだ。
 
 それでも「変わった」と感じることがある。
