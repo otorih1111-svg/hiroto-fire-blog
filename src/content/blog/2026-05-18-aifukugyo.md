@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/2026-05-18-aifukugyo.png'
 tags: ["AI", "副業", "シングル父"]
 draft: false
 affiliate: false
----夜10時。息子が寝たあと、ノートパソコンを開く。
+---
+夜10時。息子が寝たあと、ノートパソコンを開く。
 
 「さて、やるか」と思って気づいたら、11時半になっていた。
 

@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/2026-05-18-single-fatherfire.png'
 tags: ["AI", "副業", "FIRE", "シングル父", "継続"]
 draft: false
 affiliate: false
----「FIREを目指す」と言い始めたのに、自分の資産を一度もちゃんと計算したことがなかった。
+---
+「FIREを目指す」と言い始めたのに、自分の資産を一度もちゃんと計算したことがなかった。
 
 かっこ悪いけど、書く。
 

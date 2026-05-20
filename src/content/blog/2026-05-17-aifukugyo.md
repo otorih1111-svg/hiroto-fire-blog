@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/2026-05-17-aifukugyo.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false
----正直に言う。
+---
+正直に言う。
 AIを使っても、収益はほぼゼロのままだ。
 
 それでも「変わった」と感じることがある。

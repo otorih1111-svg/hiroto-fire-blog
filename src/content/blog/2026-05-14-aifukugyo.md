@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/2026-05-14-aifukugyo.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false
----3ヶ月前と今では、同じ「副業してる」という言葉の意味が全然違う。
+---
+3ヶ月前と今では、同じ「副業してる」という言葉の意味が全然違う。
 
 やることは同じようで、かかる時間が半分以下になった。
 

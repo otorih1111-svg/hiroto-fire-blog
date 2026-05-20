@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/single-father-daily.png'
 tags: ["シングル父", "副業", "朝活", "子育て"]
 draft: false
 affiliate: false
----朝5時半に起きるようになった。
+---
+朝5時半に起きるようになった。
 
 正直、最初から意識が高かったわけじゃない。
 夜に副業をしようとしても、ほとんど続かなかったからだ。

@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/2026-05-14-single-fatherfire.png'
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false
----副業収益はほぼゼロ。フォロワーは100人ちょっと。それでも毎日考えてる。
+---
+副業収益はほぼゼロ。フォロワーは100人ちょっと。それでも毎日考えてる。
 
 なぜFIREを目指すのか、を。
 

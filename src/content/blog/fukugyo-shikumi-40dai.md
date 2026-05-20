@@ -7,7 +7,8 @@ ogImage: '/images/thumbnails/fukugyo-shikumi-40dai.png'
 tags: ["副業", "40代", "仕組み", "AI"]
 draft: false
 affiliate: false
----副業を始めたのに続かない。
+---
+副業を始めたのに続かない。
 仕事から帰ると疲れている。
 家のことをしていたら、気づけば夜になっている。
 
