@@ -1,22 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-function makeCover(title: string, accent: string, subline: string) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420">
-      <rect width="300" height="420" rx="18" fill="${accent}" />
-      <rect x="18" y="18" width="264" height="384" rx="12" fill="rgba(255,255,255,0.12)" />
-      <text x="32" y="74" fill="#ffffff" font-size="20" font-family="Arial, sans-serif" font-weight="700">${subline}</text>
-      <foreignObject x="28" y="110" width="244" height="240">
-        <div xmlns="http://www.w3.org/1999/xhtml" style="color:#fff;font-size:30px;line-height:1.45;font-family:Arial,sans-serif;font-weight:700;">
-          ${title}
-        </div>
-      </foreignObject>
-    </svg>
-  `;
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
-}
-
 const sections = [
   {
     title: 'お金・FIRE入門',
@@ -26,7 +10,7 @@ const sections = [
         title: 'お金の大学',
         author: '両学長',
         body: 'お金の基礎を学ぶならまずこの1冊。貯める・稼ぐ・増やす・守る・使うの5つの力を、生活に落とし込みやすい形で解説しています。',
-        cover: makeCover('お金の大学', '#2f855a', 'お金・FIRE入門'),
+        cover: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3780/9784023323780_1_5.jpg?_ex=240x240',
         rakuten:
           'https://hb.afl.rakuten.co.jp/ichiba/52e5bfa5.fe4aaada.52e5bfa6.88ed0deb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18041936%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
       },
@@ -40,7 +24,7 @@ const sections = [
         title: 'ウォール街のランダム・ウォーカー',
         author: '',
         body: 'インデックス投資の定番書。長期投資の考え方を身につけたいときに、一度は読んでおきたい内容です。',
-        cover: makeCover('ウォール街のランダム・ウォーカー', '#2b6cb0', '投資入門'),
+        cover: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5877/9784296115877_1_5.jpg?_ex=240x240',
         rakuten:
           'https://hb.afl.rakuten.co.jp/ichiba/52e5bfa5.fe4aaada.52e5bfa6.88ed0deb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17455659%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
       },
@@ -48,7 +32,7 @@ const sections = [
         title: '敗者のゲーム',
         author: '',
         body: 'プロに勝てない理由と、インデックス投資の合理性を落ち着いて説明してくれる本です。',
-        cover: makeCover('敗者のゲーム', '#1e40af', '投資入門'),
+        cover: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/9119/9784532359119_1_3.jpg?_ex=240x240',
         rakuten:
           'https://hb.afl.rakuten.co.jp/ichiba/52e5bfa5.fe4aaada.52e5bfa6.88ed0deb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F16973485%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
       },
@@ -62,7 +46,7 @@ const sections = [
         title: 'ブログで5億円稼いだ方法',
         author: 'クニトミ',
         body: '副業ブログの実践書。抽象論よりも、何をどう進めるかの手順が具体的に書かれています。',
-        cover: makeCover('ブログで5億円稼いだ方法', '#dd6b20', '副業・ブログ'),
+        cover: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5879/9784478115879_1_3.jpg?_ex=240x240',
         rakuten:
           'https://hb.afl.rakuten.co.jp/ichiba/52e5bfa5.fe4aaada.52e5bfa6.88ed0deb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17148399%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
       },
@@ -76,7 +60,7 @@ const sections = [
         title: '金持ち父さん貧乏父さん',
         author: '',
         body: 'お金に対する考え方が根本から変わる1冊。賛否はあるけれど、最初に読むと視点が広がります。',
-        cover: makeCover('金持ち父さん貧乏父さん', '#744210', 'マインドセット'),
+        cover: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4246/9784480864246_1_278.jpg?_ex=240x240',
         rakuten:
           'https://hb.afl.rakuten.co.jp/ichiba/52e5bfa5.fe4aaada.52e5bfa6.88ed0deb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12488205%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
       },
@@ -234,8 +218,11 @@ const sections = [
 
 .book-cover {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
 }
 
 .book-headline {
