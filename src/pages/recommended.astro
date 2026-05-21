@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+
 const sections = [
   {
     title: '自己アフィリ・ASP',
@@ -9,18 +11,28 @@ const sections = [
       {
         name: 'ハピタス',
         body: '自己アフィリエイトを知る入口として調べました。報酬額より、成果条件と否認条件を読む練習になると感じています。',
+        href: 'https://hapitas.jp/appinvite?i=25519472&route=pcText',
+        label: 'ハピタスに登録する',
+        sponsored: true,
       },
       {
         name: 'A8.net',
         body: '案件数が多く、ASPの管理画面や提携申請の流れを理解するために見ています。最初は案件の多さにかなり迷いました。',
+        href: 'https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU',
+        label: 'A8.netを見てみる',
+        sponsored: true,
       },
       {
         name: 'afb',
         body: 'A8とは違う案件や条件を見るために登録しました。確定率やEPCなど、案件選びの数字を見る練習にもなります。',
+        href: 'https://www.afi-b.com/',
+        label: 'afb公式サイトを見る',
       },
       {
         name: 'もしもアフィリエイト',
         body: '物販やブログ収益化を考えるときに候補に入れています。まずは仕組みを理解する目的で調べています。',
+        href: 'https://af.moshimo.com/',
+        label: 'もしもアフィリエイトを見る',
       },
     ],
   },
@@ -31,18 +43,26 @@ const sections = [
       {
         name: '格安SIM',
         body: '毎月の通信費は一度見直すと効果が続く固定費です。家計を小さく整える候補として優先度を高く見ています。',
+        href: 'https://www.iijmio.jp/',
+        label: '格安SIMを比較する',
       },
       {
         name: '楽天カード',
         body: '生活費の支払いとポイント管理をまとめる候補として調べています。使いすぎ防止も含めて考える必要があります。',
+        href: 'https://www.rakuten-card.co.jp/',
+        label: '楽天カード公式を見る',
       },
       {
         name: '家計簿アプリ',
         body: '副業より先に、毎月どこにお金が出ているかを見える化するために必要だと感じました。',
+        href: 'https://moneyforward.com/',
+        label: '家計簿アプリを見る',
       },
       {
         name: 'ふるさと納税',
         body: '食費や日用品の負担を少しでも下げられるか、シングル父の家計目線で調べています。',
+        href: 'https://event.rakuten.co.jp/furusato/',
+        label: 'ふるさと納税を見る',
       },
     ],
   },
@@ -53,18 +73,26 @@ const sections = [
       {
         name: 'MacBook',
         body: '副業用の作業環境として使っています。記事作成、画像生成、AI操作をまとめてできるのが助かっています。',
+        href: 'https://www.apple.com/jp/macbook-air/',
+        label: 'MacBookを見る',
       },
       {
         name: 'Canva',
         body: '画像や資料づくりで使いやすい候補です。デザインが苦手でも最低限の見た目を整えやすいと感じています。',
+        href: 'https://www.canva.com/ja_jp/',
+        label: 'Canvaを見る',
       },
       {
         name: 'ChatGPT / Claude / Codex',
         body: '記事の下書き、構成、コード修正で使っています。丸投げではなく、考える時間を短縮する道具として見ています。',
+        href: 'https://openai.com/chatgpt',
+        label: 'AIツールの入口を見る',
       },
       {
         name: 'ブログ用サーバー',
         body: 'WordPressで始める人には必要な項目です。ぼくのサイトは別構成ですが、ブログ運営の選択肢として調べています。',
+        href: 'https://www.xserver.ne.jp/',
+        label: 'ブログ用サーバーを見る',
       },
     ],
   },
@@ -75,14 +103,20 @@ const sections = [
       {
         name: '楽天証券',
         body: 'NISAや資産形成を調べる中で候補に入るサービスです。生活防衛資金を先に考えたうえで見ています。',
+        href: 'https://www.rakuten-sec.co.jp/',
+        label: '楽天証券を見る',
       },
       {
         name: 'SBI証券',
         body: '証券口座を比較するときによく名前が出ます。手数料や使いやすさを、初心者目線で確認したい項目です。',
+        href: 'https://www.sbisec.co.jp/',
+        label: 'SBI証券を見る',
       },
       {
         name: 'GMOクリック証券',
         body: 'FXや証券口座の候補として調べています。リスクがあるため、すすめるより先に注意点を整理します。',
+        href: 'https://click-sec.com/',
+        label: 'GMOクリック証券を見る',
       },
     ],
   },
@@ -93,10 +127,15 @@ const sections = [
       {
         name: '保険相談',
         body: '子どもがいる家庭として、保障が足りているかを確認する候補です。入りすぎない視点も大事にします。',
+        href: 'https://hoken-com.com/',
+        label: '保険相談の候補を見る',
       },
       {
         name: 'FP相談',
         body: '家計、教育費、老後資金を一度整理するための相談先として見ています。答えを丸投げしない前提で使いたいです。',
+        href: 'https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM',
+        label: 'FP相談を見てみる',
+        sponsored: true,
       },
     ],
   },
@@ -120,7 +159,7 @@ const sections = [
       <p>
         離婚後、家計を全部見直したときに思ったのは「副業で増やす前に、出ていくお金を整えないときつい」ということでした。
         ここでは、ぼくが調べたもの、使ったもの、これから比較したいものをまとめます。
-        いまはアドセンス審査中のため、アフィリエイトリンクは入れていません。
+        実際に使ったもの、比較したもの、これから深掘りしたいものを、生活目線で整理しています。
       </p>
     </header>
 
@@ -144,9 +183,14 @@ const sections = [
               <article class="service-item">
                 <h3>{service.name}</h3>
                 <p>{service.body}</p>
-                {/* ADSENSE_REVIEW_START */}
-                {/* <a href="#" class="service-link" rel="nofollow sponsored">詳しく見る</a> */}
-                {/* ADSENSE_REVIEW_END */}
+                <a
+                  href={service.href}
+                  class="service-link"
+                  target="_blank"
+                  rel={service.sponsored ? 'nofollow sponsored noopener noreferrer' : 'noopener noreferrer'}
+                >
+                  {service.label}
+                </a>
               </article>
             ))}
           </div>
@@ -160,9 +204,7 @@ const sections = [
         どれを使ったか、どこで迷ったか、失敗しそうになった点は、記事とLINEのPDFにまとめていきます。
         まずは自分の家計と副業に本当に必要だったものだけ、正直に残していきます。
       </p>
-      {/* ADSENSE_REVIEW_START */}
-      {/* <a href="https://line.me/R/ti/p/%40103khwdx" target="_blank" rel="noopener noreferrer" class="line-cta-link">LINEでPDFを受け取る</a> */}
-      {/* ADSENSE_REVIEW_END */}
+      <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-link">LINEでPDFを受け取る</a>
     </section>
   </div>
 </BaseLayout>

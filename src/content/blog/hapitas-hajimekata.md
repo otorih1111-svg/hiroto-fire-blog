@@ -6,7 +6,7 @@ category: 副業実録
 ogImage: '/images/thumbnails/hapitas-hajimekata.png'
 tags: ["副業", "自己アフィリエイト", "ハピタス", "初心者"]
 draft: false
-affiliate: false
+affiliate: true
 ---
 
 「自己アフィリエイトって本当に稼げるの？」
@@ -189,4 +189,5 @@ affiliate: false
 
 ぼくが実際に見た案件の選び方や、40代シングル父が副業を始めるときに気をつけたことは、LINEのPDFにも整理していく予定です。
 
-<!-- ADSENSE_REVIEW_START: LINE CTA hidden during AdSense review. ADSENSE_REVIEW_END -->
+- [ハピタスに登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)
+- 紹介コード：`QSEKKE`
