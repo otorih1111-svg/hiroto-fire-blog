@@ -1,0 +1,65 @@
+{
+  "priority_keywords": [
+    {
+      "rank": 1,
+      "keyword": "ハピタス 始め方 初心者",
+      "campaign": "hapitas",
+      "reason": "体験談あり・YMYLリスク低・月間検索数適度",
+      "target_volume": "50〜1000件",
+      "difficulty": "低〜中"
+    },
+    {
+      "rank": 2,
+      "keyword": "自己アフィリエイト 始め方 初心者",
+      "campaign": "hapitas",
+      "reason": "体験談あり・競合が比較的少ない",
+      "target_volume": "50〜1000件",
+      "difficulty": "低〜中"
+    },
+    {
+      "rank": 3,
+      "keyword": "アフィリエイト ASP 選び方 初心者",
+      "campaign": "a8net",
+      "reason": "A8登録済みの体験談で書ける",
+      "target_volume": "50〜1000件",
+      "difficulty": "低〜中"
+    },
+    {
+      "rank": 4,
+      "keyword": "副業 初心者 40代 何から始める",
+      "campaign": "hapitas",
+      "reason": "ひろとのペルソナと完全一致",
+      "target_volume": "100〜2000件",
+      "difficulty": "中"
+    },
+    {
+      "rank": 5,
+      "keyword": "40代 副業 初心者 ブログ",
+      "campaign": "a8net",
+      "reason": "ブログ体験談として書ける",
+      "target_volume": "50〜500件",
+      "difficulty": "低〜中"
+    }
+  ],
+  "later_keywords": [
+    "FX 口座開設 初心者",
+    "GMOクリック証券 始め方",
+    "クレジットカード おすすめ 40代",
+    "楽天カード メリット デメリット",
+    "保険相談",
+    "FP相談"
+  ],
+  "priority_search_keywords": [
+    "ハピタス 始め方",
+    "自己アフィリエイト 始め方",
+    "副業 初心者 40代",
+    "アフィリエイト ASP 選び方",
+    "40代 副業 ブログ"
+  ],
+  "later_search_keywords": [
+    "FX 口座開設",
+    "クレジットカード おすすめ",
+    "保険相談",
+    "FP相談"
+  ]
+}
