@@ -1,28 +1,60 @@
 ---
 import BlogPost from '../../layouts/BlogPost.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
+  const legacyRedirects = {
+    '2026-05-17-single-fatherfire': '/blog/2026-05-22-single-fatherfire/',
+    '2026-05-20-single-fatherfire': '/blog/2026-05-22-single-fatherfire/',
+  };
   const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map(post => ({
+  const postPaths = posts.map(post => ({
     params: { slug: post.id },
     props: { post },
   }));
+
+  const redirectPaths = Object.entries(legacyRedirects).map(([slug, redirectTarget]) => ({
+    params: { slug },
+    props: { redirectTarget },
+  }));
+
+  return [...postPaths, ...redirectPaths];
 }
 
-const { post } = Astro.props;
-const { Content } = await render(post);
+const { post, redirectTarget } = Astro.props;
+let Content;
+if (post) {
+  ({ Content } = await render(post));
+}
 ---
 
-<BlogPost
-  title={post.data.title}
-  description={post.data.description}
-  pubDate={post.data.pubDate}
-  updatedDate={post.data.updatedDate}
-  category={post.data.category}
-  tags={post.data.tags}
-  affiliate={post.data.affiliate}
-  ogImage={post.data.ogImage}
->
-  <Content />
-</BlogPost>
+{redirectTarget ? (
+  <BaseLayout
+    title="記事を移動しました"
+    description="重複整理のため、この記事は最新のURLへ移動しました。"
+  >
+    <meta http-equiv="refresh" content={`0;url=${redirectTarget}`} />
+    <div class="container" style="padding: 4rem 1rem;">
+      <h1>記事を移動しました</h1>
+      <p>
+        重複整理のため、この記事は
+        <a href={redirectTarget}>最新のURL</a>
+        へ移動しました。
+      </p>
+    </div>
+  </BaseLayout>
+) : (
+  <BlogPost
+    title={post.data.title}
+    description={post.data.description}
+    pubDate={post.data.pubDate}
+    updatedDate={post.data.updatedDate}
+    category={post.data.category}
+    tags={post.data.tags}
+    affiliate={post.data.affiliate}
+    ogImage={post.data.ogImage}
+  >
+    <Content />
+  </BlogPost>
+)}
