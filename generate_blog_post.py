@@ -34,6 +34,67 @@ THUMBNAIL_DIR = BLOG_DIR / "public" / "images" / "thumbnails"
 X_POSTS_FILE = Path(__file__).parent.parent / "x_posts.md"  # X投稿ストックファイル
 BLOG_BASE_URL = "https://hiroto-fire.com"
 
+ARTICLE_PRESETS = {
+    "ハピタスの始め方と稼ぎ方【シングル父が月1万円稼いだ手順】": {
+        "slug": "hapitas-hajimekata-kasegikata",
+        "keyword": "ハピタス 始め方",
+        "affiliate_urls": ["https://hapitas.jp/appinvite?i=25519472&route=pcText"],
+        "invite_code": "QSEKKE",
+        "outline": [
+            "ハピタスとは（結論：自己アフィリで稼げるポイントサイト）",
+            "登録手順（スクショ風に説明）",
+            "稼ぎ方3つ（自己アフィリ・ショッピング・友達紹介）",
+            "ひろとの実績（体験談）",
+            "注意点",
+            "まとめ＋招待リンク",
+        ],
+    },
+    "自己アフィリエイトで稼ぐ方法【初心者が1発目に稼ぐべき理由】": {
+        "slug": "jiko-affiliate-kasegikata",
+        "keyword": "自己アフィリエイト 稼ぎ方",
+        "affiliate_urls": ["https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU"],
+        "outline": [
+            "自己アフィリとは（結論：自分でサービスに申し込んで報酬をもらう仕組み）",
+            "なぜ初心者に最適か（理由3つ）",
+            "稼ぎ方の手順",
+            "おすすめASP一覧（A8・afb・もしも・バリューコマース）",
+            "注意点（同一人物の複数申込はNG）",
+            "まとめ",
+        ],
+    },
+    "FP無料相談は怪しい？実際に使ってみた正直レビュー": {
+        "slug": "fp-sodan-review",
+        "keyword": "FP無料相談 怪しい",
+        "affiliate_urls": ["https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM"],
+        "outline": [
+            "FP無料相談は怪しくない（結論から）",
+            "無料の理由（成果報酬型の仕組みを説明）",
+            "こんな人におすすめ（お金の悩みがある人・FIRE目指す人）",
+            "ひろとが相談した体験談",
+            "注意点（保険・投資を勧められることがある）",
+            "まとめ＋申込リンク",
+        ],
+        "ymyl_note": "金融・保険の個別判断を断定せず、一般論と体験談に留めること。",
+    },
+    "副業初心者が最初の1万円を稼ぐロードマップ【順番が大事】": {
+        "slug": "fukugyo-first-10000-roadmap",
+        "keyword": "副業 初心者 稼ぎ方",
+        "affiliate_urls": [
+            "https://hapitas.jp/appinvite?i=25519472&route=pcText",
+            "https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU",
+        ],
+        "invite_code": "QSEKKE",
+        "outline": [
+            "結論：最初は自己アフィリ一択",
+            "ステップ1：ハピタスに登録",
+            "ステップ2：A8・afbで自己アフィリ案件を探す",
+            "ステップ3：稼いだお金をブログ運営費に回す",
+            "ステップ4：ブログでアフィリ収益を狙う",
+            "まとめ",
+        ],
+    },
+}
+
 
 def _load_env_key() -> str:
     """親ディレクトリの.envからAPIキーを読む"""
@@ -115,6 +176,8 @@ ARTICLE_TYPES = {
     "fun": "楽しい・面白い記事（ファン化・シェア）",
 }
 
+MAX_DAILY_POSTS = 2
+
 CATEGORY_KEYWORDS = {
     '副業実録': ['副業', '収益', 'アフィリ', '稼ぐ', '仕組み', '継続', 'フォロワー'],
     'AI活用': ['AI', 'Claude', 'ChatGPT', '自動化', '生成', 'プロンプト'],
@@ -147,6 +210,16 @@ def _detect_article_type(theme: str, category: str) -> str:
     if category in ("AI活用", "FIRE設計") and any(keyword in theme for keyword in ("方法", "仕組み", "設計")):
         return "solution"
     return "record"
+
+
+def check_daily_post_limit(max_posts: int = MAX_DAILY_POSTS) -> bool:
+    """今日公開済みの記事数を確認し、上限に達していれば生成をスキップする。"""
+    today = datetime.date.today().isoformat()
+    existing_posts = sorted(CONTENT_DIR.glob(f"{today}-*.md"))
+    if len(existing_posts) >= max_posts:
+        print(f"⚠️ 本日の投稿上限（{max_posts}本）に達しています。生成をスキップします。")
+        return False
+    return True
 
 
 def _article_type_instructions(article_type: str) -> str:
@@ -185,11 +258,14 @@ def _article_type_instructions(article_type: str) -> str:
 
 def generate_blog_post(
     theme: str = "",
+    title: str = "",
+    keyword: str = "",
     category: str = "",
     article_type: str = "",
     sns_posts: list[dict] | None = None,
     dry_run: bool = False,
     line_url: str = "https://line.me/R/ti/p/%40103khwdx",
+    affiliate_urls: list[str] | None = None,
 ) -> dict:
     """
     Claude APIを呼んでブログ記事を生成する
@@ -197,13 +273,28 @@ def generate_blog_post(
     Returns:
         {"slug": str, "path": Path, "title": str, "content": str}
     """
+    if not dry_run and not check_daily_post_limit():
+        return {
+            "skipped": True,
+            "reason": "daily_post_limit_reached",
+        }
+
+    affiliate_urls = [url for url in (affiliate_urls or []) if url]
+    preset = ARTICLE_PRESETS.get(title, {})
+    if not keyword:
+        keyword = preset.get("keyword", "")
+    if not affiliate_urls:
+        affiliate_urls = preset.get("affiliate_urls", [])
+
+    effective_theme = title or theme
+
     # カテゴリ自動判定
     if not category:
-        category = _detect_category(theme) if theme else '副業実録'
+        category = _detect_category(effective_theme) if effective_theme else '副業実録'
     if category not in CATEGORIES:
         category = '副業実録'
     if article_type not in ARTICLE_TYPES:
-        article_type = _detect_article_type(theme, category)
+        article_type = _detect_article_type(effective_theme, category)
 
     # SNS投稿をコンテキストとして整形
     sns_context = ""
@@ -253,26 +344,57 @@ frontmatterなしで出力してください。
 本文の冒頭にタイトルのH1見出しを入れないこと。
 タイトルはフロントマターに含めるため、本文内の「# タイトル」は不要です。
 タイトルはコメント `<!-- title: ... -->` として冒頭に入れてください。
-記事の長さ：1500〜2500文字
+記事の長さ：2000〜4000文字
 見出し：H2を3〜5個使用
-最後の段落の後に「---」で区切り、LINEへの誘導文を書いてください。"""
+最後の段落の後に、必要なら「---」で区切って補足導線を書いてください。"""
 
     article_type_instruction = _article_type_instructions(article_type)
+    preset_outline = (
+        "この記事の想定構成：\n- " + "\n- ".join(preset.get("outline", []))
+        if preset.get("outline")
+        else "必要なら自然な構成を提案してください。"
+    )
+    invite_code_note = f"招待コード：{preset.get('invite_code')}" if preset.get("invite_code") else ""
+    ymyl_note = f"補足：{preset.get('ymyl_note')}" if preset.get("ymyl_note") else ""
+    affiliate_url_note = (
+        "使えるアフィリエイトURL：\n- " + "\n- ".join(affiliate_urls)
+        if affiliate_urls
+        else "アフィリエイトURLは指定なしです。"
+    )
 
     user_prompt = f"""以下の条件でブログ記事を書いてください。
 
 カテゴリ：{category}
 記事タイプ：{ARTICLE_TYPES[article_type]}
-{'テーマ：' + theme if theme else 'テーマは自由に設定してください。ひろとの最近の体験を元に。'}
+{'タイトル：' + title if title else ''}
+{'テーマ：' + theme if theme else ''}
+{'主キーワード：' + keyword if keyword else ''}
 {sns_context}
 
 {article_type_instruction}
 
+## 記事の狙い
+- 読者の悩みから逆算して書く
+- 1記事1キーワードで書く
+- 結論を先に書く（PREP法）
+- 検索意図に100%答える
+- ひろとの体験談で補強する
+- 文字数は2000〜4000文字
+
+## 個別要件
+{preset_outline}
+{invite_code_note}
+{ymyl_note}
+{affiliate_url_note}
+
 ## 注意事項
-- PR・アフィリエイト商品は含めない（純粋な体験談・ノウハウ記事）
 - ひろとの「今の状況（収益ほぼゼロ・フォロワー約100人・3ヶ月継続中）」を活かす
 - 読者は「副業したいけど時間がない・何から始めていいかわからない40代」
-- LINEのURLは {line_url}
+- 「誰でも簡単に稼げる」とは書かない
+- 金融・保険は一般論と体験談ベースで、断定や個別助言をしない
+- アフィリエイトリンクは自然な流れで紹介する
+- アフィリエイトリンクを入れる場合は本文末尾に「## 登録リンク」または「## 申込リンク」を作り、各リンクに（PR）を明記する
+- LINEのURLは {line_url}。ただし本記事の主役がアフィリエイト導線なら、LINE誘導は補助的でよい
 
 ## 出力形式
 1行目：<!-- title: 記事タイトル -->
@@ -286,8 +408,8 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
     print(f"\n🤖 Claude APIで記事生成中...")
     print(f"   カテゴリ：{category}")
     print(f"   記事タイプ：{ARTICLE_TYPES[article_type]}")
-    if theme:
-        print(f"   テーマ：{theme}")
+    if effective_theme:
+        print(f"   テーマ：{effective_theme}")
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     message = client.messages.create(
@@ -307,7 +429,7 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
     elif title_h1_match:
         title = title_h1_match.group(1).strip()
     else:
-        title = theme.strip() or "無題の記事"
+        title = title.strip() or effective_theme.strip() or "無題の記事"
 
     # description抽出
     desc_match = re.search(r'<!--\s*description:\s*(.+?)\s*-->', raw_content)
@@ -323,7 +445,7 @@ descriptionとして使える1〜2文のサマリーをコメント<!-- descript
 
     # スラッグ生成
     today = datetime.date.today().isoformat()
-    slug_base = _slugify(theme or title)[:40]
+    slug_base = preset.get("slug", _slugify(title or effective_theme)[:40])
     slug = f"{today}-{slug_base}"
 
     # Markdownファイル生成（frontmatter + 本文）
@@ -338,10 +460,17 @@ category: {category}
 ogImage: '/images/thumbnails/{slug}.png'
 tags: {json.dumps(tags, ensure_ascii=False)}
 draft: false
-affiliate: false
+affiliate: {"true" if affiliate_urls else "false"}
 ---
 
 """
+    body = _ensure_affiliate_links(
+        body=body,
+        title=title,
+        affiliate_urls=affiliate_urls,
+        preset=preset,
+        line_url=line_url,
+    )
     full_content = frontmatter + body
 
     result = {
@@ -430,6 +559,58 @@ def _extract_tags(text: str, category: str) -> list[str]:
         if t not in tags:
             tags.append(t)
     return list(dict.fromkeys(tags))[:5]  # 重複除去・最大5個
+
+
+def _ensure_affiliate_links(
+    body: str,
+    title: str,
+    affiliate_urls: list[str],
+    preset: dict,
+    line_url: str,
+) -> str:
+    """指定がある記事では、最低限の登録リンク導線を末尾に補完する。"""
+    if not affiliate_urls:
+        return body
+
+    lines: list[str] = []
+    joined = "\n".join(affiliate_urls)
+
+    if "ハピタス" in title:
+        lines.append("- [ハピタスに登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)")
+        if preset.get("invite_code"):
+            lines.append(f"- 招待コード：`{preset['invite_code']}`")
+
+    if "自己アフィリエイト" in title:
+        lines.append("- [A8.netを見てみる（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)")
+        lines.append("- [afb公式サイトを見る](https://www.afi-b.com/)")
+        lines.append("- [もしもアフィリエイト公式サイトを見る](https://af.moshimo.com/)")
+        lines.append("- [バリューコマース公式サイトを見る](https://www.valuecommerce.ne.jp/)")
+
+    if "FP無料相談" in title:
+        lines.append("- [FP無料相談を見てみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)")
+
+    if "最初の1万円" in title:
+        lines.append("- [ハピタスに登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)")
+        lines.append("- [A8.netを見てみる（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)")
+        if preset.get("invite_code"):
+            lines.append(f"- 招待コード：`{preset['invite_code']}`")
+
+    for url in affiliate_urls:
+        if url not in joined:
+            continue
+        if url not in "\n".join(lines):
+            lines.append(f"- [登録リンクを見る（PR）]({url})")
+
+    if not lines:
+        return body
+    if "## 登録リンク" in body or "## 申込リンク" in body:
+        return body
+
+    section_title = "## 申込リンク" if "FP無料相談" in title else "## 登録リンク"
+    suffix = f"\n\n---\n\n{section_title}\n\n" + "\n".join(lines)
+    if "LINE登録" not in body and "line.me" not in body:
+        suffix += f"\n\n気になった流れや、実際にどこで迷ったかは [LINEでもまとめています]({line_url})。"
+    return body.rstrip() + suffix
 
 
 def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
@@ -529,6 +710,8 @@ def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
             sns_posts=sns_posts,
             dry_run=dry_run,
         )
+        if result.get("skipped"):
+            break
         results.append(result)
 
     return results
@@ -540,9 +723,12 @@ def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SNS投稿からAstroブログ記事を自動生成")
+    parser.add_argument("--title", type=str, default="", help="記事タイトル")
     parser.add_argument("--theme", type=str, default="", help="記事テーマ")
+    parser.add_argument("--keyword", type=str, default="", help="主キーワード")
     parser.add_argument("--category", type=str, default="", help="カテゴリ（副業実録/AI活用/FIRE設計/シングル父の日常/買ってよかった）")
     parser.add_argument("--type", choices=ARTICLE_TYPES.keys(), default="", help="記事タイプ（solution/record/fun）")
+    parser.add_argument("--affiliate-url", action="append", default=[], help="記事内で使うアフィリエイトURL。複数指定可")
     parser.add_argument("--dry-run", action="store_true", help="生成のみ・ファイル保存なし")
     parser.add_argument("--weekly", action="store_true", help="週次バッチ（3記事同時生成）")
     parser.add_argument("--from-file", type=str, default="", help="投稿JSONファイルから生成")
@@ -564,17 +750,26 @@ if __name__ == "__main__":
         text = post_data.get("text", post_data.get("content", ""))
         result = generate_blog_post(
             theme=text[:50] if text else args.theme,
+            title=args.title,
+            keyword=args.keyword,
             category=args.category,
             article_type=args.type,
             sns_posts=[post_data],
             dry_run=args.dry_run,
+            affiliate_urls=args.affiliate_url,
         )
     else:
         result = generate_blog_post(
             theme=args.theme,
+            title=args.title,
+            keyword=args.keyword,
             category=args.category,
             article_type=args.type,
             sns_posts=_get_recent_sns_posts(),
             dry_run=args.dry_run,
+            affiliate_urls=args.affiliate_url,
         )
-        print(f"\n✅ 完了: /blog/{result['slug']}/")
+        if result.get("skipped"):
+            print("\n⏭️ 記事生成をスキップしました。")
+        else:
+            print(f"\n✅ 完了: /blog/{result['slug']}/")
