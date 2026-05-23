@@ -245,7 +245,6 @@ EPC。
 <!-- ADSENSE_REVIEW: 審査通過後に復元
 - [A8.netを見てみる（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)
 -->
-- Googleアドセンス審査中のため、A8.netの申込リンクは一時停止中です。
 - [もしもアフィリエイト公式サイトを見る](https://af.moshimo.com/)
 - [afb公式サイトを見る](https://www.afi-b.com/)
 

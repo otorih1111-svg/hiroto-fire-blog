@@ -192,5 +192,4 @@ affiliate: true
 <!-- ADSENSE_REVIEW: 審査通過後に復元
 - [ハピタスに登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)
 -->
-- Googleアドセンス審査中のため、登録リンクは一時停止中です。
 - 紹介コード：`QSEKKE`

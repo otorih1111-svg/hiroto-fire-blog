@@ -176,6 +176,5 @@ AIは答えをくれる機械じゃなくて、
 <!-- ADSENSE_REVIEW: 審査通過後に復元
 [👉 LINEで無料登録する](https://line.me/R/ti/p/%40103khwdx)
 -->
-※ Googleアドセンス審査中のため、LINE導線は一時停止中です。
 
 ---
