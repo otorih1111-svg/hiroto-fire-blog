@@ -168,6 +168,14 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   background: #f5f5f5;
 }
 
+.prose > :global(h1:first-child) {
+  display: none;
+}
+
+.prose > :global(h1:first-child + hr) {
+  display: none;
+}
+
 .post-tags {
   margin-top: 32px;
   padding-top: 24px;
