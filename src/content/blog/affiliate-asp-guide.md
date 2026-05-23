@@ -240,12 +240,4 @@ EPC。
 
 ---
 
-## 登録リンク
-
-<!-- ADSENSE_REVIEW: 審査通過後に復元
-- [A8.netを見てみる（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)
--->
-- [もしもアフィリエイト公式サイトを見る](https://af.moshimo.com/)
-- [afb公式サイトを見る](https://www.afi-b.com/)
-
-ひろとの副業実録や、AIを使ったブログ運営の途中経過は、プロフィールやLINEでもまとめています。
+<!-- ADSENSE_RESTORE: Re-add ASP outbound links after review -->

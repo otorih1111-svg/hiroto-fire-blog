@@ -167,14 +167,4 @@ AIは答えをくれる機械じゃなくて、
 
 あなたの「言語化できてない何か」は、何ですか。
 
----
-
-## 📩 LINE登録で「副業実録レポート」無料プレゼント中
-
-シングル父がAIと副業で這い上がった実録レポートをLINE登録者に無料配布しています。
-
-<!-- ADSENSE_REVIEW: 審査通過後に復元
-[👉 LINEで無料登録する](https://line.me/R/ti/p/%40103khwdx)
--->
-
----
+<!-- ADSENSE_RESTORE: Re-add end-of-article LINE CTA after review -->
