@@ -252,7 +252,7 @@ const sections = [
 
 <BaseLayout
   title="ひろとのおすすめ本【副業×FIRE×投資】"
-  description="シングル父ひろとが実際に読んでよかった本をまとめています。楽天リンクあり。"
+  description="シングル父ひろとが実際に読んでよかった本をまとめています。"
 >
   <div class="books-page">
     <nav class="breadcrumb">
@@ -295,14 +295,17 @@ const sections = [
                   </div>
                   {book.author && <p class="book-author">{book.author}</p>}
                   <p>{book.body}</p>
-                  <a
+                  {/* ADSENSE_REVIEW_START: 審査通過後に楽天アフィリエイトリンクを戻す */}
+                  {/* <a
                     href={makeRakutenLink(book.productId)}
                     class="book-link"
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
                   >
                     楽天で見る（PR）
-                  </a>
+                  </a> */}
+                  {/* ADSENSE_REVIEW_END */}
+                  <span class="book-link is-disabled">Google AdSense審査中のため一時停止中</span>
                 </div>
               </article>
             ))}

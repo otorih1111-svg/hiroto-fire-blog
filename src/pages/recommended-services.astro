@@ -117,14 +117,30 @@ const sections = [
                 <p>{service.body}</p>
                 {service.meta && <p class="resource-meta">{service.meta}</p>}
                 {service.href ? (
-                  <a
-                    href={service.href}
-                    class="resource-link"
-                    target="_blank"
-                    rel={service.sponsored ? 'nofollow sponsored noopener noreferrer' : 'noopener noreferrer'}
-                  >
-                    {service.label}
-                  </a>
+                  service.sponsored ? (
+                    <>
+                      {/* ADSENSE_REVIEW_START: 審査通過後にアフィリエイトリンクを戻す */}
+                      {/* <a
+                        href={service.href}
+                        class="resource-link"
+                        target="_blank"
+                        rel="nofollow sponsored noopener noreferrer"
+                      >
+                        {service.label}
+                      </a> */}
+                      {/* ADSENSE_REVIEW_END */}
+                      <span class="resource-link is-disabled">Google AdSense審査中のため一時停止中</span>
+                    </>
+                  ) : (
+                    <a
+                      href={service.href}
+                      class="resource-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {service.label}
+                    </a>
+                  )
                 ) : (
                   <span class="resource-link is-disabled">比較記事の準備中</span>
                 )}
