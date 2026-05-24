@@ -12,6 +12,7 @@ const categoryConfig: Record<string, { bg: string; accent: string; emoji: string
   'FIRE設計':       { bg: '#ef4444', accent: '#b91c1c', emoji: '🔥' },
   'シングル父の日常': { bg: '#10b981', accent: '#047857', emoji: '👨‍👦' },
   '買ってよかった':  { bg: '#ec4899', accent: '#be185d', emoji: '🛒' },
+  'ひろとについて':  { bg: '#0ea5e9', accent: '#0369a1', emoji: '👤' },
 };
 
 const fontJpPath = fileURLToPath(new URL('../../../public/fonts/NotoSansJP-japanese-700.woff', import.meta.url));

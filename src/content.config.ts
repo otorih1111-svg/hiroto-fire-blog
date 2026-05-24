@@ -8,7 +8,7 @@ const blog = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    category: z.enum(['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった']),
+    category: z.enum(['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった', 'ひろとについて']),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     affiliate: z.boolean().default(false),

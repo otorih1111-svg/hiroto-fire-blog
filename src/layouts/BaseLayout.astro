@@ -46,6 +46,7 @@ const categoryDefs = [
   { name: 'FIRE設計',       emoji: '🔥' },
   { name: 'シングル父の日常', emoji: '👨‍👦' },
   { name: '買ってよかった',  emoji: '🛒' },
+  { name: 'ひろとについて',  emoji: '👤' },
 ];
 
 const categoryCounts = categoryDefs.map(cat => ({
@@ -54,7 +55,7 @@ const categoryCounts = categoryDefs.map(cat => ({
 }));
 
 const popularPosts = [
-  { title: '副業ゼロから始めた最初の一歩', slug: 'hajimete-no-fukugyo' },
+  { title: '副業3ヶ月、収益ゼロでも続ける理由【40代シングル父のリアル】', slug: 'hajimete-no-fukugyo' },
   { title: 'シングル父がFIREを目指す理由を正直に書く', slug: '2026-05-14-single-fatherfire' },
   { title: '40代がAI副業を始めた理由', slug: 'ai-fukugyo-hajimekata' },
 ];
@@ -117,7 +118,7 @@ const popularPosts = [
         <nav>
           <ul class="site-nav">
             <li><a href="/">トップ</a></li>
-            <li><a href="/about/">プロフィール</a></li>
+            <li><a href="/blog/about-hiroto/">プロフィール</a></li>
             {/* ADSENSE_REVIEW_START */}
             {/* <li>
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="nav-line-btn">
@@ -167,7 +168,7 @@ const popularPosts = [
                 note
               </a>
             </div>
-            <a href="/about/" class="sidebar-profile-link">プロフィール詳細 →</a>
+            <a href="/blog/about-hiroto/" class="sidebar-profile-link">プロフィール詳細 →</a>
           </div>
 
           <!-- カテゴリ一覧 -->
@@ -239,7 +240,7 @@ const popularPosts = [
               ))}
               <li><a href="/recommended-services/">おすすめサービス</a></li>
               <li><a href="/recommended-books/">おすすめ本</a></li>
-              <li><a href="/about/">プロフィール</a></li>
+              <li><a href="/blog/about-hiroto/">プロフィール</a></li>
               <li><a href="/contact/">お問い合わせ</a></li>
               <li><a href="/privacy/">プライバシーポリシー</a></li>
             </ul>

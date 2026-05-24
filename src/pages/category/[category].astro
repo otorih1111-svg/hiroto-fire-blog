@@ -4,7 +4,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const categories = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった'];
+  const categories = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった', 'ひろとについて'];
   return categories.map(category => ({
     params: { category },
     props: { categoryName: category },
@@ -24,6 +24,7 @@ const categoryDescriptions: Record<string, string> = {
   'FIRE設計': 'FIREに向けた資産設計・計算・投資の記録と学び。',
   'シングル父の日常': '10歳の息子との日々と、そこで気づいたお金・仕事・人生のこと。',
   '買ってよかった': '楽天で実際に購入して本当によかったものを紹介しています。#PR',
+  'ひろとについて': 'ひろとのプロフィールや、このブログを始めた理由をまとめた記事です。',
 };
 ---
 
