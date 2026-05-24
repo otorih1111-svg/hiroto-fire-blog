@@ -1,0 +1,6 @@
+# Permanent redirects for legacy profile pages.
+/about /blog/about-hiroto/ 301
+/about/ /blog/about-hiroto/ 301
+/profile /blog/about-hiroto/ 301
+/profile/ /blog/about-hiroto/ 301
+/blog/2026-05-18-post/ /blog/2026-05-16-fire/ 301
