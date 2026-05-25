@@ -14,7 +14,7 @@ echo "=============================="
 echo "🚀 ブログ自動生成開始: $(date)"
 echo "=============================="
 
-# 記事生成（週次バッチ：3記事）
+# 記事生成（1日最大2記事）
 PYTHONUNBUFFERED=1 \
   caffeinate -disu \
   "$PY" -u scripts/generate_blog_post.py --weekly \
@@ -23,7 +23,7 @@ PYTHONUNBUFFERED=1 \
 # git push（Cloudflare Pages が自動デプロイ）
 echo ""
 echo "📦 GitHub にプッシュ中..."
-git add src/content/blog/
+git add src/content/blog/ public/images/thumbnails/
 git diff --cached --quiet && echo "⚠ 新規記事なし・スキップ" && exit 0
 
 git commit -m "auto: ブログ記事自動生成 $(date +%Y-%m-%d)"

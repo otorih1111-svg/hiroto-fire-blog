@@ -229,30 +229,32 @@ def _article_type_instructions(article_type: str) -> str:
 ## 記事タイプ：解決系記事（SEO流入メイン）
 - 検索されるキーワードで書く
 - 読者の具体的な悩みを解決する
-- 冒頭150文字以内で読者の悩みをそのまま代弁する
+- リード文は必ず「悩み → 結論 → ベネフィット」の順で書き、その後に `---` を入れる
 - 構成は「悩み → 原因 → 解決手順 → よくある失敗 → 今日できる一歩」
 - H2「なぜこの悩みが起きるか」を入れる
 - H2「解決策・手順」を核心にして800〜1200文字で具体的に書く
 - H2「よくある失敗・注意点」を入れる
 - H2「まとめ・今日できる一歩」で行動を1つに絞る
+- 記事末尾に必ず `## まとめ：...` を置き、要点3〜5個とCTA1文で締める
 """
     if article_type == "fun":
         return """
 ## 記事タイプ：楽しい・面白い記事（エンタメ系）
 - 読んで楽しかった、面白かったと思わせる
+- リード文は必ず「悩み → 結論 → ベネフィット」の順で書き、その後に `---` を入れる
 - 短い段落と会話を多めにする
 - 自虐・笑える失敗談・意外なオチを入れる
 - 役に立つ話だけで終わらせず、ひろとの人間味を出す
-- 締めは「こんな父親ですが続けてます」のように親しみやすくする
+- 締めは `## まとめ：...` で要点整理とCTAを入れる
 """
     return """
 ## 記事タイプ：実録系記事（共感・信頼構築メイン）
 - ひろとの体験・失敗・途中経過を正直に書く
-- 冒頭は具体的な場面・情景から始める
+- リード文は必ず「悩み → 結論 → ベネフィット」の順で書き、その後に `---` を入れる
 - 時系列、または「問題 → 気づき → 変化」の流れで書く
 - 数字を入れる（○日目・○円・○人など）
 - 恥ずかしい話や失敗も入れてリアリティを出す
-- 締めは押しつけず、読者が「自分もそうだった」と思える終わり方にする
+- 記事末尾に必ず `## まとめ：...` を置き、要点整理とCTAで締める
 """
 
 
@@ -323,19 +325,23 @@ def generate_blog_post(
 - 売り込まない・欲しがらせる書き方
 - 1文は短め（20〜30文字）
 
-## 記事構成
-記事を生成する時は以下の3つを必ず入れる：
-1. 読者の悩みを解決する（役に立つ）
-2. 読んで楽しい・面白い（飽きさせない）
-3. LINEに誘導する（成約につなげる）
+## 記事構成の必須ルール
+- リード文は必ず以下の順で書く
+  1. 悩み：読者が感じている状況を1〜2文
+  2. 結論：この記事で何がわかるかを1文
+  3. ベネフィット：読むとどうなるかを1文
+  4. その後に必ず `---` を1本入れる
+- 本文はH2/H3見出しを使う
+- 各セクションはPREP法（結論→理由→具体例→結論）を意識する
+- 記事末尾には必ず `## まとめ：...` を置く
+- まとめの中には要点の箇条書き3〜5点と、最後に1文のCTAを入れる
+- 記事タイトルと同じ文言のH2は作らない
+- LINE誘導、LINE登録CTA、外部チャット誘導は本文に入れない
 
 ## 記事生成時の共通ルール
 - 1記事1テーマに絞る
-- 冒頭150文字で読者を引き込む
 - 読者の悩み → 解決策 → 行動指示の流れを守る
 - 自分の体験・数字・エピソードで補強する
-- 末尾には必ずCTA（LINE登録誘導）を入れる
-- CTAは毎回同じ文言のコピペにしない
 - #PRが必要な案件紹介には必ず#PRを入れる
 - 解決策を「頑張る」など抽象論で終わらせない
 
@@ -394,7 +400,7 @@ frontmatterなしで出力してください。
 - 金融・保険は一般論と体験談ベースで、断定や個別助言をしない
 - アフィリエイトリンクは自然な流れで紹介する
 - アフィリエイトリンクを入れる場合は本文末尾に「## 登録リンク」または「## 申込リンク」を作り、各リンクに（PR）を明記する
-- LINEのURLは {line_url}。ただし本記事の主役がアフィリエイト導線なら、LINE誘導は補助的でよい
+- LINE登録、LINEボタン、LINEプレゼント、DM誘導などの文言は本文に入れない
 
 ## 出力形式
 1行目：<!-- title: 記事タイトル -->
@@ -608,8 +614,6 @@ def _ensure_affiliate_links(
 
     section_title = "## 申込リンク" if "FP無料相談" in title else "## 登録リンク"
     suffix = f"\n\n---\n\n{section_title}\n\n" + "\n".join(lines)
-    if "LINE登録" not in body and "line.me" not in body:
-        suffix += f"\n\n気になった流れや、実際にどこで迷ったかは [LINEでもまとめています]({line_url})。"
     return body.rstrip() + suffix
 
 
@@ -689,17 +693,22 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
 def generate_from_weekly_posts(dry_run: bool = False) -> list[dict]:
     """
     週次バッチ：直近1週間のSNS投稿から複数記事を生成
-    テーマが重複しないように3記事を生成する
+    1日最大2記事までに制限して、テーマ重複を避ける
     """
     sns_posts = _get_recent_sns_posts(days=7)
     if not sns_posts:
         print("⚠️  直近SNS投稿が見つかりませんでした。デフォルトテーマで生成します。")
 
+    remaining_slots = MAX_DAILY_POSTS if dry_run else max(0, MAX_DAILY_POSTS - len(sorted(CONTENT_DIR.glob(f"{datetime.date.today().isoformat()}-*.md"))))
+    if remaining_slots <= 0:
+        print(f"⚠️ 本日の投稿上限（{MAX_DAILY_POSTS}本）に達しているため、週次生成をスキップします。")
+        return []
+
     default_themes = [
         ("副業を3ヶ月続けて気づいたこと", "副業実録"),
         ("AIを使い始めて変わった副業のやり方", "AI活用"),
         ("シングル父のFIRE設計：今の資産状況を正直に", "FIRE設計"),
-    ]
+    ][:remaining_slots]
 
     results = []
     for theme, category in default_themes:
@@ -730,7 +739,7 @@ if __name__ == "__main__":
     parser.add_argument("--type", choices=ARTICLE_TYPES.keys(), default="", help="記事タイプ（solution/record/fun）")
     parser.add_argument("--affiliate-url", action="append", default=[], help="記事内で使うアフィリエイトURL。複数指定可")
     parser.add_argument("--dry-run", action="store_true", help="生成のみ・ファイル保存なし")
-    parser.add_argument("--weekly", action="store_true", help="週次バッチ（3記事同時生成）")
+    parser.add_argument("--weekly", action="store_true", help="週次バッチ（1日最大2記事）")
     parser.add_argument("--from-file", type=str, default="", help="投稿JSONファイルから生成")
     args = parser.parse_args()
 

@@ -3,7 +3,7 @@ title: "はじめまして。シングル父がAIと副業でFIREを目指す話
 description: "離婚を経て息子を育てる40代シングル父です。AIを使いながら副業とブログでFIREを目指す過程をリアルに発信しています。このブログとひろとという人間のことを知ってもらえると嬉しいです。"
 pubDate: 2026-04-30
 category: ひろとについて
-ogImage: '/images/hiroto-avatar.png'
+ogImage: '/images/thumbnails/about-hiroto.png'
 tags: [自己紹介, シングル父, AI副業, FIRE]
 draft: false
 affiliate: false
