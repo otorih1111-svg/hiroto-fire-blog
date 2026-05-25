@@ -12,6 +12,7 @@ interface Props {
   tags?: string[];
   affiliate?: boolean;
   ogImage?: string;
+  headings?: { depth: number; slug: string; text: string }[];
 }
 
 const {
@@ -23,7 +24,10 @@ const {
   tags = [],
   affiliate = false,
   ogImage,
+  headings = [],
 } = Astro.props;
+
+const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
 
 const dateStr = pubDate.toLocaleDateString('ja-JP', {
   year: 'numeric',
@@ -86,6 +90,18 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
 
       <!-- 記事本文 -->
       <div class="prose">
+        {tocHeadings.length >= 3 && (
+          <aside class="post-toc" aria-label="目次">
+            <p class="post-toc-title">目次</p>
+            <ol class="post-toc-list">
+              {tocHeadings.map((heading) => (
+                <li class={`post-toc-item depth-${heading.depth}`}>
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                </li>
+              ))}
+            </ol>
+          </aside>
+        )}
         <slot />
       </div>
 
@@ -180,6 +196,46 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid var(--color-border);
+}
+
+.post-toc {
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(45, 122, 79, 0.18);
+  background: linear-gradient(180deg, #f8fbf8 0%, #f1f7f3 100%);
+  border-radius: 10px;
+}
+
+.post-toc-title {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1f4d32;
+}
+
+.post-toc-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 10px;
+}
+
+.post-toc-item {
+  line-height: 1.6;
+}
+
+.post-toc-item a {
+  color: #234d34;
+  text-decoration: none;
+}
+
+.post-toc-item a:hover {
+  text-decoration: underline;
+}
+
+.post-toc-item.depth-3 {
+  margin-left: 0.9rem;
+  font-size: 0.92rem;
 }
 .post-tags-label {
   font-size: 0.82rem;

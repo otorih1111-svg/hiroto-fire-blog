@@ -24,8 +24,9 @@ export async function getStaticPaths() {
 
 const { post, redirectTarget } = Astro.props;
 let Content;
+let headings = [];
 if (post) {
-  ({ Content } = await render(post));
+  ({ Content, headings } = await render(post));
 }
 ---
 
@@ -54,6 +55,7 @@ if (post) {
     tags={post.data.tags}
     affiliate={post.data.affiliate}
     ogImage={post.data.ogImage}
+    headings={headings}
   >
     <Content />
   </BlogPost>
