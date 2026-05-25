@@ -91,7 +91,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
       <!-- 記事本文 -->
       <div class="prose">
         {tocHeadings.length >= 3 && (
-          <aside class="post-toc" aria-label="目次">
+          <aside class="post-toc js-post-toc" aria-label="目次">
             <p class="post-toc-title">目次</p>
             <ol class="post-toc-list">
               {tocHeadings.map((heading) => (
@@ -136,6 +136,28 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
 
     </article>
   </div>
+
+  {tocHeadings.length >= 3 && (
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const prose = document.querySelector('.prose');
+        const toc = document.querySelector('.js-post-toc');
+        if (!prose || !toc) return;
+
+        const firstHr = prose.querySelector('hr');
+        const firstH2 = prose.querySelector('h2');
+
+        if (firstHr?.parentElement === prose) {
+          firstHr.insertAdjacentElement('afterend', toc);
+          return;
+        }
+
+        if (firstH2?.parentElement === prose) {
+          firstH2.insertAdjacentElement('beforebegin', toc);
+        }
+      });
+    </script>
+  )}
 </BaseLayout>
 
 <style>
