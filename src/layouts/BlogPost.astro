@@ -144,17 +144,18 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         const toc = document.querySelector('.js-post-toc');
         if (!prose || !toc) return;
 
-        const firstHr = prose.querySelector('hr');
-        const firstH2 = prose.querySelector('h2');
+        const firstBoundary = Array.from(prose.children).find((element) => {
+          return element.tagName === 'HR' || element.tagName === 'H2';
+        });
 
-        if (firstHr?.parentElement === prose) {
-          firstHr.insertAdjacentElement('afterend', toc);
+        if (!firstBoundary) return;
+
+        if (firstBoundary.tagName === 'HR') {
+          firstBoundary.insertAdjacentElement('afterend', toc);
           return;
         }
 
-        if (firstH2?.parentElement === prose) {
-          firstH2.insertAdjacentElement('beforebegin', toc);
-        }
+        firstBoundary.insertAdjacentElement('beforebegin', toc);
       });
     </script>
   )}
