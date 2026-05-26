@@ -49,6 +49,15 @@ PROHIBITED_PATTERNS = [
     "ぜひ活用してみてください！",
 ]
 
+CATEGORY_RULES = {
+    "副業実録": "笑いは記事全体で2〜3箇所。体験談の流れの中に自然に入れる。",
+    "AI活用": "笑いは記事全体で1〜2箇所。情報や手順が主役。",
+    "FIRE設計": "笑いは記事全体で1〜2箇所。数字と根拠が主役。",
+    "シングル父の日常": "笑いは記事全体で3箇所程度。感情と共感が主役。",
+    "買ってよかった": "笑いは記事全体で2〜3箇所。レビューの正直感を優先する。",
+    "ひろとについて": "笑いは記事全体で3箇所程度。人間味を優先する。",
+}
+
 
 SYSTEM_PROMPT = """
 あなたは日本語ブログのリライト編集者です。
@@ -62,19 +71,21 @@ SYSTEM_PROMPT = """
 2. 見出し構成、箇条書き、番号リスト、リンクURL、内部リンク、コメントは維持
 3. 内容の主張・結論・情報量・検索意図を変えない
 4. 体験していないことを足さない
-5. 笑いは記事全体で3〜5箇所までの温度感
-6. カッコ内オチまたは自己ツッコミを最低1箇所は入れる
-7. 笑いは点在させる。まとめてボケない
+5. 笑いの量は記事カテゴリの指定に従う
+6. ボケは文体の流れの中に自然に入れる
+7. カッコ書きでオチを入れない
 8. ADSENSE_REVIEWコメントはそのまま残す
 9. スマホで読みやすい改行を優先する
-10. 1段落は原則1〜3文までに抑える
-11. 話題が切り替わる箇所、感情が動く一文、結論の一文の後は改行する
+10. 1文ごとに改行を入れる
+11. 1段落は最大3〜4行までに抑える
+12. リード文の最初の1行は、具体的な場面や数字で始める
+13. リード文の構成「悩み→結論→ベネフィット」は変えない
 
 使ってよい技術:
-- カッコ内で短いオチ
 - 自己ツッコミ
 - 当たり前のことをあえて説明して落とす
 - 日常の具体物で比喩する
+- 文体の流れの中にさらっと一言落とす
 
 禁止:
 - 「非常に重要なポイントです！」「ぜひ活用してみてください！」などの煽り
@@ -82,6 +93,7 @@ SYSTEM_PROMPT = """
 - 「〜すべきです」「〜してください」の連発
 - 笑いが多すぎて内容が薄く見える書き換え
 - ボケのための作り話
+- カッコ内でオチを入れること
 
 出力:
 - リライト後の本文Markdownのみ
@@ -99,18 +111,31 @@ def split_frontmatter(text: str) -> tuple[str, str]:
     return text[:end], text[end:]
 
 
-def rewrite_body(client: anthropic.Anthropic, path: Path, body: str) -> str:
+def extract_category(frontmatter: str) -> str:
+    match = re.search(r"^category:\s*(.+)$", frontmatter, re.MULTILINE)
+    if not match:
+        return ""
+    return match.group(1).strip().strip('"').strip("'")
+
+
+def rewrite_body(client: anthropic.Anthropic, path: Path, category: str, body: str) -> str:
+    category_rule = CATEGORY_RULES.get(category, "笑いは記事全体で2〜3箇所まで。内容が主役。")
     user_prompt = f"""
 以下はブログ記事の本文Markdownです。
 この記事の本文だけを、温度感を整える目的でリライトしてください。
 
 対象ファイル: {path.name}
+カテゴリ: {category}
 
 温度感の基準サンプル:
 - 何に使ったっけ……外食？Amazonか？いや、どっちも心当たりしかない
-- まあ来月がんばろ（来月も同じことを言う）
-- コーヒー2杯を我慢すれば家計が丸見えになります。（コーヒー代も家計簿に記録されます）
+- まあ来月がんばろ。来月も同じことを言う。
+- コーヒー2杯を我慢すれば家計が丸見えになります。コーヒー代もちゃんと記録されます。
 - 息子は交際相手じゃないので食費に直します。当たり前ですが。
+- 副業収益、今月347円。振込手数料で消えた。
+
+笑いの量ルール:
+{category_rule}
 
 維持するもの:
 - 見出し
@@ -122,9 +147,20 @@ def rewrite_body(client: anthropic.Anthropic, path: Path, body: str) -> str:
 
 読みやすさルール:
 - スマホで読んだときに詰まって見えないよう、改行は多めに入れる
-- 1段落は原則1〜3文まで。4文以上の長い段落は分ける
+- 1文ごとに改行を入れる
+- 1段落は最大3〜4行まで。長い段落は分ける
 - 箇条書きでない通常本文も、話題が切り替わる場所で素直に段落を分ける
 - 内容は変えず、段落だけ細かくしてよい
+
+リード文ルール:
+- 最初の1行は、具体的な場面・数字・状況が浮かぶ書き出しにする
+- 作り話は禁止。記事内容とひろとの実体験に沿って具体化する
+- その後の「悩み→結論→ベネフィット」の並びは変えない
+
+ボケの入れ方:
+- カッコ書きは使わない
+- 文体の流れの中に自然な一言として入れる
+- 笑いのために文章を長くしない
 
 本文:
 {body}
@@ -146,8 +182,18 @@ def verify_article(path: Path, frontmatter: str, original_body: str, body: str) 
         issues.append("adsense_in_frontmatter")
     if "ADSENSE_REVIEW_START" in original_body and "ADSENSE_REVIEW_START" not in body:
         issues.append("adsense_comment_missing")
-    if "（" not in body and "(" not in body and "当たり前ですが" not in body and "当然です" not in body:
+    humor_markers = [
+        "当たり前ですが",
+        "当然です",
+        "いや、",
+        "我ながら",
+        "自分で言う",
+        "振込手数料で消えた",
+    ]
+    if not any(marker in body for marker in humor_markers):
         issues.append("no_humor_marker")
+    if "（" in body or "(" in body:
+        issues.append("paren_present")
     for pattern in PROHIBITED_PATTERNS:
         if pattern in body:
             issues.append(f"prohibited:{pattern}")
@@ -186,8 +232,9 @@ def main() -> int:
         if not frontmatter:
             failures.append((path.name, ["frontmatter_parse_failed"]))
             continue
+        category = extract_category(frontmatter)
 
-        rewritten_body = rewrite_body(client, path, body)
+        rewritten_body = rewrite_body(client, path, category, body)
         issues = verify_article(path, frontmatter, body, rewritten_body)
         if issues:
             failures.append((path.name, issues))
