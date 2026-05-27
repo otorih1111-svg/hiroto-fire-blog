@@ -1,40 +1,40 @@
 <svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="720" rx="32" fill="#F7FBF8"/>
   <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
-  <text x="88" y="126" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="40" font-weight="700">
+  <text x="88" y="122" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
     マネーフォワード クラウド確定申告で楽になった流れ
   </text>
-  <text x="88" y="172" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+  <text x="88" y="165" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
     副業のお金を集めるところから申告準備まで、ひとつずつ見える化してくれる
   </text>
 
   <rect x="90" y="240" width="220" height="240" rx="24" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
   <circle cx="200" cy="302" r="38" fill="#E3F1E7"/>
-  <text x="180" y="315" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">1</text>
-  <text x="128" y="372" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">口座・カードを</text>
-  <text x="142" y="412" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">連携する</text>
-  <text x="120" y="452" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">最初の設定だけ少し頑張る。</text>
+  <text x="182" y="314" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">1</text>
+  <text x="136" y="370" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">口座・カードを</text>
+  <text x="150" y="404" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">連携する</text>
+  <text x="116" y="446" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">最初の設定だけ少し頑張る。</text>
 
   <rect x="355" y="240" width="220" height="240" rx="24" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
   <circle cx="465" cy="302" r="38" fill="#E3F1E7"/>
-  <text x="445" y="315" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">2</text>
-  <text x="396" y="372" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">明細がまとまって</text>
-  <text x="423" y="412" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">見える</text>
-  <text x="383" y="452" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">数字集めのしんどさが減る。</text>
+  <text x="447" y="314" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">2</text>
+  <text x="406" y="370" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">明細がまとまって</text>
+  <text x="432" y="404" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">見える</text>
+  <text x="382" y="446" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">数字集めのしんどさが減る。</text>
 
   <rect x="620" y="240" width="220" height="240" rx="24" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
   <circle cx="730" cy="302" r="38" fill="#E3F1E7"/>
-  <text x="710" y="315" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">3</text>
-  <text x="666" y="372" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">ガイドを見ながら</text>
-  <text x="693" y="412" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">入力する</text>
-  <text x="652" y="452" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">何を入れるか迷いにくい。</text>
+  <text x="712" y="314" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">3</text>
+  <text x="676" y="370" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">ガイドを見ながら</text>
+  <text x="703" y="404" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">入力する</text>
+  <text x="655" y="446" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">何を入れるか迷いにくい。</text>
 
   <rect x="885" y="240" width="220" height="240" rx="24" fill="#EDF8EF" stroke="#BED9C3" stroke-width="2"/>
   <circle cx="995" cy="302" r="38" fill="#D7EFDC"/>
-  <text x="975" y="315" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">4</text>
-  <text x="935" y="372" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">申告準備が</text>
-  <text x="948" y="412" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">前に進む</text>
-  <text x="912" y="452" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">怖くて止まる時間が減る。</text>
+  <text x="977" y="314" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">4</text>
+  <text x="941" y="370" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">申告準備が</text>
+  <text x="954" y="404" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">前に進む</text>
+  <text x="908" y="446" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">怖くて止まる時間が減る。</text>
 
   <path d="M310 360H355" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
   <path d="M575 360H620" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
@@ -44,7 +44,7 @@
   <path d="M867 342L885 360L867 378" stroke="#7CB089" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 
   <rect x="88" y="548" width="1024" height="72" rx="18" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
-  <text x="120" y="592" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">
+  <text x="122" y="590" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
     いちばん大きい変化は、難しそうで止まっていた作業が「とりあえず進める作業」に変わったこと。
   </text>
 </svg>
