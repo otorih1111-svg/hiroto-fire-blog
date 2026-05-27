@@ -1,0 +1,50 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="88" y="118" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
+    副業の確定申告、どこから読めばいいか
+  </text>
+  <text x="88" y="162" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    今どこで止まっているかで、次に読む記事を決める
+  </text>
+
+  <rect x="96" y="228" width="220" height="248" rx="24" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
+  <circle cx="206" cy="288" r="34" fill="#E3F1E7"/>
+  <text x="189" y="300" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">1</text>
+  <text x="126" y="356" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">20万円ルールが</text>
+  <text x="163" y="390" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">曖昧</text>
+  <text x="118" y="434" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">まず制度の土台を確認。</text>
+
+  <rect x="358" y="228" width="220" height="248" rx="24" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
+  <circle cx="468" cy="288" r="34" fill="#E3F1E7"/>
+  <text x="451" y="300" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">2</text>
+  <text x="394" y="356" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">数字をまとめるのが</text>
+  <text x="444" y="390" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">苦手</text>
+  <text x="382" y="434" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">家計簿より見える化から。</text>
+
+  <rect x="620" y="228" width="220" height="248" rx="24" fill="#F7F6FB" stroke="#D8D4E9" stroke-width="2"/>
+  <circle cx="730" cy="288" r="34" fill="#E7E3F6"/>
+  <text x="713" y="300" fill="#3D3862" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">3</text>
+  <text x="656" y="356" fill="#3D3862" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">ソフト選びで</text>
+  <text x="686" y="390" fill="#3D3862" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">止まる</text>
+  <text x="651" y="434" fill="#6B6688" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">マネーフォワードとfreeeを比較。</text>
+
+  <rect x="882" y="228" width="220" height="248" rx="24" fill="#EDF8EF" stroke="#BED9C3" stroke-width="2"/>
+  <circle cx="992" cy="288" r="34" fill="#D7EFDC"/>
+  <text x="975" y="300" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">4</text>
+  <text x="932" y="356" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">実際の流れを</text>
+  <text x="945" y="390" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">知りたい</text>
+  <text x="910" y="434" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">体験談レビューを読む。</text>
+
+  <path d="M316 352H358" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
+  <path d="M578 352H620" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
+  <path d="M840 352H882" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
+  <path d="M340 336L358 352L340 368" stroke="#7CB089" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M602 336L620 352L602 368" stroke="#7CB089" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M864 336L882 352L864 368" stroke="#7CB089" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="96" y="552" width="1008" height="60" rx="18" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="126" y="590" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
+    制度 → 見える化 → 比較 → 体験談 の順で見ると、確定申告の怖さがかなり整理しやすい。
+  </text>
+</svg>
