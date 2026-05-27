@@ -75,6 +75,11 @@ ogImage: "/images/thumbnails/2026-05-27-moneyforward-cloud-tax-review.png"
 このあたりは、始める前に誤解しやすいところでした。
 無料でずっと使えると思っていたら、そこは違いました。
 
+![マネーフォワード クラウド確定申告で楽になる流れ](/images/articles/moneyforward-cloud-tax-review/overview-flow.svg)
+
+口座やカードを連携して、明細がまとまって見えて、ガイドを見ながら進める。
+文字にすると地味ですが、この順番で進められるだけでもかなり気が楽でした。
+
 ---
 
 ## 使ってみてよかったこと3つ
