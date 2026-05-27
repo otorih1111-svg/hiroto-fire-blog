@@ -1,0 +1,58 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="88" y="118" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
+    家計簿が続かない人が変えるべきポイント
+  </text>
+  <text x="88" y="162" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    気合いより、続く形に変える方が早い
+  </text>
+
+  <rect x="96" y="228" width="404" height="280" rx="28" fill="#FFF7F2" stroke="#F2D9C8" stroke-width="2"/>
+  <text x="136" y="286" fill="#8A4D21" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    続かない流れ
+  </text>
+  <text x="136" y="336" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    1. 手入力で始める
+  </text>
+  <text x="136" y="378" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    2. 分類で止まる
+  </text>
+  <text x="136" y="420" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    3. 1日抜けて嫌になる
+  </text>
+  <text x="136" y="462" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    4. また明日で終わる
+  </text>
+  <text x="136" y="494" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
+    気合い頼みだと、だいたい3日で止まりやすい
+  </text>
+
+  <path d="M530 366H670" stroke="#7CB089" stroke-width="12" stroke-linecap="round"/>
+  <path d="M646 346L670 366L646 386" stroke="#7CB089" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="700" y="228" width="404" height="280" rx="28" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
+  <text x="740" y="286" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    続きやすい流れ
+  </text>
+  <text x="740" y="336" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    1. 口座とカードを連携
+  </text>
+  <text x="740" y="378" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    2. 支出をまとめて見る
+  </text>
+  <text x="740" y="420" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    3. ざっくり把握する
+  </text>
+  <text x="740" y="462" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    4. 必要な所だけ見直す
+  </text>
+  <text x="740" y="494" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
+    完璧より見える化を優先すると、かなり続きやすい
+  </text>
+
+  <rect x="96" y="570" width="1008" height="58" rx="18" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="122" y="607" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
+    家計簿が続かない人に必要なのは、気合いではなく「続く仕組み」。
+  </text>
+</svg>

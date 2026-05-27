@@ -55,6 +55,10 @@ ogImage: "/images/thumbnails/2026-05-27-kakeibo-tsuzukanai-kotsu.png"
 勝てない相手と毎回戦っていた感じです。
 勝てないのに、毎回同じやり方で向かっていたので、そりゃ続かないです。
 
+![家計簿が続かない流れと続きやすい流れの違い](/images/articles/kakeibo-tsuzukanai-kotsu/continue-flow.svg)
+
+気合いで続ける形から、見える化で続ける形に変えるだけで、かなり楽になります。
+
 ---
 
 ## 家計簿が続かなかった頃のぼく

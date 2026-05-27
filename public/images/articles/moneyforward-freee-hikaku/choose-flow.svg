@@ -1,0 +1,57 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="88" y="118" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
+    マネーフォワードとfreee、迷ったときの選び方
+  </text>
+  <text x="88" y="162" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    機能表より「自分が止まらずに進められる方」で選ぶ
+  </text>
+
+  <rect x="96" y="228" width="452" height="306" rx="28" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
+  <text x="136" y="286" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    マネーフォワード向き
+  </text>
+  <text x="136" y="336" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・一覧でお金の流れを見たい
+  </text>
+  <text x="136" y="380" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・口座やカードの明細をまとめたい
+  </text>
+  <text x="136" y="424" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・家計管理の延長で使いたい
+  </text>
+  <text x="136" y="468" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・まず全体像を見てから進みたい
+  </text>
+  <rect x="136" y="494" width="322" height="26" rx="13" fill="#DDEEE2"/>
+  <text x="148" y="514" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700">
+    見える化で不安を減らしたい人向け
+  </text>
+
+  <rect x="652" y="228" width="452" height="306" rx="28" fill="#F7F6FB" stroke="#D8D4E9" stroke-width="2"/>
+  <text x="692" y="286" fill="#3D3862" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    freee向き
+  </text>
+  <text x="692" y="336" fill="#55507B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・質問に答えながら進みたい
+  </text>
+  <text x="692" y="380" fill="#55507B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・会計用語を見るだけで疲れる
+  </text>
+  <text x="692" y="424" fill="#55507B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・順番に案内してほしい
+  </text>
+  <text x="692" y="468" fill="#55507B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・まず動き方を教えてほしい
+  </text>
+  <rect x="692" y="494" width="286" height="26" rx="13" fill="#E7E3F6"/>
+  <text x="704" y="514" fill="#55507B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700">
+    案内の多さで安心したい人向け
+  </text>
+
+  <rect x="96" y="574" width="1008" height="58" rx="18" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="126" y="611" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700">
+    どちらが上かより、どちらなら止まらず進められるかで決める方が失敗しにくい。
+  </text>
+</svg>

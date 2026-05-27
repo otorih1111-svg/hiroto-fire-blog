@@ -59,6 +59,10 @@ ogImage: "/images/thumbnails/2026-05-27-moneyforward-freee-hikaku.png"
 
 比較で疲れやすい人ほど、この見方の方が決めやすいと思います。
 
+![マネーフォワードとfreeeの選び方のざっくり比較](/images/articles/moneyforward-freee-hikaku/choose-flow.svg)
+
+機能の細かい違いより、「一覧で見たいか」「順番に案内してほしいか」で分けるとかなり選びやすくなります。
+
 ---
 
 ## 料金で見るとどう違う？
