@@ -166,7 +166,8 @@ ahamoを否定しているわけではありません。
 
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3WJ3+FYJD36+5W58+5YJRM" alt="">
 
-[ahamoの公式サイトを見る](#)
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+5VYDOI+4TIO+626XU" rel="nofollow sponsored noopener noreferrer">ahamoの公式サイトを見る</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3WJ5+5VYDOI+4TIO+626XU" alt="">
 -->
 <!-- ADSENSE_REVIEW_END -->
 
