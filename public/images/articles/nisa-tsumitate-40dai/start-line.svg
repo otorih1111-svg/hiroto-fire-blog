@@ -1,0 +1,57 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F7FAF8"/>
+  <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#DCE8E0" stroke-width="2"/>
+  <text x="88" y="118" fill="#234933" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
+    40代シングル父の新NISAは「続く金額」からでいい
+  </text>
+  <text x="88" y="162" fill="#607066" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    大きく入れるより、家計を壊さずに積み立てが続く形を先に作る
+  </text>
+
+  <rect x="90" y="230" width="300" height="250" rx="28" fill="#F4F8F5" stroke="#D6E4DA" stroke-width="2"/>
+  <text x="126" y="286" fill="#234933" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    月1万円
+  </text>
+  <text x="126" y="338" fill="#355844" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・最初の一歩に向く
+  </text>
+  <text x="126" y="382" fill="#355844" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・固定費見直しと相性がいい
+  </text>
+  <text x="126" y="426" fill="#355844" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・家計への負担が比較的軽い
+  </text>
+
+  <rect x="450" y="230" width="300" height="250" rx="28" fill="#FFF9E9" stroke="#F1E1AE" stroke-width="2"/>
+  <text x="486" y="286" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    月3万円
+  </text>
+  <text x="486" y="338" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・積立の軸になりやすい
+  </text>
+  <text x="486" y="382" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・支出把握が前提
+  </text>
+  <text x="486" y="426" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・生活防衛費も要確認
+  </text>
+
+  <rect x="810" y="230" width="300" height="250" rx="28" fill="#F8F6FB" stroke="#DDD7EC" stroke-width="2"/>
+  <text x="846" y="286" fill="#433B64" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700">
+    月5万円
+  </text>
+  <text x="846" y="338" fill="#59527E" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・しっかり積み立てる額
+  </text>
+  <text x="846" y="382" fill="#59527E" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・教育費や住居費と要相談
+  </text>
+  <text x="846" y="426" fill="#59527E" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24">
+    ・無理して入れない
+  </text>
+
+  <rect x="90" y="542" width="1020" height="86" rx="22" fill="#EEF6F1" stroke="#D6E4DA" stroke-width="2"/>
+  <text x="126" y="595" fill="#234933" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700">
+    先に決めるのは「いくら増やしたいか」より「家計を壊さず何年続けられるか」
+  </text>
+</svg>
