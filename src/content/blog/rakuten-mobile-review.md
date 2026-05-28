@@ -6,6 +6,7 @@ category: FIRE設計
 tags: ["楽天モバイル", "格安SIM", "通信費削減", "乗り換え", "体験談"]
 draft: false
 affiliate: true
+ogImage: "/images/thumbnails/rakuten-mobile-review.png"
 ---
 「携帯代、なんとなく払い続けてるな」と思いながら、何年も放置していました。
 
