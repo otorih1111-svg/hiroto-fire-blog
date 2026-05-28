@@ -6,6 +6,7 @@ category: FIRE設計
 tags: ["新NISA", "積立投資", "FIRE", "家計管理", "40代"]
 draft: false
 affiliate: true
+ogImage: "/images/thumbnails/nisa-tsumitate-40dai.png"
 ---
 「新NISAが気になる。でも今さら遅い気がする」
 
