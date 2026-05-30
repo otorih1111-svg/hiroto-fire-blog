@@ -2,7 +2,7 @@
 title: "副業ブログのジャンル選びで収益が10倍変わる理由"
 description: "副業ブログ初心者がジャンル選びで迷う理由と、40代シングル父のひろとが収益ゼロから考え直した選び方を整理しました。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-blog-genre-erabi.png'
 tags: ["副業", "ブログ", "アフィリエイト", "ジャンル選び"]
 draft: false

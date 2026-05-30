@@ -2,7 +2,7 @@
 title: "40代会社員が副業を3ヶ月続けるための仕組みの作り方"
 description: "副業が続かない40代会社員向けに、気合いではなく仕組みで3ヶ月続けるための考え方と具体的な方法をまとめました。"
 pubDate: 2026-05-19
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-shikumi-40dai.png'
 tags: ["副業", "40代", "仕組み", "AI"]
 draft: false

@@ -2,7 +2,7 @@
 title: "docomo・au・SoftBankから楽天モバイルに乗り換える手順"
 description: "docomo・au・SoftBankから楽天モバイルへの乗り換え手順をまとめました。今はワンストップMNPでMNP予約番号なしで進められるケースも。スマホだけで完結、店舗不要、申し込み操作は30分前後で終わります。"
 pubDate: 2026-05-28
-category: FIRE設計
+category: 節約・家計
 tags: ["楽天モバイル", "MNP", "乗り換え", "docomo", "au", "SoftBank", "手順"]
 draft: false
 affiliate: true

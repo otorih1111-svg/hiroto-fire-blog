@@ -2,7 +2,7 @@
 title: "ハピタスの始め方と稼ぎ方【シングル父が月1万円稼いだ手順】"
 description: "「副業を始めたいけど何から手をつければいいかわからない」という40代に向けて、シングル父ひろとがハピタスで月1万円稼いだ手順を正直に解説します。難しい知識も初期費用もいりません。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 節約・家計
 ogImage: '/images/thumbnails/2026-05-21-hapitas-hajimekata-kasegikata.png'
 tags: ["副業", "FIRE", "楽天", "シングル父"]
 draft: false

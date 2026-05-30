@@ -2,7 +2,7 @@
 title: "シングル父のFIRE設計：今の資産状況を正直に公開する"
 description: "40代シングル父・ひろとが、現在の資産状況をありのまま公開。貯金ほぼゼロから始めたFIRE設計の現在地と、「見ない」をやめた日からの変化を正直に書いた記録。"
 pubDate: 2026-05-25
-category: FIRE設計
+category: 投資・FIRE
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false

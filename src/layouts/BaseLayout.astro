@@ -41,12 +41,9 @@ const ogImageUrl  = ogImage
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 
 const categoryDefs = [
-  { name: '副業実録',       emoji: '📝' },
-  { name: 'AI活用',         emoji: '🤖' },
-  { name: 'FIRE設計',       emoji: '🔥' },
-  { name: 'シングル父の日常', emoji: '👨‍👦' },
-  { name: '買ってよかった',  emoji: '🛒' },
-  { name: 'ひろとについて',  emoji: '👤' },
+  { name: '節約・家計', emoji: '💰' },
+  { name: '投資・FIRE', emoji: '📈' },
+  { name: '副業・AI',   emoji: '🤖' },
 ];
 
 const categoryCounts = categoryDefs.map(cat => ({
@@ -236,8 +233,13 @@ const popularPosts = [
             <h3>カテゴリ</h3>
             <ul>
               {categoryDefs.map(cat => (
-                <li><a href={`/category/${cat.name}/`}>{cat.name}</a></li>
+                <li><a href={`/category/${encodeURIComponent(cat.name)}/`}>{cat.emoji} {cat.name}</a></li>
               ))}
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h3>リンク</h3>
+            <ul>
               <li><a href="/recommended-services/">おすすめサービス</a></li>
               <li><a href="/recommended-books/">おすすめ本</a></li>
               <li><a href="/blog/about-hiroto/">プロフィール</a></li>

@@ -3,7 +3,7 @@ title: "投資が怖かった自分が「ほったらかし投資」を始めた
 slug: "hottarakashi-investment-nisa-begin"
 description: "投資が怖くてずっと後回しにしてきた40代シングル父が、ほったらかし投資を始めた理由とやり方を正直に書きました。楽天証券・オルカン・S&P500で実際にやっていること。"
 pubDate: 2026-05-29
-category: FIRE設計
+category: 投資・FIRE
 tags:
   - 新NISA
   - ほったらかし投資

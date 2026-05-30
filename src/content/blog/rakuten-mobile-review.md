@@ -2,7 +2,7 @@
 title: "docomo・auで月7000円台払ってた自分が、楽天モバイルで1078円になった話【乗り換えて正解だった】"
 description: "docomoとauで月7000円台払っていた自分が、楽天モバイルに乗り換えて月1078円になった話。IIJmio経験者が感じた電波のリアル、スマホだけで完結したMNP手続き、楽天リンクで通話料ゼロになったことを正直に書いています。"
 pubDate: 2026-05-28
-category: FIRE設計
+category: 節約・家計
 tags: ["楽天モバイル", "格安SIM", "通信費削減", "乗り換え", "体験談"]
 draft: false
 affiliate: true

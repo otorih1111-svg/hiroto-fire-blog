@@ -2,7 +2,7 @@
 title: "副業を始めて買ってよかったもの3つ【40代シングル父の実録】"
 description: "40代シングル父が副業を始めて実際に買ってよかったものを、MacBook・作業環境・ツールの視点で正直にまとめました。"
 pubDate: 2026-05-19
-category: 買ってよかった
+category: 副業・AI
 ogImage: '/images/thumbnails/katte-yokatta-mac.png'
 tags: ["買ってよかった", "副業", "MacBook", "40代"]
 draft: false

@@ -2,7 +2,7 @@
 title: "AIを使い始めて、副業のやり方が変わった話【40代シングル父の実録】"
 description: "AIを使い始めてから、副業のやり方がどう変わったか。収益ゼロのシングル父が3ヶ月かけて気づいた「時間の使い方」の変化を正直に書く。"
 pubDate: 2026-05-27
-category: AI活用
+category: 副業・AI
 tags: ["AI", "副業", "シングル父"]
 draft: false
 affiliate: false

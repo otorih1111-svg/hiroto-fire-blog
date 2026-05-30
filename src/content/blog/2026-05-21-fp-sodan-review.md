@@ -2,7 +2,7 @@
 title: "FP無料相談は怪しい？実際に使ってみた正直レビュー"
 description: "「無料なんて怪しい」と思って避けてきたFP相談。離婚後に家計がボロボロだったひろとが実際に使ってみた体験を、正直に書きました。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 投資・FIRE
 ogImage: '/images/thumbnails/2026-05-21-fp-sodan-review.png'
 tags: ["副業", "FIRE", "継続"]
 draft: false

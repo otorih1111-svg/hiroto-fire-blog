@@ -2,7 +2,7 @@
 title: "シングル父の朝5時半。息子が起きる前の1時間で副業している話"
 description: "40代シングル父が、息子が起きる前の朝5時半から1時間だけ副業を続けている日常と、その中で感じていることを書きました。"
 pubDate: 2026-05-19
-category: シングル父の日常
+category: 副業・AI
 ogImage: '/images/thumbnails/single-father-daily.png'
 tags: ["シングル父", "副業", "朝活", "子育て"]
 draft: false

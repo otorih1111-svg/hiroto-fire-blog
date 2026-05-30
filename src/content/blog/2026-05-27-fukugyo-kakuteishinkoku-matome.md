@@ -4,7 +4,7 @@ description: "副業の確定申告をゼロから始めたい会社員向けに
 slug: "2026-05-27-fukugyo-kakuteishinkoku-matome"
 permalink: "/blog/fukugyo-kakuteishinkoku-matome/"
 pubDate: 2026-05-27
-category: FIRE設計
+category: 副業・AI
 tags: ["副業", "確定申告", "マネーフォワード", "freee", "まとめ"]
 draft: false
 affiliate: true

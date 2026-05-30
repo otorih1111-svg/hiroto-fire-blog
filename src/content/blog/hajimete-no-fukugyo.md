@@ -2,7 +2,7 @@
 title: "副業3ヶ月、収益ゼロでも続ける理由【40代シングル父のリアル】"
 description: "副業を始めて3ヶ月、収益はほぼゼロ。それでも毎朝5時半に起きて続けている40代シングル父のリアルな記録です。結果が出なくても続けられる理由と、3ヶ月で本当に変わったことを正直に書きました。"
 pubDate: 2026-05-01
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/hajimete-no-fukugyo.png'
 tags: [副業, シングル父, FIRE, 継続]
 draft: false

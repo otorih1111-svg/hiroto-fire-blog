@@ -2,7 +2,7 @@
 title: "自己アフィリエイトで稼ぐ方法【初心者が1発目に稼ぐべき理由】"
 description: "副業初心者が最初に稼ぐなら「自己アフィリエイト」が最短ルート。仕組み・手順・おすすめASPを、収益ほぼゼロから始めた40代ワンオペパパが正直に解説します。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/2026-05-21-jiko-affiliate-kasegikata.png'
 tags: ["副業", "FIRE", "楽天"]
 draft: false

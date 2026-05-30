@@ -2,7 +2,7 @@
 title: "40代シングル父の家計管理まとめ｜固定費・保険・支出把握の全記録"
 slug: "kakeibo-matome"
 pubDate: 2026-05-25
-category: "FIRE設計"
+category: 節約・家計
 description: "離婚後に家計と向き合い始めた40代シングル父が、固定費見直し・保険・支出把握・資産整理の記録をまとめたハブ記事です。"
 ogImage: '/images/thumbnails/kakeibo-matome.png'
 tags: ["家計管理", "固定費", "保険", "FIRE", "シングル父"]

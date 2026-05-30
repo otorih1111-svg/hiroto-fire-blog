@@ -2,7 +2,7 @@
 title: "副業初心者が最初の1週間でやること5つ【40代会社員版】"
 description: "副業を始めたいけど何から手をつけるか分からない40代会社員向けに、最初の1週間でやるべきことを具体的に解説します。"
 pubDate: 2026-05-17
-category: "副業実録"
+category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-hajime-1week.png'
 tags: [副業, 40代, 自己アフィリエイト, AI活用]
 draft: false

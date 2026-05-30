@@ -2,7 +2,7 @@
 title: "AIを使うまで、副業の「準備」だけで夜が終わっていた"
 description: "AIを副業に使い始めてから、「作業のやり方」より先に「考え方」が変わった。稼げた話じゃないけど、具体的に何がどう変わったかを正直に書く。"
 pubDate: 2026-05-18
-category: AI活用
+category: 副業・AI
 ogImage: '/images/thumbnails/2026-05-18-aifukugyo.png'
 tags: ["AI", "副業", "シングル父"]
 draft: false

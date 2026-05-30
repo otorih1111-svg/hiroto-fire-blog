@@ -2,7 +2,7 @@
 title: "シングル父のFIRE設計：今の資産状況を正直に書く"
 description: "離婚後、通帳を全部並べたら貯金がほぼゼロだった。シングル父のひろとが、FIREを目指すにあたって現在の資産状況をありのままに公開する記事。"
 pubDate: 2026-05-22
-category: FIRE設計
+category: 投資・FIRE
 tags: ["AI", "副業", "FIRE", "シングル父"]
 draft: false
 affiliate: false

@@ -2,7 +2,7 @@
 title: "アフィリエイトASPの選び方と登録すべき3つ【副業初心者向け】"
 description: "アフィリエイト初心者向けに、ASPの仕組み、最初に登録すべきASP、案件選びで見るべき成約までの距離・確定率・EPC・クッキー期間を整理しました。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/affiliate-asp-guide.png'
 tags: ["副業", "アフィリエイト", "ASP", "ブログ"]
 draft: false

@@ -4,7 +4,7 @@ description: "副業の確定申告を何でやるか迷っている会社員向
 slug: "2026-05-27-moneyforward-cloud-tax-review"
 permalink: "/blog/moneyforward-cloud-tax-review/"
 pubDate: 2026-05-27
-category: FIRE設計
+category: 副業・AI
 tags: ["副業", "確定申告", "マネーフォワード", "会計ソフト", "レビュー"]
 draft: false
 affiliate: true

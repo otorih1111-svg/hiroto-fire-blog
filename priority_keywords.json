@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-05-21",
+  "method": "ラッコキーワード公式の関連キーワード/サジェスト方針を参照し、Googleサジェスト候補とSERP競合の目視で評価。月間検索数は無料範囲では厳密取得不可のため推定レンジ。",
+  "keywords": [
+    {
+      "rank": 1,
+      "keyword": "自己アフィリエイト 始め方 初心者",
+      "monthly_volume": "推定100〜1,000件",
+      "difficulty": "低〜中",
+      "campaign": "hapitas / A8セルフバック",
+      "reason": "検索意図が明確で、ひろとの副業初心者体験と一致。アドセンス審査中は手順記事、通過後はハピタスやASP導線に自然接続できる。",
+      "source_seed": "自己アフィリエイト 始め方",
+      "suggest_keywords": [
+        "自己アフィリエイト 始め方"
+      ]
+    },
+    {
+      "rank": 2,
+      "keyword": "ハピタス 始め方 初心者",
+      "monthly_volume": "推定100〜1,000件",
+      "difficulty": "低〜中",
+      "campaign": "hapitas",
+      "reason": "悩みが具体的で個人ブログでも体験談を足せる。既存記事を強化しやすく、自己アフィリ導線の入口になる。",
+      "source_seed": "ハピタス 始め方",
+      "suggest_keywords": [
+        "ハピタス 始め方"
+      ]
+    },
+    {
+      "rank": 3,
+      "keyword": "アフィリエイト ASP 選び方 初心者",
+      "monthly_volume": "推定50〜500件",
+      "difficulty": "低〜中",
+      "campaign": "A8.net / もしもアフィリエイト / afb",
+      "reason": "ASP登録前の初心者に刺さる。案件選び、確定率、EPCなどを体験談で書けるため、専門性と信頼を出しやすい。",
+      "source_seed": "自己アフィリエイト 始め方",
+      "suggest_keywords": [
+        "アフィリエイト 始め方",
+        "自己アフィリエイト 始め方"
+      ]
+    },
+    {
+      "rank": 4,
+      "keyword": "副業 初心者 40代 何から始める",
+      "monthly_volume": "推定100〜1,000件",
+      "difficulty": "中",
+      "campaign": "AI講座 / ASP登録 / ブログ導線",
+      "reason": "ひろとの属性そのもの。高単価へ直行せず、AI副業・ブログ・自己アフィリへの導線を作れる。",
+      "source_seed": "副業 初心者 40代",
+      "suggest_keywords": [
+        "40代 副業 初心者"
+      ]
+    },
+    {
+      "rank": 5,
+      "keyword": "40代 副業 初心者 ブログ",
+      "monthly_volume": "推定50〜500件",
+      "difficulty": "低〜中",
+      "campaign": "ブログ開設 / ASP / AIツール",
+      "reason": "競合に個人ブログが混ざりやすく、ひろとの実録と相性が良い。ブログ特化の内部リンク軸にもなる。",
+      "source_seed": "副業 初心者 40代",
+      "suggest_keywords": [
+        "40代 副業 初心者"
+      ]
+    },
+    {
+      "rank": 6,
+      "keyword": "転職エージェント 無料 なぜ",
+      "monthly_volume": "推定500〜5,000件",
+      "difficulty": "中〜高",
+      "campaign": "転職エージェント案件",
+      "reason": "無料理由という検索意図が強く、教育記事にしやすい。40代会社員の不安・副業との比較で差別化できる。",
+      "source_seed": "転職エージェント 無料",
+      "suggest_keywords": [
+        "転職エージェント 無料",
+        "転職エージェント 無料 なぜ",
+        "転職エージェント 無料 理由"
+      ]
+    },
+    {
+      "rank": 7,
+      "keyword": "転職 40代 副業 会社員",
+      "monthly_volume": "推定50〜500件",
+      "difficulty": "中",
+      "campaign": "転職エージェント / キャリア相談",
+      "reason": "検索母数は大きすぎないが、ひろとの会社員・副業文脈と一致。転職か副業かで悩む読者に刺さる。",
+      "source_seed": "転職 40代 副業",
+      "suggest_keywords": [
+        "40代 転職 副業"
+      ]
+    },
+    {
+      "rank": 8,
+      "keyword": "GMOクリック証券 FX 始め方 初心者",
+      "monthly_volume": "推定50〜500件",
+      "difficulty": "中〜高",
+      "campaign": "GMOクリック証券 FX口座",
+      "reason": "ブランド指名寄りで成約意図が高い。金融YMYLなので体験談・注意点・少額前提で慎重に書く必要がある。",
+      "source_seed": "GMOクリック証券 始め方",
+      "suggest_keywords": [
+        "gmoクリック証券 始め方",
+        "gmoクリック証券 fx 始め方"
+      ]
+    },
+    {
+      "rank": 9,
+      "keyword": "クレジットカード おすすめ 40代 男性",
+      "monthly_volume": "推定100〜1,000件",
+      "difficulty": "高",
+      "campaign": "クレジットカード案件",
+      "reason": "高単価に繋がるが比較サイトが強い。ひろとの生活費管理・シングル父視点で絞れば記事化余地あり。",
+      "source_seed": "クレジットカード おすすめ 40代",
+      "suggest_keywords": [
+        "クレジットカード おすすめ 40代",
+        "クレジットカード おすすめ 40代 男性"
+      ]
+    },
+    {
+      "rank": 10,
+      "keyword": "楽天カード メリット デメリット 40代",
+      "monthly_volume": "推定500〜5,000件",
+      "difficulty": "高",
+      "campaign": "楽天カード / クレカ案件",
+      "reason": "検索需要は大きいが競合も強い。楽天経済圏を生活費・子育て費目線で語れば独自性を出せる。",
+      "source_seed": "楽天カード メリット",
+      "suggest_keywords": [
+        "楽天カード メリット",
+        "楽天カード メリット デメリット",
+        "楽天カード メリットとデメリット"
+      ]
+    }
+  ]
+}

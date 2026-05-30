@@ -2,7 +2,7 @@
 title: "AIを使い始めて、副業のやり方が根本から変わった話"
 description: "AIを副業に使い始めて、何が変わったのか。時間の使い方、記事の作り方、考え方。収益ゼロのシングル父が正直に書く、3ヶ月間のリアルな変化。"
 pubDate: 2026-05-20
-category: AI活用
+category: 副業・AI
 tags: ["AI", "副業", "シングル父"]
 draft: false
 affiliate: false

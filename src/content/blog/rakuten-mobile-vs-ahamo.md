@@ -2,7 +2,7 @@
 title: "楽天モバイルとahamoどっちがいい？迷ったときの判断基準をまとめた"
 description: "楽天モバイルとahamoを料金・通話・電波・データ量で比較。どちらが自分に向いているか迷っている人向けに、楽天モバイルユーザーのぼくが正直に判断基準をまとめました。"
 pubDate: 2026-05-28
-category: FIRE設計
+category: 節約・家計
 tags: ["楽天モバイル", "ahamo", "格安SIM", "比較", "通信費削減"]
 draft: false
 affiliate: true

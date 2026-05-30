@@ -2,7 +2,7 @@
 title: "新NISAは月1万円でも意味ある？40代シングル父が『大きく増やす』より先に考えたこと"
 description: "新NISAが気になるけれど、まとまったお金は出しにくい。40代シングル父のひろとが、月1万円からでも始める意味と、無理なく続ける考え方を正直にまとめました。"
 pubDate: 2026-05-28
-category: FIRE設計
+category: 投資・FIRE
 tags: ["新NISA", "積立投資", "FIRE", "家計管理", "40代"]
 draft: false
 affiliate: true

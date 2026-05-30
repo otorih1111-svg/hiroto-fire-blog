@@ -2,7 +2,7 @@
 title: "ハピタスの始め方【初心者ガイド】40代シングル父が最初にやったこと"
 description: "ハピタスの始め方を、副業初心者の40代シングル父目線で整理しました。最初の3ステップ、案件選び、否認されないための注意点を実体験ベースでまとめます。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 節約・家計
 ogImage: '/images/thumbnails/hapitas-hajimekata.png'
 tags: ["副業", "自己アフィリエイト", "ハピタス", "初心者"]
 draft: false

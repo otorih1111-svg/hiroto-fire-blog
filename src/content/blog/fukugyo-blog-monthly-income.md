@@ -2,7 +2,7 @@
 title: "副業ブログで月3〜10万円稼ぐ現実的な計算式"
 description: "副業ブログで月3万円から10万円を目指すときに必要なアクセス数、成約率、単価を現実的な数字で整理しました。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-blog-monthly-income.png'
 tags: ["副業", "ブログ", "収益化", "アフィリエイト"]
 draft: false

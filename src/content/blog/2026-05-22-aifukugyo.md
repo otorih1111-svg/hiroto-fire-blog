@@ -2,7 +2,7 @@
 title: "AIに愚痴を話したら、副業のヒントをもらった話"
 description: "AIに「仕事の愚痴」を話したら、思ってもみない使い方を発見してしまった。40代シングル父が試した、ちょっと恥ずかしいAI活用法の話。"
 pubDate: 2026-05-22
-category: AI活用
+category: 副業・AI
 tags: ["AI", "副業", "シングル父"]
 draft: false
 affiliate: false

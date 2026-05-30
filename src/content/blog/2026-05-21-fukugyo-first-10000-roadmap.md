@@ -2,7 +2,7 @@
 title: "副業初心者が最初の1万円を稼ぐロードマップ【順番が大事】"
 description: "副業を始めたいけど何から手をつければいいかわからない40代へ。収益ほぼゼロから試行錯誤したひろとが、最初の1万円を稼ぐために「本当に有効だった順番」を正直に書きます。"
 pubDate: 2026-05-21
-category: 副業実録
+category: 副業・AI
 ogImage: '/images/thumbnails/2026-05-21-fukugyo-first-10000-roadmap.png'
 tags: ["副業", "FIRE", "継続"]
 draft: false
