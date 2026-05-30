@@ -29,13 +29,11 @@ const GA_ID    = import.meta.env.PUBLIC_GA_ID    || 'G-LRT5BKLD8Y';
 const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
 
 const fullTitle   = title === siteTitle ? title : `${title} | ${siteTitle}`;
-// ogImage未指定の場合はslugからOGP自動生成画像を使う、それもなければデフォルト
-const _slug = Astro.url.pathname.match(/\/blog\/([^/]+)/)?.[1];
+// OGP画像: ogImageが指定されていればそれを使い、なければデフォルト
+// 動的OGP生成は廃止（@resvg/resvg-js の Cloudflare Linux 非互換のため）
 const ogImageUrl  = ogImage
   ? `${siteUrl}${ogImage}`
-  : _slug
-    ? `${siteUrl}/og/${_slug}.png`
-    : `${siteUrl}/og/default.png`;
+  : `${siteUrl}/og/default.png`;
 
 // カテゴリ別記事数を集計
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
