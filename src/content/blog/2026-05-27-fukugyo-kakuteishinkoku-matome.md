@@ -148,7 +148,7 @@ freeeにするか
 「難しそう」が「思ったより普通だった」に変わる流れを知りたいなら、この体験談が一番近いです。
 
 <!-- ADSENSE_REVIEW_START -->
-[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/moneyforward-cloud-tax-review/)
+[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/2026-05-27-moneyforward-cloud-tax-review/)
 <!-- ADSENSE_REVIEW_END -->
 
 ---
@@ -188,7 +188,7 @@ freeeにするか
 体験談から入った方がイメージしやすい人もいます。
 
 <!-- ADSENSE_REVIEW_START -->
-[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/moneyforward-cloud-tax-review/)
+[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/2026-05-27-moneyforward-cloud-tax-review/)
 <!-- ADSENSE_REVIEW_END -->
 
 ---

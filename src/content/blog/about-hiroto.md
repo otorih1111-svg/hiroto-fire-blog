@@ -65,9 +65,9 @@ affiliate: false
 ## テーマ別に読む
 
 - 家計・固定費の話 → [家計まとめ記事](/blog/kakeibo-matome/)
-- 副業の話 → [副業実録カテゴリ](/category/副業実録/)
-- AI活用の話 → [AI活用カテゴリ](/category/AI活用/)
-- FIRE設計の話 → [FIRE設計カテゴリ](/category/FIRE設計/)
+- 副業の話 → [副業実録カテゴリ](/category/副業・AI/)
+- AI活用の話 → [AI活用カテゴリ](/category/副業・AI/)
+- FIRE設計の話 → [FIRE設計カテゴリ](/category/投資・FIRE/)
 
 迷ったら、上の4本からどれか1つ読んでみてください。
 気が向いたやつで大丈夫です。

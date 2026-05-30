@@ -169,7 +169,7 @@ ogImage: "/images/thumbnails/2026-05-27-fukugyo-kakuteishinkoku-20man.png"
 詳しくは、実際に使った体験談を別の記事にまとめています。
 
 <!-- ADSENSE_REVIEW_START -->
-[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/moneyforward-cloud-tax-review/)
+[【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/2026-05-27-moneyforward-cloud-tax-review/)
 <!-- ADSENSE_REVIEW_END -->
 
 ---
