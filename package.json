@@ -2,9 +2,6 @@
   "name": "hiroto-fire-blog",
   "type": "module",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -13,7 +10,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
-    "@fontsource/noto-sans-jp": "^5.2.9",
     "astro": "^6.3.1"
   }
 }
