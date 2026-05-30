@@ -95,23 +95,33 @@ def _get_recent_sns_posts(days: int = 7) -> list[dict]:
     return posts[:10]
 
 
-CATEGORIES = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった']
+CATEGORIES = ['節約・家計', '投資・FIRE', '副業・AI']
 MAX_DAILY_POSTS = 2
 
 CATEGORY_KEYWORDS = {
-    '副業実録': ['副業', '収益', 'アフィリ', '稼ぐ', '仕組み', '継続', 'フォロワー'],
-    'AI活用': ['AI', 'Claude', 'ChatGPT', '自動化', '生成', 'プロンプト'],
-    'FIRE設計': ['FIRE', '投資', 'NISA', '資産', '老後', '積立', '証券', '保険', 'FP'],
-    'シングル父の日常': ['息子', '子ども', '子育て', '離婚', '運動会', '宿題', '家族'],
-    '買ってよかった': ['楽天', '買った', 'おすすめ', 'ふるさと', 'ポイント', '節約'],
+    '節約・家計': ['節約', '固定費', '家計', '通信費', '格安SIM', 'ポイ活', 'ハピタス', '保険', '支出'],
+    '投資・FIRE': ['FIRE', '投資', 'NISA', '資産', '老後', '積立', '証券', 'FP', 'iDeCo', 'オルカン'],
+    '副業・AI':   ['副業', 'AI', 'Claude', 'ChatGPT', '収益', 'アフィリ', 'ブログ', '自動化', '稼ぐ'],
 }
+
+# 生成禁止テーマクラスター（カニバリゼーション防止）
+BLOCKED_THEME_CLUSTERS = [
+    "AIを使い始めて副業が変わった",
+    "AIを使って副業のやり方が変わった",
+    "副業3ヶ月で気づいたのは稼ぎ方じゃなかった",
+    "副業3ヶ月で気づいた自分のクセ",
+    "副業3ヶ月 収益ゼロ 続ける理由",
+    "AIに相談するようになった",
+    "AIに愚痴を話した",
+    "AIに今日何すればいいか聞いた",
+]
 
 
 def _detect_category(theme: str) -> str:
     for cat, keywords in CATEGORY_KEYWORDS.items():
         if any(kw in theme for kw in keywords):
             return cat
-    return '副業実録'
+    return '副業・AI'
 
 
 def _get_recent_blog_titles(n: int = 10) -> list[dict]:
@@ -131,7 +141,7 @@ def _get_recent_blog_titles(n: int = 10) -> list[dict]:
 def _pick_next_category(recent: list[dict]) -> str:
     """直近記事のカテゴリ偏りを見て、次に使うべきカテゴリを返す"""
     if not recent:
-        return "副業実録"
+        return "副業・AI"
     # 直近5件のカテゴリカウント
     from collections import Counter
     counts = Counter(a["category"] for a in recent[:5])
@@ -179,8 +189,8 @@ def generate_blog_post(
             "reason": "daily_post_limit_reached",
         }
 
-    # 直近記事を取得して被り防止に使う
-    recent_articles = _get_recent_blog_titles(10)
+    # 直近記事を取得して被り防止に使う（30件に拡大）
+    recent_articles = _get_recent_blog_titles(30)
 
     if not category:
         if theme:
@@ -272,12 +282,21 @@ def generate_blog_post(
 frontmatterなしで、H1タイトルから始めてください。
 記事の長さ：1500〜2500文字"""
 
-    # 直近記事リストを文字列化
+    # 直近記事リストを文字列化（カニバリゼーション防止）
     recent_titles_str = ""
     if recent_articles:
-        recent_titles_str = "\n\n## ⚠️ 直近の公開済み記事（これらと被らないようにしてください）\n"
+        recent_titles_str = "\n\n## ⚠️ 公開済み記事（テーマ・切り口が被らないようにしてください）\n"
         for a in recent_articles:
             recent_titles_str += f"- [{a['category']}] {a['title']}\n"
+
+    # 生成禁止クラスターを文字列化
+    blocked_str = "\n\n## 🚫 絶対に使わないテーマ（カニバリゼーション防止）\n"
+    blocked_str += "以下のテーマ・切り口は記事が既に多数あるため、類似内容は絶対に生成しないこと：\n"
+    for cluster in BLOCKED_THEME_CLUSTERS:
+        blocked_str += f"- {cluster}\n"
+    blocked_str += "- 「AIを使い始めて〇〇が変わった」系全般（同テーマが5本以上ある）\n"
+    blocked_str += "- 「副業3ヶ月で気づいた〇〇」系全般（同テーマが6本以上ある）\n"
+    blocked_str += "上記に近いテーマが浮かんだ場合は、全く別の切り口・テーマを選ぶこと。\n"
 
     user_prompt = f"""以下の条件でブログ記事を書いてください。
 
@@ -285,6 +304,7 @@ frontmatterなしで、H1タイトルから始めてください。
 {'テーマ：' + theme if theme else 'テーマは自由に設定してください。ひろとの最近の体験を元に。'}
 {sns_context}
 {recent_titles_str}
+{blocked_str}
 
 ## 注意事項
 - PR・アフィリエイト商品は含めない（純粋な体験談・ノウハウ記事）
@@ -325,6 +345,9 @@ descriptionとして使える1〜2文のサマリーを <!-- description: ... --
     body = raw_content
     if desc_match:
         body = body.replace(desc_match.group(0), "").strip()
+
+    # H1タイトル行をbodyから除去（frontmatterにtitleが既にあるため不要）
+    body = re.sub(r'^#\s+.+\n?', '', body, count=1, flags=re.MULTILINE).strip()
 
     body = body.rstrip()
     if "ADSENSE_REVIEW_START" not in body:
@@ -406,8 +429,7 @@ def _extract_tags(text: str, category: str) -> list[str]:
         if keyword in text:
             tags.extend(tag_list[:1])
     cat_tags = {
-        '副業実録': ['副業'], 'AI活用': ['AI'], 'FIRE設計': ['FIRE'],
-        'シングル父の日常': ['シングル父'], '買ってよかった': ['楽天'],
+        '節約・家計': ['節約', '家計'], '投資・FIRE': ['FIRE', '投資'], '副業・AI': ['副業', 'AI'],
     }
     for t in cat_tags.get(category, []):
         if t not in tags:

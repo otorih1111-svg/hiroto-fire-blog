@@ -4,7 +4,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const categories = ['副業実録', 'AI活用', 'FIRE設計', 'シングル父の日常', '買ってよかった', 'ひろとについて'];
+  const categories = ['節約・家計', '投資・FIRE', '副業・AI'];
   return categories.map(category => ({
     params: { category },
     props: { categoryName: category },
@@ -18,19 +18,30 @@ const posts = allPosts
   .filter(post => post.data.category === categoryName)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const categoryDescriptions: Record<string, string> = {
-  '副業実録': '副業の過程をありのまま記録しています。成果なしの時期も正直に。',
-  'AI活用': 'Claude・ChatGPTなどAIツールを副業・日常に活用した記録。',
-  'FIRE設計': 'FIREに向けた資産設計・計算・投資の記録と学び。',
-  'シングル父の日常': '10歳の息子との日々と、そこで気づいたお金・仕事・人生のこと。',
-  '買ってよかった': '楽天で実際に購入して本当によかったものを紹介しています。#PR',
-  'ひろとについて': 'ひろとのプロフィールや、このブログを始めた理由をまとめた記事です。',
+const categoryMeta: Record<string, { emoji: string; desc: string; lead: string }> = {
+  '節約・家計': {
+    emoji: '💰',
+    desc: '固定費・格安SIM・家計簿・ポイ活など、毎月の支出を整えるための記事一覧です。',
+    lead: '固定費を削って毎月の手残りを増やす。ハピタス・格安SIM・保険見直しなど、40代シングル父が実際にやった節約と家計管理の記録です。まず「見える化」から始める人向けの記事を集めています。',
+  },
+  '投資・FIRE': {
+    emoji: '📈',
+    desc: '新NISA・iDeCo・FP相談・資産公開など、FIREに向けた資産形成の記録一覧です。',
+    lead: '楽天証券でオルカンを積み立てながらFIREを目指す40代シングル父の記録。資産公開・NISA積立・FP無料相談など、「いつかやろう」を「今月から動く」に変えるための記事を集めています。',
+  },
+  '副業・AI': {
+    emoji: '🤖',
+    desc: '副業の始め方・AI活用・ブログ運営・自己アフィリなど、稼ぐ仕組みをつくる記事一覧です。',
+    lead: '収益ゼロから始めた副業の試行錯誤をリアルに発信。ハピタス自己アフィリ・ブログ収益化・AIを使った時短術など、40代会社員が夜の1時間で動ける副業ノウハウを集めています。',
+  },
 };
+
+const meta = categoryMeta[categoryName] ?? { emoji: '📝', desc: `${categoryName}に関する記事一覧`, lead: '' };
 ---
 
 <BaseLayout
-  title={`${categoryName}の記事一覧`}
-  description={categoryDescriptions[categoryName] || `${categoryName}に関する記事一覧`}
+  title={`${meta.emoji} ${categoryName}の記事一覧`}
+  description={meta.desc}
 >
   <div class="container">
 
@@ -42,11 +53,11 @@ const categoryDescriptions: Record<string, string> = {
     </nav>
 
     <div class="page-title">
-      <span class={`category-badge category-${categoryName}`} style="font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">
-        {categoryName}
+      <span class="category-badge" style="font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">
+        {meta.emoji} {categoryName}
       </span>
-      <h1>{categoryName}の記事一覧</h1>
-      <p>{categoryDescriptions[categoryName]}</p>
+      <h1>{categoryName}の記事一覧（{posts.length}件）</h1>
+      <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 8px;">{meta.lead}</p>
     </div>
 
     {posts.length > 0 ? (
