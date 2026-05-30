@@ -22,20 +22,15 @@ const featuredPosts = featuredSlugs
   .filter(Boolean);
 
 const categories = [
-  { name: '副業実録',       emoji: '📝' },
-  { name: 'AI活用',         emoji: '🤖' },
-  { name: 'FIRE設計',       emoji: '🔥' },
-  { name: 'シングル父の日常', emoji: '👨‍👦' },
-  { name: '買ってよかった',  emoji: '🛒' },
-  { name: 'ひろとについて',  emoji: '👤' },
+  { name: '節約・家計', emoji: '💰' },
+  { name: '投資・FIRE', emoji: '📈' },
+  { name: '副業・AI',   emoji: '🤖' },
 ];
 
 const topicLinks = [
-  { label: '家計', href: '/blog/kakeibo-matome/' },
-  { label: '副業', href: '/category/副業実録/' },
-  { label: 'AI', href: '/category/AI活用/' },
-  { label: 'FIRE', href: '/category/FIRE設計/' },
-  { label: 'シングル父', href: '/category/シングル父の日常/' },
+  { label: '節約・家計（お金を整える）', href: '/category/節約・家計/' },
+  { label: '投資・FIRE（増やす）',       href: '/category/投資・FIRE/' },
+  { label: '副業・AI（稼ぐ）',           href: '/category/副業・AI/' },
 ];
 ---
 
@@ -49,8 +44,7 @@ const topicLinks = [
         息子に「お金で諦めた」と<br>言わせたくない
       </h1>
       <p class="hero-cta-desc">
-        AIと副業でFIREを目指す過程をリアルに発信。<br>
-        <strong>今はブログ本編を中心に更新しています。</strong>
+        節約して、投資して、副業して。それでもまだFIREは遠い。でも続けてる。
       </p>
       <div class="hero-cta-btns">
         {/* ADSENSE_REVIEW_START: 審査通過後にLINEボタンを戻す */}
@@ -64,6 +58,7 @@ const topicLinks = [
         <a href="/blog/about-hiroto/" class="hero-sub-btn">ひろとについて</a>
       </div>
     </div>
+    {/* ADSENSE_REVIEW_START: 副業実録レポートブロック（準備中）審査通過後に戻す
     <div class="hero-cta-right">
       <div class="hero-report-card">
         <span class="hero-report-icon">📋</span>
@@ -72,6 +67,7 @@ const topicLinks = [
         <span class="hero-report-free">準備中</span>
       </div>
     </div>
+    ADSENSE_REVIEW_END */}
   </section>
 
   <section class="guide-grid">
