@@ -386,6 +386,15 @@ ogImage: '/images/thumbnails/{slug}.png'
 
     if not dry_run:
         CONTENT_DIR.mkdir(parents=True, exist_ok=True)
+
+        # 記事内SVG画像を生成して本文に挿入
+        result["body"] = body
+        new_body = _generate_article_svg(result, client)
+        if new_body:
+            body = new_body
+            full_content = frontmatter + body
+            result["content"] = full_content
+
         result["path"].write_text(full_content, encoding="utf-8")
         print(f"\n✅ 記事を保存しました：")
         print(f"   {result['path'].relative_to(BLOG_DIR)}")
@@ -435,6 +444,83 @@ def _extract_tags(text: str, category: str) -> list[str]:
         if t not in tags:
             tags.append(t)
     return list(dict.fromkeys(tags))[:5]
+
+
+def _generate_article_svg(result: dict, client) -> str | None:
+    """
+    記事内容を元にSVG図解を1枚生成して本文に挿入する。
+    戻り値：挿入後のbody文字列（失敗時はNone）
+    """
+    slug = result["slug"]
+    title = result["title"]
+    category = result["category"]
+    body = result.get("body", "")
+
+    svg_dir = BLOG_DIR / "public" / "images" / "articles" / slug
+    svg_path = svg_dir / "summary.svg"
+    svg_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"\n🖼 記事内SVG画像を生成中...")
+
+    prompt = f"""以下のブログ記事を読んで、読者の理解を助けるSVG図解を1枚作成してください。
+
+記事タイトル：{title}
+カテゴリ：{category}
+
+本文（先頭2000文字）：
+{body[:2000]}
+
+## 図解の種類（記事内容に合わせて1つ選ぶ）
+- Before/After比較図（変化・効果を示す記事に）
+- ステップ・フロー図（手順・流れを示す記事に）
+- 比較表図（2〜3つのものを比べる記事に）
+- ポイント整理図（3〜4つの要点をまとめる記事に）
+
+## SVG仕様
+- width="1200" height="460" viewBox="0 0 1200 460"
+- 背景色：#F7FBF8（薄いグリーン）
+- メインカラー：#1F4D32（深いグリーン）
+- アクセント：#7CB089
+- フォント：'Hiragino Sans','Noto Sans JP',sans-serif
+- 日本語テキストを使用
+- シンプルで読みやすいデザイン
+
+SVGコードのみを返してください（説明不要、<svg>タグから始める）。"""
+
+    try:
+        response = client.messages.create(
+            model="claude-haiku-4-5",
+            max_tokens=3000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        svg_raw = response.content[0].text.strip()
+
+        svg_match = re.search(r'(<svg[\s\S]*?</svg>)', svg_raw)
+        if not svg_match:
+            print("  ⚠ SVGの抽出に失敗しました")
+            return None
+
+        svg_content = svg_match.group(1)
+        svg_path.write_text(svg_content, encoding="utf-8")
+        print(f"  ✅ SVG保存: {svg_path.name}")
+
+        # 本文の中盤に挿入（2番目のH2の前）
+        img_tag = f"\n\n![{title}の図解](/images/articles/{slug}/summary.svg)\n"
+        h2_matches = list(re.finditer(r'^## .+$', body, re.MULTILINE))
+        if len(h2_matches) >= 2:
+            insert_pos = h2_matches[1].start()
+            body = body[:insert_pos] + img_tag + body[insert_pos:]
+        elif h2_matches:
+            insert_pos = h2_matches[0].end()
+            body = body[:insert_pos] + img_tag + body[insert_pos:]
+        else:
+            body = body + img_tag
+
+        return body
+
+    except Exception as e:
+        print(f"  ⚠ SVG生成エラー: {e}")
+        return None
 
 
 def _generate_thumbnail_for_post(result: dict) -> None:
