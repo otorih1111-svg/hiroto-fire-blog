@@ -152,6 +152,48 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
     return True
 
 
+def generate_thumbnail(file_path: Path) -> Path | None:
+    """記事のサムネイルを生成して保存パスを返す"""
+    content = file_path.read_text(encoding="utf-8")
+
+    # frontmatterからtitle・categoryを取得
+    title_m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+    cat_m = re.search(r'^category:\s*(.+?)\s*$', content, re.MULTILINE)
+    og_m = re.search(r"^ogImage:\s*['\"](.+?)['\"]", content, re.MULTILINE)
+
+    if not title_m:
+        log("⚠️  タイトルが取得できず、サムネ生成をスキップします")
+        return None
+
+    title = title_m.group(1)
+    category = cat_m.group(1) if cat_m else "副業・AI"
+
+    # ogImageのファイル名からサムネパスを決定
+    if og_m:
+        thumb_rel = og_m.group(1)  # 例: /images/thumbnails/2026-05-31-xxx.png
+        thumb_path = BLOG_DIR / "public" / thumb_rel.lstrip("/")
+    else:
+        thumb_path = BLOG_DIR / "public" / "images" / "thumbnails" / f"{file_path.stem}.png"
+
+    # すでに存在する場合はスキップ
+    if thumb_path.exists():
+        log(f"   サムネイル既存: {thumb_path.name}")
+        return thumb_path
+
+    log(f"🖼️  サムネイル生成中: {thumb_path.name}")
+    result = subprocess.run(
+        [sys.executable, str(BLOG_DIR / "scripts" / "generate_thumbnail.py"),
+         "--title", title, "--category", category, "--output", str(thumb_path)],
+        capture_output=True, text=True, cwd=str(BLOG_DIR)
+    )
+    if result.returncode == 0:
+        log(f"   ✅ サムネイル生成完了: {thumb_path.name}")
+        return thumb_path
+    else:
+        log(f"   ⚠️  サムネイル生成失敗: {result.stderr[:200]}")
+        return None
+
+
 def set_draft_false(file_path: Path):
     """draft: true → draft: false に変更"""
     content = file_path.read_text(encoding="utf-8")
@@ -196,6 +238,9 @@ def process_article(file_path: Path, dry_run: bool = False) -> str:
         log(f"   スコア: {total}/70点 → {'✅ 合格' if passed else '❌ 不合格'}")
 
         if passed:
+            # サムネイル生成（合格時に必ず実行）
+            thumb_path = generate_thumbnail(file_path)
+
             if dry_run or not AUTO_PUBLISH:
                 log(f"   ✅ {total}点で合格。draft: true のまま保持します（手動公開待ち）。")
                 log(f"   💬 公開するには Claude Code で「公開して」と伝えてください。")
@@ -204,8 +249,11 @@ def process_article(file_path: Path, dry_run: bool = False) -> str:
             # 自動公開（AUTO_PUBLISH=Trueの場合のみ）
             set_draft_false(file_path)
             slug = score_result.get("slug", file_path.stem)
+            push_files = [file_path]
+            if thumb_path and thumb_path.exists():
+                push_files.append(thumb_path)
             msg = f"publish: {score_result.get('title', slug)}（自動採点{total}点）\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
-            git_push([file_path], msg)
+            git_push(push_files, msg)
             log(f"🎉 公開完了: {slug}")
             return "published" if attempt == 1 else "rewritten_published"
 
