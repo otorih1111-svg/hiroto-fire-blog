@@ -114,11 +114,13 @@ const popularPosts = [
           <ul class="site-nav">
             <li><a href="/">トップ</a></li>
             <li><a href="/blog/about-hiroto/">プロフィール</a></li>
+            {/* LINE_PAUSE:
             <li>
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="nav-line-btn">
                 📩 LINE登録（無料）
               </a>
             </li>
+            */}
           </ul>
         </nav>
       </div>
@@ -135,7 +137,7 @@ const popularPosts = [
         <aside class="sidebar-col">
 
           <!-- LINE CTAウィジェット（最上部・最重要） -->
-          <LineBannerSide />
+          {/* LINE_PAUSE: <LineBannerSide /> */}
 
           <!-- プロフィールカード -->
           <div class="sidebar-profile-card">
@@ -167,7 +169,7 @@ const popularPosts = [
             <div class="sidebar-section-title">カテゴリ</div>
             <ul class="sidebar-category-list">
               {categoryCounts.map(cat => (
-                <li>
+                {/* LINE_PAUSE 
                   <a href={`/category/${cat.name}/`}>
                     <span>{cat.emoji} {cat.name}</span>
                     <span class="sidebar-category-count">{cat.count}</span>
@@ -196,7 +198,7 @@ const popularPosts = [
       </div>
     </main>
 
-    <LineBanner />
+    {/* LINE_PAUSE: <LineBanner /> */}
 
     <!-- フッター -->
     <footer class="site-footer">
@@ -224,18 +226,18 @@ const popularPosts = [
             <h3>カテゴリ</h3>
             <ul>
               {categoryDefs.map(cat => (
-                <li><a href={`/category/${encodeURIComponent(cat.name)}/`}>{cat.emoji} {cat.name}</a></li>
+                {/* LINE_PAUSE <a href={`/category/${encodeURIComponent(cat.name)}/`}>{cat.emoji} {cat.name}</a></li>
               ))}
             </ul>
           </div>
           <div class="footer-nav">
             <h3>リンク</h3>
             <ul>
-              <li><a href="/recommended-services/">おすすめサービス</a></li>
-              <li><a href="/recommended-books/">おすすめ本</a></li>
-              <li><a href="/blog/about-hiroto/">プロフィール</a></li>
-              <li><a href="/contact/">お問い合わせ</a></li>
-              <li><a href="/privacy/">プライバシーポリシー</a></li>
+              {/* LINE_PAUSE <a href="/recommended-services/">おすすめサービス</a></li>
+              {/* LINE_PAUSE <a href="/recommended-books/">おすすめ本</a></li>
+              {/* LINE_PAUSE <a href="/blog/about-hiroto/">プロフィール</a></li>
+              {/* LINE_PAUSE <a href="/contact/">お問い合わせ</a></li>
+              {/* LINE_PAUSE <a href="/privacy/">プライバシーポリシー</a></li>
             </ul>
           </div>
         </div>
