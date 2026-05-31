@@ -83,10 +83,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         </figure>
       )}
 
-      {/* ADSENSE_REVIEW_START */}
-      {/* LINE誘導（冒頭） */}
-      {/* <LineBanner variant="article" /> */}
-      {/* ADSENSE_REVIEW_END */}
+      <LineBanner variant="article" />
 
       <!-- 記事本文 -->
       <div class="prose">
@@ -105,10 +102,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         <slot />
       </div>
 
-      {/* ADSENSE_REVIEW_START */}
-      {/* LINE誘導（末尾）：緑CTA */}
-      {/* <LineCTA /> */}
-      {/* ADSENSE_REVIEW_END */}
+      <LineCTA />
 
       {tags.length > 0 && (
         <div class="post-tags">

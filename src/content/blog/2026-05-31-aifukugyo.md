@@ -154,4 +154,3 @@ AIをどう日常に取り込むかについては「[AIに「今日何すれば
 今夜5分だけ、明日やることを1行だけ書いてみてほしい。
 AIに聞いてもいいし、自分でメモするだけでもいい。それだけで明日の朝が変わる。
 
-<!-- ADSENSE_REVIEW_START: LINE CTA hidden during AdSense review. ADSENSE_REVIEW_END -->

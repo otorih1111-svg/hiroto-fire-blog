@@ -176,4 +176,3 @@ AIを使いこなせている実感はまだない。
 でも「使い始める前に戻りたいか」と聞かれたら、絶対に戻りたくない。  
 まずは構成だけ聞いてみる、そこから始めてみてほしい。
 
-<!-- ADSENSE_REVIEW_START: LINE CTA hidden during AdSense review. ADSENSE_REVIEW_END -->

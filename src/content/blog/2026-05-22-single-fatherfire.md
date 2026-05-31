@@ -202,4 +202,3 @@ FIREまで7,145万円足りない。
 
 ---
 
-<!-- ADSENSE_REVIEW_START: CTA hidden during AdSense review. ADSENSE_REVIEW_END -->

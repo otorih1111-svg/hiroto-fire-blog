@@ -63,9 +63,7 @@ ogImage: "/images/thumbnails/2026-05-27-fukugyo-kakuteishinkoku-matome.png"
 
 まずここを知りたい人は、この記事から読むのがいちばん早いです。
 
-<!-- ADSENSE_REVIEW_START -->
 [副業収入が20万円を超えたら何をすればいい？確定申告の基本](/blog/2026-05-27-fukugyo-kakuteishinkoku-20man/)
-<!-- ADSENSE_REVIEW_END -->
 
 ---
 
@@ -92,9 +90,7 @@ ogImage: "/images/thumbnails/2026-05-27-fukugyo-kakuteishinkoku-matome.png"
 「お金を見えるようにするところから始めたい」
 人には、この入口記事が合います。
 
-<!-- ADSENSE_REVIEW_START -->
 [家計簿が続かない人に教えたい、続けるための唯一のコツ](/blog/2026-05-27-kakeibo-tsuzukanai-kotsu/)
-<!-- ADSENSE_REVIEW_END -->
 
 ---
 
@@ -120,9 +116,7 @@ freeeにするか
 
 比較で止まりやすい人は、まずこの1本を見れば十分です。
 
-<!-- ADSENSE_REVIEW_START -->
 [マネーフォワードとfreeeで迷ったときに見るポイント](/blog/2026-05-27-moneyforward-freee-hikaku/)
-<!-- ADSENSE_REVIEW_END -->
 
 ---
 
@@ -147,9 +141,7 @@ freeeにするか
 
 「難しそう」が「思ったより普通だった」に変わる流れを知りたいなら、この体験談が一番近いです。
 
-<!-- ADSENSE_REVIEW_START -->
 [【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/2026-05-27-moneyforward-cloud-tax-review/)
-<!-- ADSENSE_REVIEW_END -->
 
 ---
 
@@ -163,33 +155,25 @@ freeeにするか
 まずはここからです。
 制度の土台を知らないと、その先の比較もレビューも頭に入りにくいです。
 
-<!-- ADSENSE_REVIEW_START -->
 [副業収入が20万円を超えたら何をすればいい？確定申告の基本](/blog/2026-05-27-fukugyo-kakuteishinkoku-20man/)
-<!-- ADSENSE_REVIEW_END -->
 
 ### そもそも数字をまとめるのが苦手
 
 家計簿や支出把握で毎回止まるなら、先に見える化の考え方から入った方が楽です。
 
-<!-- ADSENSE_REVIEW_START -->
 [家計簿が続かない人に教えたい、続けるための唯一のコツ](/blog/2026-05-27-kakeibo-tsuzukanai-kotsu/)
-<!-- ADSENSE_REVIEW_END -->
 
 ### ソフト選びで決めきれない
 
 比較で止まるなら、ここです。
 
-<!-- ADSENSE_REVIEW_START -->
 [マネーフォワードとfreeeで迷ったときに見るポイント](/blog/2026-05-27-moneyforward-freee-hikaku/)
-<!-- ADSENSE_REVIEW_END -->
 
 ### 実際に使った人の話を先に見たい
 
 体験談から入った方がイメージしやすい人もいます。
 
-<!-- ADSENSE_REVIEW_START -->
 [【体験談】副業の確定申告、マネーフォワード クラウドで初めてできた話](/blog/2026-05-27-moneyforward-cloud-tax-review/)
-<!-- ADSENSE_REVIEW_END -->
 
 ---
 
