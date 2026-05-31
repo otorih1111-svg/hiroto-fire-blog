@@ -22,26 +22,32 @@ BLOG_DIR = Path(__file__).resolve().parents[1]
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_DIR = BLOG_DIR.parent / "threads_affiliate_system"
 
-PASS_SCORE = 56   # 80% = 入稿OK
-TARGET_SCORE = 63  # 90% = 目標
+PASS_SCORE = 67   # 実質90%相当（自動採点が約5〜10点甘い傾向のため補正）
+TARGET_SCORE = 67  # 合格基準と同値
 
-SCORING_PROMPT = """あなたはブログ記事の品質審査員です。以下の記事を14軸・70点満点で採点し、必ずJSON形式のみで返してください。説明文は不要です。
+SCORING_PROMPT = """あなたはブログ記事の厳格な品質審査員です。以下の記事を14軸・70点満点で採点し、必ずJSON形式のみで返してください。説明文は不要です。
+
+【重要な採点方針】
+- 採点は厳しく行う。「まあOK」は3点、「明確に良い」は4点、「非常に優れている」のみ5点
+- 5点は滅多に与えない。4点でも十分良い評価
+- 迷ったら低い方の点数をつける
+- 「入っている」だけでは高得点にしない。「効果的に使われている」かを見る
 
 採点基準（各軸0〜5点）:
-1. 悩み解決: 読者の悩みに明確に答えているか
-2. 面白さ・人間味: 体験談・クスッとする一文が入っているか
-3. 役立ち度: 具体的な数字・手順・情報があるか
-4. 読みやすさ: 1文が短い・段落が適切・スマホで読みやすいか
-5. 独自性: ひろとにしか書けない体験・視点があるか
-6. SEO: 本文にキーワードが自然に入っているか
-7. タイトル・description: タイトル27文字以内・description80〜120文字か（frontmatterで確認）
-8. 構成の流れ: 悩み→結論→体験→行動の流れか
-9. 内部リンク: 関連記事へのリンクが入っているか（0=なし、5=2本以上）
-10. 導線設計: 案件や次のアクションへの流れが自然か
-11. CTA: まとめ後に次の行動が明確か
-12. ルール準拠: ズボラ感・ポンコツ感・クスッとが入っているか
-13. 正確性: 数字・情報に誤りがないか
-14. 画像・サムネ: 本文内に![...]画像があるか・ogImageが設定されているか
+1. 悩み解決: 読者の具体的な悩みに明確に答えているか（一般論はマイナス）
+2. 面白さ・人間味: クスッとする一文・自己ツッコミが自然に入っているか（1箇所だけでは3点止まり）
+3. 役立ち度: 具体的な数字・手順・実測値があるか（「便利です」で終わる記述はマイナス）
+4. 読みやすさ: 全段落が1〜3文以内か・スマホで詰まって見えないか（1箇所でも4文以上の段落があれば3点以下）
+5. 独自性: ひろと（シングル父・40代・息子のため）にしか書けない体験・視点が複数あるか
+6. SEO: メインキーワードが自然に本文の複数箇所に入っているか
+7. タイトル・description: タイトルが27文字以内か・descriptionが80〜120文字か（どちらか1つでもNGなら2点以下）
+8. 構成の流れ: 冒頭が「悩み→結論→ベネフィット」になっているか・H2の順番が読者の疑問に沿っているか
+9. 内部リンク: 関連記事へのリンクが入っているか（0本=0点、1本=3点、2本以上=5点）
+10. 導線設計: アフィリリンクまたは次のアクションへの流れが自然か（ADSENSE_REVIEW中は評価保留で3点固定）
+11. CTA: まとめ後に読者の次の1アクションが具体的に示されているか
+12. ルール準拠: ズボラ感・ポンコツ感・クスッとが各1箇所以上あるか（どれか1つ欠けていたら3点以下）
+13. 正確性: 数字・制度・情報に誤りがないか（免責表記があるか）
+14. 画像・サムネ: 本文内に![...]画像があるか・ogImageが設定されているか（どちらか欠けていたら3点以下）
 
 返答はこのJSONのみ（```json```不要）:
 {"scores":{"悩み解決":0,"面白さ・人間味":0,"役立ち度":0,"読みやすさ":0,"独自性":0,"SEO":0,"タイトル・description":0,"構成の流れ":0,"内部リンク":0,"導線設計":0,"CTA":0,"ルール準拠":0,"正確性":0,"画像・サムネ":0},"total":0,"pass":false,"low_axes":[],"feedback":{},"rewrite_instructions":""}
@@ -112,27 +118,27 @@ def score_article(file_path: Path, verbose: bool = True) -> dict:
         messages=[{"role": "user", "content": prompt}]
     )
 
-    raw = response.content[0].text
+    raw = response.content[0].text.strip()
 
-    # JSONを抽出（複数パターン対応）
-    raw = raw.strip()
+    # JSONを抽出（複数パターン対応・優先順位順）
     json_str = None
-    # パターン1: ```json ... ```
-    m = re.search(r"```json\s*(.*?)\s*```", raw, re.DOTALL)
-    if m:
-        json_str = m.group(1)
-    else:
-        # パターン2: ``` ... ```
-        m = re.search(r"```\s*(.*?)\s*```", raw, re.DOTALL)
+    for pattern in [
+        r"```json\s*([\s\S]*?)\s*```",   # ```json ... ```
+        r"```\s*([\s\S]*?)\s*```",        # ``` ... ```
+        r"(\{[\s\S]*\})",                  # { ... } 直接
+    ]:
+        m = re.search(pattern, raw)
         if m:
-            json_str = m.group(1)
-        else:
-            # パターン3: { ... } を直接探す
-            m = re.search(r"\{.*\}", raw, re.DOTALL)
-            json_str = m.group(0) if m else "{}"
+            candidate = m.group(1).strip()
+            try:
+                json.loads(candidate)  # 有効なJSONか確認
+                json_str = candidate
+                break
+            except json.JSONDecodeError:
+                continue
 
     try:
-        result = json.loads(json_str)
+        result = json.loads(json_str) if json_str else {}
     except json.JSONDecodeError:
         print(f"⚠️  JSON解析に失敗しました。生のレスポンス:\n{raw[:500]}")
         result = {}

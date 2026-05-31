@@ -31,7 +31,7 @@ BLOG_DIR = Path(__file__).resolve().parents[1]
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_DIR = BLOG_DIR.parent / "threads_affiliate_system"
 
-PASS_SCORE = 63   # 90% = 自動公開基準（現在は手動公開のため参考値）
+PASS_SCORE = 67   # 自動採点が5〜10点甘い傾向のため補正（実質90%相当）
 MAX_RETRIES = 2
 AUTO_PUBLISH = False  # Trueにすると自動公開。アドセンス通過後に検討
 LOG_DIR = BLOG_DIR / "logs"
