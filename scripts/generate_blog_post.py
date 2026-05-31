@@ -199,7 +199,7 @@ def generate_blog_post(
             # カテゴリ偏りを自動調整
             category = _pick_next_category(recent_articles)
     if category not in CATEGORIES:
-        category = '副業実録'
+        category = '副業・AI'
 
     sns_context = ""
     if sns_posts:
@@ -472,11 +472,9 @@ def _append_x_promo_post(result: dict, dry_run: bool = False) -> None:
     blog_url = result["blog_url"]
 
     category_hook = {
-        '副業実録': "副業の記録",
-        'AI活用': "AIを使った話",
-        'FIRE設計': "FIREへの設計",
-        'シングル父の日常': "シングル父の日常",
-        '買ってよかった': "実際に試してみた話",
+        '節約・家計': "節約・家計の話",
+        '投資・FIRE': "投資・FIREへの道",
+        '副業・AI': "副業・AIの記録",
     }.get(category, "記録")
 
     print(f"\n🐦 X紹介投稿を生成中...")
@@ -542,9 +540,9 @@ def generate_from_weekly_posts(dry_run: bool = False, with_note: bool = False) -
         return []
 
     default_themes = [
-        ("副業を3ヶ月続けて気づいたこと", "副業実録"),
-        ("AIを使い始めて変わった副業のやり方", "AI活用"),
-        ("シングル父のFIRE設計：今の資産状況を正直に", "FIRE設計"),
+        ("副業を3ヶ月続けて気づいたこと", "副業・AI"),
+        ("AIを使い始めて変わった副業のやり方", "副業・AI"),
+        ("シングル父のFIRE設計：今の資産状況を正直に", "投資・FIRE"),
     ][:remaining_slots]
 
     results = []
