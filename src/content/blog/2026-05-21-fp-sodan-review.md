@@ -159,9 +159,9 @@ FPさんが何かを決めてくれるわけじゃない。
 
 ---
 
-FP無料相談を試してみたい方はこちら。全国4,500名以上のFPと提携しているサービスで、オンライン相談にも対応しています。
+FP無料相談を試してみたい方はこちら。オンライン相談に対応しており、相談後にハーゲンダッツのギフト券がもらえるキャンペーンもあります。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5ZMCI" rel="nofollow sponsored noopener noreferrer">FP無料相談はこちら（保険マンモス）</a>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">無料FP相談はこちら（ファインドイット）</a>
 
 ---
 
