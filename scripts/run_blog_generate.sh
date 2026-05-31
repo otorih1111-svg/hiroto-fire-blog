@@ -1,5 +1,5 @@
 #!/bin/bash
-# ブログ記事自動生成 → git push → Cloudflare自動デプロイ
+# ブログ記事自動生成 → 採点 → 書き直し → 合格したら公開
 set -euo pipefail
 
 BLOG_DIR="/Users/hiroto/claud code/hiroto-fire-blog"
@@ -11,24 +11,14 @@ mkdir -p "$LOG_DIR"
 cd "$BLOG_DIR"
 
 echo "=============================="
-echo "🚀 ブログ自動生成開始: $(date)"
+echo "🚀 ブログ自動公開パイプライン開始: $(date)"
 echo "=============================="
 
-# 記事生成（1日最大2記事）
+# 生成→採点→書き直し→公開をパイプラインで一括実行
 PYTHONUNBUFFERED=1 \
   caffeinate -disu \
-  "$PY" -u scripts/generate_blog_post.py --weekly \
-  2>&1 | tee -a "$LOG_DIR/blog_generate_${TS}.log"
-
-# git push（Cloudflare Pages が自動デプロイ）
-echo ""
-echo "📦 GitHub にプッシュ中..."
-git add src/content/blog/ public/images/thumbnails/
-git diff --cached --quiet && echo "⚠ 新規記事なし・スキップ" && exit 0
-
-git commit -m "auto: ブログ記事自動生成 $(date +%Y-%m-%d)"
-git push origin main
+  "$PY" -u scripts/auto_publish_pipeline.py --generate \
+  2>&1 | tee -a "$LOG_DIR/blog_pipeline_${TS}.log"
 
 echo ""
-echo "✅ 完了: $(date)"
-echo "   Cloudflare Pages が自動デプロイします"
+echo "✅ パイプライン完了: $(date)"

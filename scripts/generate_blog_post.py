@@ -366,7 +366,7 @@ description: "{description_escaped}"
 pubDate: {today}
 category: {category}
 tags: {json.dumps(tags, ensure_ascii=False)}
-draft: false
+draft: true
 affiliate: false
 ogImage: '/images/thumbnails/{slug}.png'
 ---
