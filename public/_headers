@@ -1,3 +1,7 @@
+# 全ページにインデックス許可（Cloudflare Pagesのnoindex自動付与を上書き）
+/*
+  X-Robots-Tag: index, follow
+
 # サムネイル画像：更新のたびに最新版を返す
 /thumbnails/*
   Cache-Control: public, max-age=0, must-revalidate
