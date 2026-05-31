@@ -2,6 +2,13 @@
 /*
   X-Robots-Tag: index, follow
 
+# サイトマップ自体は検索結果に出さない（SEO標準の作法）
+/sitemap-index.xml
+  X-Robots-Tag: noindex, follow
+
+/sitemap-0.xml
+  X-Robots-Tag: noindex, follow
+
 # サムネイル画像：更新のたびに最新版を返す
 /thumbnails/*
   Cache-Control: public, max-age=0, must-revalidate
