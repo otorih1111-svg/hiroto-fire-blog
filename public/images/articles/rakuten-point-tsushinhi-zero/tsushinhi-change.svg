@@ -1,0 +1,43 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="480" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="56" width="1088" height="368" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+
+  <text x="88" y="118" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="32" font-weight="700">
+    通信費の変化｜楽天経済圏に寄せた結果
+  </text>
+  <text x="88" y="155" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    カードを変えて・プランを変えて・ポイント払いにしただけ
+  </text>
+
+  <!-- Step 1 -->
+  <rect x="88" y="188" width="280" height="170" rx="20" fill="#FFF3F0" stroke="#F2C8C0" stroke-width="2"/>
+  <text x="228" y="228" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700" text-anchor="middle">大手キャリア時代</text>
+  <text x="228" y="300" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="48" font-weight="700" text-anchor="middle">¥8,000</text>
+  <text x="228" y="338" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">毎月かかっていた</text>
+
+  <!-- Arrow 1 -->
+  <path d="M392 273H460" stroke="#7CB089" stroke-width="8" stroke-linecap="round"/>
+  <path d="M444 257L464 273L444 289" stroke="#7CB089" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="426" y="318" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">乗り換え</text>
+
+  <!-- Step 2 -->
+  <rect x="464" y="188" width="280" height="170" rx="20" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="604" y="228" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700" text-anchor="middle">楽天モバイルへ変更</text>
+  <text x="604" y="300" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="48" font-weight="700" text-anchor="middle">¥1,078</text>
+  <text x="604" y="338" fill="#8A7A30" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">最大プランでもこの金額</text>
+
+  <!-- Arrow 2 -->
+  <path d="M768 273H836" stroke="#7CB089" stroke-width="8" stroke-linecap="round"/>
+  <path d="M820 257L840 273L820 289" stroke="#7CB089" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="804" y="318" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">ポイント払い</text>
+
+  <!-- Step 3 -->
+  <rect x="840" y="188" width="280" height="170" rx="20" fill="#F3F8F4" stroke="#9FC9AC" stroke-width="2"/>
+  <text x="980" y="228" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700" text-anchor="middle">ポイント払い導入後</text>
+  <text x="980" y="300" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="48" font-weight="700" text-anchor="middle">¥0</text>
+  <text x="980" y="338" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">自己負担ゼロ</text>
+
+  <!-- Bottom note -->
+  <rect x="88" y="376" width="1008" height="28" rx="8" fill="#F3F8F4"/>
+  <text x="600" y="396" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="700" text-anchor="middle">年間差額：約96,000円｜特別な出費は一切増やしていない</text>
+</svg>
