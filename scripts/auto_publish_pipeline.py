@@ -31,8 +31,9 @@ BLOG_DIR = Path(__file__).resolve().parents[1]
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_DIR = BLOG_DIR.parent / "threads_affiliate_system"
 
-PASS_SCORE = 56
+PASS_SCORE = 63   # 90% = 自動公開基準（現在は手動公開のため参考値）
 MAX_RETRIES = 2
+AUTO_PUBLISH = False  # Trueにすると自動公開。アドセンス通過後に検討
 LOG_DIR = BLOG_DIR / "logs"
 
 
@@ -195,11 +196,12 @@ def process_article(file_path: Path, dry_run: bool = False) -> str:
         log(f"   スコア: {total}/70点 → {'✅ 合格' if passed else '❌ 不合格'}")
 
         if passed:
-            if dry_run:
-                log("   [dry-run] 合格。実際には公開しません。")
-                return "dry_run_pass"
+            if dry_run or not AUTO_PUBLISH:
+                log(f"   ✅ {total}点で合格。draft: true のまま保持します（手動公開待ち）。")
+                log(f"   💬 公開するには Claude Code で「公開して」と伝えてください。")
+                return "ready"
 
-            # 公開処理
+            # 自動公開（AUTO_PUBLISH=Trueの場合のみ）
             set_draft_false(file_path)
             slug = score_result.get("slug", file_path.stem)
             msg = f"publish: {score_result.get('title', slug)}（自動採点{total}点）\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
@@ -251,7 +253,7 @@ def main():
 
     log(f"📋 draft記事 {len(drafts)}本を処理します")
 
-    results = {"published": [], "rewritten_published": [], "failed": []}
+    results = {"published": [], "rewritten_published": [], "ready": [], "failed": []}
 
     for file_path in drafts:
         status = process_article(file_path, dry_run=args.dry_run)
@@ -260,10 +262,15 @@ def main():
     # サマリー
     log(f"\n{'='*60}")
     log("📊 パイプライン完了サマリー")
-    log(f"   ✅ 一発合格・公開: {len(results['published'])}本")
-    log(f"   🔄 書き直し後・公開: {len(results['rewritten_published'])}本")
-    log(f"   ❌ 要手動確認: {len(results['failed'])}本")
+    log(f"   ✅ 合格・公開待ち（draft:true）: {len(results['ready'])}本")
+    log(f"   🔄 書き直し後・合格・公開待ち: {len(results['rewritten_published'])}本")
+    log(f"   ❌ 要手動確認（63点未達）: {len(results['failed'])}本")
+    if results["ready"]:
+        log("   📋 公開待ち記事（「公開して」で公開できます）:")
+        for f in results["ready"]:
+            log(f"      → {f}")
     if results["failed"]:
+        log("   ⚠️  要確認記事:")
         for f in results["failed"]:
             log(f"      → {f}")
 
