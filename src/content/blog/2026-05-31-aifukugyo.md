@@ -2,7 +2,7 @@
 title: "AIを使い始めて「副業の段取り」が変わった話【40代シングル父の実録】"
 description: "AIを使い始めてから、副業の「作業の仕方」そのものが変わった。何が変わって、何はまだ変わっていないか、正直に書く。"
 pubDate: 2026-05-31
-category: 副業実録
+category: 副業・AI
 tags: ["AI", "副業", "シングル父"]
 draft: false
 affiliate: false
