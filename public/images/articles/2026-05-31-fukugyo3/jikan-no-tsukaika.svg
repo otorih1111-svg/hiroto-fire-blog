@@ -1,0 +1,31 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="460" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="48" width="1088" height="364" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+
+  <text x="600" y="105" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" text-anchor="middle">副業3ヶ月で変えた「時間の使い方」</text>
+  <text x="600" y="138" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">量より粒。続けるための3つの切り替え</text>
+
+  <!-- Item 1 -->
+  <rect x="88" y="162" width="310" height="210" rx="20" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="243" y="202" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700" text-anchor="middle">① 単位を小さくする</text>
+  <text x="108" y="238" fill="#8A7A30" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">❌ 「1時間やる」</text>
+  <text x="108" y="268" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">✅ 「タイトル1つ考える」</text>
+  <text x="108" y="298" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">✅ 「3行だけ書く」</text>
+  <text x="108" y="348" fill="#5A6A55" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="14">小さいから動ける</text>
+
+  <!-- Item 2 -->
+  <rect x="445" y="162" width="310" height="210" rx="20" fill="#F3F8F4" stroke="#9FC9AC" stroke-width="2"/>
+  <text x="600" y="202" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700" text-anchor="middle">② バテた夜用リスト</text>
+  <text x="465" y="238" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">• SNS予約（下書きあれば3分）</text>
+  <text x="465" y="268" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">• 記事を1本読む</text>
+  <text x="465" y="298" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">• 誤字を1箇所直す</text>
+  <text x="465" y="348" fill="#5A6A55" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="14">「何もしなかった」が減る</text>
+
+  <!-- Item 3 -->
+  <rect x="802" y="162" width="310" height="210" rx="20" fill="#FFF3F0" stroke="#F2C8C0" stroke-width="2"/>
+  <text x="957" y="202" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700" text-anchor="middle">③ 頑張りすぎない</text>
+  <text x="822" y="238" fill="#8A5040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">❌ 今日2時間→明日ゼロ</text>
+  <text x="822" y="268" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">✅ 毎日20〜30分以内</text>
+  <text x="822" y="298" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16">✅ 余力を残して切り上げる</text>
+  <text x="822" y="348" fill="#5A6A55" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="14">週の総量が増える</text>
+</svg>

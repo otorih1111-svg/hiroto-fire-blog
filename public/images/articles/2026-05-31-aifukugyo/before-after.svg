@@ -1,0 +1,27 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="460" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="48" width="1088" height="364" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+
+  <text x="600" y="105" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" text-anchor="middle">AI導入で変わった「朝の副業時間」</text>
+  <text x="600" y="138" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">同じ1時間でも、段取り次第でこれだけ変わる</text>
+
+  <!-- Before -->
+  <rect x="88" y="162" width="460" height="220" rx="20" fill="#FFF3F0" stroke="#F2C8C0" stroke-width="2"/>
+  <text x="318" y="200" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" text-anchor="middle">AI導入前</text>
+  <text x="118" y="240" fill="#8A5040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">① 座る　→　何をしようか考える（15分）</text>
+  <text x="118" y="275" fill="#8A5040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">② 関係ない記事を読む（20分）</text>
+  <text x="118" y="310" fill="#8A5040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">③ 「よし書こう」→ 息子が起きてくる</text>
+  <text x="118" y="355" fill="#C0392B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700">書いた文字数：ほぼゼロ</text>
+
+  <!-- Arrow -->
+  <path d="M572 272H628" stroke="#7CB089" stroke-width="10" stroke-linecap="round"/>
+  <path d="M612 255L632 272L612 289" stroke="#7CB089" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- After -->
+  <rect x="652" y="162" width="460" height="220" rx="20" fill="#F3F8F4" stroke="#9FC9AC" stroke-width="2"/>
+  <text x="882" y="200" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" text-anchor="middle">AI導入後</text>
+  <text x="682" y="240" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">前夜5分：AIに骨格を聞く</text>
+  <text x="682" y="275" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">① 座る　→　すぐ「書く」に入る</text>
+  <text x="682" y="310" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18">② 1時間ほぼ「書く」だけに使える</text>
+  <text x="682" y="355" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700">迷う時間がなくなった</text>
+</svg>
