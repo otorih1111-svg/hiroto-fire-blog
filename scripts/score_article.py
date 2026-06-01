@@ -17,6 +17,7 @@ import json
 import re
 import argparse
 from pathlib import Path
+from json import JSONDecoder
 
 BLOG_DIR = Path(__file__).resolve().parents[1]
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
@@ -96,6 +97,37 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
     return fm, body
 
 
+def extract_json_object(raw: str) -> dict:
+    """レスポンスから最初に見つかるJSONオブジェクトを抽出する"""
+    decoder = JSONDecoder()
+
+    # まずはコードフェンス内を優先
+    fence_patterns = [
+        r"```json\s*([\s\S]*?)\s*```",
+        r"```\s*([\s\S]*?)\s*```",
+    ]
+    for pattern in fence_patterns:
+        for match in re.finditer(pattern, raw):
+            candidate = match.group(1).strip()
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError:
+                pass
+
+    # 生文字列から先頭のJSONオブジェクトを総当たりで探す
+    for idx, ch in enumerate(raw):
+        if ch != "{":
+            continue
+        try:
+            obj, end = decoder.raw_decode(raw[idx:])
+            if isinstance(obj, dict):
+                return obj
+        except json.JSONDecodeError:
+            continue
+
+    return {}
+
+
 def score_article(file_path: Path, verbose: bool = True) -> dict:
     """記事を採点してスコアを返す"""
     content = file_path.read_text(encoding="utf-8")
@@ -112,36 +144,23 @@ def score_article(file_path: Path, verbose: bool = True) -> dict:
 
     prompt = SCORING_PROMPT.replace("{article_content}", content)
 
-    response = client.messages.create(
-        model="claude-haiku-4-5",
-        max_tokens=1500,
-        messages=[{"role": "user", "content": prompt}]
-    )
+    result = {}
+    raw = ""
+    for attempt in range(2):
+        response = client.messages.create(
+            model="claude-haiku-4-5",
+            max_tokens=1800,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        raw = "\n".join(
+            block.text for block in response.content if hasattr(block, "text")
+        ).strip()
+        result = extract_json_object(raw)
+        if result.get("scores") and "total" in result:
+            break
 
-    raw = response.content[0].text.strip()
-
-    # JSONを抽出（複数パターン対応・優先順位順）
-    json_str = None
-    for pattern in [
-        r"```json\s*([\s\S]*?)\s*```",   # ```json ... ```
-        r"```\s*([\s\S]*?)\s*```",        # ``` ... ```
-        r"(\{[\s\S]*\})",                  # { ... } 直接
-    ]:
-        m = re.search(pattern, raw)
-        if m:
-            candidate = m.group(1).strip()
-            try:
-                json.loads(candidate)  # 有効なJSONか確認
-                json_str = candidate
-                break
-            except json.JSONDecodeError:
-                continue
-
-    try:
-        result = json.loads(json_str) if json_str else {}
-    except json.JSONDecodeError:
-        print(f"⚠️  JSON解析に失敗しました。生のレスポンス:\n{raw[:500]}")
-        result = {}
+    if not result:
+        print(f"⚠️  JSON解析に失敗しました。生のレスポンス:\n{raw[:800]}")
 
     result["slug"] = slug
     result["title"] = title

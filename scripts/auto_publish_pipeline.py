@@ -6,8 +6,8 @@ auto_publish_pipeline.py
 フロー:
   1. generate_blog_post.py で記事生成（draft: true）
   2. score_article.py で採点
-  3. 56点以上 → draft: false → git push → 公開
-  4. 56点未満 → rewrite_article.py で書き直し → 再採点（最大2回）
+  3. 67点以上 → draft: false → git push → 公開
+  4. 67点未満 → rewrite_article.py で書き直し → 再採点（最大2回）
   5. 2回試してもNGなら draft: true のまま停止（手動確認）
 
 使い方:
@@ -111,7 +111,7 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
     prompt = f"""以下のブログ記事を改善してください。
 
 ## 現在の採点結果
-合計: {total}/70点（入稿基準: 56点）
+合計: {total}/70点（入稿基準: 67点）
 低スコア軸: {', '.join(low_axes)}
 
 ## 改善指示
@@ -137,7 +137,14 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
         messages=[{"role": "user", "content": prompt}]
     )
 
-    new_content = response.content[0].text.strip()
+    new_content = "\n".join(
+        block.text for block in response.content if hasattr(block, "text")
+    ).strip()
+
+    # ```markdown ... ``` や ```md ... ``` で返ってきても本文を抽出
+    fence_match = re.search(r"```(?:markdown|md)?\s*([\s\S]*?)\s*```", new_content)
+    if fence_match:
+        new_content = fence_match.group(1).strip()
 
     # frontmatterが含まれているか確認
     if not new_content.startswith("---"):
@@ -312,7 +319,7 @@ def main():
     log("📊 パイプライン完了サマリー")
     log(f"   ✅ 合格・公開待ち（draft:true）: {len(results['ready'])}本")
     log(f"   🔄 書き直し後・合格・公開待ち: {len(results['rewritten_published'])}本")
-    log(f"   ❌ 要手動確認（63点未達）: {len(results['failed'])}本")
+    log(f"   ❌ 要手動確認（67点未達）: {len(results['failed'])}本")
     if results["ready"]:
         log("   📋 公開待ち記事（「公開して」で公開できます）:")
         for f in results["ready"]:

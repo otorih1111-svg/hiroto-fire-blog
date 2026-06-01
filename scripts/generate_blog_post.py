@@ -270,7 +270,11 @@ def generate_blog_post(
 - まとめの中には要点の箇条書き3〜5点と、最後に1文のCTAを入れる
 - 記事タイトルと同じ文言のH2は作らない
 - LINE誘導、LINE登録CTA、外部チャット誘導は本文に入れない
-- アドセンス審査中なので、LINEに触れる文脈が必要でもCTA化しない
+- まとめのCTAは抽象的に終わらせず、「今日やるならこれ」の1アクションまで具体化する
+- H2を2〜4個作り、少なくとも1箇所で「明日そのまま試せる手順」「チェックリスト」「テンプレ」を入れる
+- 内部リンクは最低2本入れる。1本は関連記事、もう1本は次に読むべき記事にする
+- タイトルは27文字以内を最優先し、長くなる場合は削る
+- descriptionは80〜120文字で、悩みとベネフィットが両方入るようにする
 
 ## YMYLジャンルの特別ルール
 以下のジャンルはGoogleがE-E-A-T（経験・専門性・権威性・信頼性）を厳しく評価する。
@@ -296,6 +300,10 @@ YMYLジャンルの記事では：
 - カッコ書きのオチに逃げていないか
 - 自己ツッコミやユーモアが入っても内容が薄くなっていないか
 - YMYLジャンルなら免責表記が入っているか・断定表現を避けているか
+- タイトルが27文字以内か
+- descriptionが80〜120文字か
+- 内部リンクが2本以上あるか
+- CTAが「考えてみて」で終わっていないか
 
 ## 出力形式
 frontmatterなしで、H1タイトルから始めてください。
@@ -334,6 +342,9 @@ frontmatterなしで、H1タイトルから始めてください。
 - 直近の公開済み記事と同じテーマ・タイトルは絶対に使わない（特に「副業3ヶ月・収益ほぼゼロ」は3記事連続で使用済み）
 - LINE登録、LINEボタン、LINEプレゼント、DM誘導などの文言は本文に入れない
 - リード文とまとめは必須。省略しない
+- 「副業3ヶ月で気づいた」「AIを使い始めて変わった」系の似た切り口は避ける
+- 明日そのまま使える具体例を必ず1つ入れる
+- 最後は「まず今日やるならこれ」で締める
 
 ## 出力形式
 1行目：記事タイトル（# で始めるMarkdown見出し）
@@ -369,8 +380,6 @@ descriptionとして使える1〜2文のサマリーを <!-- description: ... --
     body = re.sub(r'^#\s+.+\n?', '', body, count=1, flags=re.MULTILINE).strip()
 
     body = body.rstrip()
-    if "ADSENSE_REVIEW_START" not in body:
-        body += "\n\n<!-- ADSENSE_REVIEW_START: LINE CTA hidden during AdSense review. ADSENSE_REVIEW_END -->"
 
     today = datetime.date.today().isoformat()
     slug_base = _slugify(theme or title)[:40]
@@ -645,9 +654,9 @@ def generate_from_weekly_posts(dry_run: bool = False, with_note: bool = False) -
         return []
 
     default_themes = [
-        ("副業を3ヶ月続けて気づいたこと", "副業・AI"),
-        ("AIを使い始めて変わった副業のやり方", "副業・AI"),
-        ("シングル父のFIRE設計：今の資産状況を正直に", "投資・FIRE"),
+        ("新NISAを続ける前に整えた家計の話", "投資・FIRE"),
+        ("楽天経済圏を続けて見えた固定費の話", "節約・家計"),
+        ("シングル父がFIRE準備で先に見直したこと", "投資・FIRE"),
     ][:remaining_slots]
 
     results = []
