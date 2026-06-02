@@ -1,0 +1,42 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="460" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="48" width="1088" height="364" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="600" y="108" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" text-anchor="middle">新NISAを始める前にやること</text>
+  <text x="600" y="142" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">順番を守るだけで、投資が続くかどうかが変わる</text>
+
+  <!-- Step 1 -->
+  <rect x="88" y="168" width="220" height="200" rx="20" fill="#FFF9E8" stroke="#F0E2AE" stroke-width="2"/>
+  <text x="198" y="210" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700" text-anchor="middle">① 収支を把握</text>
+  <text x="198" y="242" fill="#8A7A30" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">手取り収入を確認</text>
+  <text x="198" y="265" fill="#8A7A30" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">毎月の支出を把握</text>
+  <text x="198" y="288" fill="#8A7A30" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">残高を確認する</text>
+  <text x="198" y="345" fill="#6A5B1C" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="13" font-weight="700" text-anchor="middle">まず「現在地」を知る</text>
+
+  <!-- Arrow -->
+  <path d="M328 268H388" stroke="#7CB089" stroke-width="8" stroke-linecap="round"/>
+  <path d="M374 252L394 268L374 284" stroke="#7CB089" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Step 2 -->
+  <rect x="398" y="168" width="220" height="200" rx="20" fill="#FFF3F0" stroke="#F2C8C0" stroke-width="2"/>
+  <text x="508" y="210" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700" text-anchor="middle">② 固定費を削る</text>
+  <text x="508" y="242" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">通信費を見直す</text>
+  <text x="508" y="265" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">保険を整理する</text>
+  <text x="508" y="288" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">サブスクを棚卸し</text>
+  <text x="508" y="345" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="13" font-weight="700" text-anchor="middle">投資余力を作る</text>
+
+  <!-- Arrow -->
+  <path d="M638 268H698" stroke="#7CB089" stroke-width="8" stroke-linecap="round"/>
+  <path d="M684 252L704 268L684 284" stroke="#7CB089" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Step 3 -->
+  <rect x="708" y="168" width="220" height="200" rx="20" fill="#F3F8F4" stroke="#9FC9AC" stroke-width="2"/>
+  <text x="818" y="210" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" font-weight="700" text-anchor="middle">③ 新NISAを始める</text>
+  <text x="818" y="242" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">月1,000円からでOK</text>
+  <text x="818" y="265" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">積立設定だけして</text>
+  <text x="818" y="288" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" text-anchor="middle">あとはほったらかし</text>
+  <text x="818" y="345" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="13" font-weight="700" text-anchor="middle">やっと投資のスタート</text>
+
+  <!-- Bottom note -->
+  <rect x="88" y="386" width="1008" height="30" rx="8" fill="#F3F8F4"/>
+  <text x="600" y="407" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" text-anchor="middle">この順番を守るだけで、投資が長続きしやすくなる</text>
+</svg>
