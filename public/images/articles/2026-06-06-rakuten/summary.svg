@@ -1,0 +1,114 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    ポイント還元より先に見るべきこと
+  </text>
+  
+  <!-- 左側：見落としていた時期 -->
+  <g>
+    <!-- ボックス -->
+    <rect x="40" y="70" width="480" height="360" rx="12" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    
+    <!-- タイトル -->
+    <text x="280" y="105" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ❌ 見落としていた時期
+    </text>
+    
+    <!-- 項目1 -->
+    <circle cx="80" cy="155" r="6" fill="#7CB089"/>
+    <text x="100" y="160" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ポイント還元に注目
+    </text>
+    <text x="100" y="180" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      月800～1,200円分のポイント
+    </text>
+    
+    <!-- 項目2 -->
+    <circle cx="80" cy="220" r="6" fill="#7CB089"/>
+    <text x="100" y="225" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      月の支出合計を把握していない
+    </text>
+    <text x="100" y="245" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      去年との比較計算をしていない
+    </text>
+    
+    <!-- 項目3 -->
+    <circle cx="80" cy="285" r="6" fill="#7CB089"/>
+    <text x="100" y="290" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      見逃していた支出がある
+    </text>
+    <text x="100" y="310" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      不要なサブスク・保険が継続中
+    </text>
+    
+    <!-- 合計ダメージ -->
+    <rect x="60" y="345" width="420" height="60" rx="8" fill="#FFE6E6" stroke="#E74C3C" stroke-width="2"/>
+    <text x="270" y="365" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#E74C3C" font-weight="bold">
+      年間 46,560円 の無駄支出
+    </text>
+    <text x="270" y="390" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      動画サービス + 保険特約 + 宅配サービス
+    </text>
+  </g>
+  
+  <!-- 矢印 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1F4D32" />
+    </marker>
+  </defs>
+  <line x1="545" y1="250" x2="635" y2="250" stroke="#1F4D32" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- 右側：見直した後 -->
+  <g>
+    <!-- ボックス -->
+    <rect x="680" y="70" width="480" height="360" rx="12" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    
+    <!-- タイトル -->
+    <text x="920" y="105" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ✓ 固定費を見直した後
+    </text>
+    
+    <!-- 項目1 -->
+    <circle cx="720" cy="155" r="6" fill="#7CB089"/>
+    <text x="740" y="160" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      月の固定費を「見える化」
+    </text>
+    <text x="740" y="180" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      スプレッドシートに記録・比較
+    </text>
+    
+    <!-- 項目2 -->
+    <circle cx="720" cy="220" r="6" fill="#7CB089"/>
+    <text x="740" y="225" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      不要な支出を削除
+    </text>
+    <text x="740" y="245" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      使わないサブスク・保険を解約
+    </text>
+    
+    <!-- 項目3 -->
+    <circle cx="720" cy="285" r="6" fill="#7CB089"/>
+    <text x="740" y="290" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      実額で比較・乗り換え判断
+    </text>
+    <text x="740" y="310" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      ポイント目当てではなく実額重視
+    </text>
+    
+    <!-- 成果 -->
+    <rect x="700" y="345" width="420" height="60" rx="8" fill="#E6F9E6" stroke="#27AE60" stroke-width="2"/>
+    <text x="910" y="365" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#27AE60" font-weight="bold">
+      月 3,880円 削減 / 年 46,560円 削減
+    </text>
+    <text x="910" y="390" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      ポイント還元(月800円)の58倍の効果
+    </text>
+  </g>
+  
+  <!-- 底部：重要メッセージ -->
+  <rect x="40" y="450" width="1120" height="0" rx="0"/>
+</svg>

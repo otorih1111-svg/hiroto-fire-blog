@@ -122,10 +122,6 @@ ogImage: "/images/thumbnails/gakushihoken-junior-nisa-single-father.png"
 
 「自分の家計でどちらが合っているか判断できない」という人は、FPに相談してみるのが一番早い。家計全体を見た上でアドバイスをもらえるので、独りで悩むより答えが出やすい。
 
-<!-- ADSENSE_REVIEW -->
-※[投資のミカタ（無料相談）はこちら](#)
-※[お金のみらいマップ（無料相談）はこちら](#)
-<!-- /ADSENSE_REVIEW -->
 
 → 固定費全体を見直したい人はこちら
 [固定費を見直したら月1万円以上浮いた話](/blog/koteihi-minaoshi/)

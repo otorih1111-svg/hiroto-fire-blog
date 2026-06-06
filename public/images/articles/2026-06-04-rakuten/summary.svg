@@ -1,0 +1,67 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    楽天経済圏による固定費の変化
+  </text>
+  
+  <!-- 左側：変わったこと -->
+  <g>
+    <!-- セクションタイトル -->
+    <text x="300" y="80" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✓ 変わったこと
+    </text>
+    
+    <!-- 1. 通信費 -->
+    <rect x="70" y="110" width="460" height="80" rx="8" fill="#E8F5E9" stroke="#7CB089" stroke-width="2"/>
+    <text x="90" y="135" font-size="14" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">通信費（スマホ・ネット）</text>
+    <text x="90" y="160" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">乗り換え前：月7,000円</text>
+    <text x="90" y="178" font-size="16" font-weight="bold" fill="#7CB089" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">乗り換え後：月1,078円 ⬇️ 86%削減</text>
+    
+    <!-- 2. 見える化 -->
+    <rect x="70" y="210" width="460" height="80" rx="8" fill="#E8F5E9" stroke="#7CB089" stroke-width="2"/>
+    <text x="90" y="235" font-size="14" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">支出の「見える化」</text>
+    <text x="90" y="260" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">楽天カードで支払い一本化</text>
+    <text x="90" y="278" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">毎月10分で全体像を把握できるように</text>
+    
+    <!-- 3. ポイント活用 -->
+    <rect x="70" y="310" width="460" height="80" rx="8" fill="#E8F5E9" stroke="#7CB089" stroke-width="2"/>
+    <text x="90" y="335" font-size="14" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">ポイント活用</text>
+    <text x="90" y="360" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">月1,500～2,500ポイント貯蓄</text>
+    <text x="90" y="378" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">通信費の補填で実質無料月も発生</text>
+  </g>
+  
+  <!-- 右側：変わらなかったこと -->
+  <g>
+    <!-- セクションタイトル -->
+    <text x="900" y="80" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✗ 変わらなかったこと
+    </text>
+    
+    <!-- 食費・日用品費 -->
+    <rect x="670" y="110" width="460" height="280" rx="8" fill="#FFF3E0" stroke="#D4A574" stroke-width="2"/>
+    <text x="690" y="135" font-size="14" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">食費・日用品費</text>
+    
+    <text x="690" y="165" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">期待：楽天市場まとめ買いで節約</text>
+    <text x="690" y="185" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">• ポイント還元が多い</text>
+    <text x="690" y="205" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">• 手間が減る</text>
+    
+    <!-- 区切り線 -->
+    <line x1="690" y1="220" x2="1100" y2="220" stroke="#D4A574" stroke-width="1" stroke-dasharray="5,5"/>
+    
+    <text x="690" y="245" font-size="12" font-weight="bold" fill="#D4A574" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">結果：大差なし</text>
+    <text x="690" y="265" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">• スーパーの方が実質的に安かった</text>
+    <text x="690" y="285" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">• まとめ買いで余分に購入してしまう</text>
+    <text x="690" y="305" font-size="12" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">• 生活リズムと相性が悪かった</text>
+    
+    <text x="690" y="335" font-size="11" fill="#999" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">※個人の性格や生活スタイルによって異なる可能性あり</text>
+  </g>
+  
+  <!-- 下部：重要ポイント -->
+  <rect x="70" y="410" width="1060" height="40" rx="6" fill="#1F4D32" opacity="0.05"/>
+  <text x="90" y="435" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    💡 重要：全ての固定費が削減できるわけではない。自分の生活スタイルに合ったものから始めるのが成功のコツ
+  </text>
+</svg>

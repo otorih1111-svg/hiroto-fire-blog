@@ -1,0 +1,29 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="460" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="48" width="1088" height="364" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="600" y="108" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" text-anchor="middle">楽天経済圏の本当の順番</text>
+  <text x="600" y="142" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" text-anchor="middle">ポイント前に固定費を削る。これが先。</text>
+
+  <!-- Wrong way -->
+  <rect x="88" y="168" width="460" height="200" rx="20" fill="#FFF3F0" stroke="#F2C8C0" stroke-width="2"/>
+  <text x="318" y="210" fill="#8A3021" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" text-anchor="middle">❌ やりがちな順番</text>
+  <text x="318" y="248" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">楽天カードを作る</text>
+  <text x="318" y="274" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">↓ ポイントを貯める</text>
+  <text x="318" y="300" fill="#A05040" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">↓ 支出は変わらない</text>
+  <text x="318" y="326" fill="#C0392B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" text-anchor="middle">毎月の出費が多いままポイントだけ貯まる</text>
+
+  <!-- Divider -->
+  <path d="M572 268H628" stroke="#7CB089" stroke-width="8" stroke-linecap="round"/>
+  <path d="M612 252L632 268L612 284" stroke="#7CB089" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right way -->
+  <rect x="642" y="168" width="460" height="200" rx="20" fill="#F3F8F4" stroke="#9FC9AC" stroke-width="2"/>
+  <text x="872" y="210" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" text-anchor="middle">✅ 正しい順番</text>
+  <text x="872" y="248" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">固定費を削る（保険・通信）</text>
+  <text x="872" y="274" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">↓ 楽天経済圏に集約する</text>
+  <text x="872" y="300" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" text-anchor="middle">↓ ポイントを重ねる</text>
+  <text x="872" y="326" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" text-anchor="middle">削った費用＋ポイントで二重に得をする</text>
+
+  <rect x="88" y="386" width="1008" height="30" rx="8" fill="#F3F8F4"/>
+  <text x="600" y="407" fill="#3A7A50" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" text-anchor="middle">楽天経済圏は「固定費削減の仕上げ」として使うのが正解</text>
+</svg>

@@ -1,0 +1,147 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    楽天経済圏での「気づき」：固定費の3つの落とし穴
+  </text>
+  
+  <!-- 左側：落とし穴① -->
+  <g>
+    <!-- 枠 -->
+    <rect x="20" y="65" width="360" height="375" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- タイトル背景 -->
+    <rect x="20" y="65" width="360" height="50" fill="#1F4D32" rx="8"/>
+    <text x="200" y="95" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      落とし穴①
+    </text>
+    <text x="200" y="115" font-size="13" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ポイント還元≠固定費削減
+    </text>
+    
+    <!-- 内容 -->
+    <text x="40" y="145" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ❌ よくある間違い
+    </text>
+    <text x="50" y="165" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      「ポイント倍率UP」でサービス契約
+    </text>
+    <text x="50" y="182" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      楽天市場で「ポイント貯まるから」購買
+    </text>
+    <text x="50" y="199" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      結果：支出が増える悪循環
+    </text>
+    
+    <!-- 例 -->
+    <rect x="40" y="210" width="320" height="70" fill="#f0f8f4" stroke="#7CB089" stroke-width="1" rx="4"/>
+    <text x="50" y="228" font-size="11" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      実例：月1,500円の不要サービス契約
+    </text>
+    <text x="50" y="245" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      月1,500円 × 12ヶ月 = 年18,000円
+    </text>
+    <text x="50" y="260" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      獲得ポイントで割に合わず
+    </text>
+    <text x="50" y="275" font-size="10" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✓ 解決：ポイントと削減を分けて考える
+    </text>
+  </g>
+  
+  <!-- 中央：落とし穴② -->
+  <g>
+    <!-- 枠 -->
+    <rect x="420" y="65" width="360" height="375" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- タイトル背景 -->
+    <rect x="420" y="65" width="360" height="50" fill="#1F4D32" rx="8"/>
+    <text x="600" y="95" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      落とし穴②
+    </text>
+    <text x="600" y="115" font-size="13" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      見えない自動引き落とし
+    </text>
+    
+    <!-- 内容 -->
+    <text x="440" y="145" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ❌ よくある間違い
+    </text>
+    <text x="450" y="165" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      口座一本化で「安心」してしまう
+    </text>
+    <text x="450" y="182" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      月次確認をおろそかにする
+    </text>
+    <text x="450" y="199" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      使っていないサブスク放置
+    </text>
+    
+    <!-- 例 -->
+    <rect x="440" y="210" width="320" height="70" fill="#f0f8f4" stroke="#7CB089" stroke-width="1" rx="4"/>
+    <text x="450" y="228" font-size="11" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      実例：3つの不要サブスク
+    </text>
+    <text x="450" y="245" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      動画：990円、クラウド：250円、アプリ：480円
+    </text>
+    <text x="450" y="260" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      合計月1,720円 × 12 = 年20,640円
+    </text>
+    <text x="450" y="275" font-size="10" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✓ 解決：毎月の明細を必ず確認する
+    </text>
+  </g>
+  
+  <!-- 右側：落とし穴③ -->
+  <g>
+    <!-- 枠 -->
+    <rect x="820" y="65" width="360" height="375" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- タイトル背景 -->
+    <rect x="820" y="65" width="360" height="50" fill="#1F4D32" rx="8"/>
+    <text x="1000" y="95" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      落とし穴③
+    </text>
+    <text x="1000" y="115" font-size="13" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      浮いたお金の「行き先」
+    </text>
+    
+    <!-- 内容 -->
+    <text x="840" y="145" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ❌ よくある間違い
+    </text>
+    <text x="850" y="165" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      「安くなった」で満足する
+    </text>
+    <text x="850" y="182" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      浮いたお金を曖昧に使う
+    </text>
+    <text x="850" y="199" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      結果：「お金が増えない感覚」
+    </text>
+    
+    <!-- 例 -->
+    <rect x="840" y="210" width="320" height="70" fill="#f0f8f4" stroke="#7CB089" stroke-width="1" rx="4"/>
+    <text x="850" y="228" font-size="11" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      実例：通信費月6,000円削減
+    </text>
+    <text x="850" y="245" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      削減前：「どこに使ってるか不明」
+    </text>
+    <text x="850" y="260" font-size="10" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      削減後：新NISAに月5,000円積立
+    </text>
+    <text x="850" y="275" font-size="10" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✓ 解決：削減分の「行き先」を決める
+    </text>
+  </g>
+  
+  <!-- 下部：重要なメッセージ -->
+  <rect x="20" y="420" width="1160" height="30" fill="#1F4D32" rx="4"/>
+  <text x="600" y="440" font-size="12" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    📌 重要：固定費削減は「削減した後の仕組み化」が成功の鍵 — ポイントと削減、明細確認、資金配分を組み合わせる
+  </text>
+</svg>

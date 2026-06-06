@@ -1,0 +1,143 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    新NISA開始前に整えた3つのステップ
+  </text>
+  
+  <!-- ステップ1 -->
+  <g>
+    <!-- ボックス -->
+    <rect x="50" y="70" width="320" height="360" rx="8" fill="white" stroke="#1F4D32" stroke-width="2"/>
+    
+    <!-- ステップ番号 -->
+    <circle cx="90" cy="110" r="20" fill="#1F4D32"/>
+    <text x="90" y="118" font-size="24" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">1</text>
+    
+    <!-- タイトル -->
+    <text x="210" y="120" font-size="16" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      支出を「見える化」
+    </text>
+    
+    <!-- 内容 -->
+    <text x="70" y="160" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      通帳明細を紙に書き出す
+    </text>
+    <text x="70" y="190" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      完璧な家計簿は不要
+    </text>
+    
+    <!-- 発見内容 -->
+    <rect x="70" y="215" width="280" height="90" rx="4" fill="#E8F0E5"/>
+    <text x="80" y="235" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      発見した無駄な支出
+    </text>
+    <text x="80" y="260" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • 未使用サブスク：月2,000円
+    </text>
+    <text x="80" y="280" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • 惰性保険：月8,000円
+    </text>
+    <text x="80" y="300" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      合計：月13,000円（年15万円以上）
+    </text>
+    
+    <!-- アイコン -->
+    <text x="250" y="360" font-size="40" text-anchor="middle">📋</text>
+  </g>
+  
+  <!-- ステップ2 -->
+  <g>
+    <!-- ボックス -->
+    <rect x="440" y="70" width="320" height="360" rx="8" fill="white" stroke="#1F4D32" stroke-width="2"/>
+    
+    <!-- ステップ番号 -->
+    <circle cx="480" cy="110" r="20" fill="#1F4D32"/>
+    <text x="480" y="118" font-size="24" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">2</text>
+    
+    <!-- タイトル -->
+    <text x="600" y="120" font-size="16" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      積立額を決める
+    </text>
+    
+    <!-- 内容 -->
+    <text x="460" y="160" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      「目標金額」ではなく
+    </text>
+    <text x="460" y="185" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      「確実に余る金額」から決める
+    </text>
+    
+    <!-- 計算例 -->
+    <rect x="460" y="215" width="280" height="90" rx="4" fill="#E8F0E5"/>
+    <text x="470" y="235" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      実例：月の余裕を計算
+    </text>
+    <text x="470" y="260" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      当初の目標：月3万円
+    </text>
+    <text x="470" y="280" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      実際に計算：月5,000円
+    </text>
+    <text x="470" y="300" font-size="11" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ⇒ 0より5,000円が大事！
+    </text>
+    
+    <!-- アイコン -->
+    <text x="640" y="360" font-size="40" text-anchor="middle">💰</text>
+  </g>
+  
+  <!-- ステップ3 -->
+  <g>
+    <!-- ボックス -->
+    <rect x="830" y="70" width="320" height="360" rx="8" fill="white" stroke="#1F4D32" stroke-width="2"/>
+    
+    <!-- ステップ番号 -->
+    <circle cx="870" cy="110" r="20" fill="#1F4D32"/>
+    <text x="870" y="118" font-size="24" font-weight="bold" text-anchor="middle" fill="white" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">3</text>
+    
+    <!-- タイトル -->
+    <text x="990" y="120" font-size="16" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      固定費を削減
+    </text>
+    
+    <!-- 内容 -->
+    <text x="850" y="160" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      1つずつ見直す
+    </text>
+    <text x="850" y="185" font-size="13" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      「じわじわ」が続く秘訣
+    </text>
+    
+    <!-- 削減内容 -->
+    <rect x="850" y="215" width="280" height="90" rx="4" fill="#E8F0E5"/>
+    <text x="860" y="235" font-size="12" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      削減内容（約6ヶ月）
+    </text>
+    <text x="860" y="260" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • 通信費：月7,000円→1,078円
+    </text>
+    <text x="860" y="280" font-size="11" fill="#333" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • サブスク＆保険：月10,800円削減
+    </text>
+    <text x="860" y="300" font-size="11" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      積立額：5,000円→15,000円に増加
+    </text>
+    
+    <!-- アイコン -->
+    <text x="1030" y="360" font-size="40" text-anchor="middle">📈</text>
+  </g>
+  
+  <!-- 下部の矢印 -->
+  <g>
+    <text x="370" y="420" font-size="14" text-anchor="middle" fill="#7CB089" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">→</text>
+    <text x="760" y="420" font-size="14" text-anchor="middle" fill="#7CB089" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">→</text>
+  </g>
+  
+  <!-- 重要メッセージ -->
+  <text x="600" y="450" font-size="13" text-anchor="middle" fill="#1F4D32" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    投資額を「増やす」より先に「消えているお金」を止めることが続く秘訣
+  </text>
+</svg>

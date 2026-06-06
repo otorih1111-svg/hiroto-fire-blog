@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+      .bg { fill: #F7FBF8; }
+      .title { font-size: 28px; font-weight: 700; fill: #1F4D32; font-family: 'Noto Sans JP', sans-serif; }
+      .subtitle { font-size: 16px; font-weight: 700; fill: #1F4D32; font-family: 'Noto Sans JP', sans-serif; }
+      .text { font-size: 14px; fill: #2C2C2C; font-family: 'Noto Sans JP', sans-serif; }
+      .text-light { font-size: 13px; fill: #555555; font-family: 'Noto Sans JP', sans-serif; }
+      .box-border { stroke: #1F4D32; stroke-width: 2; fill: none; }
+      .box-fill { fill: #E8F1E9; stroke: #1F4D32; stroke-width: 2; }
+      .accent-box { fill: #FFF4E6; stroke: #E8B54F; stroke-width: 2; }
+      .error-box { fill: #FFE8E8; stroke: #D32F2F; stroke-width: 2; }
+      .success-box { fill: #E8F5E9; stroke: #4CAF50; stroke-width: 2; }
+      .arrow { stroke: #7CB089; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .number { font-size: 18px; font-weight: 700; fill: white; font-family: 'Noto Sans JP', sans-serif; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7CB089"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1200" height="460"/>
+  
+  <!-- Title -->
+  <text x="40" y="45" class="title">楽天経済圏で見直すべき優先順位</text>
+  
+  <!-- LEFT SIDE: Wrong Order (実はしていたこと) -->
+  <g>
+    <!-- Section title -->
+    <text x="40" y="100" class="subtitle" fill="#D32F2F">❌ 多くの人がしている順序</text>
+    
+    <!-- Step 1: Pointer -->
+    <circle cx="70" cy="150" r="22" fill="#D32F2F"/>
+    <text x="70" y="160" class="number" text-anchor="middle">1</text>
+    <rect x="40" y="135" width="260" height="50" rx="6" class="error-box"/>
+    <text x="170" y="155" class="subtitle" text-anchor="middle">ポイント還元に目がいく</text>
+    <text x="170" y="173" class="text-light" text-anchor="middle">「月500円得してる！」</text>
+    
+    <!-- Step 2: New Services -->
+    <circle cx="70" cy="245" r="22" fill="#D32F2F"/>
+    <text x="70" y="255" class="number" text-anchor="middle">2</text>
+    <rect x="40" y="230" width="260" height="50" rx="6" class="error-box"/>
+    <text x="170" y="250" class="subtitle" text-anchor="middle">新しいサービスに加入</text>
+    <text x="170" y="268" class="text-light" text-anchor="middle">「ポイント倍率が上がる！」</text>
+    
+    <!-- Step 3: Realize -->
+    <circle cx="70" cy="340" r="22" fill="#D32F2F"/>
+    <text x="70" y="350" class="number" text-anchor="middle">3</text>
+    <rect x="40" y="325" width="260" height="50" rx="6" class="error-box"/>
+    <text x="170" y="345" class="subtitle" text-anchor="middle">実は損していることに気づく</text>
+    <text x="170" y="363" class="text-light" text-anchor="middle">重複・不必要な支払いが発生</text>
+    
+    <!-- Arrows -->
+    <path d="M 170 185 L 170 230" class="arrow"/>
+    <path d="M 170 280 L 170 325" class="arrow"/>
+  </g>
+  
+  <!-- CENTER: VS Line -->
+  <line x1="380" y1="100" x2="380" y2="400" stroke="#CCCCCC" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="380" y="420" class="text" text-anchor="middle" fill="#999999">VS</text>
+  
+  <!-- RIGHT SIDE: Correct Order (本来すべき順序) -->
+  <g>
+    <!-- Section title -->
+    <text x="420" y="100" class="subtitle" fill="#4CAF50">✅ 本来の正しい順序</text>
+    
+    <!-- Step 1: Fixed Costs -->
+    <circle cx="1090" cy="150" r="22" fill="#4CAF50"/>
+    <text x="1090" y="160" class="number" text-anchor="middle">1</text>
+    <rect x="420" y="135" width="260" height="50" rx="6" class="success-box"/>
+    <text x="550" y="155" class="subtitle" text-anchor="middle">固定費を整理する</text>
+    <text x="550" y="173" class="text-light" text-anchor="middle">通信費・保険・サブスク</text>
+    
+    <!-- Step 2: Delete Unnecessary -->
+    <circle cx="1090" cy="245" r="22" fill="#4CAF50"/>
+    <text x="1090" y="255" class="number" text-anchor="middle">2</text>
+    <rect x="420" y="230" width="260" height="50" rx="6" class="success-box"/>
+    <text x="550" y="250" class="subtitle" text-anchor="middle">不要なものを削る</text>
+    <text x="550" y="268" class="text-light" text-anchor="middle">重複・無駄を排除</text>
+    
+    <!-- Step 3: Then Points -->
+    <circle cx="1090" cy="340" r="22" fill="#4CAF50"/>
+    <text x="1090" y="350" class="number" text-anchor="middle">3</text>
+    <rect x="420" y="325" width="260" height="50" rx="6" class="success-box"/>
+    <text x="550" y="345" class="subtitle" text-anchor="middle">その上でポイント活用</text>
+    <text x="550" y="363" class="text-light" text-anchor="middle">本当の節約が実現</text>
+    
+    <!-- Arrows -->
+    <path d="M 550 185 L 550 230" class="arrow" stroke="#4CAF50"/>
+    <path d="M 550 280 L 550 325" class="arrow" stroke="#4CAF50"/>
+  </g>
+  
+  <!-- Bottom insight box -->
+  <g>
+    <rect x="40" y="405" width="1120" height="45" rx="6" class="box-fill"/>
+    <text x="60" y="428" class="text" font-weight="700">💡 重要なポイント：</text>
+    <text x="260" y="428" class="text">楽天経済圏は「固定費削減」が土台。ポイントはその後の話。</text>
+  </g>
+</svg>
