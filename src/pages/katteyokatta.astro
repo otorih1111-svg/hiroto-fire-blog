@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const items = [
+  {
+    category: 'ガジェット・道具',
+    note: '副業・在宅作業・日常で実際に使って「これ買ってよかった」と感じたモノをまとめています。',
+    products: [],
+  },
+];
+---
+
+<BaseLayout title="買ってよかったモノまとめ【40代シングルファーザーが本当に使ってるもの】" description="40代シングルファーザーのひろとが実際に買って使い続けているモノをまとめたページ。副業・節約・子育てで本当に役立ったものだけ紹介します。">
+  <article class="page-article">
+    <h1 class="page-title">買ってよかったモノまとめ</h1>
+
+    <p class="page-lead">
+      正直に言うと、ぼくは基本的に「買いたくない」タイプです。
+    </p>
+    <p class="page-lead">
+      お金を使うのが怖いし、失敗したくないし、レビューを読んでも「本当かな」と疑う。
+    </p>
+    <p class="page-lead">
+      でも実際に使い続けているモノは、それなりに理由があります。
+      このページでは、40代シングルファーザー視点で「買ってよかった」と感じたモノをまとめます。
+    </p>
+    <p class="page-lead">
+      副業・在宅作業・節約・子育てで実際に使っているもの限定です。
+    </p>
+
+    <div class="coming-soon-box">
+      <p>🚧 現在コンテンツ準備中です。</p>
+      <p>もうすこしお待ちください。</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+  .page-lead {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .coming-soon-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f5f9f5;
+    border-left: 4px solid #3a7d44;
+    border-radius: 4px;
+    color: #444;
+    line-height: 1.8;
+  }
+</style>
