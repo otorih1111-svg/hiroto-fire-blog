@@ -6,7 +6,7 @@ category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-blog-monthly-income.png'
 tags: ["副業", "ブログ", "収益化", "アフィリエイト"]
 draft: false
-affiliate: false
+affiliate: true
 ---
 「月3万円って、実際どれくらい記事を書いたら届くんだろう」と思いながら書き始めると、どこを目指せばいいか分からなくなる。
 
@@ -126,6 +126,12 @@ affiliate: false
 
 ぼくが今、月3万円を目指してブログを作るなら、まず30記事を目安にします。
 
+ちなみに、副業ブログを始めるにはサーバーとドメインが必要だ。
+最初から高いものを選ぶ必要はなくて、月数百円のコスパ重視のサーバーで十分動く。
+
+<!-- ADSENSE_REVIEW_START -->
+<!-- ADSENSE_REVIEW_END -->
+
 ただし、適当に30記事ではありません。
 
 悩み解決の記事を10本。
@@ -185,3 +191,8 @@ affiliate: false
 - 最初は小さく公開して、数字を見ながら改善する進め方が現実的
 
 → まず目標金額を1つ決めて、必要な成約件数を書き出してみよう。
+
+---
+
+<!-- ADSENSE_REVIEW_START -->
+<!-- ADSENSE_REVIEW_END -->
