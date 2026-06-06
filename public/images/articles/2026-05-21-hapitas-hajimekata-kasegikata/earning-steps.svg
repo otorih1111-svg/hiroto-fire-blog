@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="800" height="170" fill="#f8fdf8" rx="12"/>
+  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">ハピタスで稼ぐ3つの方法（難易度順）</text>
+
+  <!-- Step 1 -->
+  <rect x="20" y="45" width="230" height="110" fill="#fff" rx="10" stroke="#4caf50" stroke-width="2"/>
+  <text x="135" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">① 自己アフィリ（一番稼げる）</text>
+  <text x="135" y="95" text-anchor="middle" font-size="11" fill="#333">カード発行・口座開設を</text>
+  <text x="135" y="112" text-anchor="middle" font-size="11" fill="#333">ハピタス経由でやるだけ</text>
+  <text x="135" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#e53935">数千〜数万pt獲得可</text>
+
+  <!-- Arrow -->
+  <text x="263" y="108" text-anchor="middle" font-size="20" fill="#aaa">▶</text>
+
+  <!-- Step 2 -->
+  <rect x="285" y="45" width="230" height="110" fill="#fff" rx="10" stroke="#66bb6a" stroke-width="2"/>
+  <text x="400" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">② ショッピング経由（コツコツ）</text>
+  <text x="400" y="95" text-anchor="middle" font-size="11" fill="#333">いつもの買い物を</text>
+  <text x="400" y="112" text-anchor="middle" font-size="11" fill="#333">ハピタス経由に変えるだけ</text>
+  <text x="400" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">月100〜400pt自動で貯まる</text>
+
+  <!-- Arrow -->
+  <text x="528" y="108" text-anchor="middle" font-size="20" fill="#aaa">▶</text>
+
+  <!-- Step 3 -->
+  <rect x="550" y="45" width="230" height="110" fill="#fff9c4" rx="10" stroke="#f9a825" stroke-width="2"/>
+  <text x="665" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">③ 友達紹介（フォロワー増えてから）</text>
+  <text x="665" y="95" text-anchor="middle" font-size="11" fill="#333">紹介リンクから登録してもらう</text>
+  <text x="665" y="112" text-anchor="middle" font-size="11" fill="#333">一定条件達成でptもらえる</text>
+  <text x="665" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">読者・フォロワーがいれば本番</text>
+</svg>
