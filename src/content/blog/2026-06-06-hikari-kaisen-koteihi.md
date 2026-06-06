@@ -216,13 +216,7 @@ AIに先を越された気分でしたが、今度こそちゃんとやろうと
 
 月1万円の副業収入を作るより、月3,000円の固定費を削る方が正直ずっと早い。
 
-楽天モバイルを使っている人は、楽天ひかりへの乗り換えが一番わかりやすい入口です。
-
-<div style="border:2px solid #bf0000;border-radius:10px;padding:18px 22px;margin:28px 0;background:#fff;">
-  <p style="font-weight:bold;font-size:15px;margin:0 0 8px;">📡 楽天ひかり</p>
-  <p style="font-size:13px;color:#555;margin:0 0 12px;">楽天モバイルとセットで毎月1,000ポイント還元。乗り換え工事費無料キャンペーン実施中。</p>
-  <a href="https://ad2.trafficgate.net/t/r/200/3159/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer" style="color:#bf0000;font-weight:bold;font-size:14px;">▶ 楽天ひかりの詳細・申し込みはこちら（PR）</a>
-</div>
+楽天モバイルを使っている人は、<a href="https://ad2.trafficgate.net/t/r/200/3159/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天ひかりへの乗り換え</a>が一番わかりやすい入口です。
 
 ---
 
