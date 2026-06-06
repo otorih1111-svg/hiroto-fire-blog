@@ -119,16 +119,14 @@ const sections = [
                 {service.href ? (
                   service.sponsored ? (
                     <>
-                      {/* ADSENSE_REVIEW_START: 審査通過後にアフィリエイトリンクを戻す */}
-                      {/* <a
+                      <a
                         href={service.href}
                         class="resource-link"
                         target="_blank"
                         rel="nofollow sponsored noopener noreferrer"
                       >
                         {service.label}
-                      </a> */}
-                      {/* ADSENSE_REVIEW_END */}
+                      </a>
                     </>
                   ) : (
                     <a
