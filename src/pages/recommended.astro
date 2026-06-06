@@ -185,16 +185,14 @@ const sections = [
                 <p>{service.body}</p>
                 {service.sponsored ? (
                   <>
-                    {/* ADSENSE_REVIEW_START: 審査通過後にアフィリエイトリンクを戻す */}
-                    {/* <a
+                    <a
                       href={service.href}
                       class="service-link"
                       target="_blank"
                       rel="nofollow sponsored noopener noreferrer"
                     >
                       {service.label}
-                    </a> */}
-                    {/* ADSENSE_REVIEW_END */}
+                    </a>
                   </>
                 ) : (
                   <a
@@ -219,9 +217,7 @@ const sections = [
         どれを使ったか、どこで迷ったか、失敗しそうになった点は、記事とLINEのPDFにまとめていきます。
         まずは自分の家計と副業に本当に必要だったものだけ、正直に残していきます。
       </p>
-      {/* ADSENSE_REVIEW_START: 審査通過後にLINE CTAを戻す */}
-      {/* <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-link">LINEでPDFを受け取る</a> */}
-      {/* ADSENSE_REVIEW_END */}
+      <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-link">LINEでPDFを受け取る</a>
     </section>
   </div>
 </BaseLayout>

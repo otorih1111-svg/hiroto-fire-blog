@@ -295,16 +295,14 @@ const sections = [
                   </div>
                   {book.author && <p class="book-author">{book.author}</p>}
                   <p>{book.body}</p>
-                  {/* ADSENSE_REVIEW_START: 審査通過後に楽天アフィリエイトリンクを戻す */}
-                  {/* <a
+                  <a
                     href={makeRakutenLink(book.productId)}
                     class="book-link"
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
                   >
                     楽天で見る（PR）
-                  </a> */}
-                  {/* ADSENSE_REVIEW_END */}
+                  </a>
                 </div>
               </article>
             ))}
