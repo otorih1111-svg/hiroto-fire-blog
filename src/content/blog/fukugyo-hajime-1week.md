@@ -6,7 +6,7 @@ category: 副業・AI
 ogImage: '/images/thumbnails/fukugyo-hajime-1week.png'
 tags: [副業, 40代, 自己アフィリエイト, AI活用]
 draft: false
-affiliate: false
+affiliate: true
 ---
 副業を始めたいのに、気づけば調べるだけで1週間が溶けていた、という話をします。
 
@@ -73,6 +73,8 @@ affiliate: false
 - 成果条件：何をしたら報酬が出るか
 - 否認条件：何をしたら無効になるか
 - 本人申込OK：自分で申し込んで対象になるか
+
+ぼくが最初に使ったのは[ハピタス](https://hapitas.jp/appinvite?i=25519472&route=pcText)（PR）です。無料登録して案件一覧を眺めるだけでも、お金の流れが見えてきます。
 
 この3つを読むだけでも、副業のお金の流れが少し見えてきます。
 
@@ -164,4 +166,6 @@ Threadsのフォロワーも多くないし、収益もほぼゼロです。
 - 成功者としてではなく、同じ初心者として記録する姿勢にも価値がある
 
 → 今日15分だけ副業時間を決めて、案件を1つ読むところから始めてみよう。
+
+[ハピタスに無料登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)
 
