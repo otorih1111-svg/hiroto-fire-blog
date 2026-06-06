@@ -6,7 +6,7 @@ category: 副業・AI
 ogImage: '/images/thumbnails/katte-yokatta-mac.png'
 tags: ["買ってよかった", "副業", "MacBook", "40代"]
 draft: false
-affiliate: false
+affiliate: true
 ---
 副業を始めた最初の月、気づいたら「便利そうなもの」を3つ検索していた。
 どれも高くて、どれも必要か分からなかった。
@@ -45,31 +45,23 @@ MacBookにしてから、開いてすぐ書けるようになった。
 
 でも、毎日使う道具として考えると、ぼくには必要な投資だったと思っている。
 
-## 2. 外付けキーボードと小さな作業スペース
+気になる人は[楽天市場でMacBook Airを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dba2a.ff617e7e.549dba2b.9e0f57fb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshop-inverse%2Fsku-macbookair-13-2022%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9NYWNCb29rJTIwQWlyJTIwTTIvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)。
 
-2つ目は、外付けキーボードと作業スペースだ。
+## 2. iPhone。外出先でもSNS投稿を途切れさせない
 
-高級なものではない。
-ただ、毎朝同じ場所に座って、同じ姿勢で作業できるようにした。
+2つ目は、iPhoneだ。
 
-以前はダイニングテーブルで作業していた。
-夕飯の食器が残っている日もある。
-学校のプリントが置いてある日もある。
-息子の鉛筆や消しゴムが転がっている日もある。
+副業を始めてから、スマホの使い方が変わった。
 
-そのたびに片付けてから始める。
-これが地味にしんどかった。
+以前はスマホ＝SNSを眺める道具だった。
+今は、移動中にThreadsの投稿を考えたり、ブログの構成メモを入力したり、AIに質問したりする場所になっている。
 
-今は、小さくても副業用の場所を作っている。
-パソコンを置く場所。
-メモ帳を置く場所。
-充電器を挿す場所。
+朝の通勤電車、昼休みの10分、子どもの習い事の待ち時間。
+MacBookを開けない時間でも、スマホがあれば少しずつ進められる。
 
-たったそれだけだけど、「ここに座れば作業する」という切り替えができるようになった。
+1日の作業時間が限られているぼくには、これが地味に助かっている。
 
-40代で副業を続けるには、気合いより環境だと思う。
-毎回がんばって準備するのではなく、座ったら始められる状態にしておく。
-これだけで続けやすさがかなり変わる。
+[楽天市場でiPhoneを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dc14f.7d18dd31.549dc150.c95ec71a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenmobile-store%2Fiphone-16%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9pUGhvbmUrMTYvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)
 
 ## 3. AIツール。考える時間を短くしてくれた
 
@@ -92,6 +84,9 @@ MacBookにしてから、開いてすぐ書けるようになった。
 AIを使うようになってから、真っ白な画面の前で止まる時間が減った。
 これは副業を続けるうえでかなり助かっている。
 
+ぼくが使っているのは[Claude](https://claude.ai/referral/kbSLRTfRjQ)だ。
+1週間無料で試せるリンクも置いておく。
+
 ただし、AIに任せきりにはしない。
 最後は自分の体験に直す。
 
@@ -103,7 +98,7 @@ AIを使うようになってから、真っ白な画面の前で止まる時間
 3つに共通しているのは、全部「作業を始めるまでの重さ」を減らしてくれたことだ。
 
 MacBookは、開けばすぐ作業できる。
-作業スペースは、座れば始められる。
+iPhoneは、隙間時間を逃さず作業できる。
 AIツールは、考え始めるきっかけを作ってくれる。
 
 副業で一番大事なのは、派手な道具をそろえることではない。
@@ -143,7 +138,7 @@ AIツールは、考え始めるきっかけを作ってくれる。
 副業を始めて買ってよかったものは、派手なものではなかった。
 
 毎朝開くパソコン。
-座れば始められる小さな場所。
+隙間時間を埋めるスマホ。
 考える時間を短くしてくれるAIツール。
 
 どれも、生活の中で副業を続けるための道具だった。
@@ -158,8 +153,14 @@ AIツールは、考え始めるきっかけを作ってくれる。
 
 - 本当に効いたのは、派手な買い物より毎日触る道具だった
 - MacBookは起動の速さだけでも「今日はやめよう」を減らしてくれる
-- 小さくても専用の作業スペースがあると、切り替えがかなり楽になる
+- iPhoneは隙間時間を副業タイムに変えてくれる
 - AIツールは考え始めるまでの重さを減らす補助として相性がいい
 - 高額教材より先に、毎日続けやすくなる環境へお金を使う方が失敗しにくい
 
 → まず自分の副業で一番重い「始めるまでの摩擦」を1つ減らしてみよう。
+
+---
+
+- [楽天市場でMacBook Airを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dba2a.ff617e7e.549dba2b.9e0f57fb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshop-inverse%2Fsku-macbookair-13-2022%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9NYWNCb29rJTIwQWlyJTIwTTIvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)
+- [楽天市場でiPhoneを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dc14f.7d18dd31.549dc150.c95ec71a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenmobile-store%2Fiphone-16%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9pUGhvbmUrMTYvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)
+- [Claudeを1週間無料で試す](https://claude.ai/referral/kbSLRTfRjQ)
