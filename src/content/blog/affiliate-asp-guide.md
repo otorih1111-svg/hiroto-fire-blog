@@ -213,4 +213,6 @@ AIスクール、ビジネス講座、学習サービス、相談系の案件な
 
 ---
 
-<!-- ADSENSE_RESTORE: Re-add ASP outbound links after review -->
+[A8.netに無料登録する（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)
+
+[ハピタスに無料登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)

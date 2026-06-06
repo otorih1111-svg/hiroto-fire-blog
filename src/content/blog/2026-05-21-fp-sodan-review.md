@@ -180,7 +180,7 @@ FP無料相談を試してみたい方はこちら。オンライン相談に対
 
 ---
 
-<!-- ADSENSE_RESTORE: Re-add FP affiliate CTA after review -->
+[FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
 
 ※本記事はアフィリエイト広告を含みます。
 相談の内容・商品の判断は、必ずご自身でご確認ください。
@@ -191,4 +191,4 @@ FP無料相談を試してみたい方はこちら。オンライン相談に対
 
 ---
 
-<!-- ADSENSE_RESTORE: Re-add LINE follow CTA after review -->
+副業の過程をLINEで発信しています。気になる方はプロフィールのリンクからどうぞ。
