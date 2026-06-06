@@ -301,7 +301,7 @@ const sections = [
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
                   >
-                    楽天で見る（PR）
+                    📖 楽天ブックスで見る
                   </a>
                 </div>
               </article>
@@ -463,10 +463,21 @@ const sections = [
 }
 
 .book-link {
-  display: inline-block;
-  margin-top: 12px;
-  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 9px 18px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.88rem;
   font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.book-link:hover {
+  opacity: 0.85;
 }
 
 @media (max-width: 720px) {
