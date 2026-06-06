@@ -62,14 +62,12 @@ affiliate: false
 ### 副業・AIを始めたい人
 **→ [副業・AIカテゴリへ](/category/副業・AI/)**
 
-### FIREを目指したい人
-**→ [投資・FIREカテゴリへ](/category/投資・FIRE/)**
-
 ## テーマ別に読む
 
 - 家計・固定費の話 → [家計まとめ記事](/blog/kakeibo-matome/)
 - 副業・AIの話 → [副業・AIカテゴリへ](/category/副業・AI/)
 - 投資・FIREの話 → [投資・FIREカテゴリへ](/category/投資・FIRE/)
+- 副業に役立った本 → [おすすめ本まとめへ](/recommended-books/)
 
-迷ったら、上の4本からどれか1つ読んでみてください。
+迷ったら、上の3つからどれか1つ読んでみてください。
 気が向いたやつで大丈夫です。
