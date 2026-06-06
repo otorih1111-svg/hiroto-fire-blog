@@ -85,6 +85,10 @@ ogImage: "/images/thumbnails/nisa-tsumitate-40dai.png"
 楽天証券でもSBI証券でも、まずは大手を1つ決めれば十分です。
 最初から完璧な比較をしようとすると、そこで止まりやすいです。
 
+<!-- ADSENSE_REVIEW_START -->
+[DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)
+<!-- ADSENSE_REVIEW_END -->
+
 ### 2. 月1万円で積立設定をする
 
 最初から大きく入れず、まずは月1万円で設定する。

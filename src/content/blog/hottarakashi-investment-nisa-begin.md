@@ -99,6 +99,10 @@ ogImage: "/images/thumbnails/hottarakashi-investment-nisa-begin.png"
 
 必要なものは「マイナンバーカードまたは通知カード」「本人確認書類」だけです。
 
+<!-- ADSENSE_REVIEW_START -->
+[DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)
+<!-- ADSENSE_REVIEW_END -->
+
 ### ステップ2：銘柄を選ぶ
 
 迷ったら「オルカン」か「S&P500」のどちらかでOKです。
