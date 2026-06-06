@@ -165,12 +165,9 @@ ahamoを否定しているわけではありません。
 そこだけはかなり現実的です。
 最終的には、自分の通話量とデータ使用量を見た方が早いです。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ3+FYJD36+5W58+5YJRM" rel="nofollow sponsored noopener noreferrer">楽天モバイルの公式サイトを見る</a>
+[楽天モバイルの公式サイトを見る（PR）](https://px.a8.net/svt/ejp?a8mat=4B3WJ3+FYJD36+5W58+5YJRM)
 
-<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3WJ3+FYJD36+5W58+5YJRM" alt="">
-
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+5VYDOI+4TIO+626XU" rel="nofollow sponsored noopener noreferrer">ahamoの公式サイトを見る</a>
-<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3WJ5+5VYDOI+4TIO+626XU" alt="">
+[ahamoの公式サイトを見る（PR）](https://px.a8.net/svt/ejp?a8mat=4B3WJ5+5VYDOI+4TIO+626XU)
 
 ---
 

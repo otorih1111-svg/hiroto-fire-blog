@@ -169,8 +169,7 @@ docomoからの乗り換えだけで月6,000円以上浮いた。
 
 <a href="https://ad2.trafficgate.net/t/r/361/1396/317992_397371" target="_blank" rel="nofollow">楽天カードの申し込みはこちら</a>
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ3+FYJD36+5W58+5YJRM" rel="nofollow">楽天モバイルの申し込みはこちら</a>
-<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3WJ3+FYJD36+5W58+5YJRM" alt="">
+[楽天モバイルの申し込みはこちら（PR）](https://px.a8.net/svt/ejp?a8mat=4B3WJ3+FYJD36+5W58+5YJRM)
 
 ---
 
