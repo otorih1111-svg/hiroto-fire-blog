@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif">
+  <!-- 背景 -->
+  <rect width="720" height="300" fill="#f8fafb" rx="12"/>
+
+  <!-- ビフォー側 -->
+  <rect x="20" y="20" width="300" height="260" fill="#fff" rx="10" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="20" y="20" width="300" height="48" fill="#e57373" rx="10"/>
+  <rect x="20" y="48" width="300" height="20" fill="#e57373"/>
+  <text x="170" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="bold">見直し前</text>
+
+  <text x="170" y="105" text-anchor="middle" fill="#555" font-size="13">明治安田生命</text>
+  <text x="170" y="128" text-anchor="middle" fill="#333" font-size="13">生命保険＋学資保険</text>
+  <text x="170" y="168" text-anchor="middle" fill="#e57373" font-size="28" font-weight="bold">15,000円</text>
+  <text x="170" y="192" text-anchor="middle" fill="#888" font-size="12">/月</text>
+  <line x1="60" y1="210" x2="280" y2="210" stroke="#eee" stroke-width="1"/>
+  <text x="170" y="240" text-anchor="middle" fill="#aaa" font-size="12">結婚時のまま放置…</text>
+
+  <!-- 矢印 -->
+  <text x="360" y="158" text-anchor="middle" fill="#2d7a4f" font-size="28">→</text>
+
+  <!-- アフター側 -->
+  <rect x="400" y="20" width="300" height="260" fill="#fff" rx="10" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="400" y="20" width="300" height="48" fill="#2d7a4f" rx="10"/>
+  <rect x="400" y="48" width="300" height="20" fill="#2d7a4f"/>
+  <text x="550" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="bold">見直し後（3本柱）</text>
+
+  <text x="550" y="90" text-anchor="middle" fill="#555" font-size="11">ライフネット生命（死亡）4,505円</text>
+  <text x="550" y="110" text-anchor="middle" fill="#555" font-size="11">アクサダイレクト（収入保障）2,100円</text>
+  <text x="550" y="130" text-anchor="middle" fill="#555" font-size="11">千葉県民共済（怪我・病気）2,000円</text>
+
+  <line x1="440" y1="145" x2="660" y2="145" stroke="#eee" stroke-width="1"/>
+
+  <text x="550" y="178" text-anchor="middle" fill="#2d7a4f" font-size="28" font-weight="bold">8,605円</text>
+  <text x="550" y="202" text-anchor="middle" fill="#888" font-size="12">/月</text>
+
+  <rect x="450" y="220" width="200" height="36" fill="#e8f5ee" rx="6"/>
+  <text x="550" y="244" text-anchor="middle" fill="#2d7a4f" font-size="14" font-weight="bold">月6,395円 削減！</text>
+</svg>
