@@ -135,6 +135,8 @@ ogImage: "/images/thumbnails/2026-05-27-kakeibo-tsuzukanai-kotsu.png"
 
 家計簿が続かない人は、入力の頑張りより、見える化の仕組みを優先した方がいいです。
 
+ぼくが使っているのは[マネーフォワード ME](https://moneyforward.com/lp/mf_me/)で、口座とカードをつなぐだけで支出が自動で集まってきます。
+
 たとえば、
 - 口座を連携する
 - クレカを連携する
