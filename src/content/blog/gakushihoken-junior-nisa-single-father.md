@@ -69,6 +69,8 @@ ogImage: "/images/thumbnails/gakushihoken-junior-nisa-single-father.png"
 
 銘柄はS&P500一択にしました。ぼくのNISAと同じです。難しいことは考えませんでした。
 
+証券口座はまだ持っていない人は、[DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)のが一番手続きがシンプルでした。
+
 ---
 
 ## 3年積み立てたところでジュニアNISAが終了した
@@ -155,4 +157,6 @@ A. 2027年からこどもNISAという新制度が始まる予定。それまで
 
 **Q. S&P500一本でいいですか？**
 A. ぼくはそうしている。世界経済の中心であるアメリカ市場に集中投資するシンプルな方法で、長期で見た実績も高い。ただ投資は自己責任なので、気になる人はFPに相談するのが一番。
+
+[DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)
 

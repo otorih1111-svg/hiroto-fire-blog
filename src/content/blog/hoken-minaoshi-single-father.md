@@ -180,3 +180,7 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 → 固定費全体を見直したい人はこちらも  
 [固定費を見直したら月1万円以上浮いた話](/blog/koteihi-minaoshi/)
+
+保険の設計が自分で判断しにくいなら、FP無料相談でまとめて確認するのが一番早いです。
+
+[FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
