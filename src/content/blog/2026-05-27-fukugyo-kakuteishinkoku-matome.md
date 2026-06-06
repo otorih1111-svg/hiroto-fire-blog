@@ -131,7 +131,7 @@ freeeにするか
 
 ここは正直、体験談がいちばん早いです。
 
-ぼくはマネーフォワード クラウド確定申告を使って、初めて自力で確定申告を終わらせました。
+ぼくは<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+DDNQPU+3SPO+C8KZDE" target="_blank" rel="nofollow sponsored noopener noreferrer">マネーフォワード クラウド確定申告</a>を使って、初めて自力で確定申告を終わらせました。
 知識なし。
 経験なし。
 しかも確定申告という言葉だけで3年閉じていた側です。
@@ -200,3 +200,5 @@ freeeにするか
 だから同じタイプの人ほど、この順番で見た方がたぶん進みやすいです。
 最初の1本を開けるだけでも、かなり前進です。
 ゼロのまま怖がっている時間より、たぶんずっといいです。
+
+会計ソフトの入口として試したい人は、<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+DDNQPU+3SPO+C8KZDE" target="_blank" rel="nofollow sponsored noopener noreferrer">マネーフォワード クラウド確定申告の公式サイト</a>から無料プランの内容を確認できます。

@@ -5,7 +5,7 @@ slug: "2026-05-27-kakeibo-tsuzukanai-kotsu"
 permalink: "/blog/kakeibo-tsuzukanai-kotsu/"
 pubDate: 2026-05-27
 category: 節約・家計
-tags: ["家計簿", "家計管理", "マネーフォワード", "固定費", "40代"]
+tags: ["家計簿", "家計管理", "マネーフォワード", "固定費", "シングルファーザー"]
 draft: false
 affiliate: true
 ogImage: "/images/thumbnails/2026-05-27-kakeibo-tsuzukanai-kotsu.png"
@@ -193,8 +193,6 @@ Amazonの明細も、だいたい心当たりしかありません。
 
 逆に、記録そのものが苦じゃない人なら、もっと細かくやってもいいと思います。
 ぼくには少し難しかったです。
-
----
 
 ---
 

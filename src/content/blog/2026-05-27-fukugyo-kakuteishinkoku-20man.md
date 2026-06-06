@@ -160,7 +160,7 @@ ogImage: "/images/thumbnails/2026-05-27-fukugyo-kakuteishinkoku-20man.png"
 自分で進める必要はあるけれど、数字集めや入力の負担をかなり減らせます。
 紙と電卓だけで週末を溶かす未来より、かなり平和です。
 
-ぼくは最終的に、マネーフォワード クラウド確定申告で進めました。
+ぼくは最終的に、<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+DDNQPU+3SPO+C8KZDE" target="_blank" rel="nofollow sponsored noopener noreferrer">マネーフォワード クラウド確定申告</a>で進めました。
 確定申告という言葉だけで3年閉じていた人間でも、最後まで形にできました。
 
 それなら、たぶん入口としては十分やさしい方です。
@@ -237,3 +237,5 @@ ogImage: "/images/thumbnails/2026-05-27-fukugyo-kakuteishinkoku-20man.png"
 副業の規模がまだ大きくなくて、でも紙でやるのは不安という人には、会計ソフトの方が進めやすいと思います。
 少なくとも、数字集めと入力の負担はかなり減ります。
 知識なし、経験なしで難しいことが苦手なぼくでも進められたので、最初の選択肢としてはかなり現実的でした。
+
+気になる人は<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+DDNQPU+3SPO+C8KZDE" target="_blank" rel="nofollow sponsored noopener noreferrer">マネーフォワード クラウド確定申告の公式サイト</a>で料金・機能を確認してみてください。
