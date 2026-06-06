@@ -9,8 +9,6 @@ affiliate: true
 ogImage: "/images/thumbnails/2026-06-06-hikari-kaisen-koteihi.png"
 ---
 
-※本記事はプロモーション（PR）を含みます。
-
 「光回線って、高いけど変えられないよな」
 
 そう思って、ずっと放置していました。
