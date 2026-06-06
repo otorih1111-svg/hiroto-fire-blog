@@ -218,6 +218,8 @@ AIに先を越された気分でしたが、今度こそちゃんとやろうと
 
 楽天モバイルを使っている人は、<a href="https://ad2.trafficgate.net/t/r/200/3159/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天ひかりへの乗り換え</a>が一番わかりやすい入口です。
 
+乗り換えを検討している人は、<a href="https://ad2.trafficgate.net/t/r/200/3159/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天ひかりの公式サイト</a>で料金・エリアを確認してみてください。
+
 ---
 
 **あわせて読みたい：**
