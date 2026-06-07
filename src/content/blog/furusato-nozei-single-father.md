@@ -6,7 +6,7 @@ category: 節約・家計
 ogImage: '/images/thumbnails/furusato-nozei-single-father.png'
 tags: ["ふるさと納税", "ふるさと納税 初めて", "節約", "家計", "シングルファーザー"]
 draft: false
-affiliate: false
+affiliate: true
 ---
 
 ふるさと納税、気になってるけど「なんか面倒そう」で後回しにしていないだろうか。
@@ -98,6 +98,13 @@ affiliate: false
 ### ステップ2：返礼品を選んで申し込む（15分）
 
 普段使っている通販サイトと同じ感覚で選べた。
+
+ちなみにぼくはauユーザーなので、auPAY残高やPontaポイントが使える「au PAY ふるさと納税」を使った。
+ポイントが貯まる・使えるサイトを選んだだけで、特別なことは何もしていない。
+
+> <a href="https://px.a8.net/svt/ejp?a8mat=4B5NW3+42GP4Y+54OC+5YJRM" rel="nofollow sponsored noopener noreferrer" target="_blank">au PAY ふるさと納税（PR）</a>
+
+普段使っているポイント・キャリアに合わせて選ぶくらいの温度感で十分だと思う。
 
 ぼくが選んだのは、こんな感じだ。
 
