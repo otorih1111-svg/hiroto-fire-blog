@@ -129,8 +129,10 @@ affiliate: true
 ちなみに、副業ブログを始めるにはサーバーとドメインが必要だ。
 最初から高いものを選ぶ必要はなくて、月数百円のコスパ重視のサーバーで十分動く。
 
-<!-- ADSENSE_REVIEW_START -->
-<!-- ADSENSE_REVIEW_END -->
+ちなみに案件探しはASP（広告主とブログをつなぐサービス）への登録が先になる。
+ぼくも最初は「審査とか面倒そう」と後回しにしていたけど、無料で登録できるので、サーバーを決めたタイミングで一緒に済ませておくと後がラクになる。
+
+[A8.netに無料登録する（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)
 
 ただし、適当に30記事ではありません。
 
@@ -194,5 +196,12 @@ affiliate: true
 
 ---
 
-<!-- ADSENSE_REVIEW_START -->
-<!-- ADSENSE_REVIEW_END -->
+[A8.netに無料登録する（PR）](https://px.a8.net/svt/ejp?a8mat=35AXS6+691W7U+0K+10FXXU)
+
+[ハピタスに無料登録する（PR）](https://hapitas.jp/appinvite?i=25519472&route=pcText)
+
+関連リンク： [おすすめサービス一覧を見る](/recommended-services/)
+
+---
+
+副業の過程をLINEで発信しています。気になる方はプロフィールのリンクからどうぞ。
