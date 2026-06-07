@@ -19,10 +19,6 @@ const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%401
       </ul>
     </div>
     <div class="line-cta-right">
-      <div class="line-cta-report-img">
-        <span class="line-cta-report-emoji">💬</span>
-        <p class="line-cta-report-label">月1万円<br>改善プロジェクト</p>
-      </div>
       <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-btn">
         <svg width="22" height="22" viewBox="0 0 48 48" fill="currentColor">
           <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
@@ -92,31 +88,8 @@ const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%401
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
-}
-
-.line-cta-report-img {
-  width: 90px;
-  height: 110px;
-  background: rgba(255,255,255,0.15);
-  border: 2px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.line-cta-report-emoji { font-size: 2rem; }
-
-.line-cta-report-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.4;
-  opacity: 0.9;
 }
 
 .line-cta-btn {
@@ -144,8 +117,7 @@ const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%401
 
 @media (max-width: 600px) {
   .line-cta-inner { flex-direction: column; }
-  .line-cta-right { flex-direction: row; gap: 16px; width: 100%; }
-  .line-cta-btn { flex: 1; justify-content: center; font-size: 0.82rem; padding: 11px 14px; }
-  .line-cta-report-img { width: 70px; height: 86px; }
+  .line-cta-right { width: 100%; }
+  .line-cta-btn { justify-content: center; font-size: 0.85rem; padding: 13px 14px; }
 }
 </style>

@@ -1,6 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import LineBanner from '../components/LineBanner.astro';
 import LineCTA from '../components/LineCTA.astro';
 
 interface Props {
@@ -82,8 +81,6 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
           />
         </figure>
       )}
-
-      <LineBanner variant="article" />
 
       <!-- 記事本文 -->
       <div class="prose">
