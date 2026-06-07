@@ -1,0 +1,57 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F7FBF8"/>
+  <rect x="56" y="56" width="1088" height="608" rx="28" fill="white" stroke="#D7E7DB" stroke-width="2"/>
+  <text x="88" y="118" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700">
+    父子家庭の家計簿(月234,941円)の内訳
+  </text>
+  <text x="88" y="162" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20">
+    削れた項目と、削らないと決めた項目
+  </text>
+
+  <rect x="96" y="220" width="500" height="320" rx="28" fill="#FFF7F2" stroke="#F2D9C8" stroke-width="2"/>
+  <text x="136" y="276" fill="#8A4D21" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">
+    削らないと決めた項目
+  </text>
+  <text x="136" y="324" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="23">
+    家賃　　　　85,000円
+  </text>
+  <text x="136" y="364" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="23">
+    食費　　　　40,000円
+  </text>
+  <text x="136" y="404" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="23">
+    教育費　　　27,000円
+  </text>
+  <text x="136" y="444" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="23">
+    保険料　　　8,605円
+  </text>
+  <text x="136" y="494" fill="#8A5A34" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700">
+    息子優先で残した項目
+  </text>
+
+  <path d="M626 380H766" stroke="#7CB089" stroke-width="12" stroke-linecap="round"/>
+  <path d="M742 360L766 380L742 400" stroke="#7CB089" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="796" y="220" width="312" height="320" rx="28" fill="#F3F8F4" stroke="#CFE2D4" stroke-width="2"/>
+  <text x="836" y="276" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700">
+    削れた項目
+  </text>
+  <text x="836" y="324" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">
+    通信費 → 5,336円
+  </text>
+  <text x="836" y="364" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">
+    サブスク 2件解約
+  </text>
+  <text x="836" y="404" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22">
+    外食 週2→月2回
+  </text>
+  <text x="836" y="466" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700">
+    一度変えると
+  </text>
+  <text x="836" y="494" fill="#315C43" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700">
+    そのまま効き続ける
+  </text>
+
+  <text x="88" y="608" fill="#5F6F65" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19">
+    全部を一気に変えようとせず、削れる項目から少しずつ。交際費はまだ手つかずのまま。
+  </text>
+</svg>
