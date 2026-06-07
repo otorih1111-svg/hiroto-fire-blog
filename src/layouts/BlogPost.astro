@@ -83,7 +83,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         </figure>
       )}
 
-      <!-- LINE_PAUSE -->
+      <LineBanner variant="article" />
 
       <!-- 記事本文 -->
       <div class="prose">
@@ -102,7 +102,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         <slot />
       </div>
 
-      <!-- LINE_PAUSE -->
+      <LineCTA />
 
       {tags.length > 0 && (
         <div class="post-tags">
