@@ -22,44 +22,51 @@ affiliate: false
 
 <style>
 .about-line-intro {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
   background: #ecfdf5;
   border: 1px solid #00c300;
   border-radius: 8px;
-  padding: 14px 18px;
+  padding: 16px;
   margin: 20px 0;
+  width: 100%;
+  overflow: hidden;
 }
 .about-line-intro-text {
   font-size: 0.85rem;
   line-height: 1.6;
   color: #1F4D32;
   margin: 0;
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 200px;
 }
 .about-line-intro-btn {
-  display: inline-block;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   background: #00c300;
   color: #fff;
   font-weight: 700;
   font-size: 0.85rem;
-  padding: 10px 16px;
+  padding: 12px 16px;
   border-radius: 6px;
   text-decoration: none;
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.4;
+  width: 100%;
 }
 .about-line-intro-btn:hover {
   background: #00a500;
   text-decoration: none;
   color: #fff;
 }
-@media (max-width: 600px) {
-  .about-line-intro { flex-direction: column; align-items: stretch; text-align: center; }
-  .about-line-intro-btn { text-align: center; }
+@media (min-width: 601px) {
+  .about-line-intro-btn { width: auto; white-space: nowrap; }
 }
 </style>
 
