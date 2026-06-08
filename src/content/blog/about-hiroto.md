@@ -13,6 +13,56 @@ affiliate: false
 
 ただ、それだけです。
 
+<div class="about-line-intro">
+  <p class="about-line-intro-text">「節約→投資→副業」を試行錯誤中のひろとが、失敗込みで正直に届けています。</p>
+  <a href="https://line.me/R/ti/p/%40103khwdx" target="_blank" rel="noopener noreferrer" class="about-line-intro-btn">
+    💬 月1万円改善プロジェクトに参加する（無料）
+  </a>
+</div>
+
+<style>
+.about-line-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ecfdf5;
+  border: 1px solid #00c300;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 20px 0;
+}
+.about-line-intro-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #1F4D32;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+.about-line-intro-btn {
+  display: inline-block;
+  background: #00c300;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.about-line-intro-btn:hover {
+  background: #00a500;
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .about-line-intro { flex-direction: column; align-items: stretch; text-align: center; }
+  .about-line-intro-btn { text-align: center; }
+}
+</style>
+
 ---
 
 ## 離婚した夜のこと
