@@ -1,0 +1,87 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="500" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="45" font-size="26" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    楽天経済圏2年で気づいた3つのデメリット
+  </text>
+
+  <!-- カード1 -->
+  <g>
+    <rect x="50" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="220" cy="150" r="28" fill="#7CB089"/>
+    <text x="220" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">1</text>
+    <text x="220" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ポイント還元で
+    </text>
+    <text x="220" y="228" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      買い物のハードルが下がる
+    </text>
+    <text x="220" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      「ポイント5倍だから」で
+    </text>
+    <text x="220" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      つい多めに買ってしまう
+    </text>
+    <rect x="80" y="380" width="280" height="55" rx="8" fill="#FFE6E6" stroke="#E74C3C" stroke-width="2"/>
+    <text x="220" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#E74C3C" font-weight="bold">
+      得しながら、出費は増えていた
+    </text>
+    <text x="220" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      ポイントは戻るが買わなくていい物も
+    </text>
+  </g>
+
+  <!-- カード2 -->
+  <g>
+    <rect x="430" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="600" cy="150" r="28" fill="#7CB089"/>
+    <text x="600" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">2</text>
+    <text x="600" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      「無料期間」が
+    </text>
+    <text x="600" y="228" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      終わったのに気づかない
+    </text>
+    <text x="600" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      セット割の1年無料特典が終了
+    </text>
+    <text x="600" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      通常料金に戻ったまま2ヶ月放置
+    </text>
+    <rect x="460" y="380" width="280" height="55" rx="8" fill="#FFE6E6" stroke="#E74C3C" stroke-width="2"/>
+    <text x="600" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#E74C3C" font-weight="bold">
+      合計 約4,600円 を払い過ぎ
+    </text>
+    <text x="600" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      メールは来ていたが見ていなかった
+    </text>
+  </g>
+
+  <!-- カード3 -->
+  <g>
+    <rect x="810" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="980" cy="150" r="28" fill="#7CB089"/>
+    <text x="980" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">3</text>
+    <text x="980" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      「楽天版」に切り替えたのに
+    </text>
+    <text x="980" y="228" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      旧サービスが残っていた
+    </text>
+    <text x="980" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      楽天マガジンを契約したのに
+    </text>
+    <text x="980" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      旧・電子書籍サービスを解約し忘れ
+    </text>
+    <rect x="840" y="380" width="280" height="55" rx="8" fill="#FFE6E6" stroke="#E74C3C" stroke-width="2"/>
+    <text x="980" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#E74C3C" font-weight="bold">
+      4ヶ月分 を二重に支払い
+    </text>
+    <text x="980" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      1件は小さくても積み重なると痛い
+    </text>
+  </g>
+</svg>
