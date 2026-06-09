@@ -1,0 +1,82 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="480" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="48" font-size="26" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    支出を3つに分けると家計の全体像が見える
+  </text>
+
+  <!-- 矢印ライン -->
+  <line x1="600" y1="68" x2="600" y2="88" stroke="#7CB089" stroke-width="2"/>
+
+  <!-- ===== カード1：固定費 ===== -->
+  <rect x="50" y="100" width="330" height="340" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+  <!-- ヘッダー帯 -->
+  <rect x="50" y="100" width="330" height="56" rx="14" fill="#1F4D32"/>
+  <rect x="50" y="134" width="330" height="22" fill="#1F4D32"/>
+  <text x="215" y="136" font-size="22" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">固定費</text>
+
+  <text x="215" y="185" font-size="13" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">毎月ほぼ同額かかるもの</text>
+
+  <!-- アイコン的な箇条書き -->
+  <text x="80" y="220" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 家賃 / 住宅ローン</text>
+  <text x="80" y="248" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 光熱費（基本料金）</text>
+  <text x="80" y="276" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 通信費・スマホ代</text>
+  <text x="80" y="304" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 保険料</text>
+  <text x="80" y="332" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ サブスク（定額）</text>
+
+  <!-- アクション -->
+  <rect x="72" y="368" width="286" height="50" rx="8" fill="#E8F5E9" stroke="#7CB089" stroke-width="1.5"/>
+  <text x="215" y="390" font-size="13" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">👉 削れるものを探す</text>
+  <text x="215" y="408" font-size="11" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">使っていないサブスクを解約するだけで効果大</text>
+
+  <!-- ===== カード2：変動費 ===== -->
+  <rect x="435" y="100" width="330" height="340" rx="14" fill="#fff" stroke="#E8A000" stroke-width="2"/>
+  <rect x="435" y="100" width="330" height="56" rx="14" fill="#E8A000"/>
+  <rect x="435" y="134" width="330" height="22" fill="#E8A000"/>
+  <text x="600" y="136" font-size="22" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">変動費</text>
+
+  <text x="600" y="185" font-size="13" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">月によって金額が変わるもの</text>
+
+  <text x="465" y="220" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 食費・外食費</text>
+  <text x="465" y="248" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 日用品・消耗品</text>
+  <text x="465" y="276" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 娯楽・交際費</text>
+  <text x="465" y="304" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 衣類・雑費</text>
+  <text x="465" y="332" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 子どもの習い事費</text>
+
+  <rect x="457" y="368" width="286" height="50" rx="8" fill="#FFF8E1" stroke="#E8A000" stroke-width="1.5"/>
+  <text x="600" y="390" font-size="13" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">👉 上限の目安を決める</text>
+  <text x="600" y="408" font-size="11" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">「今月の外食残り○○円」をメモするだけでOK</text>
+
+  <!-- ===== カード3：投資 ===== -->
+  <rect x="820" y="100" width="330" height="340" rx="14" fill="#fff" stroke="#2E7D9F" stroke-width="2"/>
+  <rect x="820" y="100" width="330" height="56" rx="14" fill="#2E7D9F"/>
+  <rect x="820" y="134" width="330" height="22" fill="#2E7D9F"/>
+  <text x="985" y="136" font-size="22" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">投資</text>
+
+  <text x="985" y="185" font-size="13" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">将来のためのお金</text>
+
+  <text x="850" y="220" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 新NISAの積立</text>
+  <text x="850" y="248" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ iDeCo</text>
+  <text x="850" y="276" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">・ 貯蓄・緊急予備費</text>
+  <text x="850" y="304" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#999">・</text>
+  <text x="850" y="332" font-size="14" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#999">・</text>
+
+  <rect x="842" y="368" width="286" height="50" rx="8" fill="#E3F2FD" stroke="#2E7D9F" stroke-width="1.5"/>
+  <text x="985" y="390" font-size="13" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1A5276">👉 給料日翌日に先取り設定</text>
+  <text x="985" y="408" font-size="11" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">「残ったら投資」では残らない。最初に引く。</text>
+</svg>
