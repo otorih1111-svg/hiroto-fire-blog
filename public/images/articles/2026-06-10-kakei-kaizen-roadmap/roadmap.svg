@@ -1,0 +1,72 @@
+<svg width="1200" height="1000" viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1000" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="50" font-size="28" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    月1万円家計改善ロードマップ
+  </text>
+
+  <!-- STEP1 -->
+  <rect x="120" y="90" width="960" height="150" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+  <circle cx="190" cy="165" r="34" fill="#1F4D32"/>
+  <text x="190" y="175" font-size="26" font-weight="bold" text-anchor="middle" fill="#fff" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">1</text>
+  <text x="245" y="135" font-size="22" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">スマホ・光回線を見直す</text>
+  <text x="245" y="170" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">楽天モバイル＋楽天ひかりに乗り換え</text>
+  <text x="245" y="200" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">手続きはスマホだけで完了</text>
+  <rect x="850" y="120" width="190" height="80" rx="10" fill="#E8F5E9" stroke="#1F4D32" stroke-width="1.5"/>
+  <text x="945" y="155" font-size="16" text-anchor="middle" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">月8,300円</text>
+  <text x="945" y="180" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">減</text>
+
+  <!-- 矢印1 -->
+  <line x1="600" y1="240" x2="600" y2="280" stroke="#999" stroke-width="3"/>
+  <polygon points="600,290 590,272 610,272" fill="#999"/>
+
+  <!-- STEP2 -->
+  <rect x="120" y="300" width="960" height="150" rx="14" fill="#fff" stroke="#E8A000" stroke-width="2"/>
+  <circle cx="190" cy="375" r="34" fill="#E8A000"/>
+  <text x="190" y="385" font-size="26" font-weight="bold" text-anchor="middle" fill="#fff" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">2</text>
+  <text x="245" y="345" font-size="22" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">保険を見直す</text>
+  <text x="245" y="380" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">結婚時のまま放置していた保険をFP相談で整理</text>
+  <text x="245" y="410" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">月15,000円→月8,605円</text>
+  <rect x="850" y="330" width="190" height="80" rx="10" fill="#FFF8E1" stroke="#E8A000" stroke-width="1.5"/>
+  <text x="945" y="365" font-size="16" text-anchor="middle" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">月6,400円</text>
+  <text x="945" y="390" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">減</text>
+
+  <!-- 矢印2 -->
+  <line x1="600" y1="450" x2="600" y2="490" stroke="#999" stroke-width="3"/>
+  <polygon points="600,500 590,482 610,482" fill="#999"/>
+
+  <!-- STEP3 -->
+  <rect x="120" y="510" width="960" height="150" rx="14" fill="#fff" stroke="#2E7D9F" stroke-width="2"/>
+  <circle cx="190" cy="585" r="34" fill="#2E7D9F"/>
+  <text x="190" y="595" font-size="26" font-weight="bold" text-anchor="middle" fill="#fff" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">3</text>
+  <text x="245" y="555" font-size="22" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1A5276">サブスク・外食を整理する</text>
+  <text x="245" y="590" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">使っていないサブスク2つを解約</text>
+  <text x="245" y="620" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">外食を週2回→週1回に</text>
+  <rect x="850" y="540" width="190" height="80" rx="10" fill="#E3F2FD" stroke="#2E7D9F" stroke-width="1.5"/>
+  <text x="945" y="575" font-size="16" text-anchor="middle" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1A5276">月5,000円</text>
+  <text x="945" y="600" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1A5276">前後減</text>
+
+  <!-- 矢印3 -->
+  <line x1="600" y1="660" x2="600" y2="700" stroke="#999" stroke-width="3"/>
+  <polygon points="600,710 590,692 610,692" fill="#999"/>
+
+  <!-- STEP4 -->
+  <rect x="120" y="720" width="960" height="150" rx="14" fill="#fff" stroke="#A65DA6" stroke-width="2"/>
+  <circle cx="190" cy="795" r="34" fill="#A65DA6"/>
+  <text x="190" y="805" font-size="26" font-weight="bold" text-anchor="middle" fill="#fff" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">4</text>
+  <text x="245" y="765" font-size="22" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#6A3D6A">投資を「先取り」設定にする</text>
+  <text x="245" y="800" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">浮いたお金から新NISAに上乗せ</text>
+  <text x="245" y="830" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">積立額：月3,000円→月8,000円</text>
+  <rect x="850" y="750" width="190" height="80" rx="10" fill="#F3E5F5" stroke="#A65DA6" stroke-width="1.5"/>
+  <text x="945" y="785" font-size="16" text-anchor="middle" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#6A3D6A">+5,000円</text>
+  <text x="945" y="810" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#6A3D6A">投資へ</text>
+
+  <!-- 合計バー -->
+  <rect x="120" y="900" width="960" height="70" rx="14" fill="#1F4D32"/>
+  <text x="600" y="945" font-size="24" font-weight="bold" text-anchor="middle"
+    font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">
+    合計：月14,000円以上の家計改善
+  </text>
+</svg>
