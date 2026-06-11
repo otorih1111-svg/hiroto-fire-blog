@@ -1,0 +1,76 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap');
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; fill: #1F4D32; }
+      .label { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; font-weight: 600; fill: #1F4D32; }
+      .small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; fill: #555; }
+      .time { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; font-weight: 700; fill: #7CB089; }
+      .step-num { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 700; fill: white; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="#F7FBF8"/>
+
+  <text x="60" y="45" class="title">楽天証券 口座開設の流れと実際にかかった時間</text>
+
+  <!-- Step1 -->
+  <circle cx="150" cy="130" r="28" fill="#7CB089"/>
+  <text x="150" y="138" class="step-num" text-anchor="middle">1</text>
+  <rect x="60" y="170" width="180" height="120" fill="white" stroke="#7CB089" stroke-width="2" rx="6"/>
+  <text x="150" y="200" class="label" text-anchor="middle">公式サイトで申込み</text>
+  <text x="150" y="225" class="small" text-anchor="middle">メールアドレス登録</text>
+  <text x="150" y="245" class="small" text-anchor="middle">基本情報を入力</text>
+  <text x="150" y="275" class="time" text-anchor="middle">所要時間：約10分</text>
+
+  <!-- Arrow -->
+  <path d="M 245 230 L 295 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step2 -->
+  <circle cx="390" cy="130" r="28" fill="#7CB089"/>
+  <text x="390" y="138" class="step-num" text-anchor="middle">2</text>
+  <rect x="300" y="170" width="180" height="120" fill="white" stroke="#7CB089" stroke-width="2" rx="6"/>
+  <text x="390" y="200" class="label" text-anchor="middle">本人確認書類提出</text>
+  <text x="390" y="225" class="small" text-anchor="middle">マイナンバーカード</text>
+  <text x="390" y="245" class="small" text-anchor="middle">スマホで撮影・送信</text>
+  <text x="390" y="275" class="time" text-anchor="middle">所要時間：約5分</text>
+
+  <!-- Arrow -->
+  <path d="M 485 230 L 535 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step3 -->
+  <circle cx="630" cy="130" r="28" fill="#1F4D32"/>
+  <text x="630" y="138" class="step-num" text-anchor="middle">3</text>
+  <rect x="540" y="170" width="180" height="120" fill="white" stroke="#1F4D32" stroke-width="2" rx="6"/>
+  <text x="630" y="200" class="label" text-anchor="middle">審査・口座開設</text>
+  <text x="630" y="225" class="small" text-anchor="middle">運営側の審査待ち</text>
+  <text x="630" y="245" class="small" text-anchor="middle">ログインID発行</text>
+  <text x="630" y="275" class="time" text-anchor="middle">所要時間：数日</text>
+
+  <!-- Arrow -->
+  <path d="M 725 230 L 775 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step4 -->
+  <circle cx="870" cy="130" r="28" fill="#1F4D32"/>
+  <text x="870" y="138" class="step-num" text-anchor="middle">4</text>
+  <rect x="780" y="170" width="180" height="120" fill="white" stroke="#1F4D32" stroke-width="2" rx="6"/>
+  <text x="870" y="200" class="label" text-anchor="middle">NISA口座を申請</text>
+  <text x="870" y="225" class="small" text-anchor="middle">つみたて投資枠を選択</text>
+  <text x="870" y="245" class="small" text-anchor="middle">税務署審査を待つ</text>
+  <text x="870" y="275" class="time" text-anchor="middle">所要時間：1〜2週間</text>
+
+  <!-- Total box -->
+  <rect x="1000" y="160" width="140" height="140" fill="#1F4D32" rx="6"/>
+  <text x="1070" y="195" class="small" text-anchor="middle" fill="white">トータル</text>
+  <text x="1070" y="230" text-anchor="middle" style="font-family: 'Noto Sans JP', sans-serif; font-size: 26px; font-weight: 700; fill: #7CB089;">約2〜3</text>
+  <text x="1070" y="260" class="small" text-anchor="middle" fill="white">週間で</text>
+  <text x="1070" y="280" class="small" text-anchor="middle" fill="white">投資開始</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7CB089"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="350" class="small">入力作業そのものは合計15分くらい。あとは「待ってる時間」が大半でした。</text>
+</svg>
