@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap');
       .bg { fill: #F7FBF8; }
       .title { font-size: 28px; font-weight: 700; fill: #1F4D32; font-family: 'Noto Sans JP', sans-serif; }
       .subtitle { font-size: 16px; font-weight: 700; fill: #1F4D32; font-family: 'Noto Sans JP', sans-serif; }
