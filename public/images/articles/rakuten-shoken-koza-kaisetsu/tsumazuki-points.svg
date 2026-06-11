@@ -1,0 +1,62 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap');
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; fill: #1F4D32; }
+      .num { font-family: 'Noto Sans JP', sans-serif; font-size: 22px; font-weight: 700; fill: white; }
+      .label { font-family: 'Noto Sans JP', sans-serif; font-size: 17px; font-weight: 700; fill: #1F4D32; }
+      .body { font-family: 'Noto Sans JP', sans-serif; font-size: 13.5px; fill: #444; }
+      .tag { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 700; fill: #B45309; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+
+  <text x="60" y="50" class="title">口座開設でつまずいた3つのポイント</text>
+
+  <!-- Card 1 -->
+  <rect x="60" y="90" width="340" height="320" fill="white" stroke="#7CB089" stroke-width="2" rx="10"/>
+  <circle cx="110" cy="140" r="26" fill="#EF4444"/>
+  <text x="110" y="148" class="num" text-anchor="middle">1</text>
+  <text x="150" y="135" class="tag">時間ロス：数日</text>
+  <text x="150" y="160" class="label">本人確認書類が「不鮮明」</text>
+  <text x="90" y="200" class="body">マイナンバーカードを適当に</text>
+  <text x="90" y="222" class="body">撮影して提出 → 再提出に。</text>
+  <text x="90" y="260" class="body">対策：</text>
+  <text x="90" y="285" class="body">・照明をしっかり当てる</text>
+  <text x="90" y="307" class="body">・平らな机で真上から撮る</text>
+  <text x="90" y="329" class="body">・反射で文字が消えてないか</text>
+  <text x="90" y="351" class="body">　撮影後に確認する</text>
+  <text x="90" y="385" class="body" font-weight="700" fill="#1F4D32">これだけで一発で通った</text>
+
+  <!-- Card 2 -->
+  <rect x="430" y="90" width="340" height="320" fill="white" stroke="#7CB089" stroke-width="2" rx="10"/>
+  <circle cx="480" cy="140" r="26" fill="#F59E0B"/>
+  <text x="480" y="148" class="num" text-anchor="middle">2</text>
+  <text x="520" y="135" class="tag">2〜3回撮り直し</text>
+  <text x="520" y="160" class="label">顔の動画撮影が地味に緊張</text>
+  <text x="460" y="200" class="body">「正面を向く」「ゆっくり</text>
+  <text x="460" y="222" class="body">右を向く」を画面の指示通り</text>
+  <text x="460" y="244" class="body">に動かすだけなのに、</text>
+  <text x="460" y="266" class="body">タイミングが微妙にずれる。</text>
+  <text x="460" y="300" class="body">部屋で一人スマホに向かって</text>
+  <text x="460" y="322" class="body">首を傾けている自分が、</text>
+  <text x="460" y="344" class="body">想像以上に怪しい人だった。</text>
+  <text x="460" y="385" class="body" font-weight="700" fill="#1F4D32">思ったよりちゃんと本人確認される</text>
+
+  <!-- Card 3 -->
+  <rect x="800" y="90" width="340" height="320" fill="white" stroke="#7CB089" stroke-width="2" rx="10"/>
+  <circle cx="850" cy="140" r="26" fill="#7CB089"/>
+  <text x="850" y="148" class="num" text-anchor="middle">3</text>
+  <text x="890" y="135" class="tag">手戻りで二度手間</text>
+  <text x="890" y="160" class="label">二段階認証を後回しにした</text>
+  <text x="830" y="200" class="body">「あとでもいいか」と</text>
+  <text x="830" y="222" class="body">スキップしようとしたら、</text>
+  <text x="830" y="244" class="body">NISAの設定をする前に</text>
+  <text x="830" y="266" class="body">結局必須になっていた。</text>
+  <text x="830" y="300" class="body">同じ画面に2回戻ることに</text>
+  <text x="830" y="322" class="body">なって、地味にめんどくさい。</text>
+  <text x="830" y="385" class="body" font-weight="700" fill="#1F4D32">出てきた時にやるのが一番早い</text>
+
+  <text x="60" y="445" class="body">どれも「ちゃんとやれば数分」のことばかり。後回しにした分だけ日数が伸びました。</text>
+</svg>
