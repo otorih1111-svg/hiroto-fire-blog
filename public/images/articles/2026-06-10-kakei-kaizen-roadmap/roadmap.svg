@@ -1,5 +1,5 @@
-<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="900" fill="#F7FBF8"/>
+<svg width="1200" height="1020" viewBox="0 0 1200 1020" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1020" fill="#F7FBF8"/>
 
   <!-- タイトル -->
   <text x="600" y="50" font-size="28" font-weight="bold" text-anchor="middle"
@@ -64,8 +64,20 @@
   <text x="945" y="735" font-size="18" text-anchor="middle" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">収益0円</text>
   <text x="945" y="760" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7B5800">挑戦中</text>
 
+  <!-- 矢印3 -->
+  <line x1="600" y1="810" x2="600" y2="850" stroke="#999" stroke-width="3"/>
+  <polygon points="600,860 590,842 610,842" fill="#999"/>
+
+  <!-- ===== STEP4：LINEへ ===== -->
+  <rect x="100" y="870" width="1000" height="100" rx="14" fill="#E8FBEE" stroke="#06C755" stroke-width="2"/>
+  <circle cx="170" cy="920" r="30" fill="#06C755"/>
+  <path d="M170 905 a16 12 0 1 0 0.1 0 z" fill="#fff" transform="translate(0,0)"/>
+  <text x="170" y="928" font-size="20" font-weight="bold" text-anchor="middle" fill="#06C755" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">LINE</text>
+  <text x="225" y="908" font-size="20" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#0a8a3f">気になるテーマだけ、もっと詳しく届きます</text>
+  <text x="225" y="938" font-size="15" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">節約・投資・副業、好きなテーマを選んでLINEで深掘りできる</text>
+
   <!-- フッター -->
-  <text x="600" y="855" font-size="16" text-anchor="middle"
+  <text x="600" y="995" font-size="16" text-anchor="middle"
     font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#555">
     節約で土台を作り、投資で将来に回し、副業で次の一手を増やす
   </text>

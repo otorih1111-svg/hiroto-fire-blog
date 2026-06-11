@@ -101,7 +101,19 @@ FPに相談したら、月8,605円になった。差額、6,400円。
 
 残りの12,700円は、生活防衛費や急な出費に備える余裕として持っておくことにした。投資に全振りしないのも、シングルファーザーには大事な判断だと思っている。
 
+正直、19,700円浮いたなら全部投資に回したい気持ちもあった。
+
+でも、貯金ほぼゼロから始めた身としては、まず「何かあっても崩れない土台」を作る方が先だと思った。
+
+投資は増やす話、生活防衛費は守る話。
+
+どっちもやっておきたかったので、今のぼくには7,000円と12,700円のバランスがちょうどよかった。
+
 → 詳しくは[新NISAは月1万円でも意味あるか考えた話](/blog/nisa-tsumitate-40dai/)に書いている。
+
+ちなみに、この「投資にいくら回すか」の感覚は、最初は全然わからなかった。
+
+「節約・投資・副業」のうち、投資のテーマが気になる人には、この振り分けの考え方をもう少し詳しくLINEで届けている。気になる方は、記事の最後から見てみてほしい。
 
 ---
 
@@ -127,13 +139,26 @@ FPに相談したら、月8,605円になった。差額、6,400円。
 
 逆に「投資はもう少し先でいいから、まず副業の話が知りたい」という人もいると思う。
 
-だから、気になるテーマだけ選んで届ける形にしている。詳しくは下のLINEから。
+だから、気になるテーマだけ選んで届ける形にしている。
+
+<div style="background:linear-gradient(135deg,#00c300 0%,#00a500 100%);border-radius:8px;padding:20px 24px;margin:24px 0;color:#fff;text-align:center;">
+  <p style="margin:0 0 10px;font-weight:700;font-size:1.05rem;line-height:1.6;">
+    「節約」「投資」「副業」、気になるテーマだけ選んで届きます
+  </p>
+  <p style="margin:0 0 14px;font-size:0.85rem;opacity:0.92;line-height:1.7;">
+    ぼくが実際にやった手順を、失敗込みで正直にLINEで届けます。登録は30秒、いつでも解除OKです。
+  </p>
+  <a href="https://line.me/R/ti/p/%40103khwdx" target="_blank" rel="noopener noreferrer"
+     style="display:inline-block;background:#fff;color:#00a500;font-weight:700;font-size:0.9rem;padding:12px 22px;border-radius:6px;text-decoration:none;">
+    LINEで気になるテーマを選ぶ（無料）
+  </a>
+</div>
 
 ---
 
 ## 3ステップを図にすると
 
-![節約・投資・副業の3ステップロードマップ：固定費見直しで月19,700円減、NISA先取りで月10,000円積立、AI×発信で副業に挑戦](/images/articles/2026-06-10-kakei-kaizen-roadmap/roadmap.svg)
+![節約・投資・副業の3ステップロードマップ：固定費見直しで月19,700円減、NISA先取りで月10,000円積立、AI×発信で副業に挑戦。気になるテーマはLINEで深掘り](/images/articles/2026-06-10-kakei-kaizen-roadmap/roadmap.svg)
 *節約で土台を作り、投資で将来に回し、副業で次の一手を増やす。順番が大事だった。*
 
 ---
