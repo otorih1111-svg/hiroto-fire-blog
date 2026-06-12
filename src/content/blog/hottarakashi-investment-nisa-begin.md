@@ -87,7 +87,7 @@ ogImage: "/images/thumbnails/hottarakashi-investment-nisa-begin.png"
 
 新NISAを月いくらで始めるか迷っているなら、先にこっちも読むと考えやすいです。
 
-[新NISAは月1万円でも意味ある？40代シングル父が「大きく増やす」より先に考えたこと](/blog/nisa-tsumitate-40dai/)
+[新NISAは月1万円でも意味ある？40代シングルファーザーが「大きく増やす」より先に考えたこと](/blog/nisa-tsumitate-40dai/)
 
 ---
 
