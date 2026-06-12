@@ -1,0 +1,13 @@
+Search Console 優先申請URL（2026-06-12）
+
+1. https://hiroto-fire.com/blog/mnp-rakuten-mobile-steps/
+2. https://hiroto-fire.com/blog/rakuten-mobile-review/
+3. https://hiroto-fire.com/blog/rakuten-keizaiken-single-father/
+4. https://hiroto-fire.com/blog/2026-06-10-kakei-kaizen-roadmap/
+5. https://hiroto-fire.com/blog/nisa-tsumitate-40dai/
+6. https://hiroto-fire.com/blog/2026-06-07-fushikatei-kakeibo-koukai/
+
+優先理由
+- 楽天モバイル系は表示が出始めているため、CTR改善と内部リンク強化の効果を見やすい
+- ロードマップは回遊ハブとして使える
+- NISAと生活費公開は信頼記事として他記事を支えやすい
