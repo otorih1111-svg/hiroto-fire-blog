@@ -3,10 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prebuild": "node scripts/prepare_indexnow_key.mjs",
     "dev": "astro dev",
     "build": "astro build",
+    "build:seo": "npm run build && npm run seo:notify",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "seo:notify": "node scripts/post_deploy_indexing.mjs",
+    "seo:notify:live": "node scripts/post_deploy_indexing.mjs --wait-live",
+    "seo:notify:all": "node scripts/post_deploy_indexing.mjs --all"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

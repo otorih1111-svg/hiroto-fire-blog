@@ -1,0 +1,46 @@
+name: IndexNow After Cloudflare Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create .env for workflow
+        run: |
+          cat <<'EOF' > .env
+          PUBLIC_GA_ID=G-LRT5BKLD8Y
+          PUBLIC_LINE_URL=https://line.me/R/ti/p/%40103khwdx
+          EOF
+
+      - name: Build site
+        run: npm run build
+
+      - name: Wait for Cloudflare deploy and notify IndexNow
+        run: npm run seo:notify -- --wait-live --base HEAD~1 --head HEAD
+
+      - name: Upload indexing logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: indexing-logs
+          path: logs/indexing/
