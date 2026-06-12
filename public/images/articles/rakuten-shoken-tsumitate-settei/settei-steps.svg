@@ -1,0 +1,65 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap');
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; fill: #1F4D32; }
+      .label { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; font-weight: 700; fill: #1F4D32; }
+      .small { font-family: 'Noto Sans JP', sans-serif; font-size: 12.5px; fill: #555; }
+      .num { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 700; fill: white; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="400" fill="#F7FBF8"/>
+
+  <text x="60" y="45" class="title">口座開設後にやったこと（4ステップ）</text>
+
+  <!-- Step1 -->
+  <circle cx="150" cy="120" r="28" fill="#7CB089"/>
+  <text x="150" y="128" class="num" text-anchor="middle">1</text>
+  <rect x="60" y="160" width="240" height="140" fill="white" stroke="#7CB089" stroke-width="2" rx="6"/>
+  <text x="180" y="195" class="label" text-anchor="middle">NISA口座の状況確認</text>
+  <text x="180" y="225" class="small" text-anchor="middle">「つみたて投資枠」が</text>
+  <text x="180" y="245" class="small" text-anchor="middle">利用可能になっているか</text>
+  <text x="180" y="265" class="small" text-anchor="middle">マイページでチェック</text>
+
+  <path d="M 305 230 L 345 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Step2 -->
+  <circle cx="430" cy="120" r="28" fill="#7CB089"/>
+  <text x="430" y="128" class="num" text-anchor="middle">2</text>
+  <rect x="350" y="160" width="240" height="140" fill="white" stroke="#7CB089" stroke-width="2" rx="6"/>
+  <text x="470" y="195" class="label" text-anchor="middle">入金方法の設定</text>
+  <text x="470" y="225" class="small" text-anchor="middle">楽天カードでの</text>
+  <text x="470" y="245" class="small" text-anchor="middle">クレカ積立を選択</text>
+  <text x="470" y="265" class="small" text-anchor="middle">上限額は無理のない範囲に</text>
+
+  <path d="M 595 230 L 635 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Step3 -->
+  <circle cx="720" cy="120" r="28" fill="#1F4D32"/>
+  <text x="720" y="128" class="num" text-anchor="middle">3</text>
+  <rect x="640" y="160" width="240" height="140" fill="white" stroke="#1F4D32" stroke-width="2" rx="6"/>
+  <text x="760" y="195" class="label" text-anchor="middle">投資信託を選ぶ</text>
+  <text x="760" y="225" class="small" text-anchor="middle">「オルカン」または</text>
+  <text x="760" y="245" class="small" text-anchor="middle">「S&amp;P500」と検索して</text>
+  <text x="760" y="265" class="small" text-anchor="middle">積立設定ボタンを押す</text>
+
+  <path d="M 885 230 L 925 230" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Step4 -->
+  <circle cx="1010" cy="120" r="28" fill="#1F4D32"/>
+  <text x="1010" y="128" class="num" text-anchor="middle">4</text>
+  <rect x="930" y="160" width="240" height="140" fill="white" stroke="#1F4D32" stroke-width="2" rx="6"/>
+  <text x="1050" y="195" class="label" text-anchor="middle">積立設定の確定</text>
+  <text x="1050" y="225" class="small" text-anchor="middle">毎月の金額・積立日・</text>
+  <text x="1050" y="245" class="small" text-anchor="middle">引き落とし方法を選んで</text>
+  <text x="1050" y="265" class="small" text-anchor="middle">確定すれば、あとは自動</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7CB089"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="350" class="small">この4つさえ終わらせれば、あとは設定が自動で動いてくれます。</text>
+</svg>
