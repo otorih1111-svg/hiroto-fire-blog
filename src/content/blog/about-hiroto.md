@@ -33,6 +33,8 @@ affiliate: false
 ぼくはトーストを焼きながら、
 「このままじゃいけない」とだけ思っていました。
 
+![ひろとと息子が並んで笑っているイラスト](/images/characters/family/family-character-together-neutral.png)
+
 ![シングルファーザーの朝](/images/thumbnails/single-father-daily.png)
 
 ---
@@ -163,6 +165,8 @@ AIを使えば、ひとりでも量と質を出せる可能性がある。
 Cloudflare（クラウドフレア）って何？WordPress（ワードプレス）って何？ASPって何？SEOって何？
 
 全部わからないまま、調べながら進めました。
+
+![パソコンに向かうひろとのイラスト](/images/characters/hiroto/hiroto-character-pc-work.png)
 
 固定費の見直しが副業の土台になった話は、
 [節約・家計カテゴリ](/category/節約・家計/)にまとめています。

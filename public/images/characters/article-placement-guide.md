@@ -1,0 +1,42 @@
+# Character Placement Guide
+
+## すでに差し込んだ記事
+- `about-hiroto.md`
+  - `family-character-together-neutral.png`
+  - `hiroto-character-pc-work.png`
+- `2026-05-19-musuko.md`
+  - `family-character-together-thinking-worried.png`
+  - `son-character-laughing.png`
+  - `family-character-father-watching-son.png`
+- `2026-06-10-kakei-kaizen-roadmap.md`
+  - `hiroto-character-thinking.png`
+  - `hiroto-character-small-guts.png`
+  - `family-character-together-small-guts.png`
+- `2026-06-07-fushikatei-kakeibo-koukai.md`
+  - `hiroto-character-worried.png`
+  - `family-character-father-pointing-son-listening.png`
+  - `hiroto-character-nod.png`
+
+## 差し込み候補
+- `rakuten-mobile-review.md`
+  - `hiroto-character-surprised.png`
+  - `hiroto-character-nod.png`
+- `mnp-rakuten-mobile-steps.md`
+  - `hiroto-character-thinking.png`
+  - `hiroto-character-small-guts.png`
+- `hoken-minaoshi-single-father.md`
+  - `hiroto-character-worried.png`
+  - `hiroto-character-bow.png`
+  - `hiroto-character-nod.png`
+- `nisa-tsumitate-40dai.md`
+  - `hiroto-character-thinking.png`
+  - `hiroto-character-small-guts.png`
+- `2026-05-21-fp-sodan-review.md`
+  - `hiroto-character-panic.png`
+  - `hiroto-character-nod.png`
+- `2026-05-21-fukugyo-first-10000-roadmap.md`
+  - `hiroto-character-thinking.png`
+  - `hiroto-character-small-guts.png`
+- `2026-05-31-aifukugyo.md`
+  - `hiroto-character-pc-work.png`
+  - `hiroto-character-laughing.png`
