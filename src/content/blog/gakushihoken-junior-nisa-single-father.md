@@ -71,6 +71,8 @@ ogImage: "/images/thumbnails/gakushihoken-junior-nisa-single-father.png"
 
 証券口座はまだ持っていない人は、[DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)のが一番手続きがシンプルでした。
 
+ぼく自身は楽天証券を使っているので、<a href="https://ad2.trafficgate.net/t/r/928/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>も選択肢のひとつです。
+
 ---
 
 ## 3年積み立てたところでジュニアNISAが終了した

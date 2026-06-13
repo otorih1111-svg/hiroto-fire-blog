@@ -11,7 +11,7 @@ tags:
   - クレカ積立
   - シングルファーザー
 draft: false
-affiliate: false
+affiliate: true
 ogImage: "/images/thumbnails/rakuten-shoken-tsumitate-settei.png"
 ---
 
@@ -139,6 +139,8 @@ ogImage: "/images/thumbnails/rakuten-shoken-tsumitate-settei.png"
 最後に「注文受付完了」という画面が表示されたら、設定はここで終わりです。
 
 これで、次の積立日から自動で買い付けが始まります。
+
+まだ口座を持っていない人は、<a href="https://ad2.trafficgate.net/t/r/1230/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でらくらく積立を始める（PR）</a>から申し込むと、この記事と同じ流れで設定できます。
 
 ---
 
