@@ -1,0 +1,78 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="500" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="45" font-size="26" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    ブログ収益化の3つの仕組み
+  </text>
+
+  <!-- カード1：自己アフィリエイト -->
+  <g>
+    <rect x="50" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="220" cy="150" r="28" fill="#7CB089"/>
+    <text x="220" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">1</text>
+    <text x="220" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      自己アフィリエイト
+    </text>
+    <text x="220" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      アクセス0でも動かせる
+    </text>
+    <text x="220" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      最初の一歩として最適
+    </text>
+    <rect x="80" y="380" width="280" height="55" rx="8" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <text x="220" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+      今すぐ始められる
+    </text>
+    <text x="220" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      1件数百〜数万円（単発）
+    </text>
+  </g>
+
+  <!-- カード2：ASPアフィリエイト -->
+  <g>
+    <rect x="430" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="600" cy="150" r="28" fill="#7CB089"/>
+    <text x="600" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">2</text>
+    <text x="600" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ASPアフィリエイト
+    </text>
+    <text x="600" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      記事の中で案件を紹介
+    </text>
+    <text x="600" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      A8.net・afbなどに登録
+    </text>
+    <rect x="460" y="380" width="280" height="55" rx="8" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <text x="600" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+      記事を書き始めたら
+    </text>
+    <text x="600" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      1件数百〜2万円
+    </text>
+  </g>
+
+  <!-- カード3：広告収益 -->
+  <g>
+    <rect x="810" y="90" width="340" height="370" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <circle cx="980" cy="150" r="28" fill="#7CB089"/>
+    <text x="980" y="159" font-size="22" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">3</text>
+    <text x="980" y="205" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      広告収益（AdSense）
+    </text>
+    <text x="980" y="270" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      記事に広告が自動表示
+    </text>
+    <text x="980" y="290" font-size="13" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      審査通過が必要
+    </text>
+    <rect x="840" y="380" width="280" height="55" rx="8" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <text x="980" y="404" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+      記事数とアクセス次第
+    </text>
+    <text x="980" y="422" font-size="11" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      1クリック数十円
+    </text>
+  </g>
+</svg>
