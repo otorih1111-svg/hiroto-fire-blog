@@ -1,0 +1,95 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="675" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="55" font-size="26" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    チャットで確認 vs Claude in Chromeに丸投げ
+  </text>
+
+  <!-- Before カード -->
+  <g>
+    <rect x="70" y="100" width="510" height="500" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <rect x="70" y="100" width="510" height="60" rx="14" fill="#1F4D32"/>
+    <text x="325" y="140" font-size="20" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">
+      Before：チャットで1個ずつ確認
+    </text>
+
+    <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" fill="#333">
+      <circle cx="105" cy="200" r="14" fill="#7CB089"/>
+      <text x="105" y="206" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">1</text>
+      <text x="130" y="206">英語の画面をスクリーンショット</text>
+
+      <circle cx="105" cy="250" r="14" fill="#7CB089"/>
+      <text x="105" y="256" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">2</text>
+      <text x="130" y="256">チャットに貼って「これ何？」と質問</text>
+
+      <circle cx="105" cy="300" r="14" fill="#7CB089"/>
+      <text x="105" y="306" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">3</text>
+      <text x="130" y="306">回答を見て、自分でクリック</text>
+
+      <circle cx="105" cy="350" r="14" fill="#7CB089"/>
+      <text x="105" y="356" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">4</text>
+      <text x="130" y="356">次の画面でまた1に戻る（何十回）</text>
+    </g>
+
+    <rect x="100" y="420" width="450" height="140" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <text x="325" y="455" font-size="17" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      所要時間：約1〜2時間
+    </text>
+    <text x="325" y="490" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      正確だが、往復が多くて夜が更ける
+    </text>
+    <text x="325" y="515" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      「今どの画面だっけ」と迷子になることも
+    </text>
+  </g>
+
+  <!-- 矢印 -->
+  <g>
+    <path d="M 600 350 L 660 350" stroke="#1F4D32" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+        <path d="M0,0 L12,6 L0,12 Z" fill="#1F4D32"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- After カード -->
+  <g>
+    <rect x="660" y="100" width="470" height="500" rx="14" fill="#fff" stroke="#1F4D32" stroke-width="2"/>
+    <rect x="660" y="100" width="470" height="60" rx="14" fill="#7CB089"/>
+    <text x="895" y="140" font-size="20" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#fff">
+      After：Claude in Chromeに丸投げ
+    </text>
+
+    <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" fill="#333">
+      <circle cx="695" cy="200" r="14" fill="#1F4D32"/>
+      <text x="695" y="206" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">1</text>
+      <text x="720" y="206">「設定してほしい」と伝える</text>
+
+      <circle cx="695" cy="250" r="14" fill="#1F4D32"/>
+      <text x="695" y="256" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">2</text>
+      <text x="720" y="256">AIが画面を読み取って直接操作</text>
+
+      <circle cx="695" cy="300" r="14" fill="#1F4D32"/>
+      <text x="695" y="306" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">3</text>
+      <text x="720" y="306">「これで合ってますか？」だけ確認</text>
+
+      <circle cx="695" cy="350" r="14" fill="#1F4D32"/>
+      <text x="695" y="356" font-size="14" text-anchor="middle" fill="#fff" font-weight="bold">4</text>
+      <text x="720" y="356">「お願いします」で完了</text>
+    </g>
+
+    <rect x="690" y="420" width="410" height="140" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <text x="895" y="455" font-size="17" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      所要時間：数分
+    </text>
+    <text x="895" y="490" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      スクショ往復が丸ごとなくなった
+    </text>
+    <text x="895" y="515" font-size="14" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+      こちらは確認と判断だけでOK
+    </text>
+  </g>
+</svg>
