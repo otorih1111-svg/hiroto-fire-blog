@@ -4,7 +4,7 @@ description: "楽天モバイルに乗り換えるとメールアドレスはど
 pubDate: 2026-06-13
 category: 節約・家計
 tags: ["楽天モバイル", "メールアドレス", "キャリアメール", "Gmail", "格安SIM"]
-draft: true
+draft: false
 affiliate: false
 ogImage: "/images/thumbnails/rakuten-mobile-mail-address.png"
 ---
