@@ -73,28 +73,8 @@
     <text x="1095" y="165" font-size="15" font-weight="bold" text-anchor="middle" fill="#E8924A">アメリカなの！？</text>
     <text x="1095" y="195" font-size="22" text-anchor="middle">😳</text>
 
-    <!-- キャラクター本体（ひろと・丸顔） -->
-    <!-- 体 -->
-    <path d="M 1030 480 Q 1030 380 1110 380 Q 1190 380 1190 480 L 1190 560 L 1030 560 Z" fill="#7CB089"/>
-    <!-- 首 -->
-    <rect x="1090" y="320" width="40" height="40" fill="#FBD7B0"/>
-    <!-- 顔 -->
-    <circle cx="1110" cy="290" r="62" fill="#FBD7B0"/>
-    <!-- 髪（短髪・少しサイドに白髪っぽいグレー） -->
-    <path d="M 1050 270 Q 1048 220 1110 215 Q 1172 220 1170 270 Q 1170 240 1110 238 Q 1052 240 1050 270 Z" fill="#4A4036"/>
-    <!-- メガネ -->
-    <circle cx="1086" cy="292" r="16" fill="none" stroke="#1F4D32" stroke-width="3"/>
-    <circle cx="1134" cy="292" r="16" fill="none" stroke="#1F4D32" stroke-width="3"/>
-    <line x1="1102" y1="292" x2="1118" y2="292" stroke="#1F4D32" stroke-width="3"/>
-    <!-- 目 -->
-    <circle cx="1086" cy="292" r="3.5" fill="#1F4D32"/>
-    <circle cx="1134" cy="292" r="3.5" fill="#1F4D32"/>
-    <!-- 驚き眉 -->
-    <path d="M 1075 270 Q 1086 262 1097 270" stroke="#1F4D32" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M 1123 270 Q 1134 262 1145 270" stroke="#1F4D32" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <!-- 口（びっくり「お」の形） -->
-    <ellipse cx="1110" cy="322" rx="11" ry="14" fill="#1F4D32"/>
-    <ellipse cx="1110" cy="318" rx="7" ry="9" fill="#fff" opacity="0.25"/>
+    <!-- キャラクター本体（ひろと・驚き顔イラスト） -->
+    <image href="/images/characters/hiroto/hiroto-character-surprised.png" x="1000" y="240" width="220" height="220"/>
 
     <text x="1110" y="610" font-size="16" font-weight="bold" text-anchor="middle" fill="#1F4D32">ひろと</text>
   </g>
