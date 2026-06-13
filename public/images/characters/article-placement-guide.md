@@ -49,3 +49,7 @@
   - `hiroto-character-pc-work.png`
   - `hiroto-character-laughing.png`
   - 用途：Before/After図解まわりの小さめ吹き出し
+- `gmail-fukugyo-mail.md`
+  - `family-character-together-thinking-worried.png`
+  - `son-character-mail-request.png`
+  - 用途：Gmailの使い分けと子ども用連絡先の文脈の小さめ補足吹き出し

@@ -28,6 +28,9 @@
 7. cheering
 8. sad
 
+### Derived bubble asset
+9. mail-request
+
 ## Family 6
 ### family-sheet-01-duo-6.png
 1. together-neutral

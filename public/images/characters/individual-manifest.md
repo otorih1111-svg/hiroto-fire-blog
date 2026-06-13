@@ -26,6 +26,11 @@
 - son-character-cheering.png
 - son-character-sad.png
 
+## Derived Son Bubble Assets
+- son-character-mail-request.png
+  - セリフ: 「パパー。メールアドレスほしいー。」
+  - ベース: son-character-cheering.png
+
 ## family-sheet-01-duo-6.png
 - family-character-together-neutral.png
 - family-character-together-laughing.png

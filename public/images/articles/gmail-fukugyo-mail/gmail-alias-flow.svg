@@ -1,0 +1,86 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" fill="#F7FBF8"/>
+
+  <text x="600" y="48" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700" fill="#1F4D32">
+    Gmailを副業用に使うときの分け方
+  </text>
+
+  <rect x="60" y="100" width="240" height="290" rx="18" fill="#FFFFFF" stroke="#1F4D32" stroke-width="2"/>
+  <text x="180" y="142" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#1F4D32">
+    登録先
+  </text>
+
+  <rect x="95" y="175" width="170" height="48" rx="12" fill="#EAF4ED"/>
+  <text x="180" y="206" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#1F4D32">
+    ASP
+  </text>
+
+  <rect x="95" y="240" width="170" height="48" rx="12" fill="#EAF4ED"/>
+  <text x="180" y="271" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#1F4D32">
+    証券口座
+  </text>
+
+  <rect x="95" y="305" width="170" height="48" rx="12" fill="#EAF4ED"/>
+  <text x="180" y="336" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#1F4D32">
+    ポイントサイト
+  </text>
+
+  <rect x="360" y="100" width="480" height="290" rx="18" fill="#FFFFFF" stroke="#1F4D32" stroke-width="2"/>
+  <text x="600" y="142" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#1F4D32">
+    1つのGmailでエイリアスを分ける
+  </text>
+
+  <rect x="405" y="175" width="390" height="48" rx="12" fill="#F6FBF7" stroke="#7CB089" stroke-width="2"/>
+  <text x="600" y="206" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#1F4D32">
+    hiroto+a8@gmail.com
+  </text>
+
+  <rect x="405" y="240" width="390" height="48" rx="12" fill="#F6FBF7" stroke="#7CB089" stroke-width="2"/>
+  <text x="600" y="271" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#1F4D32">
+    hiroto+rakuten@gmail.com
+  </text>
+
+  <rect x="405" y="305" width="390" height="48" rx="12" fill="#F6FBF7" stroke="#7CB089" stroke-width="2"/>
+  <text x="600" y="336" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#1F4D32">
+    hiroto+point@gmail.com
+  </text>
+
+  <rect x="900" y="100" width="240" height="290" rx="18" fill="#FFFFFF" stroke="#1F4D32" stroke-width="2"/>
+  <text x="1020" y="142" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#1F4D32">
+    受信後の管理
+  </text>
+
+  <rect x="945" y="175" width="150" height="48" rx="12" fill="#1F4D32"/>
+  <text x="1020" y="206" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">
+    受信箱は1つ
+  </text>
+
+  <rect x="945" y="240" width="150" height="48" rx="12" fill="#EAF4ED" stroke="#1F4D32" stroke-width="1.5"/>
+  <text x="1020" y="271" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#1F4D32">
+    ラベルで分ける
+  </text>
+
+  <rect x="945" y="305" width="150" height="48" rx="12" fill="#EAF4ED" stroke="#1F4D32" stroke-width="1.5"/>
+  <text x="1020" y="336" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#1F4D32">
+    フィルタで自動化
+  </text>
+
+  <path d="M 300 199 L 385 199" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 300 264 L 385 264" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 300 329 L 385 329" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <path d="M 795 199 L 880 199" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 795 264 L 880 264" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 795 329 L 880 329" stroke="#7CB089" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="130" y="430" width="940" height="56" rx="14" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="600" y="464" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1F4D32">
+    受信箱は増やさず、登録先の見分けやすさだけ増やす
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#7CB089"/>
+    </marker>
+  </defs>
+</svg>
