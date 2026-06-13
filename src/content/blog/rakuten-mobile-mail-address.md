@@ -104,7 +104,7 @@ ogImage: "/images/thumbnails/rakuten-mobile-mail-address.png"
 ぼく自身は、最終的にGmailを軸にするのがいちばん楽でした。
 
 その理由は別記事の
-[楽天モバイルに乗り換えたらキャリアメールがなくなった話｜Gmailにして楽になった](/blog/gmail-fukugyo-mail/)
+[楽天モバイルでキャリアメールが消えた話](/blog/gmail-fukugyo-mail/)
 にまとめています。
 
 今回はその前段階として、
@@ -238,7 +238,7 @@ Gmailに寄せるメリットは、派手さより
 
 Gmail運用をもう少し細かく知りたいなら、こちらにまとめています。
 
-→ [楽天モバイルに乗り換えたらキャリアメールがなくなった話｜Gmailにして楽になった](/blog/gmail-fukugyo-mail/)
+→ [楽天モバイルでキャリアメールが消えた話](/blog/gmail-fukugyo-mail/)
 
 ---
 
@@ -392,7 +392,7 @@ Gmail運用をもう少し細かく知りたいなら、こちらにまとめて
 [楽天モバイルは実際どう？月7000円台→1078円になった体験談【電波も正直レビュー】](/blog/rakuten-mobile-review/)
 
 Gmailへ寄せた実体験まで見たいなら
-[楽天モバイルに乗り換えたらキャリアメールがなくなった話｜Gmailにして楽になった](/blog/gmail-fukugyo-mail/)
+[楽天モバイルでキャリアメールが消えた話](/blog/gmail-fukugyo-mail/)
 
 この2本を続けて読むと、かなり判断しやすくなるはずです。
 
