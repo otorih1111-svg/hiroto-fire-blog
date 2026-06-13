@@ -4,18 +4,22 @@
 - `about-hiroto.md`
   - `family-character-together-neutral.png`
   - `hiroto-character-pc-work.png`
+  - 用途：本文内の小さめ補足吹き出し
 - `2026-05-19-musuko.md`
   - `family-character-together-thinking-worried.png`
   - `son-character-laughing.png`
   - `family-character-father-watching-son.png`
+  - 用途：感情の切れ目に入れる小さめ吹き出し
 - `2026-06-10-kakei-kaizen-roadmap.md`
   - `hiroto-character-thinking.png`
   - `hiroto-character-small-guts.png`
   - `family-character-together-small-guts.png`
+  - 用途：導入・転換点・図解前の小さめ補足吹き出し
 - `2026-06-07-fushikatei-kakeibo-koukai.md`
   - `hiroto-character-worried.png`
   - `family-character-father-pointing-son-listening.png`
   - `hiroto-character-nod.png`
+  - 用途：図解補足・本文内の小さめ吹き出し
 - `rakuten-mobile-review.md`
   - `hiroto-character-surprised.png`
   - `hiroto-character-nod.png`

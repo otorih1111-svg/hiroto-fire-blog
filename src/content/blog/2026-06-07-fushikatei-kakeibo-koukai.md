@@ -44,7 +44,10 @@ ogImage: "/images/thumbnails/2026-06-07-fushikatei-kakeibo-koukai.png"
 父親なのに、答えられない。
 これはさすがにまずいと思いました。
 
-![考えながら相談している親子のイラスト](/images/characters/family/family-character-father-pointing-son-listening.png)
+<div class="character-note">
+  <img src="/images/characters/family/family-character-father-pointing-son-listening.png" alt="考えながら相談している親子のイラスト" />
+  <p class="character-note-bubble">これはさすがにまずい、と思いました。</p>
+</div>
 
 そこから家計簿をつけ始めて、数字が見えてくると、不思議と「誰かと比べてみたい」という気持ちが出てきました。
 
@@ -74,7 +77,10 @@ ogImage: "/images/thumbnails/2026-06-07-fushikatei-kakeibo-koukai.png"
 漠然とした不安と、理由がわかっている不安は、同じ「不安」でも重さが違います。
 ぼくはそれを家計簿をつけてから知りました。
 
-![不安そうに考え込むひろとのイラスト](/images/characters/hiroto/hiroto-character-worried.png)
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-worried.png" alt="不安そうに考え込むひろとのイラスト" />
+  <p class="character-note-bubble">理由がわかるだけで、不安の重さが変わるんです。</p>
+</div>
 
 ---
 
@@ -157,7 +163,10 @@ ogImage: "/images/thumbnails/2026-06-07-fushikatei-kakeibo-koukai.png"
 「特別大変」ではなく、「選んでこうなっている」。
 そう思えるようになっただけで、お金に対する焦りが少し和らいだ気がします。
 
-![少し安心した表情でうなずくひろとのイラスト](/images/characters/hiroto/hiroto-character-nod.png)
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-nod.png" alt="少し安心した表情でうなずくひろとのイラスト" />
+  <p class="character-note-bubble">「選んでこうなっている」と思えると、ちょっと楽になりました。</p>
+</div>
 
 ---
 
