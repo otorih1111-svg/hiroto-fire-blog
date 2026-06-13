@@ -38,7 +38,7 @@ affiliate: false
   <p class="character-note-bubble">「なんとかしなきゃ」と思った、あの朝のことです。</p>
 </div>
 
-![シングルファーザーの朝](/images/thumbnails/single-father-daily.png)
+[シングル父の朝5時半。息子が起きる前の1時間で副業している話](/blog/single-father-daily/)
 
 ---
 
