@@ -53,3 +53,6 @@
   - `family-character-together-thinking-worried.png`
   - `son-character-mail-request.png`
   - 用途：Gmailの使い分けと子ども用連絡先の文脈の小さめ補足吹き出し
+- `rakuten-mobile-mail-address.md`
+  - `family-character-together-thinking-worried.png`
+  - 用途：メールアドレス整理前の迷いを補足する小さめ吹き出し
