@@ -1,10 +1,10 @@
 ---
-title: "シングル父の朝5時半。息子が起きる前の1時間で副業している話"
+title: "シングルファーザーの朝5時半。息子が起きる前の副業"
 description: "夜に3回失敗した40代シングルファーザーが、朝5時半の1時間にたどり着いた話。収益ゼロでも続けられる理由を正直に書きます。"
 pubDate: 2026-05-19
 category: 副業・AI
 ogImage: '/images/thumbnails/single-father-daily.png'
-tags: ["シングル父", "副業", "朝活", "子育て"]
+tags: ["シングルファーザー", "副業", "朝活", "子育て"]
 draft: false
 affiliate: false
 ---
@@ -74,7 +74,7 @@ affiliate: false
 
 - ブログの見出しを1本分書く（20〜30分）
 - 書きかけの記事の冒頭だけ直す（15分）
-- Threadsに投稿する文章を3本まとめて作る（30分）
+- X、Threadsに投稿する文章を3本まとめて作る（30分）
 - Search Consoleを開いて、昨日の流入を確認する（10分）
 
 大きなことは何もできない。
@@ -84,6 +84,8 @@ affiliate: false
 収益はまだほぼゼロだが、Googleに拾われ始めた記事が出てきた。
 
 朝1時間の積み重ねがなければ、ここまで来られなかったと思う。
+
+![夜の1時間と朝の1時間の比較図](/images/articles/single-father-daily/yoru-vs-asa.svg)
 
 ---
 
