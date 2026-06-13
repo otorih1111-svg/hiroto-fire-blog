@@ -10,78 +10,62 @@
   <!-- 表の枠 -->
   <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
     <!-- ヘッダー行 -->
-    <rect x="60" y="90" width="280" height="64" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
-    <rect x="340" y="90" width="320" height="64" fill="#1F4D32"/>
-    <rect x="660" y="90" width="320" height="64" fill="#7CB089"/>
+    <rect x="60" y="90" width="300" height="64" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <rect x="360" y="90" width="380" height="64" fill="#1F4D32"/>
+    <rect x="740" y="90" width="380" height="64" fill="#7CB089"/>
 
-    <text x="200" y="130" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">項目</text>
-    <text x="500" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">オルカン</text>
-    <text x="820" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">S&amp;P500</text>
+    <text x="210" y="130" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">項目</text>
+    <text x="550" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">オルカン</text>
+    <text x="930" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">S&amp;P500</text>
 
     <!-- 行1：信託報酬 -->
-    <rect x="60" y="154" width="280" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="340" y="154" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="660" y="154" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <text x="200" y="198" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">信託報酬（年率）</text>
-    <text x="500" y="198" font-size="18" text-anchor="middle" fill="#333">0.05775%</text>
-    <text x="820" y="198" font-size="18" text-anchor="middle" fill="#333">0.0814%</text>
+    <rect x="60" y="154" width="300" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="360" y="154" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="740" y="154" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="210" y="198" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">信託報酬（年率）</text>
+    <text x="550" y="198" font-size="18" text-anchor="middle" fill="#333">0.05775%</text>
+    <text x="930" y="198" font-size="18" text-anchor="middle" fill="#333">0.0814%</text>
 
     <!-- 行2：純資産総額 -->
-    <rect x="60" y="228" width="280" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="340" y="228" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="660" y="228" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <text x="200" y="272" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">純資産総額</text>
-    <text x="500" y="272" font-size="18" text-anchor="middle" fill="#333">約12.28兆円</text>
-    <text x="820" y="272" font-size="18" text-anchor="middle" fill="#333">約11.95兆円</text>
+    <rect x="60" y="228" width="300" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="360" y="228" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="740" y="228" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="210" y="272" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">純資産総額</text>
+    <text x="550" y="272" font-size="18" text-anchor="middle" fill="#333">約12.28兆円</text>
+    <text x="930" y="272" font-size="18" text-anchor="middle" fill="#333">約11.95兆円</text>
 
     <!-- 行3：設定日 -->
-    <rect x="60" y="302" width="280" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="340" y="302" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="660" y="302" width="320" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <text x="200" y="346" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">設定日</text>
-    <text x="500" y="346" font-size="18" text-anchor="middle" fill="#333">2018年10月31日</text>
-    <text x="820" y="346" font-size="18" text-anchor="middle" fill="#333">2018年7月3日</text>
+    <rect x="60" y="302" width="300" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="360" y="302" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="740" y="302" width="380" height="74" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="210" y="346" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">設定日</text>
+    <text x="550" y="346" font-size="18" text-anchor="middle" fill="#333">2018年10月31日</text>
+    <text x="930" y="346" font-size="18" text-anchor="middle" fill="#333">2018年7月3日</text>
 
     <!-- 行4：米国株比率（注目行はオレンジ枠で強調） -->
-    <rect x="60" y="376" width="280" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
-    <rect x="340" y="376" width="320" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
-    <rect x="660" y="376" width="320" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
-    <text x="200" y="426" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">米国株の比率</text>
-    <text x="500" y="418" font-size="22" font-weight="bold" text-anchor="middle" fill="#E8924A">約60〜63%</text>
-    <text x="500" y="445" font-size="14" text-anchor="middle" fill="#666">（年々上昇傾向）</text>
-    <text x="820" y="418" font-size="22" font-weight="bold" text-anchor="middle" fill="#E8924A">100%</text>
-    <text x="820" y="445" font-size="14" text-anchor="middle" fill="#666">（米国主要500社）</text>
+    <rect x="60" y="376" width="300" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <rect x="360" y="376" width="380" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <rect x="740" y="376" width="380" height="88" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <text x="210" y="426" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">米国株の比率</text>
+    <text x="550" y="418" font-size="22" font-weight="bold" text-anchor="middle" fill="#E8924A">約60〜63%</text>
+    <text x="550" y="445" font-size="14" text-anchor="middle" fill="#666">（年々上昇傾向）</text>
+    <text x="930" y="418" font-size="22" font-weight="bold" text-anchor="middle" fill="#E8924A">100%</text>
+    <text x="930" y="445" font-size="14" text-anchor="middle" fill="#666">（米国主要500社）</text>
 
     <!-- 行5：向いている人 -->
-    <rect x="60" y="464" width="280" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="340" y="464" width="320" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <rect x="660" y="464" width="320" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
-    <text x="200" y="518" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">向いている人</text>
-    <text x="500" y="507" font-size="15" text-anchor="middle" fill="#333">アメリカ集中が怖い</text>
-    <text x="500" y="531" font-size="15" text-anchor="middle" fill="#333">広く分散したい人</text>
-    <text x="820" y="507" font-size="15" text-anchor="middle" fill="#333">アメリカ中心と</text>
-    <text x="820" y="531" font-size="15" text-anchor="middle" fill="#333">割り切れる人</text>
-  </g>
-
-  <!-- 右側：キャラクター（ひろと）が驚いている -->
-  <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
-    <!-- 吹き出し -->
-    <path d="M 1000 90 Q 1000 70 1020 70 L 1170 70 Q 1190 70 1190 90 L 1190 190 Q 1190 210 1170 210 L 1060 210 L 1030 240 L 1040 210 L 1020 210 Q 1000 210 1000 190 Z"
-          fill="#fff" stroke="#1F4D32" stroke-width="2.5"/>
-    <text x="1095" y="115" font-size="15" font-weight="bold" text-anchor="middle" fill="#1F4D32">え、オルカンって</text>
-    <text x="1095" y="140" font-size="15" font-weight="bold" text-anchor="middle" fill="#1F4D32">もう半分以上</text>
-    <text x="1095" y="165" font-size="15" font-weight="bold" text-anchor="middle" fill="#E8924A">アメリカなの！？</text>
-    <text x="1095" y="195" font-size="22" text-anchor="middle">😳</text>
-
-    <!-- キャラクター本体（ひろと・驚き顔イラスト） -->
-    <image href="/images/characters/hiroto/hiroto-character-surprised.png" x="1000" y="240" width="220" height="220"/>
-
-    <text x="1110" y="610" font-size="16" font-weight="bold" text-anchor="middle" fill="#1F4D32">ひろと</text>
+    <rect x="60" y="464" width="300" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="360" y="464" width="380" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="740" y="464" width="380" height="96" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="210" y="518" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">向いている人</text>
+    <text x="550" y="507" font-size="15" text-anchor="middle" fill="#333">アメリカ集中が怖い</text>
+    <text x="550" y="531" font-size="15" text-anchor="middle" fill="#333">広く分散したい人</text>
+    <text x="930" y="507" font-size="15" text-anchor="middle" fill="#333">アメリカ中心と</text>
+    <text x="930" y="531" font-size="15" text-anchor="middle" fill="#333">割り切れる人</text>
   </g>
 
   <!-- フッター注記 -->
-  <rect x="60" y="600" width="900" height="48" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
-  <text x="510" y="630" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+  <rect x="60" y="600" width="1060" height="48" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="590" y="630" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
     数字だけ見るとそこまで違わない。でも「米国株比率」だけは要チェック。
   </text>
 </svg>
