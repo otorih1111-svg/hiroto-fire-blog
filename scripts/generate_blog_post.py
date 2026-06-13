@@ -122,7 +122,53 @@ BLOCKED_THEME_CLUSTERS = [
     "楽天経済圏で固定費が増えた・じわじわ増えた話",
     "楽天経済圏2年使って気づいた固定費の正体",
     "楽天経済圏で月1万円節約できた理由と始め方",
+    # 2026-06-13追加：上記2クラスターはBLOCKED指定後も6日連続で量産され、
+    # 「新NISA いくらから？投資額の決め方3ステップ」として1本に統合・公開済み。
+    # 同テーマ・同KWでの追加生成は厳禁。
+    "新NISAはいくらから？投資額の決め方3ステップ",
+    "新NISA いくらから 投資額 決め方",
 ]
+
+# 2026-06-13追加：テーマ重複の自動検知用シグネチャ。
+# 「この組み合わせのキーワードが全部含まれる」記事が直近記事に既にあれば、
+# 同じテーマクラスターとみなして再生成させる（プロンプト指示だけでは
+# 6日連続でカニバリが発生したため、プログラム側でも検知する）。
+THEME_SIGNATURES: list[set[str]] = [
+    {"新NISA", "家計"},
+    {"新NISA", "投資額"},
+    {"新NISA", "積立額"},
+    {"楽天経済圏", "固定費"},
+    {"楽天経済圏", "デメリット"},
+    {"AI", "副業", "変わった"},
+    {"副業", "3ヶ月"},
+]
+
+# 直近記事のうち、同じシグネチャがこの件数以上あれば「もう十分にある」と判定する
+THEME_SIGNATURE_LIMIT = 1
+
+# 重複テーマと判定された場合の再生成リトライ回数
+MAX_DUPLICATE_RETRIES = 2
+
+
+def _theme_signatures(text: str) -> list[set[str]]:
+    """テキストに含まれるテーマシグネチャ（キーワード組）の一覧を返す"""
+    return [sig for sig in THEME_SIGNATURES if all(kw in text for kw in sig)]
+
+
+def _find_duplicate_signature(title: str, body: str, recent_articles: list[dict]) -> set[str] | None:
+    """
+    新しい記事のテーマシグネチャが、直近記事で既に使われすぎていないか確認する。
+    重複していればそのシグネチャ（set）を返す。問題なければNoneを返す。
+    """
+    new_text = f"{title} {body[:1500]}"
+    for sig in _theme_signatures(new_text):
+        count = sum(
+            1 for a in recent_articles
+            if sig in _theme_signatures(a["title"])
+        )
+        if count >= THEME_SIGNATURE_LIMIT:
+            return sig
+    return None
 
 
 def _detect_category(theme: str) -> str:
@@ -379,24 +425,63 @@ descriptionとして使える1〜2文のサマリーを <!-- description: ... --
         print(f"   テーマ：{theme}")
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
-    message = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": user_prompt}],
-        system=system_prompt,
-    )
 
-    raw_content = message.content[0].text
+    # 重複テーマ防止：生成→チェック→重複なら再生成（最大MAX_DUPLICATE_RETRIES回）
+    current_prompt = user_prompt
+    rejected_titles: list[str] = []
+    raw_content = ""
+    title = "無題の記事"
+    description = ""
+    body = ""
 
-    title_match = re.search(r'^#\s+(.+)$', raw_content, re.MULTILINE)
-    title = title_match.group(1).strip() if title_match else "無題の記事"
+    for attempt in range(MAX_DUPLICATE_RETRIES + 1):
+        message = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=4096,
+            messages=[{"role": "user", "content": current_prompt}],
+            system=system_prompt,
+        )
 
-    desc_match = re.search(r'<!--\s*description:\s*(.+?)\s*-->', raw_content)
-    description = desc_match.group(1).strip() if desc_match else f"{category}に関するひろとの体験談。"
+        raw_content = message.content[0].text
 
-    body = raw_content
-    if desc_match:
-        body = body.replace(desc_match.group(0), "").strip()
+        title_match = re.search(r'^#\s+(.+)$', raw_content, re.MULTILINE)
+        title = title_match.group(1).strip() if title_match else "無題の記事"
+
+        desc_match = re.search(r'<!--\s*description:\s*(.+?)\s*-->', raw_content)
+        description = desc_match.group(1).strip() if desc_match else f"{category}に関するひろとの体験談。"
+
+        body = raw_content
+        if desc_match:
+            body = body.replace(desc_match.group(0), "").strip()
+
+        dup_sig = _find_duplicate_signature(title, body, recent_articles)
+        if dup_sig is None:
+            break
+
+        rejected_titles.append(title)
+        print(f"   ⚠️ テーマ重複検知（{sorted(dup_sig)}）：「{title}」を破棄して再生成します（{attempt + 1}/{MAX_DUPLICATE_RETRIES + 1}）")
+
+        if attempt < MAX_DUPLICATE_RETRIES:
+            retry_note = (
+                "\n\n## 🔁 再生成指示（重複検知のため）\n"
+                f"直前に生成した以下のタイトル・テーマは、キーワード「{', '.join(sorted(dup_sig))}」が"
+                "直近記事と重複しているため使用できません。\n"
+            )
+            for rt in rejected_titles:
+                retry_note += f"- 使用不可：「{rt}」\n"
+            retry_note += (
+                f"上記とキーワード「{', '.join(sorted(dup_sig))}」の組み合わせが重複しない、"
+                "全く別のテーマ・切り口で書き直してください。\n"
+            )
+            current_prompt = user_prompt + retry_note
+
+    if dup_sig is not None:
+        print(f"   ❌ {MAX_DUPLICATE_RETRIES + 1}回試行してもテーマ重複が解消できなかったため、生成をスキップします。")
+        return {
+            "skipped": True,
+            "reason": "duplicate_theme",
+            "rejected_titles": rejected_titles,
+        }
 
     # H1タイトル行をbodyから除去（frontmatterにtitleが既にあるため不要）
     body = re.sub(r'^#\s+.+\n?', '', body, count=1, flags=re.MULTILINE).strip()
