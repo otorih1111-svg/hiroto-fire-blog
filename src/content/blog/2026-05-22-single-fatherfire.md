@@ -74,7 +74,7 @@ ogImage: '/images/thumbnails/2026-05-22-single-fatherfire.png'
 
 **投資信託（新NISA）**
 2024年から積み立てを始めた。
-毎月3万円、オルカン1本。
+毎月3万円、S&P500 1本。
 
 今の評価額は約80万円。
 
