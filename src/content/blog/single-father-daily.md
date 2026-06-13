@@ -135,6 +135,11 @@ affiliate: false
 相棒に「お金のことで諦めた」と言わせたくないから続けている。
 それが、目が覚める理由なんだと。
 
+<div class="character-note">
+  <img src="/images/characters/family/family-character-father-watching-son.png" alt="相棒の後ろ姿をやさしく見つめるひろとのイラスト" />
+  <p class="character-note-bubble">この時間は、相棒の選択肢を増やすための時間だと思った。</p>
+</div>
+
 ---
 
 ## うまくいっているわけではないけど、続けている
