@@ -1,0 +1,70 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="675" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="55" font-size="28" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    WordPress と Cloudflare Pages の比較
+  </text>
+
+  <!-- 表の枠 -->
+  <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    <!-- ヘッダー行 -->
+    <rect x="80" y="100" width="320" height="70" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <rect x="400" y="100" width="360" height="70" fill="#1F4D32"/>
+    <rect x="760" y="100" width="360" height="70" fill="#7CB089"/>
+
+    <text x="240" y="143" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32">項目</text>
+    <text x="580" y="143" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">WordPress</text>
+    <text x="940" y="143" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">Cloudflare Pages</text>
+
+    <!-- 行1：費用 -->
+    <rect x="80" y="170" width="320" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="400" y="170" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="760" y="170" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="240" y="222" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32">月々の費用</text>
+    <text x="580" y="215" font-size="16" text-anchor="middle" fill="#333">サーバー代 月1,000円前後</text>
+    <text x="580" y="240" font-size="16" text-anchor="middle" fill="#333">＋テーマ代（有料の場合）</text>
+    <text x="940" y="215" font-size="16" text-anchor="middle" fill="#333">基本無料</text>
+    <text x="940" y="240" font-size="16" text-anchor="middle" fill="#333">ドメイン代のみ（年1,000〜2,000円）</text>
+
+    <!-- 行2：情報量 -->
+    <rect x="80" y="260" width="320" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="400" y="260" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="760" y="260" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="240" y="312" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32">情報量</text>
+    <text x="580" y="305" font-size="16" text-anchor="middle" fill="#333">日本語の解説記事・動画が</text>
+    <text x="580" y="330" font-size="16" text-anchor="middle" fill="#333">非常に多い</text>
+    <text x="940" y="305" font-size="16" text-anchor="middle" fill="#333">英語中心。日本語の</text>
+    <text x="940" y="330" font-size="16" text-anchor="middle" fill="#333">解説はまだ少ない</text>
+
+    <!-- 行3：難易度 -->
+    <rect x="80" y="350" width="320" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="400" y="350" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="760" y="350" width="360" height="90" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="240" y="402" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32">画面のわかりやすさ</text>
+    <text x="580" y="395" font-size="16" text-anchor="middle" fill="#333">日本語UI・管理画面が</text>
+    <text x="580" y="420" font-size="16" text-anchor="middle" fill="#333">直感的</text>
+    <text x="940" y="395" font-size="16" text-anchor="middle" fill="#333">英語UI。専門用語が多く</text>
+    <text x="940" y="420" font-size="16" text-anchor="middle" fill="#333">最初は迷いやすい</text>
+
+    <!-- 行4：向いている人 -->
+    <rect x="80" y="440" width="320" height="100" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="400" y="440" width="360" height="100" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="760" y="440" width="360" height="100" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="240" y="497" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F4D32">向いている人</text>
+    <text x="580" y="485" font-size="16" text-anchor="middle" fill="#333">多少の費用は気にせず、</text>
+    <text x="580" y="510" font-size="16" text-anchor="middle" fill="#333">情報の多さで安心したい人</text>
+    <text x="940" y="485" font-size="16" text-anchor="middle" fill="#333">費用を抑えたい・AIに手順を</text>
+    <text x="940" y="510" font-size="16" text-anchor="middle" fill="#333">確認しながら進められる人</text>
+  </g>
+
+  <!-- フッター注記 -->
+  <rect x="80" y="570" width="1040" height="70" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="600" y="600" font-size="15" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    ぼくは「費用を抑えたい」を優先してCloudflare Pagesを選び、
+  </text>
+  <text x="600" y="625" font-size="15" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    英語の壁はAI（Claude Code）に手順を確認しながら進めて越えた。
+  </text>
+</svg>
