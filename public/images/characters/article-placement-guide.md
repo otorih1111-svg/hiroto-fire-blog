@@ -16,27 +16,32 @@
   - `hiroto-character-worried.png`
   - `family-character-father-pointing-son-listening.png`
   - `hiroto-character-nod.png`
-
-## 差し込み候補
 - `rakuten-mobile-review.md`
   - `hiroto-character-surprised.png`
   - `hiroto-character-nod.png`
+  - 用途：本文内の小さめ補足吹き出し
 - `mnp-rakuten-mobile-steps.md`
   - `hiroto-character-thinking.png`
   - `hiroto-character-small-guts.png`
+  - 用途：手順前後の小さめ補足吹き出し
 - `hoken-minaoshi-single-father.md`
   - `hiroto-character-worried.png`
   - `hiroto-character-bow.png`
   - `hiroto-character-nod.png`
+  - 用途：図解補足・本文内の小さめ吹き出し
 - `nisa-tsumitate-40dai.md`
   - `hiroto-character-thinking.png`
   - `hiroto-character-small-guts.png`
+  - 用途：図解前後の小さめ補足吹き出し
 - `2026-05-21-fp-sodan-review.md`
   - `hiroto-character-panic.png`
   - `hiroto-character-nod.png`
+  - 用途：本文内の小さめ補足吹き出し
 - `2026-05-21-fukugyo-first-10000-roadmap.md`
   - `hiroto-character-thinking.png`
   - `hiroto-character-small-guts.png`
+  - 用途：ロードマップ補足の小さめ吹き出し
 - `2026-05-31-aifukugyo.md`
   - `hiroto-character-pc-work.png`
   - `hiroto-character-laughing.png`
+  - 用途：Before/After図解まわりの小さめ吹き出し

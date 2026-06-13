@@ -23,6 +23,11 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 「離婚後も昔の保険のまま」という人には、特に参考になるはずです。
 
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-worried.png" alt="不安そうに考え込むひろと" />
+  <p class="character-note-bubble">保険は後回しにしやすいですが、<strong>家族構成が変わったら見直し時</strong>でした。</p>
+</div>
+
 ---
 
 ## 見直す前のぼく
@@ -143,6 +148,11 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 「保険は厚ければ厚いほどいい」ではなく、「社会保険の上に何を乗せるか」という考え方に変えてから、保険料がスッキリした。
 
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-bow.png" alt="頭を下げながら整理するひろと" />
+  <p class="character-note-bubble">民間保険だけで考えず、<strong>社会保険と合わせて見る</strong>とだいぶ整理しやすかったです。</p>
+</div>
+
 ---
 
 ## 自分の設計に自信がないなら
@@ -182,5 +192,10 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 [固定費を見直したら月1万円以上浮いた話](/blog/koteihi-minaoshi/)
 
 保険の設計が自分で判断しにくいなら、FP無料相談でまとめて確認するのが一番早いです。
+
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-nod.png" alt="納得してうなずくひろと" />
+  <p class="character-note-bubble">ひとりで決め切れないときは、<strong>家計全体ごと見てもらう</strong>ほうが早かったです。</p>
+</div>
 
 [FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)

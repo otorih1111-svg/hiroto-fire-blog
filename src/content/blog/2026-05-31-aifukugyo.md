@@ -20,6 +20,11 @@ ogImage: '/images/thumbnails/2026-05-31-aifukugyo.png'
 特別なことは何もしていない。
 それでも副業の動き方が、確実に変わった話を書く。
 
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-pc-work.png" alt="パソコンに向かって作業するひろと" />
+  <p class="character-note-bubble">AIで変わったのは派手な成果より、<strong>朝の動き出し</strong>でした。</p>
+</div>
+
 ---
 
 ## 正直に言う。最初の副業は「作業してる感」だけだった
@@ -138,6 +143,11 @@ AIの使い方の記事を読むと、だいたい「こんな便利な使い方
 「AIで副業を爆速化した話」みたいなタイトルは書けない。
 でも「AIで迷いが減った話」なら書ける。正直なところ、それで十分だと思っている。
 
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-laughing.png" alt="少し笑いながら話すひろと" />
+  <p class="character-note-bubble">爆速化というより、<strong>迷う時間を減らす使い方</strong>がいちばん現実的でした。</p>
+</div>
+
 ---
 
 AIをどう日常に取り込むかについては「[AIに「今日何すればいい？」と聞くようになった話](/blog/2026-05-21-ai/)」にも書いています。
@@ -153,4 +163,3 @@ AIをどう日常に取り込むかについては「[AIに「今日何すれば
 「作業してる感」だけで終わる朝が続いているなら、段取りを変えるだけで変わるかもしれない。
 今夜5分だけ、明日やることを1行だけ書いてみてほしい。
 AIに聞いてもいいし、自分でメモするだけでもいい。それだけで明日の朝が変わる。
-

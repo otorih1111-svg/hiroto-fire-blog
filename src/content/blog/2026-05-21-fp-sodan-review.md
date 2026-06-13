@@ -19,6 +19,11 @@ affiliate: true
 
 読むと「無料の理由」と「自分が使うべき相談かどうか」が判断しやすくなります。
 
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-panic.png" alt="相談前に身構えるひろと" />
+  <p class="character-note-bubble">無料相談は、ぼくも最初かなり警戒していました。だからこそ<strong>仕組みから先に書いています</strong>。</p>
+</div>
+
 ---
 
 ## 結論から言う。FP無料相談は怪しくない
@@ -179,6 +184,11 @@ FP無料相談を試してみたい方はこちら。オンライン相談に対
 → 今の家計がぼんやり不安なら、まず相談したいテーマを1つだけ書き出してみよう。
 
 ---
+
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-nod.png" alt="納得してうなずくひろと" />
+  <p class="character-note-bubble">向いているのは、商品選びより前に<strong>家計の全体像を整理したい人</strong>です。</p>
+</div>
 
 [FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
 
