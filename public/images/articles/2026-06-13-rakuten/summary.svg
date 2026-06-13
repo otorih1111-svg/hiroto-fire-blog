@@ -1,0 +1,135 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    楽天経済圏で固定費が増える3つのパターン
+  </text>
+  
+  <!-- パターン1 -->
+  <g>
+    <!-- 背景ボックス -->
+    <rect x="30" y="70" width="330" height="360" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- パターン番号 -->
+    <circle cx="60" cy="110" r="20" fill="#1F4D32"/>
+    <text x="60" y="118" font-size="20" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="white">1</text>
+    
+    <!-- タイトル -->
+    <text x="195" y="110" font-size="16" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      無料期間あけに止め忘れ
+    </text>
+    
+    <!-- アイコン -->
+    <rect x="100" y="150" width="130" height="80" fill="#F0F5F3" rx="4"/>
+    <text x="165" y="185" font-size="32" text-anchor="middle">📺</text>
+    <text x="165" y="215" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">楽天TV</text>
+    
+    <!-- 説明 -->
+    <text x="45" y="270" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      無料キャンペーンで登録
+    </text>
+    <text x="45" y="295" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      ↓
+    </text>
+    <text x="45" y="320" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      無料期間終了後も
+    </text>
+    <text x="45" y="340" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      解約を忘れる
+    </text>
+    
+    <!-- 金額 -->
+    <rect x="45" y="360" width="270" height="50" fill="#FFE5E5" rx="4"/>
+    <text x="55" y="378" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      月額550円 × 7ヶ月 = 3,850円の無駄
+    </text>
+  </g>
+  
+  <!-- パターン2 -->
+  <g>
+    <!-- 背景ボックス -->
+    <rect x="435" y="70" width="330" height="360" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- パターン番号 -->
+    <circle cx="465" cy="110" r="20" fill="#1F4D32"/>
+    <text x="465" y="118" font-size="20" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="white">2</text>
+    
+    <!-- タイトル -->
+    <text x="600" y="110" font-size="16" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      ポイント倍率目的で
+    </text>
+    <text x="600" y="130" font-size="16" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      使わないまま継続
+    </text>
+    
+    <!-- アイコン -->
+    <rect x="505" y="150" width="130" height="80" fill="#F0F5F3" rx="4"/>
+    <text x="570" y="185" font-size="32" text-anchor="middle">📖</text>
+    <text x="570" y="215" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">楽天マガジン</text>
+    
+    <!-- 説明 -->
+    <text x="450" y="270" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      SPU向上のために登録
+    </text>
+    <text x="450" y="295" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      ↓
+    </text>
+    <text x="450" y="320" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      実際にはほとんど
+    </text>
+    <text x="450" y="340" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      使用していない
+    </text>
+    
+    <!-- 金額 -->
+    <rect x="450" y="360" width="270" height="50" fill="#FFE5E5" rx="4"/>
+    <text x="460" y="378" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      月額550円 × 12ヶ月 = 6,600円の無駄
+    </text>
+  </g>
+  
+  <!-- パターン3 -->
+  <g>
+    <!-- 背景ボックス -->
+    <rect x="840" y="70" width="330" height="360" fill="white" stroke="#7CB089" stroke-width="2" rx="8"/>
+    
+    <!-- パターン番号 -->
+    <circle cx="870" cy="110" r="20" fill="#1F4D32"/>
+    <text x="870" y="118" font-size="20" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="white">3</text>
+    
+    <!-- タイトル -->
+    <text x="1005" y="110" font-size="16" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      上位カードへの切り替え
+    </text>
+    <text x="1005" y="130" font-size="16" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      で年会費が発生
+    </text>
+    
+    <!-- アイコン -->
+    <rect x="910" y="150" width="130" height="80" fill="#F0F5F3" rx="4"/>
+    <text x="975" y="185" font-size="32" text-anchor="middle">💳</text>
+    <text x="975" y="215" font-size="12" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">プレミアムカード</text>
+    
+    <!-- 説明 -->
+    <text x="855" y="270" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      無料カード
+    </text>
+    <text x="855" y="295" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      ↓
+    </text>
+    <text x="855" y="320" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      ポイント倍率UPで
+    </text>
+    <text x="855" y="340" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+      上位カードに切り替え
+    </text>
+    
+    <!-- 金額 -->
+    <rect x="855" y="360" width="270" height="50" fill="#FFE5E5" rx="4"/>
+    <text x="865" y="378" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+      年会費11,000円（実際に回収できるか未確認）
+    </text>
+  </g>
+</svg>

@@ -384,3 +384,12 @@ FAQは全記事に入れない。
   3. git add・commit・push
   4. Cloudflareのデプロイ完了を確認
 - サムネを忘れると記事にOGP画像が表示されない
+
+### デプロイ後のIndexNow確認（2026-06-12追加）
+- `main` に push すると GitHub Actions `IndexNow After Cloudflare Deploy` が自動実行される
+- workflow は Cloudflare 側で `https://hiroto-fire.com/facbd30e1610fa2891f4209ade56b24a.txt` が公開されるまで待ってから `IndexNow` を送信する
+- デプロイ確認は以下の順で行う
+  1. GitHub Actions の最新実行が success か確認
+  2. `https://hiroto-fire.com/facbd30e1610fa2891f4209ade56b24a.txt` を開いてキー文字列が見えるか確認
+  3. 必要なら `logs/indexing/latest-indexing.json` と `latest-search-console-candidates.txt` を確認
+- ローカルで手動確認するときは `npm run build:seo`、デプロイ反映待ち込みで確認するときは `npm run seo:notify:live` を使う

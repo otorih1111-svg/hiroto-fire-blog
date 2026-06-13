@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-06-12T12:04:32.835Z",
+  "site": "https://hiroto-fire.com",
+  "mode": "diff",
+  "comparedRefs": {
+    "base": "HEAD~1",
+    "head": "HEAD"
+  },
+  "sitemapFiles": [
+    "dist/sitemap-index.xml",
+    "dist/sitemap-0.xml"
+  ],
+  "changedFiles": [
+    "src/content/blog/rakuten-shoken-tsumitate-settei.md"
+  ],
+  "updatedUrls": [
+    "https://hiroto-fire.com/blog/rakuten-shoken-tsumitate-settei/"
+  ],
+  "searchConsoleCandidates": [
+    "https://hiroto-fire.com/blog/rakuten-shoken-tsumitate-settei/"
+  ],
+  "indexNow": {
+    "enabled": false,
+    "submitted": 0,
+    "reason": "INDEXNOW_KEY is not set."
+  }
+}

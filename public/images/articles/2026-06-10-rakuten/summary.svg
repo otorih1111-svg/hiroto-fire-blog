@@ -1,0 +1,112 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap');
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; fill: #1F4D32; }
+      .subtitle { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 600; fill: #1F4D32; }
+      .label { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; font-weight: 500; fill: #333; }
+      .amount { font-family: 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 700; fill: #1F4D32; }
+      .small { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; fill: #666; }
+      .step-num { font-family: 'Noto Sans JP', sans-serif; font-size: 18px; font-weight: 700; fill: white; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="60" y="35" class="title">固定費の「育ちすぎ問題」の流れと対策</text>
+
+  <!-- 左側：問題の流れ -->
+  <g id="left-section">
+    <!-- ステップ1 -->
+    <circle cx="90" cy="110" r="25" fill="#7CB089"/>
+    <text x="90" y="118" class="step-num" text-anchor="middle">1</text>
+    
+    <rect x="50" y="145" width="80" height="50" fill="white" stroke="#7CB089" stroke-width="2" rx="4"/>
+    <text x="90" y="165" class="label" text-anchor="middle">「試しに」</text>
+    <text x="90" y="182" class="label" text-anchor="middle">始める</text>
+
+    <!-- ステップ2 -->
+    <circle cx="90" cy="260" r="25" fill="#7CB089"/>
+    <text x="90" y="268" class="step-num" text-anchor="middle">2</text>
+    
+    <rect x="50" y="295" width="80" height="50" fill="white" stroke="#7CB089" stroke-width="2" rx="4"/>
+    <text x="90" y="308" class="label" text-anchor="middle">無料期間</text>
+    <text x="90" y="325" class="label" text-anchor="middle">気づかず有料に</text>
+
+    <!-- 矢印1→2 -->
+    <path d="M 90 170 L 90 235" stroke="#7CB089" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- 中央：サービス一覧 -->
+  <g id="center-section">
+    <!-- タイトル -->
+    <text x="400" y="60" class="subtitle">気づいたら増えていたサービス</text>
+
+    <!-- サービスボックス背景 -->
+    <rect x="280" y="80" width="240" height="260" fill="white" stroke="#1F4D32" stroke-width="2" rx="6"/>
+
+    <!-- 各サービス -->
+    <rect x="290" y="90" width="220" height="35" fill="#F0F0F0" rx="3"/>
+    <text x="305" y="108" class="label">楽天マガジン</text>
+    <text x="490" y="108" class="amount" text-anchor="end">550円</text>
+
+    <rect x="290" y="130" width="220" height="35" fill="#F0F0F0" rx="3"/>
+    <text x="305" y="148" class="label">楽天ミュージック</text>
+    <text x="490" y="148" class="amount" text-anchor="end">980円</text>
+
+    <rect x="290" y="170" width="220" height="35" fill="#F0F0F0" rx="3"/>
+    <text x="305" y="188" class="label">楽天ブックス定期</text>
+    <text x="490" y="188" class="amount" text-anchor="end">500円</text>
+
+    <rect x="290" y="210" width="220" height="35" fill="#F0F0F0" rx="3"/>
+    <text x="305" y="228" class="label">その他サービス</text>
+    <text x="490" y="228" class="amount" text-anchor="end">...</text>
+
+    <!-- 合計ボックス -->
+    <rect x="290" y="255" width="220" height="75" fill="#1F4D32" rx="4"/>
+    <text x="400" y="275" class="label" text-anchor="middle" fill="white">月額合計</text>
+    <text x="400" y="308" text-anchor="middle" style="font-family: 'Noto Sans JP', sans-serif; font-size: 28px; font-weight: 700; fill: #7CB089;">約1,500円</text>
+    <text x="400" y="325" class="small" text-anchor="middle" fill="white">年間18,000円</text>
+  </g>
+
+  <!-- 右側：対策 -->
+  <g id="right-section">
+    <!-- ステップ3 -->
+    <circle cx="820" cy="110" r="25" fill="#1F4D32"/>
+    <text x="820" y="118" class="step-num" text-anchor="middle">3</text>
+    
+    <rect x="750" y="145" width="140" height="50" fill="white" stroke="#1F4D32" stroke-width="2" rx="4"/>
+    <text x="820" y="165" class="label" text-anchor="middle">月数百円で</text>
+    <text x="820" y="182" class="label" text-anchor="middle">「そのまま」になる</text>
+
+    <!-- 対策ボックス -->
+    <rect x="720" y="245" width="200" height="180" fill="#1F4D32" rx="6" opacity="0.1"/>
+    <rect x="725" y="250" width="190" height="170" fill="white" stroke="#1F4D32" stroke-width="2" rx="4"/>
+    
+    <text x="820" y="275" class="subtitle" text-anchor="middle">固定費対策</text>
+    
+    <circle cx="740" cy="305" r="4" fill="#1F4D32"/>
+    <text x="755" y="310" class="label">契約一覧を確認</text>
+    
+    <circle cx="740" cy="330" r="4" fill="#1F4D32"/>
+    <text x="755" y="335" class="label">月額を書き出す</text>
+    
+    <circle cx="740" cy="355" r="4" fill="#1F4D32"/>
+    <text x="755" y="360" class="label">本当に必要か判断</text>
+    
+    <circle cx="740" cy="380" r="4" fill="#1F4D32"/>
+    <text x="755" y="385" class="label">不要なら解約する</text>
+  </g>
+
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7CB089"/>
+    </marker>
+  </defs>
+
+  <!-- 下部注釈 -->
+  <text x="60" y="440" class="small">ポイント倍率を上げるため入ったサービスが、実は節約を相殺していた</text>
+</svg>

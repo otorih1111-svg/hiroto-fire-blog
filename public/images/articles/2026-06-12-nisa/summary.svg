@@ -1,0 +1,155 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    家計を整える3ステップ
+  </text>
+  
+  <!-- ステップ1 -->
+  <rect x="40" y="70" width="320" height="360" fill="white" stroke="#1F4D32" stroke-width="2" rx="8"/>
+  
+  <circle cx="100" cy="110" r="24" fill="#1F4D32"/>
+  <text x="100" y="118" font-size="20" font-weight="bold" text-anchor="middle" fill="white">1</text>
+  
+  <text x="200" y="115" font-size="18" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    支出を「全部出す」
+  </text>
+  
+  <line x1="60" y1="135" x2="340" y2="135" stroke="#7CB089" stroke-width="1"/>
+  
+  <text x="60" y="165" font-size="13" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+    過去3ヶ月分を集める：
+  </text>
+  
+  <text x="70" y="190" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    • クレジットカード明細
+  </text>
+  <text x="70" y="210" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    • 銀行引き落とし
+  </text>
+  <text x="70" y="230" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    • PayPay履歴
+  </text>
+  <text x="70" y="250" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    • 現金の記録
+  </text>
+  
+  <rect x="60" y="270" width="280" height="50" fill="#F0F5F2" rx="4"/>
+  <text x="70" y="290" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+    💡 ポイント：分類は後。
+  </text>
+  <text x="70" y="310" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    まず「全部見える化」が先。
+  </text>
+  
+  <text x="60" y="340" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7CB089" font-weight="bold">
+    所要時間：約1時間
+  </text>
+  
+  <!-- ステップ2 -->
+  <rect x="420" y="70" width="320" height="360" fill="white" stroke="#1F4D32" stroke-width="2" rx="8"/>
+  
+  <circle cx="480" cy="110" r="24" fill="#1F4D32"/>
+  <text x="480" y="118" font-size="20" font-weight="bold" text-anchor="middle" fill="white">2</text>
+  
+  <text x="580" y="115" font-size="18" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    支出を3つに分ける
+  </text>
+  
+  <line x1="440" y1="135" x2="720" y2="135" stroke="#7CB089" stroke-width="1"/>
+  
+  <!-- 分類ボックス1 -->
+  <rect x="440" y="160" width="280" height="60" fill="#E8F0E6" rx="4" border="1px solid #7CB089"/>
+  <text x="460" y="180" font-size="13" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    固定費
+  </text>
+  <text x="460" y="200" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    毎月ほぼ同じ額
+  </text>
+  <text x="460" y="215" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+    家賃・保険・通信費
+  </text>
+  
+  <!-- 分類ボックス2 -->
+  <rect x="440" y="230" width="280" height="60" fill="#E8F0E6" rx="4"/>
+  <text x="460" y="250" font-size="13" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    変動費（必要）
+  </text>
+  <text x="460" y="270" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    生活に必要
+  </text>
+  <text x="460" y="285" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+    食費・光熱費・日用品
+  </text>
+  
+  <!-- 分類ボックス3 -->
+  <rect x="440" y="300" width="280" height="60" fill="#E8F0E6" rx="4"/>
+  <text x="460" y="320" font-size="13" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    変動費（任意）
+  </text>
+  <text x="460" y="340" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    なくても困らない
+  </text>
+  <text x="460" y="355" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#666">
+    外食・趣味・課金
+  </text>
+  
+  <text x="440" y="380" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#7CB089" font-weight="bold">
+    所要時間：約30分
+  </text>
+  
+  <!-- ステップ3 -->
+  <rect x="800" y="70" width="360" height="360" fill="white" stroke="#1F4D32" stroke-width="2" rx="8"/>
+  
+  <circle cx="870" cy="110" r="24" fill="#1F4D32"/>
+  <text x="870" y="118" font-size="20" font-weight="bold" text-anchor="middle" fill="white">3</text>
+  
+  <text x="980" y="115" font-size="18" font-weight="bold" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    毎月の上限を決める
+  </text>
+  
+  <line x1="830" y1="135" x2="1130" y2="135" stroke="#7CB089" stroke-width="1"/>
+  
+  <!-- 計算式 -->
+  <text x="840" y="165" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+    手取り 25万円
+  </text>
+  <line x1="840" y1="172" x2="1100" y2="172" stroke="#1F4D32" stroke-width="1"/>
+  
+  <text x="860" y="192" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    − 固定費 9万円
+  </text>
+  <line x1="860" y1="198" x2="1100" y2="198" stroke="#1F4D32" stroke-width="1"/>
+  
+  <text x="880" y="218" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+    = 配分可能額 16万円
+  </text>
+  
+  <!-- 内訳 -->
+  <text x="860" y="250" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    生活費：6万円
+  </text>
+  <text x="860" y="268" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    子どもの支出：2万円
+  </text>
+  <text x="860" y="286" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    投資・積立：2万円
+  </text>
+  <text x="860" y="304" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    任意の支出：3万円
+  </text>
+  <text x="860" y="322" font-size="11" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#333">
+    緊急用積立：1万円
+  </text>
+  
+  <rect x="830" y="340" width="280" height="30" fill="#F0F5F2" rx="4"/>
+  <text x="850" y="360" font-size="12" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32" font-weight="bold">
+    💡 バッファ2万円も確保
+  </text>
+  
+  <!-- 下部フッター -->
+  <rect x="40" y="450" width="1120" height="1" fill="#7CB089"/>
+  
+</svg>

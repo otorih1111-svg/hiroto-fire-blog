@@ -170,8 +170,6 @@ docomoからの乗り換えだけで月6,000円以上浮いた。
 **4. 楽天証券でNISAを始める**
 クレカ積立でポイントを貯めながら投資。口座を持つだけで楽天銀行の金利がさらに上がる。
 
-<a href="https://ad2.trafficgate.net/t/r/928/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>
-
 **5. 楽天市場をメインに使う**
 日用品・まとめ買いを楽天市場に集中させてポイントを積み上げる。
 
@@ -215,6 +213,8 @@ docomoからの乗り換えだけで月6,000円以上浮いた。
 - 改悪リスクはあるが、定期的に見直せばOK
 
 まずは楽天カード1枚から始めてみるだけで、日常の支払いが少しずつ変わり始める。
+
+順番の最後にある「楽天証券でNISAを始める」だけ先にやりたい人は、<a href="https://ad2.trafficgate.net/t/r/928/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>から申し込めます。
 
 ---
 

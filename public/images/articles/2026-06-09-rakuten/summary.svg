@@ -1,0 +1,141 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="460" fill="#F7FBF8"/>
+  
+  <!-- タイトル -->
+  <text x="600" y="35" font-size="26" font-weight="bold" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    固定費の見落としで、節約効果が半減するメカニズム
+  </text>
+  
+  <!-- 左側：Before（問題のある状態） -->
+  <g>
+    <!-- Beforeラベル -->
+    <text x="150" y="80" font-size="16" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ❌ Before
+    </text>
+    
+    <!-- 矢印説明 -->
+    <text x="150" y="110" font-size="13" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      気づかない状態
+    </text>
+    
+    <!-- Beforeボックス -->
+    <rect x="80" y="130" width="140" height="40" fill="#FFE5E5" stroke="#FF6B6B" stroke-width="2" rx="4"/>
+    <text x="150" y="160" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      通信費削減
+    </text>
+    <text x="150" y="175" font-size="11" text-anchor="middle" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ＋8,000円
+    </text>
+    
+    <!-- 下向き矢印 -->
+    <path d="M 150 175 L 150 210" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowdown)"/>
+    
+    <!-- 隠れた支出 -->
+    <rect x="80" y="210" width="140" height="80" fill="#FFB3B3" stroke="#FF6B6B" stroke-width="2" rx="4"/>
+    <text x="150" y="230" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      増えた固定費
+    </text>
+    <text x="150" y="247" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • 楽天マガジン 380円
+    </text>
+    <text x="150" y="262" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • プレミアムカード 917円
+    </text>
+    <text x="150" y="277" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • その他 SPU関連
+    </text>
+    <text x="150" y="292" font-size="11" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      計 3,000～4,000円
+    </text>
+    
+    <!-- 結果 -->
+    <path d="M 150 295 L 150 320" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowdown)"/>
+    <rect x="80" y="320" width="140" height="50" fill="#E8E8E8" stroke="#999" stroke-width="2" rx="4"/>
+    <text x="150" y="340" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      節約効果
+    </text>
+    <text x="150" y="358" font-size="12" text-anchor="middle" fill="#FF6B6B" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      8,000円 → 4,000円
+    </text>
+  </g>
+  
+  <!-- 中央の矢印と説明 -->
+  <g>
+    <text x="300" y="270" font-size="13" text-anchor="middle" fill="#7CB089" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      気づく ↓
+    </text>
+    <text x="300" y="287" font-size="11" text-anchor="middle" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      支出を書き出す
+    </text>
+  </g>
+  
+  <!-- 右側：After（改善後） -->
+  <g>
+    <!-- Afterラベル -->
+    <text x="950" y="80" font-size="16" font-weight="bold" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ✓ After
+    </text>
+    
+    <!-- Afterボックス -->
+    <text x="950" y="110" font-size="13" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      整理した状態
+    </text>
+    
+    <!-- 通信費削減 -->
+    <rect x="880" y="130" width="140" height="40" fill="#E5F5E8" stroke="#7CB089" stroke-width="2" rx="4"/>
+    <text x="950" y="160" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      通信費削減
+    </text>
+    <text x="950" y="175" font-size="11" text-anchor="middle" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      ＋8,000円
+    </text>
+    
+    <!-- 下向き矢印 -->
+    <path d="M 950 175 L 950 210" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowdown)"/>
+    
+    <!-- 厳選した支出 -->
+    <rect x="880" y="210" width="140" height="80" fill="#D4E8D7" stroke="#7CB089" stroke-width="2" rx="4"/>
+    <text x="950" y="230" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      必要な固定費のみ
+    </text>
+    <text x="950" y="247" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • 楽天マガジン
+    </text>
+    <text x="950" y="262" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      （実際に使用）
+    </text>
+    <text x="950" y="277" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      • SPUは月1万円
+    </text>
+    <text x="950" y="292" font-size="10" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+      以上で検討
+    </text>
+    
+    <!-- 結果 -->
+    <path d="M 950 295 L 950 320" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowdown)"/>
+    <rect x="880" y="320" width="140" height="50" fill="#D4E8D7" stroke="#7CB089" stroke-width="2" rx="4"/>
+    <text x="950" y="340" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      手元に残るお金
+    </text>
+    <text x="950" y="358" font-size="12" text-anchor="middle" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+      8,000円を実感
+    </text>
+  </g>
+  
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#666" stroke-width="2"/>
+    </marker>
+  </defs>
+  
+  <!-- 下部の注釈 -->
+  <rect x="80" y="400" width="1040" height="50" fill="#FFFFFF" stroke="#7CB089" stroke-width="1" rx="4"/>
+  <text x="100" y="420" font-size="12" fill="#1F4D32" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-weight="bold">
+    重要：ポイントや還元率に目がいくと、見落としやすい固定費
+  </text>
+  <text x="100" y="440" font-size="11" fill="#666" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    サブスク・カード年会費・SPU維持費などが月単位で積み上がり、節約効果を相殺している可能性があります
+  </text>
+</svg>
