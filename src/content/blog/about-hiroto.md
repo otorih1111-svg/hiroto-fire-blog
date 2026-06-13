@@ -133,7 +133,7 @@ affiliate: false
 最初の月、翌日に少し下がって焦りました。
 今は気にしないようになりました。たぶん、慣れです。
 
-![新NISAをはじめた話](/images/thumbnails/hottarakashi-investment-nisa-begin.png)
+[投資が怖かった自分が「ほったらかし投資」を始めた話【新NISA】](/blog/hottarakashi-investment-nisa-begin/)
 
 NISAを始めてから、お金の感覚が変わりました。
 
