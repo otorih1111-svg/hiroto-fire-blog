@@ -176,5 +176,5 @@ affiliate: false
 ---
 
 ひろとの副業の試行錯誤をもう少し読みたい人はこちら：
-→ [副業3ヶ月、収益ゼロでも続ける理由【40代シングル父のリアル】](/blog/hajimete-no-fukugyo/)
+→ [副業3ヶ月、収益ゼロでも続ける理由【シングルファーザーのリアル】](/blog/hajimete-no-fukugyo/)
 → [40代会社員が副業を3ヶ月続けるための仕組みの作り方](/blog/fukugyo-shikumi-40dai/)
