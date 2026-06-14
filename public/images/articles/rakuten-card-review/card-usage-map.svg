@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#EAF4ED" />
+
+  <text x="600" y="60" font-size="32" font-weight="700" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">
+    ぼくの楽天カード3枚の使い分け
+  </text>
+
+  <!-- Card 1: 無印 -->
+  <rect x="60" y="120" width="320" height="430" rx="16" fill="#FFFFFF" stroke="#7CB089" stroke-width="2" />
+  <rect x="60" y="120" width="320" height="64" rx="16" fill="#7CB089" />
+  <text x="220" y="162" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">無印（VISA）</text>
+  <text x="220" y="216" font-size="20" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">年会費：無料</text>
+  <text x="220" y="260" font-size="22" font-weight="700" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">日常の普段使い</text>
+  <text x="220" y="296" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">QuickPayでスマホ決済</text>
+  <text x="220" y="324" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">財布から出すことはほぼない</text>
+
+  <circle cx="220" cy="400" r="48" fill="#EAF4ED" />
+  <text x="220" y="412" font-size="40" text-anchor="middle">🛒</text>
+  <text x="220" y="490" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">維持コスト0円で</text>
+  <text x="220" y="516" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">損がないのが10年続けた理由</text>
+
+  <!-- Card 2: プレミアム -->
+  <rect x="440" y="120" width="320" height="430" rx="16" fill="#FFFFFF" stroke="#1F4D32" stroke-width="2" />
+  <rect x="440" y="120" width="320" height="64" rx="16" fill="#1F4D32" />
+  <text x="600" y="162" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">プレミアム（VISA）</text>
+  <text x="600" y="216" font-size="20" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">年会費：11,000円</text>
+  <text x="600" y="260" font-size="22" font-weight="700" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">NISA積立・旅行・楽天市場</text>
+  <text x="600" y="296" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">クレカ積立還元率1.0%</text>
+  <text x="600" y="324" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">プライオリティ・パス年5回無料</text>
+
+  <circle cx="600" cy="400" r="48" fill="#EAF4ED" />
+  <text x="600" y="412" font-size="40" text-anchor="middle">✈️</text>
+  <text x="600" y="490" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">ビジネスカードを持つために</text>
+  <text x="600" y="516" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">必須だった1枚</text>
+
+  <!-- Card 3: ビジネス -->
+  <rect x="820" y="120" width="320" height="430" rx="16" fill="#FFFFFF" stroke="#7CB089" stroke-width="2" />
+  <rect x="820" y="120" width="320" height="64" rx="16" fill="#7CB089" />
+  <text x="980" y="162" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">ビジネスカード</text>
+  <text x="980" y="216" font-size="20" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">年会費：2,200円</text>
+  <text x="980" y="260" font-size="22" font-weight="700" fill="#1F4D32" text-anchor="middle" font-family="sans-serif">副業・ブログの経費専用</text>
+  <text x="980" y="296" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">ドメイン代・ツール代・ASP費用</text>
+  <text x="980" y="324" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">明細がそのまま経費一覧に</text>
+
+  <circle cx="980" cy="400" r="48" fill="#EAF4ED" />
+  <text x="980" y="412" font-size="40" text-anchor="middle">📊</text>
+  <text x="980" y="490" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">確定申告のとき</text>
+  <text x="980" y="516" font-size="18" fill="#3a5f49" text-anchor="middle" font-family="sans-serif">入力作業がほぼ終わる</text>
+
+  <!-- Bottom note -->
+  <rect x="60" y="590" width="1080" height="60" rx="12" fill="#1F4D32" />
+  <text x="600" y="628" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">
+    合計年会費13,200円 → NISA積立＋楽天市場SPUで年4万円以上のポイントに
+  </text>
+</svg>
