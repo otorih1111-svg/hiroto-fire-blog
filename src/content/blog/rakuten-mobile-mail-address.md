@@ -107,6 +107,10 @@ ogImage: "/images/thumbnails/rakuten-mobile-mail-address.png"
 [楽天モバイルでキャリアメールが消えた話](/blog/gmail-fukugyo-mail/)
 にまとめています。
 
+「Gmailの `+` エイリアスをどう使い分けるか」まで知りたいなら、
+[Gmailサブアドレスの使い方｜エイリアスで登録先を分ける方法](/blog/gmail-subaddress-guide/)
+もあわせてどうぞ。
+
 今回はその前段階として、
 
 **楽天モバイルでメールアドレスをどう考えるか**

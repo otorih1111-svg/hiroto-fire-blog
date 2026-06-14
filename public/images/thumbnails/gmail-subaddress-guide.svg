@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FBF8"/>
+      <stop offset="100%" stop-color="#EEF6FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#FFFFFF" stroke="#D8E8DD" stroke-width="2"/>
+
+  <rect x="92" y="92" width="184" height="46" rx="23" fill="#1F4D32"/>
+  <text x="184" y="122" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">
+    Gmail整理術
+  </text>
+
+  <text x="94" y="205" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="52" font-weight="700" fill="#1F4D32">
+    サブアドレスの
+  </text>
+  <text x="94" y="277" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="52" font-weight="700" fill="#1F4D32">
+    使い方
+  </text>
+  <text x="94" y="350" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="600" fill="#587463">
+    エイリアスで副業・買い物・子ども用を分ける
+  </text>
+
+  <rect x="720" y="122" width="360" height="86" rx="20" fill="#F4F8FF" stroke="#4B74C9" stroke-width="2"/>
+  <text x="900" y="176" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#244A9C">
+    hiroto+blog
+  </text>
+  <rect x="760" y="242" width="320" height="74" rx="18" fill="#FFF9F1" stroke="#F08A24" stroke-width="2"/>
+  <text x="920" y="289" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#A85A12">
+    hiroto+shop
+  </text>
+  <rect x="700" y="348" width="380" height="74" rx="18" fill="#F0FBF4" stroke="#1F8A4D" stroke-width="2"/>
+  <text x="890" y="395" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#1F6D40">
+    hiroto+son-game
+  </text>
+
+  <rect x="94" y="450" width="986" height="86" rx="20" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="587" y="504" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#1F4D32">
+    受信箱は1つのまま。登録先だけ見分けやすくする
+  </text>
+</svg>

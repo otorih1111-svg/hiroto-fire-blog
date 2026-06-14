@@ -56,3 +56,8 @@
 - `rakuten-mobile-mail-address.md`
   - `family-character-together-thinking-worried.png`
   - 用途：メールアドレス整理前の迷いを補足する小さめ吹き出し
+- `gmail-subaddress-guide.md`
+  - `hiroto-character-thinking.png`
+  - `hiroto-character-memo.png`
+  - `son-character-mail-request.png`
+  - 用途：Gmailエイリアスの理解、受信だけ先に始める考え方、子ども用連絡先の使い分けを補足する小さめ吹き出し

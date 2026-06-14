@@ -1,0 +1,39 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F7FBF8"/>
+  <text x="600" y="58" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="32" font-weight="700" fill="#1F4D32">Gmailフィルタ設定の流れ</text>
+  <text x="600" y="94" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="500" fill="#587463">サブアドレスを作ったあと、ラベルまで付けると整理がかなり楽になる</text>
+  <rect x="70" y="130" width="1060" height="500" rx="24" fill="#FFFFFF" stroke="#D8E8DD" stroke-width="2"/>
+  <rect x="108" y="170" width="984" height="58" rx="18" fill="#F4F8FF" stroke="#4B74C9" stroke-width="2"/>
+  <circle cx="145" cy="199" r="9" fill="#4B74C9"/>
+  <circle cx="178" cy="199" r="9" fill="#D7E4FF"/>
+  <circle cx="211" cy="199" r="9" fill="#D7E4FF"/>
+  <rect x="250" y="182" width="600" height="34" rx="17" fill="#FFFFFF" stroke="#B9CBEA" stroke-width="2"/>
+  <text x="275" y="205" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="600" fill="#244A9C">to:(hiroto+blog@gmail.com)</text>
+  <rect x="874" y="182" width="178" height="34" rx="17" fill="#4B74C9"/>
+  <text x="963" y="205" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">検索条件を入れる</text>
+  <path d="M600 230 L600 270" fill="none" stroke="#4B74C9" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="600,282 590,264 610,264" fill="#4B74C9"/>
+  <rect x="120" y="296" width="300" height="208" rx="22" fill="#F4F8FF" stroke="#4B74C9" stroke-width="2"/>
+  <rect x="148" y="322" width="106" height="34" rx="17" fill="#4B74C9"/>
+  <text x="201" y="344" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">STEP 1</text>
+  <text x="270" y="392" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#244A9C">検索欄で絞る</text>
+  <text x="155" y="438" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#244A9C">・PC版Gmailを開く</text>
+  <text x="155" y="470" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#244A9C">・検索欄に対象の</text>
+  <text x="155" y="500" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#244A9C">`to:(hiroto+blog@gmail.com)`</text>
+  <rect x="450" y="296" width="300" height="208" rx="22" fill="#FFF9F1" stroke="#F08A24" stroke-width="2"/>
+  <rect x="478" y="322" width="106" height="34" rx="17" fill="#F08A24"/>
+  <text x="531" y="344" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">STEP 2</text>
+  <text x="600" y="392" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#A85A12">フィルタを作る</text>
+  <text x="485" y="438" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#A85A12">・詳細検索を開く</text>
+  <text x="485" y="470" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#A85A12">・条件が合っていれば</text>
+  <text x="485" y="500" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#A85A12">`フィルタを作成`</text>
+  <rect x="780" y="296" width="300" height="208" rx="22" fill="#F0FBF4" stroke="#1F8A4D" stroke-width="2"/>
+  <rect x="808" y="322" width="106" height="34" rx="17" fill="#1F8A4D"/>
+  <text x="861" y="344" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">STEP 3</text>
+  <text x="930" y="392" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#1F6D40">ラベルを付ける</text>
+  <text x="815" y="438" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#1F6D40">・`ラベルを付ける`</text>
+  <text x="815" y="470" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#1F6D40">・`ブログ` などを選ぶ</text>
+  <text x="815" y="500" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="17" font-weight="600" fill="#1F6D40">・保存して完了</text>
+  <rect x="140" y="560" width="920" height="48" rx="16" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="600" y="592" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700" fill="#1F4D32">最初は `+blog` か `+shop` を1個だけ作って、ラベル1個まで設定すれば十分</text>
+</svg>
