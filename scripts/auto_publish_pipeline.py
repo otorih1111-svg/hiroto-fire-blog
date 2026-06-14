@@ -6,8 +6,8 @@ auto_publish_pipeline.py
 フロー:
   1. generate_blog_post.py で記事生成（draft: true）
   2. score_article.py で採点
-  3. 67点以上 → draft: false → git push → 公開
-  4. 67点未満 → rewrite_article.py で書き直し → 再採点（最大2回）
+  3. 85点以上 → draft: false → git push → 公開
+  4. 85点未満 → rewrite_article.py で書き直し → 再採点（最大2回）
   5. 2回試してもNGなら draft: true のまま停止（手動確認）
 
 使い方:
@@ -30,8 +30,11 @@ from datetime import datetime
 BLOG_DIR = Path(__file__).resolve().parents[1]
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
 SNS_DIR = BLOG_DIR.parent / "threads_affiliate_system"
+sys.path.append(str(SNS_DIR))
 
-PASS_SCORE = 67   # 自動採点が5〜10点甘い傾向のため補正（実質90%相当）
+from scoring import BLOG_RUBRIC, build_rewrite_prompt
+
+PASS_SCORE = BLOG_RUBRIC.pass_score
 MAX_RETRIES = 2
 AUTO_PUBLISH = False  # Trueにすると自動公開。アドセンス通過後に検討
 LOG_DIR = BLOG_DIR / "logs"
@@ -108,28 +111,13 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
     if not instructions and feedback:
         instructions = "\n".join([f"・[{k}] {v}" for k, v in feedback.items()])
 
-    prompt = f"""以下のブログ記事を改善してください。
-
-## 現在の採点結果
-合計: {total}/70点（入稿基準: 67点）
-低スコア軸: {', '.join(low_axes)}
-
-## 改善指示
-{instructions}
-
-## 改善ルール
-- frontmatter（---で囲まれた部分）のtitle・description・slug・pubDate・category・draft・affiliate・ogImageはそのまま維持する
-- draft: true は変更しない（パイプラインが変更する）
-- 記事の大筋・ストーリーは変えない。低スコア軸の部分だけを改善する
-- ズボラ感・ポンコツ感・クスッとするツッコミが弱い場合は自然に追加する
-- 段落が長い場合は改行を増やす
-- 内部リンクが不足している場合は適切な既存記事へのリンクを追加する
-
-## 元の記事
-{content}
-
-## 改善後の記事（frontmatterから全文を返してください）
-"""
+    prompt = build_rewrite_prompt(
+        platform="blog",
+        content=content,
+        total=total,
+        instructions=instructions,
+        low_axes=low_axes,
+    ) + "\n- draft: true は変更しない（パイプライン側で制御する）\n\n改善後の記事はfrontmatterから全文を返してください。"
 
     response = client.messages.create(
         model="claude-sonnet-4-6",
@@ -242,7 +230,7 @@ def process_article(file_path: Path, dry_run: bool = False) -> str:
         total = score_result.get("total", 0)
         passed = score_result.get("pass", False) or total >= PASS_SCORE
 
-        log(f"   スコア: {total}/70点 → {'✅ 合格' if passed else '❌ 不合格'}")
+        log(f"   スコア: {total}/{BLOG_RUBRIC.total_points}点 → {'✅ 合格' if passed else '❌ 不合格'}")
 
         if passed:
             # サムネイル生成（合格時に必ず実行）
@@ -319,7 +307,7 @@ def main():
     log("📊 パイプライン完了サマリー")
     log(f"   ✅ 合格・公開待ち（draft:true）: {len(results['ready'])}本")
     log(f"   🔄 書き直し後・合格・公開待ち: {len(results['rewritten_published'])}本")
-    log(f"   ❌ 要手動確認（67点未達）: {len(results['failed'])}本")
+    log(f"   ❌ 要手動確認（{BLOG_RUBRIC.pass_score}点未達）: {len(results['failed'])}本")
     if results["ready"]:
         log("   📋 公開待ち記事（「公開して」で公開できます）:")
         for f in results["ready"]:
