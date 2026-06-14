@@ -558,20 +558,15 @@ main {
   margin: 2em 0;
 }
 
-.prose table {
-  display: block;
-  width: 100%;
+.prose .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-collapse: collapse;
   margin: 1.6em 0;
-  font-size: 0.92rem;
 }
 
-.prose table thead,
-.prose table tbody {
-  display: table;
-  width: 100%;
+.prose table {
+  border-collapse: collapse;
+  font-size: 0.92rem;
 }
 
 .prose th,
