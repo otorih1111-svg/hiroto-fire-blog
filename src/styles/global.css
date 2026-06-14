@@ -593,6 +593,26 @@ main {
   background: var(--color-bg-sub);
 }
 
+.prose th:first-child,
+.prose td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  box-shadow: 1px 0 0 var(--color-border);
+}
+
+.prose th:first-child {
+  background: var(--color-accent-light);
+}
+
+.prose tbody tr td:first-child {
+  background: var(--color-bg);
+}
+
+.prose tbody tr:nth-child(even) td:first-child {
+  background: var(--color-bg-sub);
+}
+
 @media (max-width: 640px) {
   .prose table {
     font-size: 0.82rem;
