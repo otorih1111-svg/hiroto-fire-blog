@@ -23,20 +23,20 @@
   <path d="M350 226 C410 226, 430 226, 485 226" fill="none" stroke="#4B74C9" stroke-width="4" stroke-linecap="round"/>
   <polygon points="485,226 470,218 470,234" fill="#4B74C9"/>
 
-  <rect x="500" y="130" width="250" height="76" rx="18" fill="#F4F8FF" stroke="#4B74C9" stroke-width="2"/>
-  <text x="625" y="176" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#244A9C">
+  <rect x="470" y="130" width="310" height="76" rx="18" fill="#F4F8FF" stroke="#4B74C9" stroke-width="2"/>
+  <text x="625" y="176" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#244A9C">
     hiroto+blog@gmail.com
   </text>
-  <rect x="500" y="224" width="250" height="76" rx="18" fill="#FFF9F1" stroke="#F08A24" stroke-width="2"/>
-  <text x="625" y="270" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#A85A12">
+  <rect x="470" y="224" width="310" height="76" rx="18" fill="#FFF9F1" stroke="#F08A24" stroke-width="2"/>
+  <text x="625" y="270" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#A85A12">
     hiroto+shop@gmail.com
   </text>
-  <rect x="500" y="318" width="250" height="76" rx="18" fill="#F6F0FF" stroke="#7A5BC1" stroke-width="2"/>
-  <text x="625" y="364" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#5A3EA0">
+  <rect x="470" y="318" width="310" height="76" rx="18" fill="#F6F0FF" stroke="#7A5BC1" stroke-width="2"/>
+  <text x="625" y="364" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#5A3EA0">
     hiroto+point@gmail.com
   </text>
-  <rect x="500" y="412" width="250" height="76" rx="18" fill="#F0FBF4" stroke="#1F8A4D" stroke-width="2"/>
-  <text x="625" y="458" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="23" font-weight="700" fill="#1F6D40">
+  <rect x="470" y="412" width="310" height="76" rx="18" fill="#F0FBF4" stroke="#1F8A4D" stroke-width="2"/>
+  <text x="625" y="458" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="700" fill="#1F6D40">
     hiroto+son-game@gmail.com
   </text>
 
