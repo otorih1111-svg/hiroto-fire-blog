@@ -1,0 +1,72 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="675" fill="#F7FBF8"/>
+
+  <!-- タイトル -->
+  <text x="600" y="50" font-size="26" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    クラウドワークス と ランサーズ の違い（2026年6月時点）
+  </text>
+
+  <g font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+    <!-- ヘッダー行 -->
+    <rect x="60" y="90" width="260" height="64" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+    <rect x="320" y="90" width="410" height="64" fill="#7CB089"/>
+    <rect x="730" y="90" width="410" height="64" fill="#1F4D32"/>
+
+    <text x="190" y="130" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">項目</text>
+    <text x="525" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">クラウドワークス</text>
+    <text x="935" y="130" font-size="19" font-weight="bold" text-anchor="middle" fill="#fff">ランサーズ</text>
+
+    <!-- 行1：案件数 -->
+    <rect x="60" y="154" width="260" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="320" y="154" width="410" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="730" y="154" width="410" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="190" y="204" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">案件数</text>
+    <text x="525" y="198" font-size="18" text-anchor="middle" fill="#333">多い</text>
+    <text x="525" y="222" font-size="14" text-anchor="middle" fill="#666">タスク形式が豊富</text>
+    <text x="935" y="198" font-size="18" text-anchor="middle" fill="#333">クラウドワークスより少なめ</text>
+    <text x="935" y="222" font-size="14" text-anchor="middle" fill="#666">プロジェクト形式中心</text>
+
+    <!-- 行2：案件の系統 -->
+    <rect x="60" y="238" width="260" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="320" y="238" width="410" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="730" y="238" width="410" height="84" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="190" y="288" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">案件の系統</text>
+    <text x="525" y="282" font-size="18" text-anchor="middle" fill="#333">ライティング・データ入力</text>
+    <text x="525" y="306" font-size="14" text-anchor="middle" fill="#666">スキル不問の案件が多い</text>
+    <text x="935" y="282" font-size="18" text-anchor="middle" fill="#333">デザイン・システム開発</text>
+    <text x="935" y="306" font-size="14" text-anchor="middle" fill="#666">専門スキル系が比較的充実</text>
+
+    <!-- 行3：手数料（強調） -->
+    <rect x="60" y="322" width="260" height="100" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <rect x="320" y="322" width="410" height="100" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <rect x="730" y="322" width="410" height="100" fill="#FFF7E8" stroke="#E8924A" stroke-width="2.5"/>
+    <text x="190" y="380" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">手数料</text>
+    <text x="525" y="362" font-size="18" font-weight="bold" text-anchor="middle" fill="#E8924A">段階制（税別）</text>
+    <text x="525" y="386" font-size="14" text-anchor="middle" fill="#666">10万円以下20%／10〜20万10%</text>
+    <text x="525" y="406" font-size="14" text-anchor="middle" fill="#666">20万円超5%＋消費税10%</text>
+    <text x="935" y="370" font-size="18" font-weight="bold" text-anchor="middle" fill="#E8924A">一律16.5%（税込）</text>
+    <text x="935" y="396" font-size="14" text-anchor="middle" fill="#666">契約金額に関わらず一定</text>
+
+    <!-- 行4：手数料の境目（最重要） -->
+    <rect x="60" y="422" width="1080" height="84" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2.5"/>
+    <text x="600" y="458" font-size="19" font-weight="bold" text-anchor="middle" fill="#1F4D32">契約金額20万円を境目に、手数料の安さが逆転する</text>
+    <text x="600" y="488" font-size="15" text-anchor="middle" fill="#555">20万円未満 → ランサーズが安い／20万円超 → クラウドワークスが安い（20万円ちょうどは同額）</text>
+
+    <!-- 行5：初心者向け度 -->
+    <rect x="60" y="506" width="260" height="92" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="320" y="506" width="410" height="92" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <rect x="730" y="506" width="410" height="92" fill="#fff" stroke="#1F4D32" stroke-width="1.5"/>
+    <text x="190" y="558" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F4D32">初心者向け度</text>
+    <text x="525" y="552" font-size="18" text-anchor="middle" fill="#333">◎ 実績ゼロから始めやすい</text>
+    <text x="525" y="576" font-size="14" text-anchor="middle" fill="#666">タスク形式で経験を積める</text>
+    <text x="935" y="552" font-size="18" text-anchor="middle" fill="#333">△ 実績がある人向け</text>
+    <text x="935" y="576" font-size="14" text-anchor="middle" fill="#666">単価重視で動ける人に有利</text>
+  </g>
+
+  <!-- フッター注記 -->
+  <rect x="60" y="616" width="1080" height="42" rx="10" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="600" y="643" font-size="16" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" fill="#1F4D32">
+    「実績作り」か「手数料の安さ」か。今の自分に必要なのはどっち？
+  </text>
+</svg>
