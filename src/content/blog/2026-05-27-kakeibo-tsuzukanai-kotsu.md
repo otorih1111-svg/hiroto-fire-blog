@@ -217,3 +217,11 @@ Amazonの明細も、だいたい心当たりしかありません。
 家計の全体像を一度誰かに整理してもらいたい人は、FP無料相談も選択肢に入ります。
 
 [FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
+
+---
+
+**合わせて読みたい**
+
+- [父子家庭の生活費はいくら？月23万円の内訳を全公開](/blog/2026-06-07-fushikatei-kakeibo-koukai/)
+- [固定費を削って月1万円以上浮かせた方法【実録】](/blog/koteihi-minaoshi/)
+- [節約・投資・副業の順番で家計改善したロードマップ【シングルファーザー】](/blog/2026-06-10-kakei-kaizen-roadmap/)

@@ -164,3 +164,10 @@ AIツールは、考え始めるきっかけを作ってくれる。
 - [楽天市場でMacBook Airを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dba2a.ff617e7e.549dba2b.9e0f57fb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshop-inverse%2Fsku-macbookair-13-2022%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9NYWNCb29rJTIwQWlyJTIwTTIvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)
 - [楽天市場でiPhoneを見る（PR）](https://hb.afl.rakuten.co.jp/ichiba/549dc14f.7d18dd31.549dc150.c95ec71a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenmobile-store%2Fiphone-16%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiIwIiwiY29sIjoiMSIsImNhdCI6IjAiLCJiYXNlIjoiaHR0cHM6Ly9zZWFyY2gucmFrdXRlbi5jby5qcC9zZWFyY2gvbWFsbC9pUGhvbmUrMTYvIiwicGFnZSI6MSwib3JkZXIiOiIwIiwic2l6ZSI6IjMwIn0)
 - [Claudeを1週間無料で試す](https://claude.ai/referral/kbSLRTfRjQ)
+
+---
+
+**合わせて読みたい**
+
+- [副業初心者が最初の1週間でやること5つ【40代会社員版】](/blog/fukugyo-hajime-1week/)
+- [副業初心者が最初の1万円を稼ぐロードマップ【順番が大事】](/blog/2026-05-21-fukugyo-first-10000-roadmap/)
