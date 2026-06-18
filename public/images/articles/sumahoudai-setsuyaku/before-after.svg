@@ -26,20 +26,21 @@
   <rect x="368" y="24" width="288" height="272" rx="10" fill="#EAF4ED" stroke="#7CB089" stroke-width="1.5"/>
   <rect x="368" y="24" width="288" height="48" rx="10" fill="#1F4D32"/>
   <rect x="368" y="60" width="288" height="12" fill="#1F4D32"/>
-  <text x="512" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="white">乗り換え後（楽天モバイル）</text>
+  <text x="512" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="white">乗り換え後（楽天モバイル実績）</text>
 
   <!-- After amount -->
-  <text x="512" y="130" text-anchor="middle" font-size="13" fill="#555">月額</text>
-  <text x="512" y="168" text-anchor="middle" font-size="38" font-weight="800" fill="#1F4D32">3,278</text>
-  <text x="512" y="192" text-anchor="middle" font-size="14" fill="#555">円 / 月</text>
+  <text x="512" y="118" text-anchor="middle" font-size="11" fill="#555">4月 1,084円 / 5月 1,094円</text>
+  <text x="512" y="138" text-anchor="middle" font-size="13" fill="#555">月額（実績）</text>
+  <text x="512" y="174" text-anchor="middle" font-size="36" font-weight="800" fill="#1F4D32">1,084</text>
+  <text x="512" y="195" text-anchor="middle" font-size="14" fill="#555">円 〜（実際の請求）</text>
 
   <!-- After yearly -->
-  <rect x="392" y="210" width="240" height="42" rx="8" fill="#fff" stroke="#7CB089" stroke-width="1"/>
-  <text x="512" y="228" text-anchor="middle" font-size="11" fill="#555">年間コスト</text>
-  <text x="512" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#1F4D32">約 39,336円</text>
+  <rect x="392" y="212" width="240" height="42" rx="8" fill="#fff" stroke="#7CB089" stroke-width="1"/>
+  <text x="512" y="230" text-anchor="middle" font-size="11" fill="#555">年間コスト（目安）</text>
+  <text x="512" y="247" text-anchor="middle" font-size="16" font-weight="700" fill="#1F4D32">約 13,000円</text>
 
   <!-- Diff badge -->
   <rect x="200" y="280" width="280" height="30" rx="15" fill="#1F4D32"/>
-  <text x="340" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="white">年間 約47,000円の差</text>
+  <text x="340" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="white">年間 約73,000円の差（実績ベース）</text>
 
 </svg>
