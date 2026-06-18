@@ -1,0 +1,45 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif">
+
+  <!-- Background -->
+  <rect width="680" height="320" rx="12" fill="#F8FAF8"/>
+
+  <!-- Before card -->
+  <rect x="24" y="24" width="288" height="272" rx="10" fill="#FFF3F3" stroke="#E8AAAA" stroke-width="1.5"/>
+  <rect x="24" y="24" width="288" height="48" rx="10" fill="#D9534F"/>
+  <rect x="24" y="60" width="288" height="12" fill="#D9534F"/>
+  <text x="168" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="white">乗り換え前（大手キャリア）</text>
+
+  <!-- Before amount -->
+  <text x="168" y="130" text-anchor="middle" font-size="13" fill="#888">月額</text>
+  <text x="168" y="168" text-anchor="middle" font-size="38" font-weight="800" fill="#D9534F">7,200</text>
+  <text x="168" y="192" text-anchor="middle" font-size="14" fill="#888">円 / 月</text>
+
+  <!-- Before yearly -->
+  <rect x="48" y="210" width="240" height="42" rx="8" fill="#fff" stroke="#E8AAAA" stroke-width="1"/>
+  <text x="168" y="228" text-anchor="middle" font-size="11" fill="#999">年間コスト</text>
+  <text x="168" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#D9534F">約 86,400円</text>
+
+  <!-- Arrow -->
+  <text x="340" y="168" text-anchor="middle" font-size="30" fill="#1F4D32">→</text>
+
+  <!-- After card -->
+  <rect x="368" y="24" width="288" height="272" rx="10" fill="#EAF4ED" stroke="#7CB089" stroke-width="1.5"/>
+  <rect x="368" y="24" width="288" height="48" rx="10" fill="#1F4D32"/>
+  <rect x="368" y="60" width="288" height="12" fill="#1F4D32"/>
+  <text x="512" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="white">乗り換え後（楽天モバイル）</text>
+
+  <!-- After amount -->
+  <text x="512" y="130" text-anchor="middle" font-size="13" fill="#555">月額</text>
+  <text x="512" y="168" text-anchor="middle" font-size="38" font-weight="800" fill="#1F4D32">3,278</text>
+  <text x="512" y="192" text-anchor="middle" font-size="14" fill="#555">円 / 月</text>
+
+  <!-- After yearly -->
+  <rect x="392" y="210" width="240" height="42" rx="8" fill="#fff" stroke="#7CB089" stroke-width="1"/>
+  <text x="512" y="228" text-anchor="middle" font-size="11" fill="#555">年間コスト</text>
+  <text x="512" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#1F4D32">約 39,336円</text>
+
+  <!-- Diff badge -->
+  <rect x="200" y="280" width="280" height="30" rx="15" fill="#1F4D32"/>
+  <text x="340" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="white">年間 約47,000円の差</text>
+
+</svg>
