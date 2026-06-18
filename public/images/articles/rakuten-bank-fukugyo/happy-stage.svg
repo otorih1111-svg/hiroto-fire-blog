@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="800" height="320" fill="#f8f9fa" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">ハッピープログラム　ステージ条件</text>
+
+  <!-- ヘッダー行 -->
+  <rect x="40" y="55" width="720" height="36" fill="#bf0000" rx="6"/>
+  <text x="170" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">ステージ</text>
+  <text x="400" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">残高条件</text>
+  <text x="610" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">取引件数条件</text>
+
+  <!-- ベーシック -->
+  <rect x="40" y="91" width="720" height="40" fill="#fff" rx="0"/>
+  <line x1="40" y1="131" x2="760" y2="131" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="170" y="116" text-anchor="middle" font-size="13" fill="#555">ベーシック</text>
+  <text x="400" y="116" text-anchor="middle" font-size="13" fill="#555">10万円以上</text>
+  <text x="610" y="116" text-anchor="middle" font-size="13" fill="#555">5件以上</text>
+
+  <!-- アドバンスト -->
+  <rect x="40" y="131" width="720" height="40" fill="#fafafa"/>
+  <line x1="40" y1="171" x2="760" y2="171" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="170" y="156" text-anchor="middle" font-size="13" fill="#555">アドバンスト</text>
+  <text x="400" y="156" text-anchor="middle" font-size="13" fill="#555">30万円以上</text>
+  <text x="610" y="156" text-anchor="middle" font-size="13" fill="#555">10件以上</text>
+
+  <!-- プレミアム -->
+  <rect x="40" y="171" width="720" height="40" fill="#fff"/>
+  <line x1="40" y1="211" x2="760" y2="211" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="170" y="196" text-anchor="middle" font-size="13" fill="#555">プレミアム</text>
+  <text x="400" y="196" text-anchor="middle" font-size="13" fill="#555">50万円以上</text>
+  <text x="610" y="196" text-anchor="middle" font-size="13" fill="#555">15件以上</text>
+
+  <!-- VIP ★ひろとここ -->
+  <rect x="40" y="211" width="720" height="40" fill="#fff9e6"/>
+  <line x1="40" y1="251" x2="760" y2="251" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="170" y="236" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf0000">VIP　★</text>
+  <text x="400" y="236" text-anchor="middle" font-size="13" fill="#555">100万円以上</text>
+  <text x="610" y="236" text-anchor="middle" font-size="13" fill="#555">20件以上</text>
+
+  <!-- スーパーVIP -->
+  <rect x="40" y="251" width="720" height="40" fill="#fafafa" rx="0"/>
+  <text x="170" y="276" text-anchor="middle" font-size="13" fill="#555">スーパーVIP</text>
+  <text x="400" y="276" text-anchor="middle" font-size="13" fill="#555">300万円以上</text>
+  <text x="610" y="276" text-anchor="middle" font-size="13" fill="#555">30件以上</text>
+
+  <!-- 枠線 -->
+  <rect x="40" y="55" width="720" height="236" fill="none" stroke="#ddd" stroke-width="1" rx="6"/>
+  <!-- 縦線 -->
+  <line x1="300" y1="55" x2="300" y2="291" stroke="#ddd" stroke-width="1"/>
+  <line x1="510" y1="55" x2="510" y2="291" stroke="#ddd" stroke-width="1"/>
+
+  <!-- 注釈 -->
+  <text x="400" y="310" text-anchor="middle" font-size="11" fill="#888">★ 残高・取引件数どちらか一方を満たせばOK</text>
+</svg>

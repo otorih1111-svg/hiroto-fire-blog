@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="800" height="280" fill="#f8f9fa" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">ぼくの口座の役割分担</text>
+
+  <!-- 楽天銀行（個人） -->
+  <rect x="40" y="60" width="220" height="160" fill="#fff" rx="10" stroke="#bf0000" stroke-width="2"/>
+  <rect x="40" y="60" width="220" height="36" fill="#bf0000" rx="10"/>
+  <rect x="40" y="84" width="220" height="12" fill="#bf0000"/>
+  <text x="150" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">楽天銀行（個人）</text>
+  <text x="150" y="118" text-anchor="middle" font-size="12" fill="#333">給与受取</text>
+  <text x="150" y="140" text-anchor="middle" font-size="12" fill="#333">副業の収益・経費</text>
+  <text x="150" y="162" text-anchor="middle" font-size="12" fill="#333">楽天カード引き落とし</text>
+  <text x="150" y="184" text-anchor="middle" font-size="12" fill="#333">マネーブリッジ</text>
+  <text x="150" y="210" text-anchor="middle" font-size="11" fill="#bf0000" font-weight="bold">日常使いのメイン</text>
+
+  <!-- 千葉銀行（法人） -->
+  <rect x="290" y="60" width="220" height="160" fill="#fff" rx="10" stroke="#555" stroke-width="2"/>
+  <rect x="290" y="60" width="220" height="36" fill="#555" rx="10"/>
+  <rect x="290" y="84" width="220" height="12" fill="#555"/>
+  <text x="400" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">千葉銀行（法人）</text>
+  <text x="400" y="118" text-anchor="middle" font-size="12" fill="#333">法人の資金管理</text>
+  <text x="400" y="140" text-anchor="middle" font-size="12" fill="#333">地域金融機関との</text>
+  <text x="400" y="158" text-anchor="middle" font-size="12" fill="#333">リレーション維持</text>
+  <text x="400" y="184" text-anchor="middle" font-size="12" fill="#888">※ネット振込は割高</text>
+  <text x="400" y="210" text-anchor="middle" font-size="11" fill="#555" font-weight="bold">融資戦略のための維持</text>
+
+  <!-- 東京東信用金庫（法人） -->
+  <rect x="540" y="60" width="220" height="160" fill="#fff" rx="10" stroke="#555" stroke-width="2"/>
+  <rect x="540" y="60" width="220" height="36" fill="#555" rx="10"/>
+  <rect x="540" y="84" width="220" height="12" fill="#555"/>
+  <text x="650" y="81" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">東京東信用金庫（法人）</text>
+  <text x="650" y="118" text-anchor="middle" font-size="12" fill="#333">法人の資金管理</text>
+  <text x="650" y="140" text-anchor="middle" font-size="12" fill="#333">地域事業者として</text>
+  <text x="650" y="158" text-anchor="middle" font-size="12" fill="#333">のつながり維持</text>
+  <text x="650" y="184" text-anchor="middle" font-size="12" fill="#888">※ネット振込は割高</text>
+  <text x="650" y="210" text-anchor="middle" font-size="11" fill="#555" font-weight="bold">融資戦略のための維持</text>
+
+  <!-- 注釈 -->
+  <text x="400" y="256" text-anchor="middle" font-size="11" fill="#888">地銀・信金は「手数料コスト＝将来の融資選択肢を広げるための費用」と割り切っている</text>
+</svg>
