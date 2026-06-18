@@ -1,0 +1,55 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif">
+
+  <rect width="680" height="380" rx="12" fill="#F8FAF8"/>
+
+  <!-- Title -->
+  <text x="340" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#1F4D32">固定費を削った順番と効果</text>
+
+  <!-- Step 1 -->
+  <rect x="32" y="56" width="196" height="130" rx="10" fill="#EAF4ED" stroke="#7CB089" stroke-width="1.5"/>
+  <circle cx="80" cy="84" r="18" fill="#1F4D32"/>
+  <text x="80" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="white">①</text>
+  <text x="148" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#1F4D32">スマホ代</text>
+  <text x="116" y="116" text-anchor="middle" font-size="11" fill="#444">月 約6,000円削減</text>
+  <text x="116" y="136" text-anchor="middle" font-size="11" fill="#444">年間 約73,000円</text>
+  <rect x="56" y="154" width="120" height="24" rx="12" fill="#1F4D32"/>
+  <text x="116" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="white">達成感◎ まず動ける</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="242" y="126" text-anchor="middle" font-size="22" fill="#7CB089">→</text>
+
+  <!-- Step 2 -->
+  <rect x="268" y="56" width="196" height="130" rx="10" fill="#EAF4ED" stroke="#7CB089" stroke-width="1.5"/>
+  <circle cx="316" cy="84" r="18" fill="#1F4D32"/>
+  <text x="316" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="white">②</text>
+  <text x="384" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#1F4D32">保険</text>
+  <text x="352" y="116" text-anchor="middle" font-size="11" fill="#444">月 6,400円削減</text>
+  <text x="352" y="136" text-anchor="middle" font-size="11" fill="#444">年間 約76,800円</text>
+  <rect x="292" y="154" width="120" height="24" rx="12" fill="#1F4D32"/>
+  <text x="352" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="white">FP相談で整理</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="478" y="126" text-anchor="middle" font-size="22" fill="#7CB089">→</text>
+
+  <!-- Step 3 -->
+  <rect x="504" y="56" width="144" height="130" rx="10" fill="#EAF4ED" stroke="#7CB089" stroke-width="1.5"/>
+  <circle cx="548" cy="84" r="18" fill="#1F4D32"/>
+  <text x="548" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="white">③</text>
+  <text x="576" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#1F4D32">サブスク</text>
+  <text x="576" y="116" text-anchor="middle" font-size="11" fill="#444">月 約3,000円削減</text>
+  <text x="576" y="136" text-anchor="middle" font-size="11" fill="#444">年間 約34,000円</text>
+  <rect x="524" y="154" width="104" height="24" rx="12" fill="#1F4D32"/>
+  <text x="576" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="white">まとめて削る</text>
+
+  <!-- Total bar -->
+  <rect x="32" y="212" width="616" height="72" rx="10" fill="#1F4D32"/>
+  <text x="340" y="240" text-anchor="middle" font-size="13" fill="#EAF4ED">3つ合計</text>
+  <text x="340" y="272" text-anchor="middle" font-size="26" font-weight="800" fill="white">月 約15,000円以上・年間 約18万円</text>
+
+  <!-- Note -->
+  <text x="340" y="318" text-anchor="middle" font-size="12" fill="#666">削れた分はNISA積立へ。固定費見直しは節約と投資が直結する。</text>
+
+  <!-- Bottom label -->
+  <text x="340" y="358" text-anchor="middle" font-size="11" fill="#999">hiroto-fire.com</text>
+
+</svg>
