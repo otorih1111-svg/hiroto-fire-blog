@@ -22,8 +22,16 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Install Google API dependencies
+        run: python3 -m pip install --upgrade pip google-auth google-api-python-client
 
       - name: Create .env for workflow
         run: |
