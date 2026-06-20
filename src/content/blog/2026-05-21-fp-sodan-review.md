@@ -202,5 +202,5 @@ FP無料相談を試してみたい方はこちら。オンライン相談に対
 **合わせて読みたい**
 
 - [新NISAは月1万円でも意味ある？40代が続けてわかったこと](/blog/nisa-tsumitate-40dai/)
-- [固定費を月1.2万円削った順番と結果【実録】](/blog/koteihi-minaoshi/)
+- [固定費の見直しで月1.2万円削った順番と結果](/blog/koteihi-minaoshi/)
 - [シングルファーザーのFIRE設計：今の資産状況を正直に書く](/blog/2026-05-22-single-fatherfire/)
