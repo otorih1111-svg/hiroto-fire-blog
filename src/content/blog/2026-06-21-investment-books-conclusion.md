@@ -72,6 +72,8 @@ S&P Dow Jones Indices の [SPIVA](https://www.spglobal.com/spdji/en/research-ins
 
 ## ぼくが読んだ本に共通していた3つのこと
 
+![投資本を20冊読んでわかった結論。低コスト・長期・積立の3つに集約される図](/images/articles/investment-books-conclusion/summary.svg)
+
 **1. コストを極限まで下げろ**
 
 投資は、派手さよりコストです。

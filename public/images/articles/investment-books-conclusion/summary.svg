@@ -1,0 +1,65 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="32" fill="#F6FAF7"/>
+  <rect x="36" y="36" width="1128" height="688" rx="28" fill="#FCFFFD" stroke="#D7E8DB" stroke-width="2"/>
+
+  <text x="600" y="112" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="48" font-weight="700" fill="#1F5133">
+    投資本を20冊読んだ結論
+  </text>
+  <text x="600" y="164" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="26" font-weight="600" fill="#3E6B4B">
+    初心者はインデックス投資を長く続ければいい
+  </text>
+
+  <rect x="120" y="210" width="960" height="114" rx="22" fill="#E7F4EA" stroke="#5B8E6E" stroke-width="3"/>
+  <text x="600" y="262" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="24" font-weight="700" fill="#1F5133">
+    結論
+  </text>
+  <text x="600" y="302" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#1F5133">
+    オルカン or S&amp;P500 を積立して、あとは放置
+  </text>
+
+  <rect x="110" y="384" width="290" height="228" rx="24" fill="#FFFFFF" stroke="#7BA889" stroke-width="3"/>
+  <circle cx="255" cy="446" r="44" fill="#E7F4EA"/>
+  <path d="M233 446H277" stroke="#2F6B47" stroke-width="10" stroke-linecap="round"/>
+  <text x="255" y="538" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#1F5133">
+    低コスト
+  </text>
+  <text x="255" y="578" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    手数料が低いほど
+  </text>
+  <text x="255" y="610" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    長期で効いてくる
+  </text>
+
+  <rect x="455" y="384" width="290" height="228" rx="24" fill="#FFFFFF" stroke="#7BA889" stroke-width="3"/>
+  <circle cx="600" cy="446" r="44" fill="#E7F4EA"/>
+  <path d="M600 420V446L618 464" stroke="#2F6B47" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="446" r="30" stroke="#2F6B47" stroke-width="8"/>
+  <text x="600" y="538" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#1F5133">
+    長期
+  </text>
+  <text x="600" y="578" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    勉強時間より
+  </text>
+  <text x="600" y="610" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    続ける年数が効く
+  </text>
+
+  <rect x="800" y="384" width="290" height="228" rx="24" fill="#FFFFFF" stroke="#7BA889" stroke-width="3"/>
+  <circle cx="945" cy="446" r="44" fill="#E7F4EA"/>
+  <path d="M922 446H968" stroke="#2F6B47" stroke-width="10" stroke-linecap="round"/>
+  <path d="M945 423V469" stroke="#2F6B47" stroke-width="10" stroke-linecap="round"/>
+  <text x="945" y="538" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#1F5133">
+    積立
+  </text>
+  <text x="945" y="578" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    相場を読まずに
+  </text>
+  <text x="945" y="610" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="500" fill="#456B53">
+    自動で続ける
+  </text>
+
+  <rect x="180" y="654" width="840" height="42" rx="18" fill="#EAF5EC" stroke="#7BA889" stroke-width="2"/>
+  <text x="600" y="682" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="700" fill="#1F5133">
+    20冊読んでわかったのは「難しく考えるより、先に積立設定」がいちばん強いこと
+  </text>
+</svg>
