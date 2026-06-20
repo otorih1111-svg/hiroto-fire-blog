@@ -30,13 +30,27 @@ jobs:
           cat <<'EOF' > .env
           PUBLIC_GA_ID=G-LRT5BKLD8Y
           PUBLIC_LINE_URL=https://line.me/R/ti/p/%40103khwdx
+          GSC_SITE_URL=sc-domain:hiroto-fire.com
           EOF
+
+      - name: Restore Google service account file (optional)
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -n "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            printf '%s' "$GOOGLE_SERVICE_ACCOUNT_JSON" > google-credentials.json
+          else
+            echo "GOOGLE_SERVICE_ACCOUNT_JSON secret is not set. Search Console sitemap submit will be skipped."
+          fi
 
       - name: Build site
         run: npm run build
 
       - name: Wait for Cloudflare deploy and notify IndexNow
         run: npm run seo:notify -- --wait-live --base HEAD~1 --head HEAD
+
+      - name: Submit sitemap to Search Console and check updated URLs
+        run: npm run seo:google
 
       - name: Upload indexing logs
         uses: actions/upload-artifact@v4

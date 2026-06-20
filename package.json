@@ -11,7 +11,10 @@
     "astro": "astro",
     "seo:notify": "node scripts/post_deploy_indexing.mjs",
     "seo:notify:live": "node scripts/post_deploy_indexing.mjs --wait-live",
-    "seo:notify:all": "node scripts/post_deploy_indexing.mjs --all"
+    "seo:notify:all": "node scripts/post_deploy_indexing.mjs --all",
+    "seo:google": "python3 scripts/submit_google_publish_signals.py",
+    "seo:google:dry": "python3 scripts/submit_google_publish_signals.py --dry-run",
+    "seo:publish": "npm run seo:notify && npm run seo:google"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
