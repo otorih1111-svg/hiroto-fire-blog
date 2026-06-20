@@ -1,4 +1,4 @@
-name: IndexNow After Cloudflare Deploy
+name: Google Publish Signals After Deploy
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  notify-indexnow:
+  publish-signals:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -46,10 +46,10 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Wait for Cloudflare deploy and notify IndexNow
+      - name: Wait for Cloudflare deploy and notify IndexNow (Bing)
         run: npm run seo:notify -- --wait-live --base HEAD~1 --head HEAD
 
-      - name: Submit sitemap to Search Console and check updated URLs
+      - name: Send Google publish signals
         run: npm run seo:google
 
       - name: Upload indexing logs
