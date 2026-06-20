@@ -1,5 +1,29 @@
 # hiroto-fire-blog 運用ルール
 
+## 【必須】記事作成時の画像チェックリスト（2026-06-21追加）
+
+記事を作成・pushする前に、以下を**必ず**完了させること。省略・後回し禁止。
+
+1. **サムネイル（OGP画像）を作成する**
+   - サイズ：`1200 x 675`
+   - 保存先：`/public/images/thumbnails/[slug].png`
+   - frontmatterの `ogImage` に正しいパスを入れる
+   - タイトルとカテゴリが一目でわかるデザインにする
+
+2. **本文内SVG図解を最低1枚作成する**
+   - 保存先：`/public/images/articles/[slug]/[画像名].svg`
+   - 記事の内容に合った図（比較表・手順図・Before/After・判断フローなど）を選ぶ
+   - 挿入箇所：体験談・手順の説明が終わった後の中盤が効果的
+   - 挿入形式：`![alt](/images/articles/[slug]/[画像名].svg)`
+
+3. **キャラクターイラストを感情が動く場面に入れる（なるべく）**
+   - `/public/images/characters/` 以下のpngを使う
+   - `.character-note` / `.character-note-bubble` パターンで挿入する
+
+**画像なしでpushしない。**
+
+---
+
 ## 文体・温度感ルール
 
 ### 基本方針
@@ -123,6 +147,15 @@
   - 上位記事が薄いか
   を見て、今のブログでも勝負できる余地があるか判断する
 - 検索ボリュームが少なくても、**読者の悩みが深くて成約や行動に近いKW**は候補に残してよい
+
+### 体験談記事のKWルール（2026-06-20追加）
+- 体験談記事は、本文の体験軸を壊してまでKWに寄せない
+- できるなら、タイトル・description・見出し1〜2本だけを検索される言い方に寄せる
+- 本文は実体験・感情・判断理由を優先し、無理に一般論へ寄せない
+- キーワードプランナーで `10〜100` でも、読者の悩みが深くて成約や次行動に近いなら候補として扱ってよい
+- キーワードプランナーで `データなし` でも、Search Consoleで実際に表示されているなら即NGにしない
+- 体験談記事は `検索流入` だけでなく、`信頼構築` `回遊` `成約補助` も評価軸に含める
+- 集客記事・比較記事・手順記事はKWを強めに見るが、体験談記事は「この体験を語れるのはぼくだけか」を優先する
 
 ### ブログ文章術ルール（2026-06-03追加）
 - ブログ文章の目的は `きれいに書くこと` ではなく `読んだ人を行動させること`
@@ -350,20 +383,49 @@ FAQは全記事に入れない。
 - 体験談・数字・具体的な手順のない記事は作らない
 - 記事を作る前に既存記事と内容が被らないか確認する
 
-### 既存記事リライト時の必須ルール
-過去記事はKW設計なしで書かれているものが多いため、リライト時は必ず先にKW確認を行う。
+### 既存記事リライト時の必須ルール（2026-06-20追加）
+過去記事は、KWを十分に確認せずに書かれているものが多い。
+そのため、既存記事のリライトでは「文章を整える前に、先にKWと検索意図を確認する」ことを必須とする。
 
 手順：
 1. 対象記事の現タイトル・現見出し・現導線を確認する
-2. Search Consoleで実際に表示されているクエリを確認する
-3. その記事で狙うメインKWを1つ、必要ならサブKWを2〜3つ決める
-4. 記事の役割（集客 / 比較 / 体験談 / ハブ / 成約）を明確にする
-5. その上でタイトル・description・リード文・見出し・CTAを調整する
+2. Search Consoleで表示クエリ・表示回数・CTR・掲載順位を確認する
+3. その記事で狙うメインKWを1つ決める
+4. 必要に応じてサブKWを2〜3つ決める
+5. 記事の役割を整理する
+   - 集客記事
+   - 比較記事
+   - 体験談記事
+   - ハブ記事
+   - 成約記事
+6. その役割に合わせて、タイトル・description・リード文・見出し・CTAを調整する
 
 注意：
 - KW確認なしで本文から先に直し始めない
-- 「今表示されているクエリ」と「本来狙いたいKW」がズレている場合は、そのズレを先に整理する
+- Search Consoleで出ているクエリと、本来狙いたいKWがズレている場合は、そのズレを先に整理する
+- 順位が高いのにクリックされていない記事は、本文より先にタイトル・description・冒頭を見直す
+- 表示も順位も弱い記事は、タイトルだけでなく構成や検索意図そのものを見直す
 - リライトは文章の改善ではなく、検索意図と記事の役割を合わせ直す作業として行う
+
+### 公開前後の必須チェック（2026-06-20追加）
+既存記事・新規記事を問わず、公開前後は以下を必ず確認する。
+
+#### 公開前チェック
+1. 本文内の数字・期間・件数と、タイトル・description・図解・alt文が一致しているか確認する
+2. CTAリンク先が現在の推奨導線と一致しているか確認する
+3. 体験談記事で、本文の実体験と違うサービス・案件を唐突にCTAへ入れていないか確認する
+4. タイトル・descriptionだけでなく、タグも記事内容とクラスター設計に合っているか確認する
+5. 内部リンクは正規URL形式に統一し、`/blog/slug/` と `/slug/` のようなURL揺れを作らない
+
+#### 公開後チェック
+1. 新規記事・大幅リライト後は、誤字・事実誤認・リンクミス以外ではすぐ再リライトしない
+2. 初動確認は公開から5〜7日後を目安にする
+3. 本判定は公開から10〜14日後を目安にする
+4. GA4でURLが分散していないか確認し、揺れがあれば内部リンク・canonical・redirectを見直す
+
+注意：
+- 公開直後の不安だけで本文を何度も触らない
+- 数字記事・比較記事・体験談記事は、本文と図解とCTAの整合を特に厳しく確認する
 
 ### リライトの基準（内容面）
 - 古い情報は最新情報に変更する
@@ -444,11 +506,26 @@ FAQは全記事に入れない。
   4. Cloudflareのデプロイ完了を確認
 - サムネを忘れると記事にOGP画像が表示されない
 
-### デプロイ後のIndexNow確認（2026-06-12追加）
-- `main` に push すると GitHub Actions `IndexNow After Cloudflare Deploy` が自動実行される
-- workflow は Cloudflare 側で `https://hiroto-fire.com/facbd30e1610fa2891f4209ade56b24a.txt` が公開されるまで待ってから `IndexNow` を送信する
+### デプロイ後の公開通知確認（2026-06-12追加・2026-06-20更新）
+- `main` に push すると GitHub Actions `Google Publish Signals After Deploy` が自動実行される
+- workflow では以下を順に行う
+  1. `npm ci`
+  2. Python セットアップ
+  3. `google-auth` / `google-api-python-client` を install
+  4. `npm run build`
+  5. `npm run seo:notify -- --wait-live --base HEAD~1 --head HEAD` で Cloudflare 反映待ち + IndexNow 送信
+  6. `npm run seo:google` で Google 向け publish signals を送る
+- Google 向け自動送信が動く条件
+  1. GitHub Actions secret `GOOGLE_SERVICE_ACCOUNT_JSON` が設定されていること
+  2. secret の値は**ファイルパスではなく** `google-credentials.json` の**JSON本文そのもの**であること
+  3. サービスアカウント `hiroto-indexing@drm1-498112.iam.gserviceaccount.com` が Search Console 側で対象プロパティにアクセスできること
 - デプロイ確認は以下の順で行う
-  1. GitHub Actions の最新実行が success か確認
-  2. `https://hiroto-fire.com/facbd30e1610fa2891f4209ade56b24a.txt` を開いてキー文字列が見えるか確認
-  3. 必要なら `logs/indexing/latest-indexing.json` と `latest-search-console-candidates.txt` を確認
+  1. GitHub Actions の最新実行 `Google Publish Signals After Deploy` が `success` か確認
+  2. ジョブ `publish-signals` の中に `Send Google publish signals` があり、そこまで成功しているか確認
+  3. `https://hiroto-fire.com/facbd30e1610fa2891f4209ade56b24a.txt` を開いてキー文字列が見えるか確認
+  4. 必要なら artifact `indexing-logs` または `logs/indexing/` を確認
+- `Send Google publish signals` が失敗したら、まず以下を疑う
+  1. `GOOGLE_SERVICE_ACCOUNT_JSON` にパスを書いてしまっている
+  2. サービスアカウントの Search Console 権限が足りない
+  3. workflow 側の Python / Google API dependencies が不足している
 - ローカルで手動確認するときは `npm run build:seo`、デプロイ反映待ち込みで確認するときは `npm run seo:notify:live` を使う
