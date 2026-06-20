@@ -276,7 +276,7 @@ ogImage: "/images/thumbnails/2026-06-07-fushikatei-kakeibo-koukai.png"
 
 家計簿を続けるコツについては、こちらの記事にもまとめています。
 
-→ [家計簿が続かない人に教えたい、続けるための唯一のコツ](/blog/kakeibo-tsuzukanai-kotsu/)
+→ [家計簿が続かない人に教えたい、続けるための唯一のコツ](/blog/2026-05-27-kakeibo-tsuzukanai-kotsu/)
 → 全体の順番から見たい人は[家計改善からFIREまでのロードマップ](/blog/2026-06-10-kakei-kaizen-roadmap/)もどうぞ。
 
 ※この記事はぼく個人の体験談・調査に基づく情報です。投資・保険・金融商品の判断は自己責任でお願いします。必要に応じてFP等の専門家にご相談ください。
