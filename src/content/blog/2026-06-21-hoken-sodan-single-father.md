@@ -106,6 +106,13 @@ ogImage: "/images/thumbnails/2026-06-21-hoken-sodan-single-father.svg"
 
 逆に、すでに特定の商品に入ると決めていて、確認事項だけの人は保険相談を挟まなくてもいいかもしれません。
 
+<div class="affiliate-box">
+  <span class="affiliate-label">PR</span>
+  <h4>無料保険相談【みんなの生命保険アドバイザー】</h4>
+  <p>全国3,000名以上のFPに無料で相談できます。離婚後・子育て中の保障見直しにも対応。オンライン可。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談してみる</a>
+</div>
+
 ---
 
 ## 申し込む前に用意しておくとラクだったもの
@@ -206,6 +213,11 @@ ogImage: "/images/thumbnails/2026-06-21-hoken-sodan-single-father.svg"
 → 先に自分の保険見直しの流れを見たい人は[離婚後に保険を見直したら月6,400円安くなった話](/blog/hoken-minaoshi-single-father/)へ。  
 → 家計全体から整理したい人は[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)へ。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" rel="nofollow sponsored noopener noreferrer">無料保険相談を見てみる（PR）</a>
+<div class="affiliate-box">
+  <span class="affiliate-label">PR</span>
+  <h4>無料保険相談【みんなの生命保険アドバイザー】</h4>
+  <p>無料・勧誘ありきではない・オンライン対応。保険証書を並べるだけでも、次が見えやすくなります。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談してみる</a>
+</div>
 
 ※本記事はアフィリエイト広告を含みます。

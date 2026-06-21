@@ -187,6 +187,13 @@ FP無料相談の多くは、相談後に保険や資産形成の商品を紹介
 逆に向いていないのは、「商品だけ即決したい人」です。
 FP相談は、答えを買う場所ではなく、整理して決める場所でした。
 
+<div class="affiliate-box">
+  <span class="affiliate-label">PR</span>
+  <h4>ファイナンシャルプランナーに相談【ファインドイット】</h4>
+  <p>家計・保険・NISA・教育費まで、無料でFPに相談できます。シングルファーザーのぼくも使いました。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談してみる</a>
+</div>
+
 ---
 
 ## 注意点もあります
@@ -237,7 +244,12 @@ FP相談は、答えを買う場所ではなく、整理して決める場所で
 保険の見直しが不安なら、先に[離婚後に保険を見直したら月6,400円安くなった話](/blog/hoken-minaoshi-single-father/)を読むと話がつながりやすいです。
 固定費全体を先に見たいなら[固定費見直しで月1.2万円浮いた話【順番と結果】](/blog/koteihi-minaoshi/)も合わせてどうぞ。
 
-[FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
+<div class="affiliate-box">
+  <span class="affiliate-label">PR</span>
+  <h4>ファイナンシャルプランナーに相談【ファインドイット】</h4>
+  <p>無料・勧誘なし・オンライン対応。家計が整理できていない人ほど、まず話すだけでも変わります。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談してみる</a>
+</div>
 
 ※本記事はアフィリエイト広告を含みます。
 相談の内容・商品の判断は、必ずご自身で確認してください。
