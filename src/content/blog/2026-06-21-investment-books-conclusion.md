@@ -207,6 +207,7 @@ S&P Dow Jones Indices の [SPIVA](https://www.spglobal.com/spdji/en/research-ins
 
 **合わせて読みたい**
 
+- [ひろとのおすすめ本【副業×FIRE×投資】](/recommended-books/)
 - [NISA初心者の40代が楽天証券を選んだ理由](/blog/rakuten-shoken-naze-eranda/)
 - [オルカンとS&P500、どっちを選ぶべきか](/blog/2026-06-18-orcan-vs-sp500/)
 - [新NISAはいくらから？投資額の決め方3ステップ](/blog/2026-06-08-nisa/)
