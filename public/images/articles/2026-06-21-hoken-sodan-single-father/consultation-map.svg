@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">無料保険相談とFP相談の使い分け図</title>
+  <desc id="desc">保険だけ整理したい人は無料保険相談、家計全体を整理したい人はFP相談へ進む判断図</desc>
+  <defs>
+    <style>
+      .bg { fill: #f6fbf8; }
+      .card { fill: #ffffff; stroke: #b9d8c3; stroke-width: 2; rx: 24; ry: 24; }
+      .main { fill: #1f4d32; }
+      .sub { fill: #476a55; }
+      .muted { fill: #6c7f72; }
+      .green { fill: #dff1e6; stroke: #8bb79a; stroke-width: 2; rx: 18; ry: 18; }
+      .blue { fill: #e8f0fb; stroke: #95afd2; stroke-width: 2; rx: 18; ry: 18; }
+      .line { stroke: #7aa287; stroke-width: 4; fill: none; stroke-linecap: round; }
+      .arrow { fill: #7aa287; }
+      text { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
+      .h1 { font-size: 38px; font-weight: 700; }
+      .h2 { font-size: 28px; font-weight: 700; }
+      .body { font-size: 24px; }
+      .small { font-size: 20px; }
+      .label { font-size: 22px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+
+  <text x="80" y="90" class="h1 main">無料保険相談とFP相談の使い分け</text>
+  <text x="80" y="130" class="body muted">保険見直しで止まっているのか、家計全体が散らかっているのかで入口を分ける</text>
+
+  <rect class="card" x="80" y="180" width="1040" height="130"/>
+  <text x="120" y="235" class="h2 main">まず確認すること</text>
+  <text x="120" y="278" class="body sub">今の悩みは「保険だけ」か、「家計全体」か</text>
+
+  <path class="line" d="M600 310 L600 370"/>
+  <polygon class="arrow" points="600,392 586,366 614,366"/>
+
+  <rect class="green" x="100" y="410" width="450" height="250"/>
+  <text x="130" y="460" class="h2 main">無料保険相談が先の人</text>
+  <text x="130" y="505" class="body sub">・保険だけ先に整理したい</text>
+  <text x="130" y="545" class="body sub">・保険料を下げたい</text>
+  <text x="130" y="585" class="body sub">・学資保険や死亡保障で迷う</text>
+  <text x="130" y="630" class="label main">今の保障と保険料を確認する</text>
+
+  <rect class="blue" x="650" y="410" width="450" height="250"/>
+  <text x="680" y="460" class="h2 main">FP相談が先の人</text>
+  <text x="680" y="505" class="body sub">・保険とNISAがごちゃつく</text>
+  <text x="680" y="545" class="body sub">・固定費全体を見直したい</text>
+  <text x="680" y="585" class="body sub">・教育費と老後資金の順番が決まらない</text>
+  <text x="680" y="630" class="label main">家計全体の優先順位を整理する</text>
+
+  <path class="line" d="M430 340 C390 370 330 380 260 410"/>
+  <path class="line" d="M770 340 C810 370 870 380 940 410"/>
+</svg>
