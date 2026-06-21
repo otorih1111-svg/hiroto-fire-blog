@@ -168,7 +168,10 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 「モヤモヤをひとりで解消しようとするより、まとめて聞いた方が早い」は本当だった。
 
 → 実際にFP相談に行ったときの話はこちら  
-[FP無料相談は怪しい？実際に使ってみた正直レビュー](/blog/2026-05-21-fp-sodan-review/)
+[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+
+保険だけ先に整理したいなら、無料保険相談をどう使うかも別記事にまとめた。  
+[無料保険相談はしつこい？シングルファーザーの体験ベースで整理](/blog/2026-06-21-hoken-sodan-single-father/)
 
 [FP無料相談を使ってみる（PR）](https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM)
 
@@ -191,7 +194,11 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 → 固定費全体を見直したい人はこちらも  
 [固定費を見直したら月1万円以上浮いた話](/blog/koteihi-minaoshi/)
 
-保険の設計が自分で判断しにくいなら、FP無料相談でまとめて確認するのが一番早いです。
+保険の設計が自分で判断しにくいなら、FP無料相談で家計ごと確認するのが一番早いです。
+
+「家計全体まではまだいいから、まず保険の設計だけ整理したい」という人は
+[無料保険相談はしつこい？シングルファーザーの体験ベースで整理](/blog/2026-06-21-hoken-sodan-single-father/)
+もどうぞ。
 
 <div class="character-note">
   <img src="/images/characters/hiroto/hiroto-character-nod.png" alt="納得してうなずくひろと" />

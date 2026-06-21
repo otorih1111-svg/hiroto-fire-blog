@@ -124,6 +124,10 @@ ogImage: "/images/thumbnails/gakushihoken-junior-nisa-single-father.png"
 
 「自分の家計でどちらが合っているか判断できない」という人は、FPに相談してみるのが一番早い。家計全体を見た上でアドバイスをもらえるので、独りで悩むより答えが出やすい。
 
+教育費と保険の関係を先に整理したい人は
+[無料保険相談はしつこい？シングルファーザーの体験ベースで整理](/blog/2026-06-21-hoken-sodan-single-father/)
+も合わせてどうぞ。
+
 
 → 固定費全体を見直したい人はこちら
 [固定費を見直したら月1万円以上浮いた話](/blog/koteihi-minaoshi/)
@@ -158,7 +162,8 @@ A. 2027年からこどもNISAという新制度が始まる予定。それまで
 **Q. S&P500一本でいいですか？**
 A. ぼくはそうしている。世界経済の中心であるアメリカ市場に集中投資するシンプルな方法で、長期で見た実績も高い。ただ投資は自己責任なので、気になる人はFPに相談するのが一番。
 
+→ 家計ごと相談したい人へ：[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+
 [DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)
 
 ぼく自身が使っているのは楽天証券です。<a href="https://ad2.trafficgate.net/t/r/928/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>からも申し込めます。
-
