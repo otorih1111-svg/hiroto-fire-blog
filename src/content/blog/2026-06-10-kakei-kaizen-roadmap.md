@@ -33,8 +33,6 @@ ogImage: '/images/thumbnails/2026-06-10-kakei-kaizen-roadmap.png'
 
 LINEでは「節約・投資・副業」の中から、今の自分に必要なテーマだけ選べるようにしている。
 
-先に選びたい方は、[LINEで気になるテーマを選ぶ](https://line.me/R/ti/p/%40103khwdx)からどうぞ。
-
 <div class="character-note">
   <img src="/images/characters/hiroto/hiroto-character-thinking.png" alt="考え込みながら整理しているひろとのイラスト" />
   <p class="character-note-bubble">順番を間違えると、全部空回りするんですよね。</p>
@@ -154,6 +152,12 @@ FPに相談したら、月8,605円になった。差額、6,400円。
 
 「節約・投資・副業」のうち、投資のテーマが気になる人には、この振り分けの考え方をもう少し詳しくLINEで届けている。気になる方は、記事の最後から見てみてほしい。
 
+「固定費も投資額も気になるけど、結局どこから手をつけるべきか決めきれない」
+というときは、
+[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+を先に読むほうが早いかもしれません。
+ぼくも、保険とNISAを同時に考えて止まった時期に一度整理してもらいました。
+
 家計の今の数字から見たい人は、
 [父子家庭の生活費、月23万円を全公開した話](/blog/2026-06-07-fushikatei-kakeibo-koukai/)
 も先に読んでみてください。
@@ -201,19 +205,6 @@ FPに相談したら、月8,605円になった。差額、6,400円。
 
 今の自分に近いところから、1つずつでいいと思っている。
 
-<div style="background:linear-gradient(135deg,#00c300 0%,#00a500 100%);border-radius:8px;padding:20px 24px;margin:24px 0;color:#fff;text-align:center;">
-  <p style="margin:0 0 10px;font-weight:700;font-size:1.05rem;line-height:1.6;">
-    「節約」「投資」「副業」、気になるテーマだけ選んで届きます
-  </p>
-  <p style="margin:0 0 14px;font-size:0.85rem;opacity:0.92;line-height:1.7;">
-    通信費や保険から見直したい人、NISAの増やし方で止まっている人、副業の最初の一歩を知りたい人へ。ぼくが実際にやった順番と失敗を、そのままLINEで届けます。
-  </p>
-  <a href="https://line.me/R/ti/p/%40103khwdx" target="_blank" rel="noopener noreferrer"
-     style="display:inline-block;background:#fff;color:#00a500;font-weight:700;font-size:0.9rem;padding:12px 22px;border-radius:6px;text-decoration:none;">
-    LINEで気になるテーマを選ぶ（無料）
-  </a>
-</div>
-
 ---
 
 ## 3ステップを図にすると
@@ -247,9 +238,17 @@ LINEでは、この流れを最初から全部読む必要はない。
 
 それぞれの詳しい記事は[家計管理まとめ記事](/blog/kakeibo-matome/)からも読める。
 
-もし「自分の場合はどのステップから始めるべきか」「通信費からやるべきか、NISAを先に増やすべきか」「副業はまだ早いのか」が気になるなら、下のLINEから「節約・投資・副業」の中で気になるテーマを選んでみてほしい。
+もし
+「自分の場合はどのステップから始めるべきか」
+「通信費からやるべきか、NISAを先に増やすべきか」
+「副業はまだ早いのか」
+が気になるなら、
+まずは次の2本が近いです。
 
-ぼくが実際にやった手順を、失敗込みで届けます。
+- 家計全体を整理したい人へ
+  [FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+- 固定費から順番に見たい人へ
+  [固定費見直しで月1.2万円浮いた話【順番と結果】](/blog/koteihi-minaoshi/)
 
 完璧にできた話ではなく、ちょっとずつ前に進めた話として読んでもらえたらうれしいです。
 
