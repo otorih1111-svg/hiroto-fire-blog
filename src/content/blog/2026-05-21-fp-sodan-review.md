@@ -211,6 +211,19 @@ FP相談は、答えを買う場所ではなく、整理して決める場所で
   <a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談してみる</a>
 </div>
 
+「いきなり1つに決めるのは少し不安」という人もいると思います。
+ぼくもそのタイプです。
+
+そんなときは、本命を1つ決めつつ、比較候補を1つだけ持っておくと気がラクでした。
+FP相談系で比較候補にしやすいのは、`FPカフェ` です。
+
+<div class="affiliate-box">
+  <span class="affiliate-label">PR</span>
+  <h4>FPカフェも比較候補に入れておく</h4>
+  <p>家計、保険、資産形成をまとめて無料相談したい人向け。ファインドイットとあわせて、相談先を比較して決めたい人に合います。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B614J+5851HE+5ULO+5Z6WX" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">FPカフェの無料相談を見てみる</a>
+</div>
+
 ---
 
 ## 注意点もあります
@@ -275,6 +288,11 @@ FP相談は、答えを買う場所ではなく、整理して決める場所で
   <p>ぼくは、保険だけでなく家計全体の順番を整理したくて使いました。離婚後の家計や教育費の不安がごちゃついている人には合いやすいです。</p>
   <a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">無料で相談の流れを見てみる</a>
 </div>
+
+比較してから決めたい人は、`FPカフェ` も見ておくと判断しやすいです。
+家計全体を相談したい方向けという意味では近い案件でした。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B614J+5851HE+5ULO+5Z6WX" rel="nofollow sponsored noopener noreferrer">FPカフェの無料相談を見てみる</a>
 
 保険の見直しが不安なら、先に[離婚後に保険を見直したら月6,400円安くなった話](/blog/hoken-minaoshi-single-father/)を読むと話がつながりやすいです。
 固定費全体を先に見たいなら[固定費見直しで月1.2万円浮いた話【順番と結果】](/blog/koteihi-minaoshi/)も合わせてどうぞ。
