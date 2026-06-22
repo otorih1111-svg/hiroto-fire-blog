@@ -165,3 +165,5 @@ ATM・振込手数料は条件を満たさないと有料になる。
 - [楽天カードを10年使った話｜無印・ゴールド・プレミアム・ブラック・ビジネスカード全比較](/blog/rakuten-card-review/)
 - [楽天証券でNISA積立を設定した手順【実録】](/blog/rakuten-shoken-tsumitate-settei/)
 - [副業の確定申告まとめ｜20万円ルール・ソフト選び・準備の流れ](/blog/2026-05-27-fukugyo-kakuteishinkoku-matome/)
+
+法人や事業用の口座候補も見ておきたいなら、[おすすめサービス一覧](/recommended-services/)に入口をまとめています。
