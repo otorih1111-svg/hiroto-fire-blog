@@ -166,4 +166,4 @@ ATM・振込手数料は条件を満たさないと有料になる。
 - [楽天証券でNISA積立を設定した手順【実録】](/blog/rakuten-shoken-tsumitate-settei/)
 - [副業の確定申告まとめ｜20万円ルール・ソフト選び・準備の流れ](/blog/2026-05-27-fukugyo-kakuteishinkoku-matome/)
 
-法人や事業用の口座候補も見ておきたいなら、[おすすめサービス一覧](/recommended-services/)に入口をまとめています。
+法人や事業用の口座候補も見ておきたいなら、[GMOあおぞらネット銀行に乗り換えた理由｜楽天銀行の法人口座を見直した話](/blog/gmo-aozora-houjin-koza/)もどうぞ。

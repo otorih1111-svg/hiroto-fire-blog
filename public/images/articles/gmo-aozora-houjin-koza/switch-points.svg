@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="960" height="540" fill="#f5f9ff" rx="24"/>
+  <text x="480" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#113b78">楽天銀行の法人口座から乗り換えた理由</text>
+  <text x="480" y="84" text-anchor="middle" font-size="15" fill="#4b5f7a">社会保険料用の別口座まで含めて見直したとき、決め手はこの3つだった</text>
+
+  <rect x="70" y="130" width="250" height="300" rx="18" fill="#ffffff" stroke="#b8d1ef" stroke-width="2"/>
+  <rect x="70" y="130" width="250" height="56" rx="18" fill="#1e63b6"/>
+  <text x="195" y="164" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+  <text x="195" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="#113b78">社会保険料等の</text>
+  <text x="195" y="252" text-anchor="middle" font-size="22" font-weight="700" fill="#113b78">自動払い対応</text>
+  <text x="195" y="306" text-anchor="middle" font-size="16" fill="#55657e">社会保険料用の</text>
+  <text x="195" y="334" text-anchor="middle" font-size="16" fill="#55657e">別口座を減らしやすい</text>
+  <text x="195" y="382" text-anchor="middle" font-size="15" fill="#1e63b6" font-weight="700">管理がかなりスッキリする</text>
+
+  <rect x="355" y="130" width="250" height="300" rx="18" fill="#ffffff" stroke="#b8d1ef" stroke-width="2"/>
+  <rect x="355" y="130" width="250" height="56" rx="18" fill="#1e63b6"/>
+  <text x="480" y="164" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+  <text x="480" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="#113b78">振込手数料が安い</text>
+  <text x="480" y="274" text-anchor="middle" font-size="34" font-weight="700" fill="#ff7a00">130円</text>
+  <text x="480" y="304" text-anchor="middle" font-size="15" fill="#55657e">とくとく会員なら121円</text>
+  <text x="480" y="352" text-anchor="middle" font-size="16" fill="#55657e">月10件、20件と増えるほど</text>
+  <text x="480" y="380" text-anchor="middle" font-size="16" fill="#55657e">差が見えやすい</text>
+
+  <rect x="640" y="130" width="250" height="300" rx="18" fill="#ffffff" stroke="#b8d1ef" stroke-width="2"/>
+  <rect x="640" y="130" width="250" height="56" rx="18" fill="#1e63b6"/>
+  <text x="765" y="164" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="765" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="#113b78">新設法人は</text>
+  <text x="765" y="252" text-anchor="middle" font-size="22" font-weight="700" fill="#113b78">月20回無料</text>
+  <text x="765" y="304" text-anchor="middle" font-size="16" fill="#55657e">設立1年未満なら</text>
+  <text x="765" y="332" text-anchor="middle" font-size="16" fill="#55657e">最大12カ月つづく</text>
+  <text x="765" y="380" text-anchor="middle" font-size="15" fill="#1e63b6" font-weight="700">最初の固定費を軽くしやすい</text>
+
+  <rect x="120" y="458" width="720" height="44" rx="22" fill="#113b78"/>
+  <text x="480" y="486" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">結論：ぼくは「口座の数が増えないこと」と「毎月回しやすいこと」で選び直した</text>
+</svg>
