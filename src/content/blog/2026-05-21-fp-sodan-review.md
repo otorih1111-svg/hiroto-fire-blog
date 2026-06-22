@@ -313,7 +313,7 @@ FP無料相談は、答えを買う場所ではなく、整理して決める場
 **PR**
 
 家計・保険見直し・NISAをまとめて整理したいなら、  
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで無料相談を予約する</a>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">今の家計をまとめて無料相談する</a>
 
 くらいの一歩で十分です。  
 申し込む前は「今いちばん不安なこと」「固定費」「保険やNISA」の3つだけメモしておくと話しやすいです。

@@ -343,7 +343,7 @@ ogImage: "/images/thumbnails/2026-06-21-hoken-sodan-single-father.png"
 **PR**
 
 まずは今の保障が合っているか確認したいなら、  
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" rel="nofollow sponsored noopener noreferrer">保険の設計を無料で見直す</a>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" rel="nofollow sponsored noopener noreferrer">プロに保険を無料でチェックしてもらう</a>
 
 という使い方がやりやすいです。  
 商品を即決する場というより、保険の設計を整理する場として向いています。
