@@ -310,12 +310,13 @@ FP無料相談は、答えを買う場所ではなく、整理して決める場
 
 この3つがあれば、最初の相談はちゃんと回りました。
 
-<div class="affiliate-box">
-  <span class="affiliate-label">PR</span>
-  <h4>ぼくが使ったのはファインドイットです</h4>
-  <p>家計・保険見直し・NISAをまとめて整理したい人向け。ぼくは「何から手をつけるか分からない」状態を整理したくて、成果報酬型のFP無料相談サービスであるファインドイットを使いました。申し込む前は「今いちばん不安なこと」「固定費」「保険やNISA」の3つだけメモしておくと話しやすいです。</p>
-  <a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">ファインドイットで無料相談を予約する</a>
-</div>
+**PR**
+
+家計・保険見直し・NISAをまとめて整理したいなら、  
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで無料相談を予約する</a>
+
+くらいの一歩で十分です。  
+申し込む前は「今いちばん不安なこと」「固定費」「保険やNISA」の3つだけメモしておくと話しやすいです。
 
 相談後に実行するなら、次はこの順番がやりやすいです。
 

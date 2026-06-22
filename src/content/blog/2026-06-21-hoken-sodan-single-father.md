@@ -175,12 +175,13 @@ ogImage: "/images/thumbnails/2026-06-21-hoken-sodan-single-father.png"
 
 このあたりに当てはまるなら、かなり相性がいいです。
 
-<div class="affiliate-box">
-  <span class="affiliate-label">PR</span>
-  <h4>無料保険相談【みんなの生命保険アドバイザー】</h4>
-  <p>保険だけ先に整理したい人向け。離婚後・子育て中の保障見直しにも対応で、オンライン相談もできます。</p>
-  <a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">今の保険を無料で整理する</a>
-</div>
+**PR**
+
+保険だけ先に整理したいなら、  
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" rel="nofollow sponsored noopener noreferrer">今の保険を無料で整理する</a>
+
+という入り方で十分です。  
+離婚後や子育て中の保障見直しにも合いやすく、オンライン相談にも対応しています。
 
 ---
 
@@ -339,11 +340,12 @@ ogImage: "/images/thumbnails/2026-06-21-hoken-sodan-single-father.png"
 [FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)へ。  
 保険だけでなく、固定費やNISAまでまとめて整理したい人向けです。
 
-<div class="affiliate-box">
-  <span class="affiliate-label">PR</span>
-  <h4>無料保険相談【みんなの生命保険アドバイザー】</h4>
-  <p>まずは今の保障が合っているか確認したい人向け。商品を即決する場というより、保険の設計を整理する場として使いやすいです。</p>
-  <a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" class="affiliate-btn" rel="nofollow sponsored noopener noreferrer">保険の設計を無料で見直す</a>
-</div>
+**PR**
+
+まずは今の保障が合っているか確認したいなら、  
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3XB3+BXV136+5SIO+5YJRM" rel="nofollow sponsored noopener noreferrer">保険の設計を無料で見直す</a>
+
+という使い方がやりやすいです。  
+商品を即決する場というより、保険の設計を整理する場として向いています。
 
 ※本記事はアフィリエイト広告を含みます。
