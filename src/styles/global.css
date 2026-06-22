@@ -717,6 +717,13 @@ main {
   transition: background 0.2s;
 }
 
+.prose a.affiliate-btn,
+.affiliate-box .affiliate-btn {
+  color: #fff;
+  border-bottom: none;
+  text-decoration: none;
+}
+
 .affiliate-btn:hover {
   background: var(--color-accent-hover);
   text-decoration: none;
