@@ -269,13 +269,12 @@ FP無料相談は、答えを買う場所ではなく、整理して決める場
 ぼくの場合は、完全に前者でした。
 「調べてから決める」のつもりが、「調べたまま止まる」になっていました。
 
-**PR**
-
-家計・保険・NISAの順番を一度整理したいなら、  
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで無料相談の空き日程を確認する</a>
-
-だけ先にやっておくのもありです。  
-予約前に迷うなら、「今いちばん不安なこと」を1行メモするだけで十分です。
+<div class="cta-note-box">
+  <p class="cta-note-label">PR</p>
+  <p class="cta-note-title">家計・保険・NISAの順番を一度整理したいなら、ここから空き日程だけ見れば十分です。</p>
+  <p><a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで無料相談の空き日程を確認する</a></p>
+  <p>予約前に迷うなら、「今いちばん不安なこと」を1行メモするだけで大丈夫です。</p>
+</div>
 
 ---
 
@@ -352,13 +351,12 @@ FP無料相談は、答えを買う場所ではなく、整理して決める場
 きれいに書く必要はないです。
 相談員の人は作文の採点はしません。当たり前ですが、ここは少し気が楽でした。
 
-**PR**
-
-家計・保険見直し・NISAをまとめて整理したいなら、  
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで家計をまとめて無料相談する</a>
-
-くらいの一歩で十分です。  
-申し込む前は「今いちばん不安なこと」「固定費」「保険やNISA」の3つだけメモしておくと話しやすいです。
+<div class="cta-note-box">
+  <p class="cta-note-label">PR</p>
+  <p class="cta-note-title">家計・保険見直し・NISAをまとめて整理したいなら、この一歩で十分です。</p>
+  <p><a href="https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM" rel="nofollow sponsored noopener noreferrer">ファインドイットで家計をまとめて無料相談する</a></p>
+  <p>申し込む前は「今いちばん不安なこと」「固定費」「保険やNISA」の3つだけメモしておくと話しやすいです。</p>
+</div>
 
 相談後に実行するなら、次はこの順番がやりやすいです。
 

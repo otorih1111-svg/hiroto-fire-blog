@@ -604,6 +604,38 @@ main {
   line-height: 1.75;
 }
 
+.prose .cta-note-box {
+  margin: 1.5em 0 1.8em;
+  padding: 1rem 1.1rem;
+  border: 1px solid #b8d8c2;
+  border-radius: 16px;
+  background: #f7fbf8;
+}
+
+.prose .cta-note-label {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(45, 122, 79, 0.1);
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.prose .cta-note-title {
+  margin: 0 0 0.55rem;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.prose .cta-note-box p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .prose .route-choice-grid {
     grid-template-columns: 1fr;
