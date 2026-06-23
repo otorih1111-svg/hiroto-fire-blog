@@ -178,7 +178,20 @@ A. 2027年からこどもNISAという新制度が始まる予定。それまで
 **Q. S&P500一本でいいですか？**
 A. ぼくはそうしている。世界経済の中心であるアメリカ市場に集中投資するシンプルな方法で、長期で見た実績も高い。ただ投資は自己責任なので、気になる人はFPに相談するのが一番。
 
-→ 家計ごと相談したい人へ：[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+家計ごと整理したいなら、次の2本が入りやすいです。
+
+<div class="route-choice-grid">
+  <a class="route-choice-card" href="/blog/2026-05-21-fp-sodan-review/">
+    <span class="route-choice-label">家計全体なら</span>
+    <strong class="route-choice-title">FP相談で順番ごと整理する</strong>
+    <span class="route-choice-desc">教育費、保険、NISAのバランスまでまとめて見たい人向けです。</span>
+  </a>
+  <a class="route-choice-card" href="/blog/2026-06-21-hoken-sodan-single-father/">
+    <span class="route-choice-label">保障だけなら</span>
+    <strong class="route-choice-title">保険相談で中身を確認する</strong>
+    <span class="route-choice-desc">学資保険より先に、今の保障が合っているか確認したい人向けです。</span>
+  </a>
+</div>
 
 [DMM株でNISA口座を開設する（PR）](https://px.a8.net/svt/ejp?a8mat=4B5PG5+43NKCI+1WP2+15ORS2)
 

@@ -238,13 +238,20 @@ LINEでは、この流れを最初から全部読む必要はない。
 
 それぞれの詳しい記事は[家計管理まとめ記事](/blog/kakeibo-matome/)からも読める。
 
-家計・保険・NISAの順番ごと整理したいなら
-[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
-へ。
+家計の順番をもう少し具体的に整理したいなら、この2本が近いです。
 
-保険の保障だけ先に決め切りたいなら
-[無料保険相談はしつこい？シングルファーザーの体験ベースで整理](/blog/2026-06-21-hoken-sodan-single-father/)
-のほうが近いです。
+<div class="route-choice-grid">
+  <a class="route-choice-card" href="/blog/2026-05-21-fp-sodan-review/">
+    <span class="route-choice-label">家計全体なら</span>
+    <strong class="route-choice-title">FP相談で順番ごと整理する</strong>
+    <span class="route-choice-desc">固定費、保険、NISAをどう並べるかまで相談したい人向けです。</span>
+  </a>
+  <a class="route-choice-card" href="/blog/2026-06-21-hoken-sodan-single-father/">
+    <span class="route-choice-label">保障だけなら</span>
+    <strong class="route-choice-title">保険相談で中身を確認する</strong>
+    <span class="route-choice-desc">保障の決め方だけ先に整理したい人は、こっちのほうが近いです。</span>
+  </a>
+</div>
 
 もし
 「自分の場合はどのステップから始めるべきか」
