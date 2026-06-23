@@ -242,13 +242,13 @@ LINEでは、この流れを最初から全部読む必要はない。
 
 <div class="route-choice-grid">
   <a class="route-choice-card" href="/blog/2026-05-21-fp-sodan-review/">
-    <span class="route-choice-label">家計全体なら</span>
-    <strong class="route-choice-title">FP相談で順番ごと整理する</strong>
+    <span class="route-choice-label">まず全体整理したい</span>
+    <strong class="route-choice-title">家計・保険・NISAをまとめて相談する</strong>
     <span class="route-choice-desc">固定費、保険、NISAをどう並べるかまで相談したい人向けです。</span>
   </a>
   <a class="route-choice-card" href="/blog/2026-06-21-hoken-sodan-single-father/">
-    <span class="route-choice-label">保障だけなら</span>
-    <strong class="route-choice-title">保険相談で中身を確認する</strong>
+    <span class="route-choice-label">保険だけ見たい</span>
+    <strong class="route-choice-title">今の保障が合っているか確認する</strong>
     <span class="route-choice-desc">保障の決め方だけ先に整理したい人は、こっちのほうが近いです。</span>
   </a>
 </div>
