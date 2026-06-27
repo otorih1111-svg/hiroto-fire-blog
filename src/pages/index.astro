@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
-const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://s.lmes.jp/landing-qr/2009994906-9dewDufs?uLand=JP6AS4';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
