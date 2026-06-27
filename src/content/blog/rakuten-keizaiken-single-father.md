@@ -95,12 +95,18 @@ docomoで月7,000円台払っていたのが、楽天モバイルに乗り換え
 
 楽天銀行と連携（マネーブリッジ）すると、普通預金の金利が年0.1%になる。銀行に預けてるだけで金利が上がるのは単純にうれしい。
 
-→ 詳しくはこちら
-[投資が怖かった自分が「ほったらかし投資」を始めた話【新NISA・楽天証券】](/blog/hottarakashi-investment-nisa-begin/)
+→ まず全体像から知りたい人はこちら
+[ほったらかし投資の始め方｜投資が怖かった40代の新NISA入門](/blog/hottarakashi-investment-nisa-begin/)
 
 今の積立額をどう決めたかは、
 [月1万円でも意味ある？新NISAを始めた40代シングルファーザーの話](/blog/nisa-tsumitate-40dai/)
 に書いています。
+
+楽天証券で始める流れを先に見たいなら、この順番で読むと迷いにくいです。
+
+1. [楽天証券とSBI証券どっちがいい？NISA初心者の40代が選んだ理由](/blog/rakuten-shoken-naze-eranda/)
+2. [楽天証券の口座開設にかかった時間と手順【実録】](/blog/rakuten-shoken-koza-kaisetsu/)
+3. [楽天証券のNISA積立設定のやり方｜初心者が迷った手順を実録](/blog/rakuten-shoken-tsumitate-settei/)
 
 ### 楽天銀行（個人・法人）
 
@@ -214,7 +220,11 @@ docomoからの乗り換えだけで月6,000円以上浮いた。
 
 まずは楽天カード1枚から始めてみるだけで、日常の支払いが少しずつ変わり始める。
 
-順番の最後にある「楽天証券でNISAを始める」だけ先にやりたい人は、<a href="https://ad2.trafficgate.net/t/r/928/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>から申し込めます。
+順番の最後にある「楽天証券でNISAを始める」だけ先にやりたい人は、まず
+[楽天証券とSBI証券どっちがいい？NISA初心者の40代が選んだ理由](/blog/rakuten-shoken-naze-eranda/)
+で比較してから、
+<a href="https://ad2.trafficgate.net/t/r/1230/738/317992_397371" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天証券でNISA口座を開設する（PR）</a>
+へ進むと流れがつかみやすいです。
 
 ---
 
