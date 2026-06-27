@@ -223,6 +223,16 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 いきなり申し込むのが重いなら、先に体験談を1本読むだけでも十分です。
 ぼくも、記事を読んで流れが見えてからのほうが動きやすかったです。
 
+特に、
+
+- 保険だけでなくNISAの積立額も気になる
+- 教育費と生活防衛費のバランスが不安
+- 離婚後の家計全体を一度並べ直したい
+
+このどれかがあるなら、保険単体より先に
+[FP無料相談は怪しい？40代シングルファーザーの体験談](/blog/2026-05-21-fp-sodan-review/)
+から入る方が合いやすいです。
+
 <div class="character-note">
   <img src="/images/characters/hiroto/hiroto-character-nod.png" alt="納得してうなずくひろと" />
   <p class="character-note-bubble">ひとりで決め切れないときは、<strong>家計全体ごと見てもらう</strong>ほうが早かったです。</p>
