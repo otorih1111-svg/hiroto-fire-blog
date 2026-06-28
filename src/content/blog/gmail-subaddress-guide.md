@@ -6,7 +6,7 @@ category: 節約・家計
 tags: ["Gmail", "サブアドレス", "エイリアス", "メールアドレス", "40代"]
 draft: false
 affiliate: false
-ogImage: "/images/thumbnails/gmail-subaddress-guide.svg"
+ogImage: "/images/thumbnails/gmail-subaddress-guide.png"
 ---
 
 Gmailの `+` を使ったエイリアス、便利そうだけど、最初は少しわかりにくい。
