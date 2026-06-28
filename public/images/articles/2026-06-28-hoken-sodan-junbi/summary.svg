@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">無料保険相談の前に準備する3つのメモ</title>
+  <desc id="desc">無料保険相談の予約前に、保険料、不安なこと、子どもの年齢の3つだけメモすると進みやすいことを示す図解</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f3eb; }
+      .card { fill: #fffdfa; stroke: #d9ccb9; stroke-width: 2; rx: 24; ry: 24; }
+      .accent { fill: #2f5d50; }
+      .accentSoft { fill: #e6f0eb; stroke: #8fb29f; stroke-width: 2; rx: 18; ry: 18; }
+      .subSoft { fill: #f7eadf; stroke: #d2ae8b; stroke-width: 2; rx: 18; ry: 18; }
+      .line { stroke: #7ca08f; stroke-width: 4; fill: none; stroke-linecap: round; }
+      .arrow { fill: #7ca08f; }
+      .main { fill: #21352d; }
+      .sub { fill: #4a6257; }
+      .muted { fill: #6e6a63; }
+      text { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
+      .h1 { font-size: 40px; font-weight: 700; }
+      .h2 { font-size: 30px; font-weight: 700; }
+      .body { font-size: 24px; }
+      .small { font-size: 20px; }
+      .label { font-size: 22px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="card" x="48" y="44" width="1104" height="672"/>
+
+  <text x="92" y="108" class="h1 main">無料保険相談の前に</text>
+  <text x="92" y="156" class="h1 main">メモするのは3つで十分</text>
+  <text x="92" y="198" class="body muted">完璧な家計簿より、最初の会話が回る最低限をそろえる</text>
+
+  <rect class="accentSoft" x="92" y="258" width="300" height="188"/>
+  <text x="126" y="316" class="h2 accent">1. 今の保険料</text>
+  <text x="126" y="360" class="body sub">月いくら払っているか</text>
+  <text x="126" y="398" class="small muted">細かい約款より先にここ</text>
+
+  <rect class="accentSoft" x="450" y="258" width="300" height="188"/>
+  <text x="484" y="316" class="h2 accent">2. 不安なこと</text>
+  <text x="484" y="360" class="body sub">安くしすぎないか</text>
+  <text x="484" y="398" class="small muted">教育費か就業不能かを1つ</text>
+
+  <rect class="accentSoft" x="808" y="258" width="300" height="188"/>
+  <text x="842" y="316" class="h2 accent">3. 子どもの年齢</text>
+  <text x="842" y="360" class="body sub">家族構成の前提になる</text>
+  <text x="842" y="398" class="small muted">保障の考え方が変わる</text>
+
+  <path class="line" d="M600 456 L600 520"/>
+  <polygon class="arrow" points="600,544 586,516 614,516"/>
+
+  <rect class="subSoft" x="180" y="566" width="840" height="96"/>
+  <text x="600" y="620" text-anchor="middle" class="label main">この3つがあれば、予約フォームで止まりにくい</text>
+  <text x="600" y="652" text-anchor="middle" class="small sub">保険の知識を全部そろえてから行く場所ではない</text>
+</svg>
