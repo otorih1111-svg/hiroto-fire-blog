@@ -7,6 +7,9 @@
 1. **サムネイル（OGP画像）を作成する**
    - サイズ：`1200 x 675`
    - 保存先：`/public/images/thumbnails/[slug].png`
+   - **frontmatterの `ogImage` は必ず `.png` を指定する（`.svg`をそのまま指定しない）**
+     - 理由：X/Threads/Facebook/LINEなど主要SNSはOGP画像にSVGを対応していないため、SNSシェア時にサムネイルが表示されなくなる
+     - SVGで下書きを作った場合は、最後に必ずPNGへ変換してから`ogImage`に設定する（変換例：`rsvg-convert -w 1200 -h 675 input.svg -o output.png`）
    - frontmatterの `ogImage` に正しいパスを入れる
    - タイトルとカテゴリが一目でわかるデザインにする
 
