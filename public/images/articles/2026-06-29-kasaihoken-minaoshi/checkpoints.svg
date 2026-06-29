@@ -1,0 +1,34 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">火災保険見直しで見るべき3ポイント</title>
+  <desc id="desc">火災保険見直しでは補償内容、地震保険込みの総額、賃貸か持ち家かの3点を見ると判断しやすいことを示す図</desc>
+  <rect width="1200" height="760" fill="#F7F4EE"/>
+  <text x="88" y="96" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="38" font-weight="700" fill="#21352D">火災保険見直しで先に見る3ポイント</text>
+  <text x="88" y="138" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="500" fill="#496457">安さだけで決めるより、条件の違いを先に並べると判断しやすい</text>
+
+  <rect x="88" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="128" y="228" width="86" height="86" rx="20" fill="#EAF4ED"/>
+  <text x="171" y="283" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#2F6F4E">1</text>
+  <text x="128" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">補償内容で</text>
+  <text x="128" y="402" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">差が動く</text>
+  <text x="128" y="462" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">水災や家財の付け方で</text>
+  <text x="128" y="492" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">見え方がかなり変わる</text>
+
+  <rect x="442" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="482" y="228" width="86" height="86" rx="20" fill="#FFF4E8"/>
+  <text x="525" y="283" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#A85A12">2</text>
+  <text x="482" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">地震保険込みの</text>
+  <text x="482" y="402" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">総額で見る</text>
+  <text x="482" y="462" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">火災だけ安く見えても</text>
+  <text x="482" y="492" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">地震込みだと印象が変わる</text>
+
+  <rect x="796" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="836" y="228" width="86" height="86" rx="20" fill="#E8F0FF"/>
+  <text x="879" y="283" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#2E5AA7">3</text>
+  <text x="836" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">賃貸か持ち家かで</text>
+  <text x="836" y="402" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">効き方が違う</text>
+  <text x="836" y="462" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">賃貸は指定保険を外すだけで</text>
+  <text x="836" y="492" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">下がることも多い</text>
+
+  <rect x="176" y="642" width="848" height="70" rx="24" fill="#21352D"/>
+  <text x="600" y="686" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700" fill="#FFFDFC">比較して「今のままでいい」と分かるだけでも見直しの価値はある</text>
+</svg>

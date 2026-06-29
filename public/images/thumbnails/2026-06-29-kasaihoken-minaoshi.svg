@@ -1,0 +1,22 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#F6F1E8"/>
+  <rect x="78" y="72" width="1044" height="531" rx="36" fill="#FFFDFC"/>
+  <rect x="190" y="108" width="260" height="48" rx="24" fill="#2F6F4E"/>
+  <text x="320" y="139" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#FFFDFC">火災保険 見直し</text>
+
+  <text x="182" y="242" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="56" font-weight="700" fill="#21352D">今の契約が</text>
+  <text x="182" y="322" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="56" font-weight="700" fill="#21352D">得だった話</text>
+  <text x="182" y="394" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#496457">5社比較で年29,624円差</text>
+
+  <rect x="738" y="168" width="280" height="310" rx="28" fill="#EAF4ED" stroke="#7BA889" stroke-width="4"/>
+  <rect x="770" y="208" width="216" height="120" rx="16" fill="#FFFFFF" stroke="#7BA889" stroke-width="3"/>
+  <text x="878" y="250" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#21352D">比較して見えた</text>
+  <text x="878" y="286" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#21352D">3つのこと</text>
+
+  <text x="780" y="372" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#21352D">・26年契約が逆に得</text>
+  <text x="780" y="410" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#21352D">・地震保険込みで見る</text>
+  <text x="780" y="448" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#21352D">・賃貸は見直しやすい</text>
+
+  <rect x="182" y="468" width="350" height="78" rx="20" fill="#FFF4E8" stroke="#D08A42" stroke-width="3"/>
+  <text x="357" y="515" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700" fill="#A85A12">下がる前提で動くと損</text>
+</svg>
