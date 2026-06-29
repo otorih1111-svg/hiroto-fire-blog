@@ -1,0 +1,30 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">地震保険が向く人と迷う人の判断図</title>
+  <desc id="desc">持ち家か賃貸か、家計負担、安心感の3軸で地震保険を考えるための図</desc>
+  <rect width="1200" height="760" fill="#F7F4EE"/>
+  <text x="88" y="96" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="38" font-weight="700" fill="#21352D">地震保険を考えるときの3つの軸</text>
+  <text x="88" y="138" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18" font-weight="500" fill="#496457">必要か不要かを断定するより、自分の家計に合うかで見ると整理しやすい</text>
+  <rect x="88" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="128" y="228" width="88" height="88" rx="22" fill="#EAF4ED"/>
+  <text x="172" y="285" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#2F6F4E">1</text>
+  <text x="128" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">持ち家か</text>
+  <text x="128" y="404" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">賃貸か</text>
+  <text x="128" y="466" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">持ち家は建物ダメージの重さが</text>
+  <text x="128" y="496" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">判断に直結しやすい</text>
+  <rect x="442" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="482" y="228" width="88" height="88" rx="22" fill="#FFF4E8"/>
+  <text x="526" y="285" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#A85A12">2</text>
+  <text x="482" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">家計で持てる</text>
+  <text x="482" y="404" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">金額か</text>
+  <text x="482" y="466" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">年額を月割りすると</text>
+  <text x="482" y="496" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">判断しやすくなる</text>
+  <rect x="796" y="196" width="316" height="410" rx="28" fill="#FFFFFF" stroke="#7BA889" stroke-width="4"/>
+  <rect x="836" y="228" width="88" height="88" rx="22" fill="#E8F0FF"/>
+  <text x="880" y="285" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#2E5AA7">3</text>
+  <text x="836" y="362" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">不安が少し</text>
+  <text x="836" y="404" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="700" fill="#21352D">軽くなるか</text>
+  <text x="836" y="466" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">安心感まで含めて</text>
+  <text x="836" y="496" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="19" font-weight="500" fill="#496457">残す判断もある</text>
+  <rect x="166" y="642" width="868" height="70" rx="24" fill="#21352D"/>
+  <text x="600" y="686" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="28" font-weight="700" fill="#FFFDFC">必要か不要かより「この金額で不安を持つか」がぼくには判断しやすかった</text>
+</svg>
