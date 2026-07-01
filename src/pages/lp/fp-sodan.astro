@@ -1,0 +1,169 @@
+---
+import '../../styles/global.css';
+
+const GA_ID = import.meta.env.PUBLIC_GA_ID || 'G-LRT5BKLD8Y';
+const AFFILIATE_URL = 'https://px.a8.net/svt/ejp?a8mat=4B3MEP+DK7HLM+5MAS+5YJRM';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>FP無料相談｜ひろとからのご案内</title>
+
+  <!-- Google Analytics -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+  <script define:vars={{ GA_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+      background: #f9f9f7;
+      color: #333;
+      line-height: 1.8;
+    }
+    .lp-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .lp-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .lp-header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    .lp-header p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    h1 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .story {
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .story p {
+      margin-bottom: 16px;
+    }
+    .highlight {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 16px;
+      margin-bottom: 32px;
+      font-size: 0.9rem;
+    }
+    .highlight ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .highlight li {
+      margin-bottom: 6px;
+    }
+    .cta-area {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .cta-btn {
+      display: block;
+      background: #2e7d32;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 24px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .cta-note {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .reassure {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 32px;
+    }
+    .reassure p {
+      margin-bottom: 8px;
+    }
+    .footer-note {
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lp-wrap">
+
+    <div class="lp-header">
+      <img src="/images/hiroto-avatar.png" alt="ひろと" />
+      <p>ひろとからのご案内</p>
+    </div>
+
+    <h1>半年動けなかったお金の不安が<br>FP相談の1時間で整理できました</h1>
+
+    <div class="story">
+      <p>LINEでお伝えした通り、ぼくも最初は全然動けなかったです。</p>
+      <p>教育費、保険、NISA、老後——全部「やらなきゃ」と思いながら、半年間ほとんど何もできなかった。</p>
+      <p>転機になったのはFP無料相談でした。<br>「全部同時にやろうとしなくていい、まず優先順位を決めましょう」という一言で、詰まっていたものが動き始めました。</p>
+    </div>
+
+    <div class="highlight">
+      <strong>相談翌日に片付いたこと</strong>
+      <ul>
+        <li>保険の受取人を変更（5分・電話のみ）</li>
+        <li>NISAの口座開設を申し込み（15分・スマホのみ）</li>
+        <li>毎月の余力を紙に書き出した（10分）</li>
+      </ul>
+    </div>
+
+    <div class="cta-area">
+      <a href={AFFILIATE_URL} rel="nofollow sponsored noopener noreferrer" class="cta-btn">
+        無料相談の空き日程を確認する →
+      </a>
+      <p class="cta-note">相談料0円・強引な勧誘なし・オンライン可</p>
+    </div>
+
+    <div class="reassure">
+      <p>「無料って怪しくない？」とぼくも思いました。</p>
+      <p>仕組みは成果報酬型で、相談後に保険や金融商品の契約が成立したときに運営側に報酬が入ります。相談だけして契約しなくても費用はかかりません。</p>
+      <p>ぼく自身が使って、強引な勧誘はなかったです。</p>
+    </div>
+
+    <div class="cta-area">
+      <a href={AFFILIATE_URL} rel="nofollow sponsored noopener noreferrer" class="cta-btn">
+        無料相談の空き日程を確認する →
+      </a>
+      <p class="cta-note">教育費・保険・老後をまとめて相談できます</p>
+    </div>
+
+    <div class="footer-note">
+      <p>※この案内はぼく個人の体験をもとにしています。相談内容・成果には個人差があります。</p>
+      <p style="margin-top:8px;">© hiroto-fire.com</p>
+    </div>
+
+  </div>
+</body>
+</html>
