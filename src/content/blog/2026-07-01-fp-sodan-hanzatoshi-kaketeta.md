@@ -65,7 +65,7 @@ FP無料相談に行ったのは、息子に「パパ、おじいちゃんにな
 子どもの一言って、大人のサボりを容赦なく暴くんですよね。可愛いのに、恐ろしいです。
 
 <div class="character-note">
-  <img src="/images/characters/son/son-character-neutral.png" alt="息子" />
+  <img src="/images/characters/son/son-character-laughing.png" alt="息子" />
   <p class="character-note-bubble">「パパ、おじいちゃんになったらどこに住むの？」——この一言で、ぼくの半年が動いた。</p>
 </div>
 
