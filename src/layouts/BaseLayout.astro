@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-import LineBanner from '../components/LineBanner.astro';
-import LineBannerSide from '../components/LineBannerSide.astro';
+import MailBanner from '../components/MailBanner.astro';
+import MailBannerSide from '../components/MailBannerSide.astro';
 import { getCollection } from 'astro:content';
 
 interface Props {
@@ -26,7 +26,6 @@ const siteTitle = 'ひろとの家計改善とFIREブログ';
 const siteUrl   = 'https://hiroto-fire.com';
 
 const GA_ID    = import.meta.env.PUBLIC_GA_ID    || 'G-LRT5BKLD8Y';
-const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
 
 const fullTitle   = title === siteTitle ? title : `${title} | ${siteTitle}`;
 // OGP画像: ogImageが指定されていればそれを使い、なければデフォルト
@@ -132,8 +131,8 @@ const popularPosts = [
         <!-- サイドバー -->
         <aside class="sidebar-col">
 
-          <!-- LINE CTAウィジェット（最上部・最重要） -->
-          <LineBannerSide />
+          <!-- メルマガCTAウィジェット（最上部・最重要） -->
+          <MailBannerSide />
 
           <!-- プロフィールカード -->
           <div class="sidebar-profile-card">
@@ -211,7 +210,7 @@ const popularPosts = [
       </div>
     </main>
 
-    <LineBanner />
+    <MailBanner />
 
     <!-- フッター -->
     <footer class="site-footer">

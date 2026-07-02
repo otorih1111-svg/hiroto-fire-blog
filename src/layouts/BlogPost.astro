@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import LineCTA from '../components/LineCTA.astro';
+import MailCTA from '../components/MailCTA.astro';
 
 interface Props {
   title: string;
@@ -99,7 +99,7 @@ const dateStr = pubDate.toLocaleDateString('ja-JP', {
         <slot />
       </div>
 
-      <LineCTA />
+      <MailCTA />
 
       {tags.length > 0 && (
         <div class="post-tags">

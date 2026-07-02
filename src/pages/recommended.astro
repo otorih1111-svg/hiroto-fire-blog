@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B3Y';
 
 const sections = [
   {
@@ -216,10 +216,10 @@ const sections = [
     <section class="recommended-closing">
       <h2>詳しい体験談はこれから整理します</h2>
       <p>
-        どれを使ったか、どこで迷ったか、失敗しそうになった点は、記事とLINEのPDFにまとめていきます。
+        どれを使ったか、どこで迷ったか、失敗しそうになった点は、記事とメルマガにまとめていきます。
         まずは自分の家計と副業に本当に必要だったものだけ、正直に残していきます。
       </p>
-      <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="line-cta-link">LINEでPDFを受け取る</a>
+      <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="line-cta-link">メルマガで受け取る</a>
     </section>
   </div>
 </BaseLayout>

@@ -1,0 +1,99 @@
+---
+// フッター上のフルバナー：メルマガ登録誘導
+const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B3Y';
+---
+
+<div class="mail-banner-full">
+  <div class="mail-banner-full-inner">
+    <div class="mail-banner-full-left">
+      <span class="mail-banner-badge">📩 完全無料</span>
+      <p class="mail-banner-title">「あと月1万円」を一緒に作りませんか？</p>
+      <p class="mail-banner-desc">固定費を見直して月1万円以上浮いた話。月3,000円から月1万円に増やした話。AI副業で試行錯誤した話。シングルファーザーのひろとが実際にやった「節約→投資→副業」の流れを、失敗込みで正直にメールで届けます。</p>
+    </div>
+    <div class="mail-banner-full-right">
+      <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="mail-banner-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 10 6 10-6"/>
+        </svg>
+        メルマガに登録する（無料）
+      </a>
+      <p class="mail-banner-note">登録は30秒・いつでも解除OK</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.mail-banner-full {
+  background: linear-gradient(135deg, #2d7a4f 0%, #1e5c39 100%);
+  color: #fff;
+  padding: 32px 24px;
+  margin-top: 48px;
+}
+.mail-banner-full-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.mail-banner-full-left { flex: 1; min-width: 0; }
+.mail-banner-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.mail-banner-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.mail-banner-desc {
+  font-size: 0.82rem;
+  opacity: 0.88;
+  line-height: 1.65;
+}
+.mail-banner-full-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.mail-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #1e5c39;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 13px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mail-banner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: #14432a;
+}
+.mail-banner-note {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .mail-banner-full-inner { flex-direction: column; gap: 20px; }
+  .mail-banner-full-right { width: 100%; }
+  .mail-banner-btn { width: 100%; justify-content: center; }
+}
+</style>

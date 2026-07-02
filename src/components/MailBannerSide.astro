@@ -1,0 +1,126 @@
+---
+// サイドバー用メルマガ登録ウィジェット（コンバージョン特化）
+const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B3Y';
+---
+
+<div class="mail-side-widget">
+  <div class="mail-side-header">
+    <span class="mail-side-badge">📩 完全無料</span>
+  </div>
+  <div class="mail-side-body">
+    <div class="mail-side-report">
+      <span class="mail-side-report-icon">💌</span>
+      <div>
+        <p class="mail-side-report-title">「あと月1万円」を一緒に</p>
+        <p class="mail-side-report-sub">節約→投資→副業の順で<br>「月1万円」を作る過程を正直にメールで配信</p>
+      </div>
+    </div>
+    <ul class="mail-side-list">
+      <li>✅ 節約・投資・副業のリアルな体験談</li>
+      <li>✅ 失敗・出費も全部正直に公開</li>
+      <li>✅ 登録30秒・いつでも解除OK</li>
+    </ul>
+    <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="mail-side-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m2 7 10 6 10-6"/>
+      </svg>
+      メルマガに登録する（無料）
+    </a>
+    <p class="mail-side-note">登録は30秒・いつでも解除OK</p>
+  </div>
+</div>
+
+<style>
+.mail-side-widget {
+  background: linear-gradient(160deg, #2d7a4f 0%, #1e5c39 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.mail-side-header {
+  padding: 10px 14px 0;
+}
+
+.mail-side-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  padding: 2px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.mail-side-body {
+  padding: 10px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mail-side-report {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255,255,255,0.12);
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.mail-side-report-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+.mail-side-report-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.mail-side-report-sub {
+  font-size: 0.68rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.mail-side-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mail-side-list li {
+  font-size: 0.72rem;
+  opacity: 0.92;
+}
+
+.mail-side-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #fff;
+  color: #1e5c39;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 11px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.mail-side-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: #14432a;
+}
+
+.mail-side-note {
+  text-align: center;
+  font-size: 0.65rem;
+  opacity: 0.75;
+  margin-top: -4px;
+}
+</style>

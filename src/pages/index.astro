@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
-const LINE_URL = import.meta.env.PUBLIC_LINE_URL || 'https://line.me/R/ti/p/%40103khwdx';
+const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B3Y';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -49,11 +49,12 @@ const topicLinks = [
         息子にお金のことで遠慮させたくなくて、固定費の見直しや投資を続けています。
       </p>
       <div class="hero-cta-btns">
-        <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="hero-line-btn">
-          <svg width="20" height="20" viewBox="0 0 48 48" fill="currentColor">
-            <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+        <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="hero-mail-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 7 10 6 10-6"/>
           </svg>
-          月1万円改善プロジェクトに参加する（無料）
+          メルマガに登録する（無料）
         </a>
         <a href="/blog/about-hiroto/" class="hero-sub-btn">ひろとについて</a>
       </div>
@@ -134,12 +135,13 @@ const topicLinks = [
 
 </BaseLayout>
 
-<div class="sticky-line-bar">
-  <a href={LINE_URL} target="_blank" rel="noopener noreferrer" class="sticky-line-btn">
-    <svg width="18" height="18" viewBox="0 0 48 48" fill="currentColor">
-      <path d="M24 4C12.95 4 4 11.84 4 21.5c0 5.8 3.2 10.96 8.18 14.3-.36 1.3-1.3 4.76-1.5 5.5-.24.9.33 .89.7.65.3-.2 4.8-3.26 6.74-4.57A22.7 22.7 0 0 0 24 39c11.05 0 20-7.84 20-17.5S35.05 4 24 4z"/>
+<div class="sticky-mail-bar">
+  <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="sticky-mail-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m2 7 10 6 10-6"/>
     </svg>
-    月1万円改善プロジェクトに参加する（無料）
+    メルマガに登録する（無料）
   </a>
 </div>
 
@@ -196,25 +198,25 @@ const topicLinks = [
   margin-bottom: 8px;
 }
 
-.hero-line-btn {
+.hero-mail-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #00b900;
+  background: #2d7a4f;
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(0,185,0,0.3);
+  box-shadow: 0 3px 12px rgba(45,122,79,0.3);
   transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
 }
 
-.hero-line-btn:hover {
-  background: #00a000;
+.hero-mail-btn:hover {
+  background: #1e5c39;
   transform: translateY(-2px);
-  box-shadow: 0 5px 16px rgba(0,185,0,0.4);
+  box-shadow: 0 5px 16px rgba(45,122,79,0.4);
   text-decoration: none;
   color: #fff;
 }
@@ -452,7 +454,7 @@ const topicLinks = [
 .cat-link-emoji { font-size: 0.9rem; }
 
 /* スマホ用スティッキーボタン */
-.sticky-line-bar {
+.sticky-mail-bar {
   display: none;
   position: fixed;
   bottom: 0;
@@ -466,29 +468,29 @@ const topicLinks = [
   box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
 }
 
-.sticky-line-btn {
+.sticky-mail-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
-  background: #00b900;
+  background: #2d7a4f;
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 13px;
   border-radius: 6px;
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(0,185,0,0.3);
+  box-shadow: 0 3px 12px rgba(45,122,79,0.3);
 }
 
-.sticky-line-btn:hover {
+.sticky-mail-btn:hover {
   text-decoration: none;
   color: #fff;
 }
 
 @media (max-width: 900px) {
-  .sticky-line-bar { display: block; }
+  .sticky-mail-bar { display: block; }
 }
 
 @media (max-width: 640px) {
