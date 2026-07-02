@@ -6,16 +6,16 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 <div class="mail-cta-block">
   <div class="mail-cta-inner">
     <div class="mail-cta-left">
-      <span class="mail-cta-badge">📩 完全無料</span>
-      <p class="mail-cta-title">「あと月1万円」を一緒に作りませんか？</p>
+      <span class="mail-cta-badge">📩 登録特典あり</span>
+      <p class="mail-cta-title">登録後すぐ受け取れます。「毎月1万円を浮かせるために最初にやったこと」</p>
       <p class="mail-cta-desc">
-        固定費を見直して<strong>月1万円以上浮いた話</strong>。月3,000円から月1万円に増やした話。AI副業で試行錯誤した話。<br>
-        シングルファーザーのひろとが実際にやった「節約→投資→副業」の流れを、失敗込みで正直にメールで届けます。
+        楽天モバイル・楽天ひかり・楽天カード・楽天証券・保険の整理まで。<br>
+        シングルファーザーのひろとが副業の前に家計を立て直した実体験を、PDFにまとめました。
       </p>
       <ul class="mail-cta-benefits">
+        <li>✅ 登録後すぐ受け取れる特典PDFつき</li>
         <li>✅ 節約・投資・副業のリアルな体験談が届く</li>
         <li>✅ 失敗・出費まで全部正直に公開</li>
-        <li>✅ 登録は30秒・いつでも解除OK</li>
       </ul>
     </div>
     <div class="mail-cta-right">
@@ -24,7 +24,7 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="m2 7 10 6 10-6"/>
         </svg>
-        メルマガに登録する（無料）
+        特典PDFを無料で受け取る
       </a>
     </div>
   </div>
@@ -32,11 +32,13 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 
 <style>
 .mail-cta-block {
-  background: linear-gradient(135deg, #2d7a4f 0%, #1e5c39 100%);
-  border-radius: 8px;
+  background: linear-gradient(135deg, #2d7a4f 0%, #246744 55%, #1c5235 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
   padding: 24px;
   margin: 28px 0;
   color: #fff;
+  box-shadow: 0 10px 24px rgba(30, 92, 57, 0.14);
 }
 
 .mail-cta-inner {
@@ -49,7 +51,8 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 
 .mail-cta-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.16);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 3px 10px;
@@ -98,20 +101,21 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
   align-items: center;
   gap: 8px;
   background: #fff;
-  color: #1e5c39;
+  color: #1d5637;
   font-weight: 700;
   font-size: 0.88rem;
-  padding: 12px 18px;
-  border-radius: 6px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 67, 42, 0.08);
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  transition: transform 0.15s, box-shadow 0.15s, color 0.15s;
   text-decoration: none;
 }
 
 .mail-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.22);
   text-decoration: none;
   color: #14432a;
 }

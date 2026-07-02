@@ -4,123 +4,146 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 ---
 
 <div class="mail-side-widget">
-  <div class="mail-side-header">
-    <span class="mail-side-badge">📩 完全無料</span>
-  </div>
-  <div class="mail-side-body">
-    <div class="mail-side-report">
-      <span class="mail-side-report-icon">💌</span>
-      <div>
-        <p class="mail-side-report-title">「あと月1万円」を一緒に</p>
-        <p class="mail-side-report-sub">節約→投資→副業の順で<br>「月1万円」を作る過程を正直にメールで配信</p>
-      </div>
-    </div>
-    <ul class="mail-side-list">
-      <li>✅ 節約・投資・副業のリアルな体験談</li>
-      <li>✅ 失敗・出費も全部正直に公開</li>
-      <li>✅ 登録30秒・いつでも解除OK</li>
-    </ul>
-    <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="mail-side-btn">
+  <span class="mail-side-badge">FREE GUIDE</span>
+  <p class="mail-side-kicker">登録後すぐ受け取れます</p>
+  <h2 class="mail-side-title">「あと月1万円」を作る流れを、無料でまとめました</h2>
+  <p class="mail-side-desc">
+    固定費見直し → 投資 → 副業の順で、シングルファーザーのひろとが実際にやった流れを、失敗込みで正直に届けます。
+  </p>
+  <ul class="mail-side-list">
+    <li><strong>特典PDFつき</strong> 登録後すぐ受け取れます</li>
+    <li><strong>体験談ベース</strong> 節約・投資・副業を無理なく追えます</li>
+    <li><strong>きれいごとなし</strong> 失敗や出費もそのまま書いています</li>
+  </ul>
+  <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="mail-side-btn">
+    <span class="mail-side-btn-icon" aria-hidden="true">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2"/>
         <path d="m2 7 10 6 10-6"/>
       </svg>
-      メルマガに登録する（無料）
-    </a>
-    <p class="mail-side-note">登録は30秒・いつでも解除OK</p>
-  </div>
+    </span>
+    無料PDFを受け取る
+  </a>
+  <p class="mail-side-note">30秒で登録・いつでも解除OK</p>
 </div>
 
 <style>
 .mail-side-widget {
-  background: linear-gradient(160deg, #2d7a4f 0%, #1e5c39 100%);
-  border-radius: 6px;
-  overflow: hidden;
-  color: #fff;
-}
-
-.mail-side-header {
-  padding: 10px 14px 0;
+  background:
+    radial-gradient(circle at top right, rgba(45,122,79,0.12), transparent 42%),
+    linear-gradient(180deg, #fbfdfb 0%, #f4faf6 100%);
+  border: 1px solid rgba(45,122,79,0.16);
+  border-radius: 20px;
+  padding: 18px 18px 20px;
+  color: #214831;
+  box-shadow: 0 14px 34px rgba(29, 86, 55, 0.08);
 }
 
 .mail-side-badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  background: rgba(255,255,255,0.2);
-  padding: 2px 10px;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-.mail-side-body {
-  padding: 10px 14px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mail-side-report {
-  display: flex;
-  gap: 10px;
+  display: inline-flex;
   align-items: center;
-  background: rgba(255,255,255,0.12);
-  padding: 8px 10px;
-  border-radius: 5px;
-}
-
-.mail-side-report-icon { font-size: 1.6rem; flex-shrink: 0; }
-
-.mail-side-report-title {
-  font-size: 0.82rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
   font-weight: 700;
-  margin-bottom: 2px;
+  color: #2d7a4f;
+  background: rgba(45,122,79,0.1);
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
 }
 
-.mail-side-report-sub {
-  font-size: 0.68rem;
-  opacity: 0.85;
-  line-height: 1.4;
+.mail-side-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2d7a4f;
+  margin-bottom: 8px;
+}
+
+.mail-side-title {
+  font-size: 1.18rem;
+  line-height: 1.45;
+  color: #20352a;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.mail-side-desc {
+  font-size: 0.82rem;
+  line-height: 1.82;
+  color: #567063;
+  margin-bottom: 14px;
 }
 
 .mail-side-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 9px;
+  margin-bottom: 16px;
 }
 
 .mail-side-list li {
-  font-size: 0.72rem;
-  opacity: 0.92;
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.77rem;
+  line-height: 1.65;
+  color: #365243;
+}
+
+.mail-side-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #2d7a4f;
+}
+
+.mail-side-list strong {
+  color: #214831;
 }
 
 .mail-side-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  background: #fff;
-  color: #1e5c39;
+  gap: 9px;
+  width: 100%;
+  background: linear-gradient(135deg, #2d7a4f 0%, #246744 55%, #1c5235 100%);
+  color: #fff;
   font-weight: 700;
-  font-size: 0.85rem;
-  padding: 11px;
-  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
   text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 12px 24px rgba(45,122,79,0.18);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.mail-side-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
 }
 
 .mail-side-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 16px 28px rgba(45,122,79,0.24);
   text-decoration: none;
-  color: #14432a;
+  color: #fff;
 }
 
 .mail-side-note {
   text-align: center;
-  font-size: 0.65rem;
-  opacity: 0.75;
-  margin-top: -4px;
+  font-size: 0.68rem;
+  color: #6f877a;
+  margin-top: 10px;
 }
 </style>
