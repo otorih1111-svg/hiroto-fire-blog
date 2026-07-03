@@ -1,0 +1,191 @@
+---
+import '../../styles/global.css';
+
+const GA_ID = import.meta.env.PUBLIC_GA_ID || 'G-LRT5BKLD8Y';
+const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B3Y';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>無料特典PDF｜ひろとからのご案内</title>
+
+  <!-- Google Analytics -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+  <script define:vars={{ GA_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+      background: #f9f9f7;
+      color: #333;
+      line-height: 1.8;
+    }
+    .lp-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .lp-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .lp-header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    .lp-header p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    h1 {
+      font-size: 1.35rem;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #1d5637;
+    }
+    .story {
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .story p {
+      margin-bottom: 16px;
+    }
+    .highlight {
+      background: #f3faf6;
+      border-left: 4px solid #2d7a4f;
+      padding: 16px;
+      margin-bottom: 32px;
+      font-size: 0.9rem;
+    }
+    .highlight strong {
+      color: #1d5637;
+    }
+    .highlight ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .highlight li {
+      margin-bottom: 6px;
+    }
+    .cta-area {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .cta-btn {
+      display: block;
+      background: linear-gradient(135deg, #2d7a4f 0%, #246744 55%, #1c5235 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 24px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .cta-note {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .reassure {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 32px;
+    }
+    .reassure p {
+      margin-bottom: 8px;
+    }
+    .footer-note {
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lp-wrap">
+
+    <div class="lp-header">
+      <img src="/images/hiroto-avatar.png" alt="ひろと" />
+      <p>ひろとからのご案内</p>
+    </div>
+
+    <h1>「毎月1万円を浮かせるために<br>最初にやったこと」を先に受け取ってください</h1>
+
+    <div class="story">
+      <p>40代でシングルファーザーになって、家計を1人で背負うことになりました。</p>
+      <p>最初にやったのは投資でも副業でもなく、固定費の見直しでした。派手さはないですが、生活を立て直すにはあれが最初で正解でした。</p>
+      <p>その時に実際にやった順番を、PDFと7日間のメールにまとめました。</p>
+    </div>
+
+    <div class="highlight">
+      <strong>特典PDFの中身（固定費を下げる5つのステップ）</strong>
+      <ul>
+        <li>STEP1 通信費：スマホ代が月7,000円台→1,078円になった流れ</li>
+        <li>STEP2 ネット代：光回線の見直しで月2,300円下がった話</li>
+        <li>STEP3 楽天カードで家計を整理しやすくした話</li>
+        <li>STEP4 浮いたお金で新NISAの入口を作った話</li>
+        <li>STEP5 保険を「削る」前に「整理」した方がいい理由</li>
+      </ul>
+    </div>
+
+    <div class="cta-area">
+      <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="cta-btn">
+        誰でもできる月1万円ガイドを受け取る →
+      </a>
+      <p class="cta-note">登録30秒・完全無料・いつでも配信停止できます</p>
+    </div>
+
+    <div class="highlight">
+      <strong>こんな人に向いています</strong>
+      <ul>
+        <li>何から手をつければいいか分からない</li>
+        <li>家計簿が続いたことがない</li>
+        <li>将来のお金と子どものお金が、漠然とずっと不安</li>
+        <li>面倒なことを後回しにしがち</li>
+      </ul>
+      <p style="margin-top:12px;">1つでも当てはまるなら、たぶん役に立ちます。<br>全部当てはまった人は、昔のぼくなので仲間です。</p>
+    </div>
+
+    <div class="reassure">
+      <p>「メルマガって、しつこい売り込みが来るんじゃ…」と思うかもしれません。</p>
+      <p>実際に届くのは、ぼくが固定費・投資・副業の順で進めた体験談です。強引な勧誘はしません。</p>
+      <p>メールの中で、ぼくが実際に使ったサービスを紹介することがあります。その場合は必ず【PR】と明記します。使っていないものは紹介しません。</p>
+      <p>合わないと感じたら、いつでも1クリックで配信停止できます。</p>
+    </div>
+
+    <div class="cta-area">
+      <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="cta-btn">
+        誰でもできる月1万円ガイドを受け取る →
+      </a>
+      <p class="cta-note">固定費見直しの順番が、登録後すぐわかります</p>
+    </div>
+
+    <div class="footer-note">
+      <p>※この案内はぼく個人の体験談・調査に基づく情報です。家計・投資の判断は自己責任でお願いします。</p>
+      <p style="margin-top:8px;">
+        <a href="/blog/about-hiroto/" style="color:#999;">プロフィール</a> ・
+        <a href="/privacy/" style="color:#999;">プライバシーポリシー</a>
+      </p>
+      <p style="margin-top:8px;">© hiroto-fire.com</p>
+    </div>
+
+  </div>
+</body>
+</html>

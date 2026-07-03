@@ -1,0 +1,135 @@
+---
+import '../styles/global.css';
+
+const GA_ID = import.meta.env.PUBLIC_GA_ID || 'G-LRT5BKLD8Y';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>登録ありがとうございます｜ひろとのメルマガ</title>
+
+  <!-- Google Analytics -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+  <script define:vars={{ GA_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    gtag('event', 'generate_lead', { method: 'orange_mail' });
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+      background: #f9f9f7;
+      color: #333;
+      line-height: 1.8;
+    }
+    .lp-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .lp-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .lp-header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #1d5637;
+    }
+    .story {
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .story p {
+      margin-bottom: 16px;
+    }
+    .highlight {
+      background: #f3faf6;
+      border-left: 4px solid #2d7a4f;
+      padding: 16px;
+      margin-bottom: 32px;
+      font-size: 0.9rem;
+    }
+    .highlight strong {
+      color: #1d5637;
+    }
+    .highlight ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .highlight li {
+      margin-bottom: 6px;
+    }
+    .back-btn {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, #2d7a4f 0%, #246744 55%, #1c5235 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+    .footer-note {
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lp-wrap">
+
+    <div class="lp-header">
+      <img src="/images/hiroto-avatar.png" alt="ひろと" />
+    </div>
+
+    <h1>登録ありがとうございます。<br>1通目のメールを送りました</h1>
+
+    <div class="story">
+      <p>数分以内に、ひろと（info@hiroto-fire.com）から特典PDF付きの1通目が届きます。</p>
+      <p>明日から7日間、ぼくが家計を立て直した順番を1日1通ずつ送ります。</p>
+    </div>
+
+    <div class="highlight">
+      <strong>メールが見当たらないときは</strong>
+      <ul>
+        <li>迷惑メールフォルダを確認してください</li>
+        <li>Gmailの方は「プロモーション」タブも確認してください</li>
+        <li>見つけたら「メイン」へ移動しておくと、2通目以降が届きやすくなります</li>
+      </ul>
+    </div>
+
+    <a href="/blog/2026-06-10-kakei-kaizen-roadmap/" class="back-btn">
+      待っている間に：家計改善ロードマップを読む →
+    </a>
+
+    <div class="footer-note">
+      <p>配信はいつでも1クリックで解除できます。</p>
+      <p style="margin-top:8px;">© hiroto-fire.com</p>
+    </div>
+
+  </div>
+</body>
+</html>
