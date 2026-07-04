@@ -535,6 +535,13 @@ FAQは全記事に入れない。
   4. Cloudflareのデプロイ完了を確認
 - サムネを忘れると記事にOGP画像が表示されない
 
+### リダイレクトの追加方法（2026-07-04追加）
+- **`public/_redirects` は直接編集禁止**。prebuildの `scripts/generate_redirects.mjs` が `public/_redirects.base` から毎ビルド再生成するため、直接書いた行はデプロイ時に消える
+- リダイレクトを足すときは `public/_redirects.base` に書く
+- 新しいトップレベルのパス（例：`/x` `/xp` `/t` `/thanks`）を作ったら、`generate_redirects.mjs` の `protectedRoots` にも追加する
+- 転送先URLのクエリ文字列（utm付き）はCloudflare Pagesで問題なく動く（検証済み）
+- SNS短縮リンク（2026-07-04設置）：`/x`＝Xプロフィール→登録LP、`/xp`＝X固定ポスト→登録LP、`/t`＝Threadsプロフィール→家計改善ロードマップ（いずれもutm付き301）
+
 ### デプロイ後の公開通知確認（2026-06-12追加・2026-06-20更新）
 - `main` に push すると GitHub Actions `Google Publish Signals After Deploy` が自動実行される
 - workflow では以下を順に行う
