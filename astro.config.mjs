@@ -6,6 +6,9 @@ import rehypeWrapTables from './scripts/rehype-wrap-tables.mjs';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hiroto-fire.com',
+  server: {
+    port: Number(process.env.PORT) || 4321,
+  },
   integrations: [
     sitemap(),
   ],

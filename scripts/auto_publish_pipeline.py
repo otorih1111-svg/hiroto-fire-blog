@@ -121,9 +121,13 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
 
     response = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=4000,
+        max_tokens=16000,
         messages=[{"role": "user", "content": prompt}]
     )
+
+    if response.stop_reason == "max_tokens":
+        log("⚠️  書き直し結果が max_tokens で打ち切られました。元の記事を維持します。")
+        return False
 
     new_content = "\n".join(
         block.text for block in response.content if hasattr(block, "text")
@@ -134,8 +138,14 @@ def rewrite_article(file_path: Path, score_result: dict) -> bool:
     if fence_match:
         new_content = fence_match.group(1).strip()
 
-    # frontmatterが含まれているか確認
+    # 前置き文がついて返ってきた場合に備え、最初の "---" 以降を本文として扱う
     if not new_content.startswith("---"):
+        frontmatter_start = new_content.find("\n---")
+        if frontmatter_start != -1:
+            new_content = new_content[frontmatter_start + 1:].strip()
+
+    # frontmatterが壊れていないか確認（開始・終了の --- が揃っているか）
+    if not new_content.startswith("---") or new_content.count("---") < 2:
         log("⚠️  書き直し結果にfrontmatterがありません。元の記事を維持します。")
         return False
 
