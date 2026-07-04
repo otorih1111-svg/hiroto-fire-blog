@@ -23,6 +23,7 @@ const protectedRoots = new Set([
   'roadmap',
   't',
   'thanks',
+  'tp',
   'x',
   'xp',
 ]);
