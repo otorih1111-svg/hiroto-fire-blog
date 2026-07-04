@@ -21,6 +21,10 @@ const protectedRoots = new Set([
   'recommended-books',
   'recommended-services',
   'roadmap',
+  't',
+  'thanks',
+  'x',
+  'xp',
 ]);
 
 function parseFrontmatter(source) {

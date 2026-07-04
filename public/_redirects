@@ -9,11 +9,6 @@
 /roadmap /blog/2026-06-10-kakei-kaizen-roadmap/ 301
 /roadmap/ /blog/2026-06-10-kakei-kaizen-roadmap/ 301
 
-# Temporary diagnostics for query-string destinations (remove after test).
-/qtest1 /lp/present/ 301
-/qtest2 /lp/present/?a=b 301
-/qtest3 /lp/present/?a=b&c=d 301
-
 # SNS short links (utm-tagged funnel entrances).
 /x /lp/present/?utm_source=x&utm_medium=bio 301
 /x/ /lp/present/?utm_source=x&utm_medium=bio 301
