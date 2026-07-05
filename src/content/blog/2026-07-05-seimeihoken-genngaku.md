@@ -6,6 +6,8 @@ category: 節約・家計
 tags: ["生命保険", "保険見直し", "固定費見直し", "新NISA", "シングルファーザー"]
 draft: false
 affiliate: true
+image: "/images/thumbnails/hoken-minaoshi-single-father.png"
+ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 ---
 「生命保険って、一回見直したら終わりではないんだな。」
 
@@ -137,9 +139,9 @@ affiliate: true
 
 ## 40代シングルファーザーが見る生命保険料の相場は？公式データの目安
 
-<p style="text-align:center;">
+<figure class="article-figure article-figure--small">
   <img src="/images/characters/hiroto/hiroto-character-thinking.png" alt="保険料の相場を考えるひろとのイラスト" width="150" />
-</p>
+</figure>
 
 「自分が払いすぎなのか、少なすぎなのか分からない。」
 
@@ -177,9 +179,9 @@ affiliate: true
 
 ## 子どもの年齢で、シングルファーザーの生命保険の保障額の決め方はかなり変わる
 
-<p style="text-align:center;">
+<figure class="article-figure article-figure--small">
   <img src="/images/characters/family/family-character-father-pointing-son-listening.png" alt="親子で将来のお金を考えるイラスト" width="190" />
-</p>
+</figure>
 
 ここも生命保険文化センターの2024年度「生命保険に関する全国実態調査」が参考になります。
 
@@ -209,39 +211,33 @@ affiliate: true
 
 ざっくり棒グラフで見ると、こんなイメージです。
 
-<svg viewBox="0 0 760 250" width="100%" role="img" aria-label="子どもの年齢別 必要生活資金総額の比較グラフ">
-  <style>
-    .chart-label { fill: #234; font-size: 14px; }
-    .chart-value { fill: #1f6f46; font-size: 13px; font-weight: 700; }
-    .chart-bar { fill: #2d7a4f; }
-    .chart-grid { stroke: #d9e7dd; stroke-width: 1; }
-  </style>
-  <line x1="170" y1="30" x2="170" y2="220" class="chart-grid" />
-  <line x1="290" y1="30" x2="290" y2="220" class="chart-grid" />
-  <line x1="410" y1="30" x2="410" y2="220" class="chart-grid" />
-  <line x1="530" y1="30" x2="530" y2="220" class="chart-grid" />
-  <line x1="650" y1="30" x2="650" y2="220" class="chart-grid" />
-
-  <text x="20" y="55" class="chart-label">末子が乳児</text>
-  <rect x="170" y="40" width="510" height="22" rx="11" class="chart-bar" />
-  <text x="690" y="56" class="chart-value">8,503万円</text>
-
-  <text x="20" y="95" class="chart-label">保育園児・幼稚園児</text>
-  <rect x="170" y="80" width="490" height="22" rx="11" class="chart-bar" />
-  <text x="670" y="96" class="chart-value">8,175万円</text>
-
-  <text x="20" y="135" class="chart-label">小・中学生</text>
-  <rect x="170" y="120" width="427" height="22" rx="11" class="chart-bar" />
-  <text x="607" y="136" class="chart-value">7,130万円</text>
-
-  <text x="20" y="175" class="chart-label">高校・短大・大学生</text>
-  <rect x="170" y="160" width="422" height="22" rx="11" class="chart-bar" />
-  <text x="602" y="176" class="chart-value">7,050万円</text>
-
-  <text x="20" y="215" class="chart-label">就学終了</text>
-  <rect x="170" y="200" width="349" height="22" rx="11" class="chart-bar" />
-  <text x="529" y="216" class="chart-value">5,824万円</text>
-</svg>
+<div class="article-chart" role="img" aria-label="子どもの年齢別 必要生活資金総額の比較グラフ">
+  <div class="article-chart-row">
+    <span class="article-chart-label">末子が乳児</span>
+    <div class="article-chart-track"><span class="article-chart-bar" style="width: 100%"></span></div>
+    <span class="article-chart-value">8,503万円</span>
+  </div>
+  <div class="article-chart-row">
+    <span class="article-chart-label">保育園児・幼稚園児</span>
+    <div class="article-chart-track"><span class="article-chart-bar" style="width: 96.1%"></span></div>
+    <span class="article-chart-value">8,175万円</span>
+  </div>
+  <div class="article-chart-row">
+    <span class="article-chart-label">小・中学生</span>
+    <div class="article-chart-track"><span class="article-chart-bar" style="width: 83.9%"></span></div>
+    <span class="article-chart-value">7,130万円</span>
+  </div>
+  <div class="article-chart-row">
+    <span class="article-chart-label">高校・短大・大学生</span>
+    <div class="article-chart-track"><span class="article-chart-bar" style="width: 82.9%"></span></div>
+    <span class="article-chart-value">7,050万円</span>
+  </div>
+  <div class="article-chart-row">
+    <span class="article-chart-label">就学終了</span>
+    <div class="article-chart-track"><span class="article-chart-bar" style="width: 68.5%"></span></div>
+    <span class="article-chart-value">5,824万円</span>
+  </div>
+</div>
 
 この数字を見ると、
 **子どもが大きくなるほど、必要保障額の考え方が少しずつ下がっていく**
@@ -255,9 +251,9 @@ affiliate: true
 
 ## 生命保険を減額していいか迷ったら見る3つのチェック
 
-<p style="text-align:center;">
+<figure class="article-figure article-figure--small">
   <img src="/images/characters/hiroto/hiroto-character-memo.png" alt="チェックポイントをメモするひろとのイラスト" width="150" />
-</p>
+</figure>
 
 「自分も生命保険を減額していいのか」は、
 この3つでざっくり整理しやすいです。
