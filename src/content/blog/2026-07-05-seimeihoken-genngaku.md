@@ -139,9 +139,10 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 ## 40代シングルファーザーが見る生命保険料の相場は？公式データの目安
 
-<figure class="article-figure article-figure--small">
-  <img src="/images/characters/hiroto/hiroto-character-thinking.png" alt="保険料の相場を考えるひろとのイラスト" width="150" />
-</figure>
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-thinking.png" alt="保険料の相場を考えるひろと" />
+  <p class="character-note-bubble">平均を見ると安心というより、<strong>家族構成まで入れないと判断できない</strong>と思いました。</p>
+</div>
 
 「自分が払いすぎなのか、少なすぎなのか分からない。」
 
@@ -179,9 +180,10 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 ## 子どもの年齢で、シングルファーザーの生命保険の保障額の決め方はかなり変わる
 
-<figure class="article-figure article-figure--small">
-  <img src="/images/characters/family/family-character-father-pointing-son-listening.png" alt="親子で将来のお金を考えるイラスト" width="190" />
-</figure>
+<div class="character-note">
+  <img src="/images/characters/family/family-character-father-pointing-son-listening.png" alt="親子で将来のお金を考えるひろと親子" />
+  <p class="character-note-bubble">子どもの年齢が上がると、<strong>必要な保障額の考え方も少しずつ変わる</strong>んですよね。</p>
+</div>
 
 ここも生命保険文化センターの2024年度「生命保険に関する全国実態調査」が参考になります。
 
@@ -251,9 +253,10 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 ## 生命保険を減額していいか迷ったら見る3つのチェック
 
-<figure class="article-figure article-figure--small">
-  <img src="/images/characters/hiroto/hiroto-character-memo.png" alt="チェックポイントをメモするひろとのイラスト" width="150" />
-</figure>
+<div class="character-note">
+  <img src="/images/characters/hiroto/hiroto-character-memo.png" alt="チェックポイントをメモするひろと" />
+  <p class="character-note-bubble">保険を減らす前に、<strong>今の前提が変わっているか</strong>を先に見たほうが整理しやすかったです。</p>
+</div>
 
 「自分も生命保険を減額していいのか」は、
 この3つでざっくり整理しやすいです。
