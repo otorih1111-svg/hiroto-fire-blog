@@ -8,14 +8,14 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featuredDescriptions = {
-  '2026-05-16-fire': 'お金から目を逸らしてきた人へ',
-  'hajimete-no-fukugyo': '成果が出なくて迷っている人へ',
+  '2026-06-10-kakei-kaizen-roadmap': '何から始めるか迷っている人へ',
+  '2026-05-21-fp-sodan-review': 'お金の不安を1時間で整理したい人へ',
   'nisa-tsumitate-40dai': '投資・NISAを始めたい人へ',
 };
 
 const featuredSlugs = [
-  '2026-05-16-fire',
-  'hajimete-no-fukugyo',
+  '2026-06-10-kakei-kaizen-roadmap',
+  '2026-05-21-fp-sodan-review',
   'nisa-tsumitate-40dai',
 ];
 
@@ -118,7 +118,7 @@ const topicLinks = [
     <h2 class="section-title" style="margin-bottom: 0;">新着記事</h2>
     {posts.length > 0 ? (
       <div class="article-list">
-        {posts.map(post => (
+        {posts.slice(0, 12).map(post => (
           <ArticleCard
             title={post.data.title}
             description={post.data.description}
@@ -135,11 +135,37 @@ const topicLinks = [
         <p>まもなく記事を公開します。</p>
       </div>
     )}
+    {posts.length > 12 && (
+      <div class="all-posts-wrap">
+        <a href="/blog/" class="all-posts-link">すべての記事を見る（{posts.length}本） →</a>
+      </div>
+    )}
   </section>
 
 </BaseLayout>
 
 <style>
+.all-posts-wrap {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.all-posts-link {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid rgba(45,122,79,0.35);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.all-posts-link:hover {
+  background: rgba(45,122,79,0.08);
+}
+
 /* ヒーローCTA */
 .hero-cta {
   background:
