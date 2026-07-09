@@ -7,6 +7,10 @@
   --color-accent:       #2d7a4f;
   --color-accent-hover: #235f3e;
   --color-accent-light: #e8f5ee;
+  --color-cta:          #ef7f1a;
+  --color-cta-hover:    #d96d0b;
+  --color-cta-grad:     linear-gradient(135deg, #f79b32 0%, #ef7f1a 55%, #e06f0e 100%);
+  --color-yellow:       #ffd93b;
   --color-line:         #00b900;
   --color-text:         #333333;
   --color-text-muted:   #777777;
@@ -1212,13 +1216,29 @@ main {
    セクション見出し
    ============================================ */
 .section-title {
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 700;
   margin-bottom: 0;
-  padding: 8px 0 8px 12px;
-  border-left: 4px solid var(--color-accent);
+  padding: 10px 20px 10px 38px;
   color: var(--color-text);
-  display: block;
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(29, 86, 55, 0.06);
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-yellow), var(--color-cta));
 }
 
 /* ============================================
