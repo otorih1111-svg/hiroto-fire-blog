@@ -23,10 +23,40 @@ const featuredPosts = featuredSlugs
   .map((slug) => posts.find((post) => post.id === slug || post.data.slug === slug))
   .filter(Boolean);
 
-const topicLinks = [
-  { label: '節約・家計（固定費を見直す）', href: '/category/節約・家計/' },
-  { label: '投資・FIRE（増やす）',       href: '/category/投資・FIRE/' },
-  { label: '副業・AI（稼ぐ）',           href: '/category/副業・AI/' },
+const orderSteps = [
+  {
+    step: 'STEP 1',
+    power: '貯める',
+    title: '節約・家計',
+    sub: '固定費を見直して、毎月の余白を作る',
+    desc: '最初にやるのは節約でも我慢でもなく、固定費の見直し。ぼくはここで月1万円以上の余白ができました。',
+    href: '/category/節約・家計/',
+    firstHref: '/blog/2026-06-10-kakei-kaizen-roadmap/',
+    firstLabel: 'まずこの1本：家計改善ロードマップ',
+    theme: 'theme-save',
+  },
+  {
+    step: 'STEP 2',
+    power: '増やす',
+    title: '投資・FIRE',
+    sub: '浮いたお金を、新NISAでコツコツ働かせる',
+    desc: '余白ができたら、次は月1万円からの積立投資。40代からでも遅くなかった、が正直な結論です。',
+    href: '/category/投資・FIRE/',
+    firstHref: '/blog/nisa-tsumitate-40dai/',
+    firstLabel: 'まずこの1本：新NISA月1万円の結論',
+    theme: 'theme-invest',
+  },
+  {
+    step: 'STEP 3',
+    power: '稼ぐ',
+    title: '副業・AI',
+    sub: '収入の柱を増やす。ここは実録中',
+    desc: '節約と投資が回り始めたら、最後に収入そのものを増やす挑戦。収益0円からの過程を隠さず書いています。',
+    href: '/category/副業・AI/',
+    firstHref: '/blog/2026-05-21-fukugyo-first-10000-roadmap/',
+    firstLabel: 'まずこの1本：最初の1万円を作る順番',
+    theme: 'theme-earn',
+  },
 ];
 ---
 
@@ -85,14 +115,25 @@ const topicLinks = [
     </article>
   </section>
 
-  <section class="topic-nav">
-    <div class="topic-nav-header">
-      <h2 class="section-title" style="margin-bottom: 0;">カテゴリから読む</h2>
-      <p class="topic-nav-desc">家計改善・投資・FIRE・シングルファーザーの暮らしの切り口で探せます。</p>
+  <section class="order-nav">
+    <div class="order-nav-header">
+      <h2 class="section-title" style="margin-bottom: 0;">「お金の順番」で学ぼう</h2>
+      <p class="topic-nav-desc">貯める → 増やす → 稼ぐ。この順番で進めるのが、遠回りしたぼくの結論です。</p>
     </div>
-    <div class="topic-link-list">
-      {topicLinks.map((topic) => (
-        <a href={topic.href} class="topic-link">{topic.label}</a>
+    <div class="order-grid">
+      {orderSteps.map((s) => (
+        <article class={`order-card ${s.theme}`}>
+          <a href={s.href} class="order-banner">
+            <span class="order-step">{s.step}</span>
+            <span class="order-power">{s.power}<span class="order-power-suffix">力</span></span>
+            <span class="order-banner-sub">{s.sub}</span>
+          </a>
+          <div class="order-body">
+            <h3 class="order-title"><a href={s.href}>{s.title}の記事一覧 →</a></h3>
+            <p class="order-desc">{s.desc}</p>
+            <a href={s.firstHref} class="order-first">{s.firstLabel}</a>
+          </div>
+        </article>
       ))}
     </div>
   </section>
@@ -371,48 +412,147 @@ const topicLinks = [
   color: var(--color-text-muted);
 }
 
-.topic-nav {
-  margin-bottom: 20px;
+.order-nav {
+  margin-bottom: 28px;
 }
 
-.topic-nav-header {
+.order-nav-header {
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
-.topic-nav-header .section-title {
+.order-nav-header .section-title {
   flex-shrink: 0;
   white-space: nowrap;
 }
 
-.topic-link-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.topic-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--color-border);
+.order-card {
   background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(29, 86, 55, 0.1);
+}
+
+.order-banner {
+  display: block;
+  padding: 20px 18px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.order-banner:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.theme-save .order-banner {
+  background: linear-gradient(135deg, #2d7a4f 0%, #1c5235 100%);
+}
+
+.theme-invest .order-banner {
+  background: linear-gradient(135deg, #1f6e8c 0%, #14506b 100%);
+}
+
+.theme-earn .order-banner {
+  background: linear-gradient(135deg, #c77b28 0%, #a2601a 100%);
+}
+
+.order-step {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+}
+
+.order-power {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.order-power-suffix {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.order-banner-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.88);
+}
+
+.order-body {
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.order-title {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.order-title a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 600;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  font-weight: 700;
 }
 
-.topic-link:hover {
-  border-color: var(--color-accent);
+.order-title a:hover {
   color: var(--color-accent);
-  background: var(--color-accent-light);
+}
+
+.order-desc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.order-first {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  border: 1px solid rgba(45,122,79,0.3);
+  border-radius: 999px;
+  padding: 7px 14px;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.order-first:hover {
+  background: rgba(45,122,79,0.08);
+  border-color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -439,9 +579,12 @@ const topicLinks = [
   .guide-grid {
     grid-template-columns: 1fr;
   }
-  .topic-nav-header {
+  .order-nav-header {
     flex-direction: column;
     align-items: start;
+  }
+  .order-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
