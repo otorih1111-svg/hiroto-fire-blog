@@ -23,12 +23,6 @@ const featuredPosts = featuredSlugs
   .map((slug) => posts.find((post) => post.id === slug || post.data.slug === slug))
   .filter(Boolean);
 
-const categories = [
-  { name: '節約・家計', emoji: '💰' },
-  { name: '投資・FIRE', emoji: '📈' },
-  { name: '副業・AI',   emoji: '🤖' },
-];
-
 const topicLinks = [
   { label: '節約・家計（固定費を見直す）', href: '/category/節約・家計/' },
   { label: '投資・FIRE（増やす）',       href: '/category/投資・FIRE/' },
@@ -101,16 +95,6 @@ const topicLinks = [
         <a href={topic.href} class="topic-link">{topic.label}</a>
       ))}
     </div>
-  </section>
-
-  <!-- カテゴリナビ -->
-  <section class="category-nav">
-    {categories.map(cat => (
-      <a href={`/category/${cat.name}/`} class="cat-link">
-        <span class="cat-link-emoji">{cat.emoji}</span>
-        {cat.name}
-      </a>
-    ))}
   </section>
 
   <!-- 新着記事 -->
@@ -399,6 +383,11 @@ const topicLinks = [
   margin-bottom: 10px;
 }
 
+.topic-nav-header .section-title {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .topic-link-list {
   display: flex;
   flex-wrap: wrap;
@@ -428,36 +417,6 @@ const topicLinks = [
 }
 
 /* カテゴリナビ */
-.category-nav {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.cat-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 5px 13px;
-  border-radius: 3px;
-  background: var(--color-bg-sub);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 0.78rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.15s;
-}
-
-.cat-link:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
-  text-decoration: none;
-}
-
-.cat-link-emoji { font-size: 0.9rem; }
 
 
 
