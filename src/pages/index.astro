@@ -30,9 +30,11 @@ const orderSteps = [
     title: '節約・家計',
     sub: '固定費を見直して、毎月の余白を作る',
     desc: '最初にやるのは節約でも我慢でもなく、固定費の見直し。ぼくはここで月1万円以上の余白ができました。',
-    href: '/category/節約・家計/',
-    firstHref: '/blog/2026-06-10-kakei-kaizen-roadmap/',
-    firstLabel: 'まずこの1本：家計改善ロードマップ',
+    hubHref: '/blog/2026-06-10-kakei-kaizen-roadmap/',
+    hubLabel: '家計改善ロードマップを読む',
+    catHref: '/category/節約・家計/',
+    img: '/images/characters/hiroto/hiroto-character-memo.png',
+    imgAlt: 'メモを取るひろと',
     theme: 'theme-save',
   },
   {
@@ -41,9 +43,11 @@ const orderSteps = [
     title: '投資・FIRE',
     sub: '浮いたお金を、新NISAでコツコツ働かせる',
     desc: '余白ができたら、次は月1万円からの積立投資。40代からでも遅くなかった、が正直な結論です。',
-    href: '/category/投資・FIRE/',
-    firstHref: '/blog/nisa-tsumitate-40dai/',
-    firstLabel: 'まずこの1本：新NISA月1万円の結論',
+    hubHref: '/blog/nisa-tsumitate-40dai/',
+    hubLabel: '新NISA月1万円の結論を読む',
+    catHref: '/category/投資・FIRE/',
+    img: '/images/characters/hiroto/hiroto-character-confident.png',
+    imgAlt: '自信ありげなひろと',
     theme: 'theme-invest',
   },
   {
@@ -52,9 +56,11 @@ const orderSteps = [
     title: '副業・AI',
     sub: '収入の柱を増やす。ここは実録中',
     desc: '節約と投資が回り始めたら、最後に収入そのものを増やす挑戦。収益0円からの過程を隠さず書いています。',
-    href: '/category/副業・AI/',
-    firstHref: '/blog/2026-05-21-fukugyo-first-10000-roadmap/',
-    firstLabel: 'まずこの1本：最初の1万円を作る順番',
+    hubHref: '/blog/2026-05-21-fukugyo-first-10000-roadmap/',
+    hubLabel: '最初の1万円を作る順番を読む',
+    catHref: '/category/副業・AI/',
+    img: '/images/characters/hiroto/hiroto-character-pc-work.png',
+    imgAlt: 'パソコンで作業するひろと',
     theme: 'theme-earn',
   },
 ];
@@ -123,15 +129,18 @@ const orderSteps = [
     <div class="order-grid">
       {orderSteps.map((s) => (
         <article class={`order-card ${s.theme}`}>
-          <a href={s.href} class="order-banner">
-            <span class="order-step">{s.step}</span>
-            <span class="order-power">{s.power}<span class="order-power-suffix">力</span></span>
-            <span class="order-banner-sub">{s.sub}</span>
+          <a href={s.hubHref} class="order-banner">
+            <span class="order-banner-text">
+              <span class="order-step">{s.step}</span>
+              <span class="order-power">{s.power}<span class="order-power-suffix">力</span></span>
+              <span class="order-banner-sub">{s.sub}</span>
+            </span>
+            <img class="order-banner-img" src={s.img} alt={s.imgAlt} width="64" height="64" loading="lazy" />
           </a>
           <div class="order-body">
-            <h3 class="order-title"><a href={s.href}>{s.title}の記事一覧 →</a></h3>
             <p class="order-desc">{s.desc}</p>
-            <a href={s.firstHref} class="order-first">{s.firstLabel}</a>
+            <a href={s.hubHref} class="order-first">{s.hubLabel} →</a>
+            <a href={s.catHref} class="order-cat">{s.title}の記事一覧 →</a>
           </div>
         </article>
       ))}
@@ -451,10 +460,28 @@ const orderSteps = [
 }
 
 .order-banner {
-  display: block;
-  padding: 20px 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 16px 16px 18px;
   color: #fff;
   text-decoration: none;
+}
+
+.order-banner-text {
+  min-width: 0;
+}
+
+.order-banner-img {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
+  background: rgba(255,255,255,0.92);
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .order-banner:hover {
@@ -487,10 +514,11 @@ const orderSteps = [
 
 .order-power {
   display: block;
-  font-size: 1.7rem;
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .order-power-suffix {
@@ -513,21 +541,6 @@ const orderSteps = [
   flex-direction: column;
   gap: 8px;
   flex: 1;
-}
-
-.order-title {
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-.order-title a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.order-title a:hover {
-  color: var(--color-accent);
 }
 
 .order-desc {
@@ -554,6 +567,20 @@ const orderSteps = [
   background: rgba(45,122,79,0.08);
   border-color: var(--color-accent);
   text-decoration: none;
+}
+
+.order-cat {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  text-align: center;
+}
+
+.order-cat:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 /* カテゴリナビ */
