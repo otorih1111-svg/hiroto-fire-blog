@@ -16,6 +16,7 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
       </ul>
     </div>
     <div class="mail-banner-full-right">
+      <img class="mail-banner-chara" src="/images/characters/family/family-character-together-small-guts.png" alt="" width="96" height="96" loading="lazy" aria-hidden="true" />
       <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="mail-banner-btn">
         <span class="mail-banner-btn-icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -52,8 +53,8 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 .mail-banner-badge {
   display: inline-flex;
   align-items: center;
-  background: rgba(45,122,79,0.1);
-  color: #2d7a4f;
+  background: rgba(255,217,59,0.35);
+  color: #b35c05;
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -112,23 +113,31 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
   border: 1px solid rgba(45,122,79,0.12);
   border-radius: 20px;
 }
+.mail-banner-chara {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 6px 12px rgba(29,86,55,0.14));
+}
+
 .mail-banner-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
-  background: linear-gradient(135deg, #2d7a4f 0%, #246744 55%, #1c5235 100%);
+  background: var(--color-cta-grad);
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
   padding: 15px 18px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
   text-decoration: none;
-  box-shadow: 0 12px 28px rgba(45,122,79,0.18);
+  box-shadow: 0 12px 28px rgba(239,127,26,0.28);
   white-space: nowrap;
-  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
 }
 
 .mail-banner-btn-icon {
@@ -142,7 +151,8 @@ const MAIL_URL = import.meta.env.PUBLIC_MAIL_URL || 'https://mail.os7.biz/add/0B
 }
 .mail-banner-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(45,122,79,0.22);
+  filter: brightness(0.95);
+  box-shadow: 0 16px 32px rgba(239,127,26,0.34);
   text-decoration: none;
   color: #fff;
 }
