@@ -86,7 +86,7 @@ const orderSteps = [
         息子にお金で遠慮させないために。40代シングルファーザーのひろとが、月1万円の余白を作るところから投資・副業まで、遠回りも失敗も含めて正直に発信しています。
       </p>
       <p class="hero-cta-pdf-label">
-        登録特典：「毎月1万円を浮かせるために最初にやったこと」
+        <span class="hero-cta-pdf-marker">登録特典：「毎月1万円を浮かせるために最初にやったこと」</span>
       </p>
       <div class="hero-cta-btns">
         <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" class="hero-mail-btn">
@@ -308,14 +308,18 @@ const orderSteps = [
 }
 
 .hero-cta-pdf-label {
-  display: inline-block;
   font-size: 0.82rem;
   font-weight: 700;
   color: #1d5637;
-  background: linear-gradient(transparent 55%, rgba(255,217,59,0.75) 55%);
-  border-radius: 4px;
-  padding: 6px 4px;
+  line-height: 1.9;
   margin-bottom: 14px;
+}
+
+.hero-cta-pdf-marker {
+  background: linear-gradient(transparent 58%, rgba(255,217,59,0.75) 58%, rgba(255,217,59,0.75) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 2px 4px;
 }
 
 .hero-cta-desc strong {
