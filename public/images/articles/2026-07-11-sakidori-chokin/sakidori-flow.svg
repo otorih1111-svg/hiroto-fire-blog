@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif">
+  <rect width="800" height="470" fill="#FFFFFF"/>
+  <text x="400" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F4D32">先取り貯金の流れ（給料日に自動で分ける）</text>
+
+  <!-- 給料 -->
+  <rect x="300" y="80" width="200" height="64" rx="12" fill="#2d7a4f"/>
+  <text x="400" y="112" text-anchor="middle" font-size="22" font-weight="bold" fill="#FFFFFF">給料（手取り）</text>
+  <text x="400" y="134" text-anchor="middle" font-size="15" fill="#DFF0E6">ぼくの場合 28万円</text>
+
+  <!-- 矢印3本 -->
+  <g stroke="#7CB089" stroke-width="4" fill="none">
+    <path d="M 340 150 C 250 190, 190 210, 165 240"/>
+    <path d="M 400 150 L 400 240"/>
+    <path d="M 460 150 C 550 190, 610 210, 635 240"/>
+  </g>
+  <g fill="#7CB089">
+    <path d="M 165 240 l 2 -16 l 12 10 z"/>
+    <path d="M 400 240 l -8 -14 h 16 z"/>
+    <path d="M 635 240 l -14 -6 l 12 -10 z"/>
+  </g>
+
+  <!-- 自動ラベル -->
+  <rect x="345" y="180" width="110" height="34" rx="17" fill="#FFF6E8" stroke="#ef7f1a" stroke-width="2"/>
+  <text x="400" y="203" text-anchor="middle" font-size="17" font-weight="bold" fill="#b35c05">全部「自動」</text>
+
+  <!-- 3口座 -->
+  <g>
+    <rect x="55" y="248" width="220" height="120" rx="14" fill="#EAF4ED" stroke="#2d7a4f" stroke-width="3"/>
+    <text x="165" y="284" text-anchor="middle" font-size="21" font-weight="bold" fill="#1F4D32">生活防衛資金</text>
+    <text x="165" y="312" text-anchor="middle" font-size="15" fill="#4a6a58">守るお金・使わない</text>
+    <text x="165" y="338" text-anchor="middle" font-size="15" font-weight="bold" fill="#2d7a4f">目標：生活費×3〜6ヶ月</text>
+  </g>
+  <g>
+    <rect x="290" y="248" width="220" height="120" rx="14" fill="#FFF6E8" stroke="#ef7f1a" stroke-width="3"/>
+    <text x="400" y="284" text-anchor="middle" font-size="21" font-weight="bold" fill="#b35c05">投資（新NISA）</text>
+    <text x="400" y="312" text-anchor="middle" font-size="15" fill="#8a6a45">未来にまわすお金</text>
+    <text x="400" y="338" text-anchor="middle" font-size="15" font-weight="bold" fill="#b35c05">ぼくは月3万円を自動積立</text>
+  </g>
+  <g>
+    <rect x="525" y="248" width="220" height="120" rx="14" fill="#F2F7FB" stroke="#1f6e8c" stroke-width="3"/>
+    <text x="635" y="284" text-anchor="middle" font-size="21" font-weight="bold" fill="#14506b">生活費</text>
+    <text x="635" y="312" text-anchor="middle" font-size="15" fill="#3f6478">残ったお金で生活する</text>
+    <text x="635" y="338" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f6e8c">ぼくの場合 23万円</text>
+  </g>
+
+  <text x="400" y="420" text-anchor="middle" font-size="17" font-weight="bold" fill="#1F4D32">「余ったら貯める」→「先に貯めて、残りで生活する」に順番を入れ替えるだけ</text>
+  <text x="400" y="448" text-anchor="middle" font-size="14" fill="#5a7367">設定は一度だけ。あとは意志ではなく仕組みが働きます</text>
+</svg>
