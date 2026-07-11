@@ -1,13 +1,13 @@
 ---
 title: "お金持ちは「稼ぐ人」ではなく「失わない人」だった"
 description: "与沢翼さんの『お金持ちは稼ぐ人ではなく失わない人』という言葉に、収益0円の40代シングルファーザーが救われた話。固定費で月19,700円を守った実録と、それでも削らなかったお金について書きます。"
-slug: "2026-07-12-ushinawanai-hito"
-pubDate: 2026-07-12
+slug: "2026-07-11-ushinawanai-hito"
+pubDate: 2026-07-11
 category: 節約・家計
 tags: ["お金の考え方", "固定費見直し", "シングルファーザー", "家計管理", "書籍"]
-draft: true
+draft: false
 affiliate: true
-ogImage: "/images/thumbnails/2026-07-12-ushinawanai-hito.png"
+ogImage: "/images/thumbnails/2026-07-11-ushinawanai-hito.png"
 ---
 
 「お金持ちは、稼ぐ人ではなく、失わない人」
@@ -40,7 +40,7 @@ ogImage: "/images/thumbnails/2026-07-12-ushinawanai-hito.png"
 
 つまり、蛇口から入る水を増やすことばかり考えて、バケツの底に空いた穴は見て見ぬふりをしていたわけです。
 
-![穴の空いたバケツにいくら水を入れても貯まらない図解](/images/articles/2026-07-12-ushinawanai-hito/bucket.svg)
+![穴の空いたバケツにいくら水を入れても貯まらない図解](/images/articles/2026-07-11-ushinawanai-hito/bucket.svg)
 
 与沢さんはかつて「秒速で1億円稼ぐ男」と呼ばれ、派手な生活の末に会社の経営破綻や税金の問題で一度すべてを失った人です。
 
