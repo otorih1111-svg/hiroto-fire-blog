@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+  <text x="400" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F4D32">いくら稼いでも、穴が空いていたら貯まらない</text>
+
+  <!-- 蛇口（収入） -->
+  <g>
+    <rect x="330" y="80" width="120" height="18" rx="9" fill="#7CB089"/>
+    <rect x="376" y="98" width="28" height="26" rx="6" fill="#7CB089"/>
+    <text x="480" y="96" font-size="20" font-weight="bold" fill="#2d7a4f">収入（稼ぐ）</text>
+    <!-- 水流 -->
+    <rect x="382" y="124" width="16" height="60" fill="#BFE3FF"/>
+  </g>
+
+  <!-- バケツ -->
+  <g>
+    <path d="M 280 190 L 500 190 L 478 380 L 302 380 Z" fill="#EAF4ED" stroke="#1F4D32" stroke-width="4"/>
+    <!-- 水面 -->
+    <path d="M 292 250 L 488 250 L 478 380 L 302 380 Z" fill="#BFE3FF"/>
+    <text x="390" y="330" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F4D32">家計</text>
+  </g>
+
+  <!-- 漏れ（穴） -->
+  <g font-size="18" font-weight="bold" fill="#b35c05">
+    <circle cx="497" cy="268" r="7" fill="#FFFFFF" stroke="#b35c05" stroke-width="3"/>
+    <path d="M 508 274 q 18 10 26 30" stroke="#5FA8E6" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <text x="560" y="286">スマホ代</text>
+
+    <circle cx="489" cy="316" r="7" fill="#FFFFFF" stroke="#b35c05" stroke-width="3"/>
+    <path d="M 500 322 q 18 10 26 30" stroke="#5FA8E6" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <text x="552" y="334">保険の払いすぎ</text>
+
+    <circle cx="483" cy="360" r="7" fill="#FFFFFF" stroke="#b35c05" stroke-width="3"/>
+    <path d="M 494 366 q 18 10 26 30" stroke="#5FA8E6" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <text x="546" y="380">使ってないサブスク</text>
+  </g>
+
+  <!-- 左の注記 -->
+  <rect x="40" y="240" width="216" height="106" rx="14" fill="#FFF6E8" stroke="#ef7f1a" stroke-width="2.5"/>
+  <text x="148" y="282" text-anchor="middle" font-size="20" font-weight="bold" fill="#b35c05">穴を塞いだ結果</text>
+  <text x="148" y="316" text-anchor="middle" font-size="24" font-weight="bold" fill="#b35c05">月19,700円</text>
+  <text x="148" y="338" text-anchor="middle" font-size="15" fill="#b35c05">漏れが止まった（実測）</text>
+
+  <text x="400" y="425" text-anchor="middle" font-size="16" fill="#5a7367">蛇口をひねる前に、穴をひとつ塞ぐ。固定費は一度塞げば効き続けます。</text>
+</svg>
