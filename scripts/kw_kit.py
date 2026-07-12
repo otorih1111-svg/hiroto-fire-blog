@@ -229,6 +229,38 @@ def gather_performance(session, articles: list[dict], days: int = 28) -> dict:
     return perf
 
 
+def _bing_api_key() -> str:
+    env_path = BLOG_DIR / ".env"
+    if env_path.exists():
+        for line in env_path.read_text().splitlines():
+            if line.strip().startswith("BING_WEBMASTER_API_KEY="):
+                return line.split("=", 1)[1].strip().strip('"\'')
+    return ""
+
+
+def fetch_bing_volume(kw: str, api_key: str) -> int | None:
+    """Bing Webmaster APIの実数インプレッション（直近約4週の合計≒月間）。
+    Bingのシェアは日本で1割前後なので、Google感覚では10〜20倍が目安。
+    キー未設定・エラー時はNone（キットは劣化なしで動く）。"""
+    if not api_key:
+        return None
+    try:
+        url = (
+            "https://ssl.bing.com/webmaster/api.svc/json/GetKeywordStats?"
+            + urllib.parse.urlencode({"apikey": api_key, "q": kw, "country": "jp", "language": "ja-JP"})
+        )
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        rows = data.get("d") or []
+        if not rows:
+            return 0
+        recent = rows[-4:]  # 週次データの直近4週
+        return int(sum(x.get("Impressions", 0) or 0 for x in recent))
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def tokenize(text: str) -> set[str]:
     return set(re.findall(r"[ぁ-んァ-ヶ一-龠a-zA-Z0-9]+", text.lower()))
 
@@ -300,7 +332,9 @@ def pick_with_claude(env, category, stats, candidates, articles, perf):
     for c in candidates:
         sig = c.get("gsc")
         sig_txt = f"｜GSC: 表示{sig['impressions']}回・順位{sig['position']:.0f}位（{sig['query']}）" if sig else ""
-        cand_lines.append(f"- {c['kw']}{sig_txt}")
+        bing = c.get("bing")
+        bing_txt = f"｜Bing検索数{bing}/月（Google目安×10〜20）" if bing is not None else ""
+        cand_lines.append(f"- {c['kw']}{sig_txt}{bing_txt}")
 
     qw_lines = "\n".join(
         f"- {q['query']}（{q['category']}・表示{q['impressions']}回・順位{q['position']:.0f}位）"
@@ -386,10 +420,15 @@ def render_kit(comment: str, picks: list[dict], stats: dict, category: str, nonb
         instruction = html.escape(build_instruction(p))
         badge = "🥇 いちおし" if i == 1 else f"{i}"
         sig = p.get("gsc_sig")
+        bing = p.get("bing_vol")
+        parts = ["サジェスト掲載あり"]
+        if bing is not None:
+            parts.append(f"<strong>Bing実数 {bing}回/月</strong>（Google目安 ×10〜20）")
         if sig:
-            volume = f"需要シグナル: サジェスト掲載あり＋<strong>GSC表示{sig['impressions']}回・順位{sig['position']:.0f}位</strong>（{html.escape(sig['query'])}）"
-        else:
-            volume = "需要シグナル: サジェスト掲載あり（月間検索数はGoogle Ads API承認後に自動表示）"
+            parts.append(f"<strong>GSC表示{sig['impressions']}回・順位{sig['position']:.0f}位</strong>（{html.escape(sig['query'])}）")
+        if bing is None and not sig:
+            parts.append("月間検索数はBingキー設定 or Google Ads API承認後に自動表示")
+        volume = "需要シグナル: " + "＋".join(parts)
         cards.append(f"""
 <div class="card">
   <p class="who">{badge}　<strong>{html.escape(p['kw'])}</strong>　<span class="cat">{html.escape(p['category'])}</span></p>
@@ -481,6 +520,15 @@ def main() -> None:
     candidates.sort(key=lambda c: (c["gsc"] is None, ))
     candidates = candidates[:MAX_CANDIDATES_FOR_CLAUDE]
 
+    # Bing実数ボリューム（APIキーがあれば。日本シェア約1割なのでGoogle目安は10〜20倍）
+    bing_key = _bing_api_key()
+    if bing_key:
+        for c in candidates:
+            c["bing"] = fetch_bing_volume(c["kw"], bing_key)
+            time.sleep(0.3)
+        # 実数が取れたら需要順に並べ替え（GSC印優先は維持）
+        candidates.sort(key=lambda c: (c["gsc"] is None, -(c.get("bing") or 0)))
+
     if not candidates:
         print("候補が集まりませんでした", file=sys.stderr)
         sys.exit(1)
@@ -489,10 +537,12 @@ def main() -> None:
     picks = result.get("picks", [])[:PICKS]
     final_category = result.get("recommended_category") or category
 
-    # GSCシグナルを付与
-    sig_map = {c["kw"]: c["gsc"] for c in candidates}
+    # GSC・Bingシグナルを付与
+    sig_map = {c["kw"]: c for c in candidates}
     for p in picks:
-        p["gsc_sig"] = sig_map.get(p["kw"])
+        c = sig_map.get(p["kw"], {})
+        p["gsc_sig"] = c.get("gsc")
+        p["bing_vol"] = c.get("bing")
 
     if dry:
         print(json.dumps({"category": final_category, "comment": result.get("comment"), "picks": picks}, ensure_ascii=False, indent=1))
