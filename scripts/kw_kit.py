@@ -238,12 +238,13 @@ def _bing_api_key() -> str:
     return ""
 
 
-def fetch_bing_volume(kw: str, api_key: str) -> int | None:
-    """Bing Webmaster APIの実数インプレッション（直近約4週の合計≒月間）。
-    Bingのシェアは日本で1割前後なので、Google感覚では10〜20倍が目安。
-    キー未設定・エラー時はNone（キットは劣化なしで動く）。"""
-    if not api_key:
-        return None
+_bing_cache: dict[str, tuple[int, int]] = {}
+
+
+def _bing_raw(kw: str, api_key: str) -> tuple[int, int] | None:
+    """(完全一致, 部分一致) の月間インプレッション。エラーはNone。"""
+    if kw in _bing_cache:
+        return _bing_cache[kw]
     try:
         url = (
             "https://ssl.bing.com/webmaster/api.svc/json/GetKeywordStats?"
@@ -252,13 +253,43 @@ def fetch_bing_volume(kw: str, api_key: str) -> int | None:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=15) as r:
             data = json.loads(r.read().decode("utf-8"))
-        rows = data.get("d") or []
-        if not rows:
-            return 0
-        recent = rows[-4:]  # 週次データの直近4週
-        return int(sum(x.get("Impressions", 0) or 0 for x in recent))
+        rows = (data.get("d") or [])[-4:]  # 直近4週≒月間
+        result = (
+            int(sum(x.get("Impressions", 0) or 0 for x in rows)),
+            int(sum(x.get("BroadImpressions", 0) or 0 for x in rows)),
+        )
+        _bing_cache[kw] = result
+        time.sleep(0.25)
+        return result
     except Exception:  # noqa: BLE001
         return None
+
+
+def fetch_bing_volume(kw: str, api_key: str) -> dict | None:
+    """Bing実数ボリューム（段階フォールバック）。
+
+    超ロングテールはBingの計測床以下で0になるため、フレーズ→語を右から
+    削った軸語、の順に部分一致の総量を探す。戻り値: {vol, term, mode} or None。
+    Bingは日本シェア約1割 → Google感覚は10〜20倍が目安。
+    """
+    if not api_key:
+        return None
+    raw = _bing_raw(kw, api_key)
+    if raw is None:
+        return None
+    strict, broad = raw
+    if strict > 0:
+        return {"vol": strict, "term": kw, "mode": "完全一致"}
+    if broad > 0:
+        return {"vol": broad, "term": kw, "mode": "部分一致"}
+    words = kw.split(" ")
+    while len(words) > 1:
+        words = words[:-1]
+        head = " ".join(words)
+        raw = _bing_raw(head, api_key)
+        if raw and raw[1] > 0:
+            return {"vol": raw[1], "term": head, "mode": "軸語を含む検索全体"}
+    return {"vol": 0, "term": kw, "mode": "計測なし"}
 
 
 def tokenize(text: str) -> set[str]:
@@ -333,7 +364,7 @@ def pick_with_claude(env, category, stats, candidates, articles, perf):
         sig = c.get("gsc")
         sig_txt = f"｜GSC: 表示{sig['impressions']}回・順位{sig['position']:.0f}位（{sig['query']}）" if sig else ""
         bing = c.get("bing")
-        bing_txt = f"｜Bing検索数{bing}/月（Google目安×10〜20）" if bing is not None else ""
+        bing_txt = f"｜Bing{bing['mode']} {bing['vol']}/月（{bing['term']}・Google目安×10〜20）" if bing else ""
         cand_lines.append(f"- {c['kw']}{sig_txt}{bing_txt}")
 
     qw_lines = "\n".join(
@@ -422,11 +453,12 @@ def render_kit(comment: str, picks: list[dict], stats: dict, category: str, nonb
         sig = p.get("gsc_sig")
         bing = p.get("bing_vol")
         parts = ["サジェスト掲載あり"]
-        if bing is not None:
-            parts.append(f"<strong>Bing実数 {bing}回/月</strong>（Google目安 ×10〜20）")
+        if bing and bing["vol"] > 0:
+            label = "" if bing["term"] == p["kw"] else f"「{html.escape(bing['term'])}」の"
+            parts.append(f"{label}<strong>Bing{bing['mode']} {bing['vol']}回/月</strong>（Google目安 ×10〜20）")
         if sig:
             parts.append(f"<strong>GSC表示{sig['impressions']}回・順位{sig['position']:.0f}位</strong>（{html.escape(sig['query'])}）")
-        if bing is None and not sig:
+        if not (bing and bing["vol"] > 0) and not sig:
             parts.append("月間検索数はBingキー設定 or Google Ads API承認後に自動表示")
         volume = "需要シグナル: " + "＋".join(parts)
         cards.append(f"""
@@ -525,9 +557,8 @@ def main() -> None:
     if bing_key:
         for c in candidates:
             c["bing"] = fetch_bing_volume(c["kw"], bing_key)
-            time.sleep(0.3)
         # 実数が取れたら需要順に並べ替え（GSC印優先は維持）
-        candidates.sort(key=lambda c: (c["gsc"] is None, -(c.get("bing") or 0)))
+        candidates.sort(key=lambda c: (c["gsc"] is None, -((c.get("bing") or {}).get("vol", 0))))
 
     if not candidates:
         print("候補が集まりませんでした", file=sys.stderr)
