@@ -9,7 +9,7 @@
   <text x="170" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="bold">見直し前</text>
 
   <text x="170" y="105" text-anchor="middle" fill="#555" font-size="13">明治安田生命</text>
-  <text x="170" y="128" text-anchor="middle" fill="#333" font-size="13">生命保険＋学資保険</text>
+  <text x="170" y="128" text-anchor="middle" fill="#333" font-size="13">生命保険（学資保険は別途）</text>
   <text x="170" y="168" text-anchor="middle" fill="#e57373" font-size="28" font-weight="bold">15,000円</text>
   <text x="170" y="192" text-anchor="middle" fill="#888" font-size="12">/月</text>
   <line x1="60" y1="210" x2="280" y2="210" stroke="#eee" stroke-width="1"/>

@@ -1,12 +1,12 @@
 ---
 title: "離婚後の保険見直し｜月6,400円下がった手順と考え方"
-description: "離婚後の保険見直しでやることは受取人変更・保障額の再計算・払いすぎの整理の3つ。月15,000円→8,605円にしたシングルファーザーが、実際の手順と見直し後の3本柱を正直に公開します。"
+description: "離婚後の保険見直しでやることは受取人変更・保障額の再計算・払いすぎの整理の3つ。生命保険を月15,000円→8,605円にしたシングルファーザーが、実際の手順と見直し後の3本柱を正直に公開します。"
 pubDate: 2026-06-06
 category: 節約・家計
 tags: ["保険", "固定費", "シングルファーザー", "節約", "家計管理"]
 draft: false
 affiliate: true
-ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
+ogImage: "/images/thumbnails/hoken-minaoshi-single-father-v2.png"
 ---
 
 「保険、見直しますか？」と聞かれるたびに、「あとで」と言い続けていた。
@@ -38,11 +38,15 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 ## 離婚後も「昔の保険のまま」だった頃
 
-結婚中は明治安田生命で生命保険と学資保険に入っていた。
+結婚中は明治安田生命で、生命保険に月15,000円ほど、それとは別に学資保険に月12,000円ほど入っていた。
 
-合計で月15,000円ほど。
+保険関係だけで、合計月27,000円。
 
 当時は「家族を守らなきゃ」という気持ちで、何となく手厚く入っていた。
+
+先に整理しておくと、この記事の「月6,400円下がった」は**生命保険（15,000円→8,605円）**の話です。
+
+学資保険の12,000円は「削った」のではなく、解約してジュニアNISAに切り替えました（経緯は記事後半のFAQから）。
 
 離婚してからも、解約するタイミングを逃し続けた。
 
@@ -106,7 +110,7 @@ ogImage: "/images/thumbnails/hoken-minaoshi-single-father.png"
 
 ## 見直し後の保険3本柱【月8,605円の中身】
 
-![保険見直し前後の比較図](/images/articles/hoken-minaoshi-single-father/before-after.svg)
+![保険見直し前後の比較図](/images/articles/hoken-minaoshi-single-father/before-after.svg?v=2)
 
 見直してたどり着いたのは、3つの保険の組み合わせです。
 
