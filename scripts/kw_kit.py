@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-ブログKWキット 毎日自動生成（2026-07-12追加）
+ブログKWツール 毎日自動生成（2026-07-12追加）
 ==============================================
 リプ回りキットのブログ版。毎朝、
 1. 既存記事のカテゴリバランスから「今日書くならこのカテゴリ」を判定
 2. Googleサジェスト（無料・審査不要）でロングテールKW候補を発掘
 3. GSCの実クエリデータで「すでに表示が出ている需要」を突き合わせ
 4. Claudeが角度・タイトル案・内部リンクを付けて7本に絞る
-5. ~/ReplyKit/ブログKWキット.html に出力 → ひろとさんが選んで
+5. ~/ReplyKit/ブログKWツール.html に出力 → ひろとさんが選んで
    「書く指示をコピー」→ Claude Codeに貼ると執筆が始まる
 
 Google Ads API（キーワードプランナー）が承認されたら、検索ボリューム数値を
@@ -36,7 +36,7 @@ from generate_kw_proposals import load_env, load_existing_articles, is_duplicate
 
 BLOG_DIR = SCRIPT_DIR.parent
 CONTENT_DIR = BLOG_DIR / "src" / "content" / "blog"
-KIT_PATH = Path.home() / "ReplyKit" / "ブログKWキット.html"
+KIT_PATH = Path.home() / "ReplyKit" / "ブログKWツール.html"
 LOG_FILE = BLOG_DIR / "logs" / "kw_kit_log.json"
 SITE_URL = "https://hiroto-fire.com/"
 
@@ -279,7 +279,7 @@ def render_kit(comment: str, picks: list[dict], stats: dict, category: str) -> N
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ブログKWキット</title>
+<title>ブログKWツール</title>
 <style>
 body {{ font-family: "Hiragino Kaku Gothic ProN", sans-serif; max-width: 760px; margin: 32px auto; padding: 0 20px; line-height: 1.8; color: #333; }}
 h1 {{ color: #1F4D32; font-size: 1.4rem; }}
@@ -304,14 +304,14 @@ function cp(id, btn) {{
 </script>
 </head>
 <body>
-<h1>ブログKWキット</h1>
+<h1>ブログKWツール</h1>
 <p><small>更新: {now_str}｜KW候補はGoogleサジェスト（実際に検索されている語）＋GSC実データから選定</small></p>
 <div class="box">
 <strong>今日のおすすめ: {html.escape(category)}</strong><br>
 {html.escape(comment)}<br>
-<small>記事数 全体: 節約{total['節約・家計']}/投資{total['投資・FIRE']}/副業{total['副業・AI']}　直近28日: 節約{recent['節約・家計']}/投資{recent['投資・FIRE']}（週3本上限・副業は新規停止中）</small>
+<small>記事数 全体: 節約{total['節約・家計']}/投資{total['投資・FIRE']}/副業{total['副業・AI']}　直近28日: 節約{recent['節約・家計']}/投資{recent['投資・FIRE']}（副業は新規停止中）</small>
 </div>
-<p>使い方: 気に入ったKWの「指示をコピー」→ Claude Codeに貼るだけ。執筆〜採点〜公開まで自動で進みます。どれもピンと来なければ書かない日でOK（週3本まで）。</p>
+<p>使い方: 気に入ったKWの「指示をコピー」→ Claude Codeに貼るだけ。執筆〜採点〜公開まで自動で進みます。どれもピンと来なければ書かない日でOK。</p>
 {''.join(cards)}
 <h2>メモ</h2>
 <div class="box">
