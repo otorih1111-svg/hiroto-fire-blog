@@ -159,7 +159,9 @@ def gather_performance(session, articles: list[dict], days: int = 28) -> dict:
         "gsc": {c: {"clicks": 0, "impressions": 0} for c in ("節約・家計", "投資・FIRE", "副業・AI")},
         "ga4_sessions": {c: 0 for c in ("節約・家計", "投資・FIRE", "副業・AI")},
         "quickwins": [],
+        "nonbrand_clicks": 0,  # 指名検索（トップ・about）を除いたクリック数
     }
+    BRAND_PAGES = ("https://hiroto-fire.com/", "https://hiroto-fire.com/blog/about-hiroto/")
     end = datetime.date.today() - datetime.timedelta(days=2)
     start = end - datetime.timedelta(days=days)
 
@@ -169,10 +171,13 @@ def gather_performance(session, articles: list[dict], days: int = 28) -> dict:
             "startDate": start.isoformat(), "endDate": end.isoformat(),
             "dimensions": ["page"], "rowLimit": 300,
         }):
-            cat = cat_of_page(r["keys"][0])
+            page_url = r["keys"][0]
+            cat = cat_of_page(page_url)
             if cat in perf["gsc"]:
                 perf["gsc"][cat]["clicks"] += r.get("clicks", 0)
                 perf["gsc"][cat]["impressions"] += r.get("impressions", 0)
+            if page_url not in BRAND_PAGES:
+                perf["nonbrand_clicks"] += r.get("clicks", 0)
     except Exception as exc:  # noqa: BLE001
         print(f"GSCページ別スキップ: {exc}", file=sys.stderr)
 
@@ -356,7 +361,25 @@ def build_instruction(pick: dict) -> str:
     )
 
 
-def render_kit(comment: str, picks: list[dict], stats: dict, category: str) -> None:
+GRADUATION_THRESHOLD = 100  # 非指名クリック/28日 がこれを超えたらKW基準を月100+へ引き上げ提案
+
+
+def graduation_banner(nonbrand_clicks: int) -> str:
+    if nonbrand_clicks >= GRADUATION_THRESHOLD:
+        return (
+            f'<div class="box" style="border-left-color:#ef7f1a;background:#FFF6E8;">'
+            f'<strong>🎓 KW基準の卒業提案</strong><br>'
+            f'直近28日の非指名クリックが<strong>{nonbrand_clicks}回</strong>と、卒業ライン（{GRADUATION_THRESHOLD}回）を超えました。'
+            f'KW選定基準を「月10〜50」→「月100回以上」に引き上げる時期です。'
+            f'Claude Codeに「KW基準を100に上げて」と伝えてください（CLAUDE.mdのルールを更新します）。</div>'
+        )
+    return (
+        f'<small>KW基準の卒業ラインまで：非指名クリック {nonbrand_clicks}/{GRADUATION_THRESHOLD}回（28日）。'
+        f'超えたらここに引き上げ提案が自動表示されます。</small>'
+    )
+
+
+def render_kit(comment: str, picks: list[dict], stats: dict, category: str, nonbrand_clicks: int = 0) -> None:
     now_str = datetime.datetime.now().strftime("%Y年%m月%d日 %H:%M")
     cards = []
     for i, p in enumerate(sorted(picks, key=lambda x: x.get("priority", 9)), start=1):
@@ -414,6 +437,7 @@ function cp(id, btn) {{
 {html.escape(comment)}<br>
 <small>記事数 全体: 節約{total['節約・家計']}/投資{total['投資・FIRE']}/副業{total['副業・AI']}　直近28日: 節約{recent['節約・家計']}/投資{recent['投資・FIRE']}（副業は新規停止中）</small>
 </div>
+{graduation_banner(nonbrand_clicks)}
 <p>使い方: 気に入ったKWの「指示をコピー」→ Claude Codeに貼るだけ。執筆〜採点〜公開まで自動で進みます。どれもピンと来なければ書かない日でOK。</p>
 {''.join(cards)}
 <h2>メモ</h2>
@@ -474,7 +498,7 @@ def main() -> None:
         print(json.dumps({"category": final_category, "comment": result.get("comment"), "picks": picks}, ensure_ascii=False, indent=1))
         return
 
-    render_kit(result.get("comment", ""), picks, stats, final_category)
+    render_kit(result.get("comment", ""), picks, stats, final_category, perf.get("nonbrand_clicks", 0))
     already_today = {e["kw"] for e in log if e.get("date") == today}
     log.extend({"date": today, "kw": p["kw"]} for p in picks if p["kw"] not in already_today)
     LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
