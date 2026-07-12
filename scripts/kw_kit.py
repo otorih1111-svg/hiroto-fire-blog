@@ -102,38 +102,126 @@ def collect_candidates(category: str) -> list[str]:
     return out
 
 
-def fetch_gsc_queries(days: int = 90) -> list[dict]:
-    """GSCの実クエリ（表示回数・順位）。サービスアカウント認証。失敗したら空でよい。"""
-    try:
-        from google.auth.transport.requests import AuthorizedSession
-        from google.oauth2 import service_account
+def _google_session():
+    from google.auth.transport.requests import AuthorizedSession
+    from google.oauth2 import service_account
 
-        creds = service_account.Credentials.from_service_account_file(
-            str(BLOG_DIR / "google-credentials.json"),
-            scopes=["https://www.googleapis.com/auth/webmasters.readonly"],
-        )
-        session = AuthorizedSession(creds)
+    creds = service_account.Credentials.from_service_account_file(
+        str(BLOG_DIR / "google-credentials.json"),
+        scopes=[
+            "https://www.googleapis.com/auth/webmasters.readonly",
+            "https://www.googleapis.com/auth/analytics.readonly",
+        ],
+    )
+    return AuthorizedSession(creds)
+
+
+def _gsc_query(session, body: dict) -> list[dict]:
+    endpoint = (
+        "https://searchconsole.googleapis.com/webmasters/v3/sites/"
+        + urllib.parse.quote(SITE_URL, safe="")
+        + "/searchAnalytics/query"
+    )
+    resp = session.post(endpoint, json=body, timeout=30)
+    resp.raise_for_status()
+    return resp.json().get("rows", [])
+
+
+def fetch_gsc_queries(session, days: int = 90) -> list[dict]:
+    """GSCの実クエリ（表示回数・順位）。失敗したら空でよい。"""
+    try:
         end = datetime.date.today() - datetime.timedelta(days=2)
         start = end - datetime.timedelta(days=days)
-        endpoint = (
-            "https://searchconsole.googleapis.com/webmasters/v3/sites/"
-            + urllib.parse.quote(SITE_URL, safe="")
-            + "/searchAnalytics/query"
-        )
-        resp = session.post(endpoint, json={
+        rows = _gsc_query(session, {
             "startDate": start.isoformat(),
             "endDate": end.isoformat(),
             "dimensions": ["query"],
             "rowLimit": 500,
-        }, timeout=30)
-        resp.raise_for_status()
+        })
         return [
-            {"query": row["keys"][0], "impressions": row.get("impressions", 0), "position": row.get("position", 0)}
-            for row in resp.json().get("rows", [])
+            {"query": r["keys"][0], "impressions": r.get("impressions", 0), "position": r.get("position", 0)}
+            for r in rows
         ]
     except Exception as exc:  # noqa: BLE001
         print(f"GSC取得スキップ: {exc}", file=sys.stderr)
         return []
+
+
+def gather_performance(session, articles: list[dict], days: int = 28) -> dict:
+    """カテゴリ別のGSC/GA4実績と、クイックウィン候補（4〜20位で表示あり）を集める。"""
+    slug_to_cat = {a["slug"]: a.get("category", "") for a in articles}
+
+    def cat_of_page(url_or_path: str) -> str:
+        m = re.search(r"/blog/([^/]+)/?", url_or_path)
+        return slug_to_cat.get(m.group(1), "") if m else ""
+
+    perf = {
+        "gsc": {c: {"clicks": 0, "impressions": 0} for c in ("節約・家計", "投資・FIRE", "副業・AI")},
+        "ga4_sessions": {c: 0 for c in ("節約・家計", "投資・FIRE", "副業・AI")},
+        "quickwins": [],
+    }
+    end = datetime.date.today() - datetime.timedelta(days=2)
+    start = end - datetime.timedelta(days=days)
+
+    # GSC: ページ別クリック・表示
+    try:
+        for r in _gsc_query(session, {
+            "startDate": start.isoformat(), "endDate": end.isoformat(),
+            "dimensions": ["page"], "rowLimit": 300,
+        }):
+            cat = cat_of_page(r["keys"][0])
+            if cat in perf["gsc"]:
+                perf["gsc"][cat]["clicks"] += r.get("clicks", 0)
+                perf["gsc"][cat]["impressions"] += r.get("impressions", 0)
+    except Exception as exc:  # noqa: BLE001
+        print(f"GSCページ別スキップ: {exc}", file=sys.stderr)
+
+    # GSC: クイックウィン（4〜20位・表示3回以上）
+    try:
+        for r in _gsc_query(session, {
+            "startDate": start.isoformat(), "endDate": end.isoformat(),
+            "dimensions": ["query", "page"], "rowLimit": 500,
+        }):
+            pos, imp = r.get("position", 99), r.get("impressions", 0)
+            if 4 <= pos <= 20 and imp >= 3:
+                perf["quickwins"].append({
+                    "query": r["keys"][0],
+                    "category": cat_of_page(r["keys"][1]) or "不明",
+                    "impressions": imp,
+                    "position": pos,
+                })
+        perf["quickwins"].sort(key=lambda x: -x["impressions"])
+        perf["quickwins"] = perf["quickwins"][:8]
+    except Exception as exc:  # noqa: BLE001
+        print(f"GSCクイックウィンスキップ: {exc}", file=sys.stderr)
+
+    # GA4: ページ別セッション
+    try:
+        prop = ""
+        env_path = BLOG_DIR / ".env"
+        for line in env_path.read_text().splitlines():
+            if line.strip().startswith("GA4_PROPERTY_ID="):
+                prop = line.split("=", 1)[1].strip()
+        if prop:
+            resp = session.post(
+                f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport",
+                json={
+                    "dateRanges": [{"startDate": f"{days}daysAgo", "endDate": "yesterday"}],
+                    "dimensions": [{"name": "pagePath"}],
+                    "metrics": [{"name": "sessions"}],
+                    "limit": 300,
+                },
+                timeout=60,
+            )
+            resp.raise_for_status()
+            for row in resp.json().get("rows", []):
+                cat = cat_of_page(row["dimensionValues"][0]["value"])
+                if cat in perf["ga4_sessions"]:
+                    perf["ga4_sessions"][cat] += int(row["metricValues"][0]["value"])
+    except Exception as exc:  # noqa: BLE001
+        print(f"GA4スキップ: {exc}", file=sys.stderr)
+
+    return perf
 
 
 def tokenize(text: str) -> set[str]:
@@ -198,7 +286,7 @@ def load_proposed_log() -> list[dict]:
     return []
 
 
-def pick_with_claude(env, category, stats, candidates, articles):
+def pick_with_claude(env, category, stats, candidates, articles, perf):
     import anthropic
 
     client = anthropic.Anthropic(api_key=env.get("ANTHROPIC_API_KEY", ""))
@@ -209,10 +297,22 @@ def pick_with_claude(env, category, stats, candidates, articles):
         sig_txt = f"｜GSC: 表示{sig['impressions']}回・順位{sig['position']:.0f}位（{sig['query']}）" if sig else ""
         cand_lines.append(f"- {c['kw']}{sig_txt}")
 
+    qw_lines = "\n".join(
+        f"- {q['query']}（{q['category']}・表示{q['impressions']}回・順位{q['position']:.0f}位）"
+        for q in perf.get("quickwins", [])
+    ) or "なし"
+
     prompt = f"""あなたは「hiroto-fire.com」（40代シングルファーザーの家計改善×FIREブログ）のSEO編集者です。
 
-【今日のおすすめカテゴリ】{category}
 【記事数の現状】全体: {stats['total']}／直近28日: {stats['recent28']}
+【目標比率】節約・家計 60% / 投資・FIRE 40%（副業・AIは新規停止）
+【直近28日の実績（GSC）】カテゴリ別クリック/表示: {perf['gsc']}
+【直近28日の実績（GA4）】カテゴリ別セッション: {perf['ga4_sessions']}
+【クイックウィン（4〜20位で表示が出ている実クエリ＝押せば上がる場所）】
+{qw_lines}
+
+まず上の実数から「今日のおすすめカテゴリ」を判断してください（機械計算の参考値: {category}）。
+commentには必ず実数（クリック数・表示回数・順位・セッション数のいずれか）を引用して理由を書くこと。
 
 【KW候補（Googleサジェスト由来＝実際に検索されている語。GSC印付きはすでにこのサイトに表示が出ている需要）】
 {chr(10).join(cand_lines)}
@@ -229,7 +329,7 @@ def pick_with_claude(env, category, stats, candidates, articles):
 - GSC印付きは「すでに戦えている証拠」なので加点
 
 【出力形式（JSONのみ。他の文字は出さない）】
-{{"comment": "今日のカテゴリ推薦理由を1-2文", "picks": [{{"kw": "...", "category": "節約・家計|投資・FIRE", "angle": "ひろと属性での切り口を1文", "title": "タイトル案（32字以内）", "reason": "選定理由を1文", "links": ["内部リンク先の既存記事タイトル", "..."], "priority": 1}}]}}
+{{"recommended_category": "節約・家計|投資・FIRE", "comment": "実数を引用した推薦理由を1-2文", "picks": [{{"kw": "...", "category": "節約・家計|投資・FIRE", "angle": "ひろと属性での切り口を1文", "title": "タイトル案（32字以内）", "reason": "選定理由を1文", "links": ["内部リンク先の既存記事タイトル", "..."], "priority": 1}}]}}
 priorityは1(最推奨)〜{PICKS}。"""
 
     resp = client.messages.create(
@@ -262,13 +362,16 @@ def render_kit(comment: str, picks: list[dict], stats: dict, category: str) -> N
     for i, p in enumerate(sorted(picks, key=lambda x: x.get("priority", 9)), start=1):
         instruction = html.escape(build_instruction(p))
         badge = "🥇 いちおし" if i == 1 else f"{i}"
-        sig = html.escape(p.get("signal", ""))
-        sig_html = f'<p class="sig">{sig}</p>' if sig else ""
+        sig = p.get("gsc_sig")
+        if sig:
+            volume = f"需要シグナル: サジェスト掲載あり＋<strong>GSC表示{sig['impressions']}回・順位{sig['position']:.0f}位</strong>（{html.escape(sig['query'])}）"
+        else:
+            volume = "需要シグナル: サジェスト掲載あり（月間検索数はGoogle Ads API承認後に自動表示）"
         cards.append(f"""
 <div class="card">
   <p class="who">{badge}　<strong>{html.escape(p['kw'])}</strong>　<span class="cat">{html.escape(p['category'])}</span></p>
-  {sig_html}
-  <p class="src">角度: {html.escape(p['angle'])}<br>タイトル案: {html.escape(p['title'])}<br>理由: {html.escape(p['reason'])}</p>
+  <p class="sig">{volume}</p>
+  <p class="src"><strong>タイトル案:</strong> {html.escape(p['title'])}<br><strong>角度:</strong> {html.escape(p['angle'])}<br><strong>理由:</strong> {html.escape(p['reason'])}</p>
   <textarea id="kw{i}" readonly style="display:none;">{instruction}</textarea>
   <p><button class="btn copy" onclick="cp('kw{i}', this)">この記事を書く指示をコピー</button></p>
 </div>""")
@@ -332,13 +435,16 @@ def main() -> None:
     articles = enrich_pubdates(load_existing_articles())
     category, stats = category_balance(articles)
 
-    # 直近30日に提案済みのKWは除外
+    # 直近30日に提案済みのKWは除外（当日分は除外しない＝同日再実行で再提案できる）
+    today = datetime.date.today().isoformat()
     log = load_proposed_log()
     cutoff = (datetime.date.today() - datetime.timedelta(days=30)).isoformat()
-    recently_proposed = {e["kw"] for e in log if e.get("date", "") >= cutoff}
+    recently_proposed = {e["kw"] for e in log if cutoff <= e.get("date", "") < today}
 
+    session = _google_session()
+    perf = gather_performance(session, articles)
     raw = collect_candidates(category)
-    gsc_rows = fetch_gsc_queries()
+    gsc_rows = fetch_gsc_queries(session)
 
     candidates = []
     for kw in raw:
@@ -355,23 +461,22 @@ def main() -> None:
         print("候補が集まりませんでした", file=sys.stderr)
         sys.exit(1)
 
-    result = pick_with_claude(env, category, stats, candidates, articles)
+    result = pick_with_claude(env, category, stats, candidates, articles, perf)
     picks = result.get("picks", [])[:PICKS]
+    final_category = result.get("recommended_category") or category
 
-    # GSCシグナルの表示文字列を付与
+    # GSCシグナルを付与
     sig_map = {c["kw"]: c["gsc"] for c in candidates}
     for p in picks:
-        sig = sig_map.get(p["kw"])
-        if sig:
-            p["signal"] = f"GSC: このサイトが既に表示されています（{sig['query']}・表示{sig['impressions']}回・順位{sig['position']:.0f}位）"
+        p["gsc_sig"] = sig_map.get(p["kw"])
 
     if dry:
-        print(json.dumps({"category": category, "comment": result.get("comment"), "picks": picks}, ensure_ascii=False, indent=1))
+        print(json.dumps({"category": final_category, "comment": result.get("comment"), "picks": picks}, ensure_ascii=False, indent=1))
         return
 
-    render_kit(result.get("comment", ""), picks, stats, category)
-    today = datetime.date.today().isoformat()
-    log.extend({"date": today, "kw": p["kw"]} for p in picks)
+    render_kit(result.get("comment", ""), picks, stats, final_category)
+    already_today = {e["kw"] for e in log if e.get("date") == today}
+    log.extend({"date": today, "kw": p["kw"]} for p in picks if p["kw"] not in already_today)
     LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
     LOG_FILE.write_text(json.dumps(log[-500:], ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"written: {KIT_PATH}")
