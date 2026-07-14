@@ -86,10 +86,19 @@ def detect_opportunities(articles: list[dict], page_stats: dict, pq_rows: list[d
     opportunities: list[dict] = []
 
     def age_days(a: dict) -> int:
-        try:
-            return (today - datetime.date.fromisoformat(a.get("pubDate", ""))).days
-        except ValueError:
+        # 「最後に触った日」からの経過日数。リライト済み記事はupdatedDateが新しいので
+        # pubDateが古くてもガード対象になる（2026-07-14: リライト直後の記事が再提案された事故対応）。
+        dates = []
+        for key in ("pubDate", "updatedDate"):
+            val = a.get(key, "")
+            if val:
+                try:
+                    dates.append(datetime.date.fromisoformat(val))
+                except ValueError:
+                    pass
+        if not dates:
             return 999
+        return (today - max(dates)).days
 
     # A: クイックウィン（クエリ単位）
     for r in pq_rows:
@@ -173,6 +182,10 @@ def build_instruction(o: dict) -> str:
             "・やること：まずGSCで表示クエリを確認し、狙うKWと記事の役割（集客/体験談/成約）を再整理。"
             "勝ち目がないKWなら記事の角度替えか、近い記事への統合を提案してください（勝手に統合はせず提案まで）\n"
         )
+    base += (
+        "・リライト時はfrontmatterの updatedDate を今日の日付に設定してください"
+        "（リライトツールが「最近触った記事」を再提案しないための目印。pubDateは変えない）\n"
+    )
     base += "・リライト後は自己採点85点以上を確認して公開、デプロイ確認までお願いします"
     return base
 
@@ -209,6 +222,7 @@ def pick_with_claude(env, opportunities: list[dict]):
 
 def render_kit(comment: str, picks: list[dict]) -> None:
     now_str = datetime.datetime.now().strftime("%Y年%m月%d日 %H:%M")
+    gen_iso = datetime.date.today().isoformat()  # ブラウザ側で「何日前のページか」を計算する基準
     type_label = {"A_クイックウィン": "🎯 クイックウィン", "B_タイトル改善": "✏️ タイトル改善", "C_沈没": "🛟 救助検討"}
     cards = []
     for i, p in enumerate(sorted(picks, key=lambda x: x.get("priority", 9)), start=1):
@@ -240,6 +254,8 @@ h1 {{ color: #1F4D32; font-size: 1.4rem; }}
 .src {{ background: #f6f6f4; border-radius: 8px; padding: 10px 12px; font-size: 0.9rem; color: #555; margin: 0 0 8px; }}
 .box {{ background: #F3FAF6; border-left: 3px solid #2d7a4f; padding: 10px 16px; margin: 10px 0; font-size: 0.9rem; }}
 small {{ color: #888; }}
+.freshbar {{ font-size: 0.9rem; border-radius: 8px; padding: 8px 14px; margin: 8px 0 14px; background: #EAF4ED; color: #1F4D32; }}
+.freshbar.stale {{ background: #fdeaea; color: #b12020; border: 1px solid #e7a3a3; font-weight: bold; }}
 </style>
 <script>
 function cp(id, btn) {{
@@ -248,13 +264,29 @@ function cp(id, btn) {{
   btn.textContent = 'コピーしました！Claude Codeに貼ってください';
   setTimeout(() => btn.textContent = o, 2500);
 }}
+// 古いページを開いたときに「何日前のデータか」を警告する（stale snapshot対策）
+function checkFresh() {{
+  const gen = new Date('{gen_iso}T00:00:00');
+  const days = Math.floor((Date.now() - gen.getTime()) / 86400000);
+  const bar = document.getElementById('freshbar');
+  if (!bar) return;
+  if (days <= 1) {{
+    bar.textContent = '🟢 このページは' + gen.toLocaleDateString('ja-JP') + '生成（最新）。';
+  }} else {{
+    bar.className = 'freshbar stale';
+    bar.textContent = '⚠️ このページは' + days + '日前（' + gen.toLocaleDateString('ja-JP')
+      + '）の候補です。表示回数などのデータも古い可能性があります。'
+      + 'リライトツールを再実行して最新化してください。';
+  }}
+}}
 </script>
 </head>
-<body>
+<body onload="checkFresh()">
 <h1>ブログリライトツール</h1>
-<p><small>更新: {now_str}｜GSC実データから「直せば伸びる記事」を検出（週1・月曜更新）</small></p>
+<div id="freshbar" class="freshbar">生成日を確認中…</div>
+<p><small>生成: {now_str}｜GSC実データから「直せば伸びる記事」を検出（週1・月曜更新）</small></p>
 <div class="box"><strong>今週の方針:</strong> {html.escape(comment)}</div>
-<p>使い方: 「リライト指示をコピー」→ Claude Codeに貼るだけ。公開・大幅リライトから14日以内の記事は自動で除外しています。</p>
+<p>使い方: 「リライト指示をコピー」→ Claude Codeに貼るだけ。公開・大幅リライトから14日以内の記事、およびupdatedDateが新しい記事は自動で除外しています。</p>
 {''.join(cards) if cards else '<p>今週はリライト候補がありません。新規記事とリプ回りに時間を使いましょう。</p>'}
 </body>
 </html>"""

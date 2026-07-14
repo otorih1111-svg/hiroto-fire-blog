@@ -316,10 +316,15 @@ def enrich_pubdates(articles: list[dict]) -> list[dict]:
     for a in articles:
         f = CONTENT_DIR / f"{a['slug']}.md"
         a["pubDate"] = ""
+        a["updatedDate"] = ""
         if f.exists():
-            m = re.search(r"^pubDate:\s*(\S+)", f.read_text(encoding="utf-8"), re.MULTILINE)
+            text = f.read_text(encoding="utf-8")
+            m = re.search(r"^pubDate:\s*(\S+)", text, re.MULTILINE)
             if m:
                 a["pubDate"] = m.group(1).strip()
+            um = re.search(r"^updatedDate:\s*(\S+)", text, re.MULTILINE)
+            if um:
+                a["updatedDate"] = um.group(1).strip()
     return articles
 
 
