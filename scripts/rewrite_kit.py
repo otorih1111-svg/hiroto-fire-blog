@@ -212,8 +212,9 @@ def pick_with_claude(env, opportunities: list[dict]):
 {{"comment": "今週のリライト方針を1文", "picks": [{{"slug": "記事のslug", "type": "A_クイックウィン|B_タイトル改善|C_沈没", "plan": "具体的な直し方1-2文", "priority": 1}}]}}"""
 
     resp = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-sonnet-5",
         max_tokens=2000,
+        thinking={"type": "disabled"},  # Sonnet 5は思考がデフォルトON。JSON出力がmax_tokensで切れないよう従来通り無効化
         messages=[{"role": "user", "content": prompt}],
     )
     m = re.search(r"\{.*\}", resp.content[0].text.strip(), re.DOTALL)

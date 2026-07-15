@@ -42,7 +42,7 @@ except ImportError:
 
 
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY") or _load_env_key()
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-5"
 
 PROHIBITED_PATTERNS = [
     "非常に重要なポイントです！",
@@ -168,6 +168,7 @@ def rewrite_body(client: anthropic.Anthropic, path: Path, category: str, body: s
     message = client.messages.create(
         model=MODEL,
         max_tokens=5000,
+        thinking={"type": "disabled"},  # Sonnet 5は思考がデフォルトON。本文がmax_tokensで切れないよう従来通り無効化
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
