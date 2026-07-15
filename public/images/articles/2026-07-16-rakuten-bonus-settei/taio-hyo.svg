@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif">
+  <rect width="800" height="460" rx="16" fill="#F7FAF7"/>
+  <text x="400" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#1F4D32">ボーナス設定、自分の積立で使える？</text>
+  <text x="400" y="82" text-anchor="middle" font-size="15" fill="#5A7264">分かれ目は「引落方法」だけ</text>
+
+  <!-- left card: OK -->
+  <rect x="45" y="110" width="340" height="250" rx="14" fill="#FFFFFF" stroke="#7CB089" stroke-width="2.5"/>
+  <rect x="45" y="110" width="340" height="56" rx="14" fill="#1F4D32"/>
+  <rect x="45" y="146" width="340" height="20" fill="#1F4D32"/>
+  <text x="215" y="146" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">証券口座からの引落し</text>
+  <circle cx="215" cy="215" r="34" fill="#EAF4ED" stroke="#2E7D4F" stroke-width="3"/>
+  <text x="215" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#2E7D4F">○</text>
+  <text x="215" y="285" text-anchor="middle" font-size="16" font-weight="700" fill="#1F4D32">ボーナス設定が使える</text>
+  <text x="215" y="312" text-anchor="middle" font-size="13.5" fill="#5A7264">年2回まで・好きな月に増額OK</text>
+  <text x="215" y="334" text-anchor="middle" font-size="13.5" fill="#5A7264">マネーブリッジ・他行引落も対象</text>
+
+  <!-- right card: NG -->
+  <rect x="415" y="110" width="340" height="250" rx="14" fill="#FFFFFF" stroke="#E8B98F" stroke-width="2.5"/>
+  <rect x="415" y="110" width="340" height="56" rx="14" fill="#C96F2B"/>
+  <rect x="415" y="146" width="340" height="20" fill="#C96F2B"/>
+  <text x="585" y="139" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">クレカ積立・楽天キャッシュ</text>
+  <text x="585" y="160" text-anchor="middle" font-size="12" fill="#FBE9D8">（毎日積立もここ）</text>
+  <circle cx="585" cy="215" r="34" fill="#FBF0E6" stroke="#C96F2B" stroke-width="3"/>
+  <text x="585" y="227" text-anchor="middle" font-size="32" font-weight="700" fill="#C96F2B">×</text>
+  <text x="585" y="285" text-anchor="middle" font-size="16" font-weight="700" fill="#8A4A15">ボーナス設定は出てこない</text>
+  <text x="585" y="312" text-anchor="middle" font-size="13.5" fill="#8A6A50">何周探しても項目がない</text>
+  <text x="585" y="334" text-anchor="middle" font-size="13.5" fill="#8A6A50">増額はスポット購入か別積立で</text>
+
+  <text x="400" y="415" text-anchor="middle" font-size="15" font-weight="600" fill="#1F4D32">ポイント重視のクレカ積立派は「その都度スポット購入」が現実解</text>
+  <text x="400" y="440" text-anchor="middle" font-size="12" fill="#8AA192">※2026年7月時点・楽天証券の公式情報をもとに作成</text>
+</svg>
