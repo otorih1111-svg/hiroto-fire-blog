@@ -164,7 +164,7 @@ ogImage: '/images/thumbnails/kabushiki-toushi-ikurakara.png'
 
 投資本を20冊読んで出た結論も、結局そこだった。
 
-→ [投資本を20冊読んだ結論｜初心者はインデックス投資でいい](/blog/2026-06-21-investment-books-conclusion/)
+→ [投資本を20冊読んだ結論｜初心者はインデックス投資でいい](/blog/investment-books-conclusion/)
 
 ---
 
