@@ -1,0 +1,74 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="32" fill="#F6FAF7"/>
+  <rect x="36" y="36" width="1128" height="648" rx="28" fill="#FCFFFD" stroke="#D7E8DB" stroke-width="2"/>
+
+  <text x="600" y="106" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="44" font-weight="700" fill="#1F5133">
+    株式投資の3つの入口
+  </text>
+  <text x="600" y="152" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="25" font-weight="600" fill="#3E6B4B">
+    同じ「株式投資」でも、必要な金額は桁が3つ変わる
+  </text>
+
+  <!-- baseline -->
+  <line x1="120" y1="600" x2="1080" y2="600" stroke="#C3DBC9" stroke-width="3"/>
+
+  <!-- ① 投資信託 : lowest hurdle -->
+  <rect x="150" y="510" width="250" height="90" rx="14" fill="#E7F4EA" stroke="#5B8E6E" stroke-width="3"/>
+  <text x="275" y="558" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="30" font-weight="700" fill="#1F5133">
+    投資信託
+  </text>
+  <text x="275" y="588" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="500" fill="#456B53">
+    何百社分をパックで
+  </text>
+  <text x="275" y="486" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="38" font-weight="700" fill="#2F6B47">
+    100円〜
+  </text>
+
+  <!-- ぼくはここ marker -->
+  <rect x="168" y="404" width="214" height="52" rx="26" fill="#2F6B47"/>
+  <text x="275" y="439" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">
+    ぼくが選んだ入口
+  </text>
+  <path d="M275 456 L262 476 L288 476 Z" fill="#2F6B47"/>
+
+  <!-- ② ミニ株 : middle hurdle -->
+  <rect x="475" y="440" width="250" height="160" rx="14" fill="#DCEDE2" stroke="#5B8E6E" stroke-width="3"/>
+  <text x="600" y="512" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="30" font-weight="700" fill="#1F5133">
+    ミニ株
+  </text>
+  <text x="600" y="546" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="500" fill="#456B53">
+    好きな会社を
+  </text>
+  <text x="600" y="576" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="500" fill="#456B53">
+    1株から
+  </text>
+  <text x="600" y="416" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="38" font-weight="700" fill="#2F6B47">
+    数百円〜
+  </text>
+
+  <!-- ③ 単元株 : tallest hurdle -->
+  <rect x="800" y="230" width="250" height="370" rx="14" fill="#CFE4D7" stroke="#3F7355" stroke-width="3"/>
+  <text x="925" y="404" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="30" font-weight="700" fill="#1F5133">
+    単元株
+  </text>
+  <text x="925" y="440" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="500" fill="#456B53">
+    好きな会社を
+  </text>
+  <text x="925" y="470" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="21" font-weight="500" fill="#456B53">
+    100株単位で
+  </text>
+  <text x="925" y="530" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#3F7355">
+    株価3,000円の会社
+  </text>
+  <text x="925" y="560" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#3F7355">
+    なら30万円
+  </text>
+  <text x="925" y="206" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="38" font-weight="700" fill="#1F5133">
+    数万〜数十万円
+  </text>
+
+  <!-- footer note -->
+  <text x="600" y="652" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="22" font-weight="600" fill="#456B53">
+    「1株から買える」も「30万円必要」も、どちらも正しい。話している入口が違うだけ。
+  </text>
+</svg>
