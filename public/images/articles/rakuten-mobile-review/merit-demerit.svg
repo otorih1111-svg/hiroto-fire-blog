@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 660" width="440" height="660" role="img" aria-label="楽天モバイルに乗り換えて良かった点と、正直なデメリットの整理図">
+  <title>楽天モバイル1年使ってわかった、良かった点と正直なデメリット</title>
+
+  <rect width="440" height="660" fill="#FFFFFF"/>
+
+  <!-- 見出し -->
+  <text x="220" y="34" text-anchor="middle" font-family="Hiragino Sans, sans-serif" font-size="19" font-weight="bold" fill="#1F4D32">実際に使ってわかったこと</text>
+
+  <!-- Before/After -->
+  <rect x="20" y="54" width="400" height="112" rx="10" fill="#EAF4ED"/>
+
+  <text x="40" y="80" font-family="Hiragino Sans, sans-serif" font-size="13" fill="#5A6B5F">乗り換え前（docomo・au時代）</text>
+  <text x="40" y="110" font-family="Hiragino Sans, sans-serif" font-size="26" font-weight="bold" fill="#8A8F8B">月 7,000円台</text>
+
+  <text x="220" y="132" text-anchor="middle" font-family="Hiragino Sans, sans-serif" font-size="16" fill="#7CB089">▼</text>
+
+  <text x="40" y="156" font-family="Hiragino Sans, sans-serif" font-size="26" font-weight="bold" fill="#1F4D32">月 1,078円</text>
+  <text x="250" y="156" font-family="Hiragino Sans, sans-serif" font-size="13" fill="#1F4D32">年7万円以上ダウン</text>
+
+  <!-- 良かった点 -->
+  <rect x="20" y="184" width="400" height="188" rx="10" fill="#F6FAF7" stroke="#7CB089" stroke-width="1.5"/>
+  <text x="40" y="212" font-family="Hiragino Sans, sans-serif" font-size="15" font-weight="bold" fill="#1F4D32">◎ 良かった点</text>
+
+  <text x="40" y="242" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#2C3A31">・3GBまで1,078円。上限も3,278円</text>
+  <text x="40" y="270" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#2C3A31">・楽天リンクで国内通話が無料</text>
+  <text x="54" y="292" font-family="Hiragino Sans, sans-serif" font-size="12.5" fill="#5A6B5F">学校・役所・病院にも気兼ねなく</text>
+  <text x="40" y="320" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#2C3A31">・申し込みから開通まで30分</text>
+  <text x="40" y="348" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#2C3A31">・一度やれば毎月自動で安いまま</text>
+
+  <!-- 正直なデメリット -->
+  <rect x="20" y="390" width="400" height="188" rx="10" fill="#FDF6F2" stroke="#D98E63" stroke-width="1.5"/>
+  <text x="40" y="418" font-family="Hiragino Sans, sans-serif" font-size="15" font-weight="bold" fill="#A85A2A">△ 正直なデメリット</text>
+
+  <text x="40" y="448" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#3A2C24">・地下鉄・ビル地下はつながりにくい</text>
+  <text x="40" y="476" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#3A2C24">・パートナー回線は月5GBまで</text>
+  <text x="40" y="504" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#3A2C24">・通話無料は楽天リンク経由のみ</text>
+  <text x="40" y="532" font-family="Hiragino Sans, sans-serif" font-size="14" fill="#3A2C24">・キャリアメールは別途対応が必要</text>
+  <text x="54" y="554" font-family="Hiragino Sans, sans-serif" font-size="12.5" fill="#7A6353">楽メール・持ち運び・Gmailの3択</text>
+
+  <!-- 結論 -->
+  <rect x="20" y="596" width="400" height="46" rx="10" fill="#1F4D32"/>
+  <text x="220" y="625" text-anchor="middle" font-family="Hiragino Sans, sans-serif" font-size="14.5" font-weight="bold" fill="#FFFFFF">毎日地下鉄が中心なら要エリア確認</text>
+</svg>
