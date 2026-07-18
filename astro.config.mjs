@@ -10,7 +10,10 @@ export default defineConfig({
     port: Number(process.env.PORT) || 4321,
   },
   integrations: [
-    sitemap(),
+    sitemap({
+      // noindexページはサイトマップに載せない（GSCの「noindexタグによって除外」警告対策）
+      filter: (page) => !page.includes('/lp/') && !page.includes('/thanks/'),
+    }),
   ],
   output: 'static',
   markdown: {
