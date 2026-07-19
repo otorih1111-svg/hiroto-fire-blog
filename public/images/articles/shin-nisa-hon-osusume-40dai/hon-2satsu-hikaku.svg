@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="424" viewBox="0 0 440 424" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="440" height="424" fill="#F6F8FA" rx="12"/>
+
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#123A52">選ぶ基準は「読み切れるか」だけ</text>
+
+  <!-- カード1 -->
+  <rect x="16" y="52" width="408" height="150" fill="#E8F2F7" rx="10"/>
+  <rect x="16" y="52" width="7" height="150" fill="#1E6E93" rx="3"/>
+  <text x="36" y="82" font-size="19" font-weight="bold" fill="#123A52">ジェイソン流お金の増やし方</text>
+  <text x="36" y="112" font-size="26" font-weight="bold" fill="#1E6E93">192ページ</text>
+  <text x="36" y="140" font-size="17" fill="#22536E">新NISAを始めたいだけの人へ</text>
+  <text x="36" y="168" font-size="15" fill="#4A7690">支出を減らす → 積立に回す、の順</text>
+  <text x="36" y="190" font-size="15" fill="#4A7690">2024年9月の改訂版で新NISA対応</text>
+
+  <!-- カード2 -->
+  <rect x="16" y="214" width="408" height="150" fill="#FBF1E6" rx="10"/>
+  <rect x="16" y="214" width="7" height="150" fill="#B5762A" rx="3"/>
+  <text x="36" y="244" font-size="19" font-weight="bold" fill="#6E4514">改訂版 お金の大学</text>
+  <text x="36" y="274" font-size="26" font-weight="bold" fill="#B5762A">324ページ</text>
+  <text x="36" y="302" font-size="17" fill="#7A5220">家計ごと立て直したい人へ</text>
+  <text x="36" y="330" font-size="15" fill="#94693A">固定費・保険・投資を1冊で網羅</text>
+  <text x="36" y="352" font-size="15" fill="#94693A">辞書として置いておく使い方</text>
+
+  <text x="20" y="392" font-size="14.5" fill="#63737E">※結論はどちらも同じ。長期で積み立てるだけ。</text>
+  <text x="20" y="410" font-size="14.5" fill="#63737E">※違うのは、そこへ行くまでの道の長さです。</text>
+</svg>
