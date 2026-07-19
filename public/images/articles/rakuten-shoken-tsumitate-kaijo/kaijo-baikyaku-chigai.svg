@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="452" viewBox="0 0 440 452" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="440" height="452" fill="#F7F9F8" rx="12"/>
+
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#1F4D32">「解除」で持っている分は売られない</text>
+
+  <!-- カード1：解除 -->
+  <rect x="16" y="52" width="408" height="112" fill="#EAF4ED" rx="10"/>
+  <rect x="16" y="52" width="7" height="112" fill="#1F4D32" rx="3"/>
+  <text x="36" y="82" font-size="20" font-weight="bold" fill="#1F4D32">積立設定の解除</text>
+  <text x="36" y="112" font-size="17" fill="#24503A">毎月の自動買い付けが止まる</text>
+  <text x="36" y="140" font-size="17" font-weight="bold" fill="#1F4D32">持っている分はそのまま残る</text>
+
+  <!-- カード2：売却 -->
+  <rect x="16" y="176" width="408" height="112" fill="#FFF4E3" rx="10"/>
+  <rect x="16" y="176" width="7" height="112" fill="#C77E1B" rx="3"/>
+  <text x="36" y="206" font-size="20" font-weight="bold" fill="#8A5A10">売却（解約）</text>
+  <text x="36" y="236" font-size="17" fill="#7A5210">持っている分を現金に換える</text>
+  <text x="36" y="264" font-size="17" font-weight="bold" fill="#8A5A10">積立設定は止まらない</text>
+
+  <!-- カード3：口座解約 -->
+  <rect x="16" y="300" width="408" height="112" fill="#F3F0F5" rx="10"/>
+  <rect x="16" y="300" width="7" height="112" fill="#6B5B7B" rx="3"/>
+  <text x="36" y="330" font-size="20" font-weight="bold" fill="#4E4159">NISA口座の解約</text>
+  <text x="36" y="360" font-size="17" fill="#5A4D66">口座そのものを閉じる</text>
+  <text x="36" y="388" font-size="17" font-weight="bold" fill="#4E4159">非課税で置いておけなくなる</text>
+
+  <text x="20" y="436" font-size="14.5" fill="#6B7671">※止めたいだけなら「解除」だけで足ります。</text>
+</svg>
