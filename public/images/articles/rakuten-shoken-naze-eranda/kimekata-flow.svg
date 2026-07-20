@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="486" viewBox="0 0 440 486" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="440" height="486" fill="#F5F8FA" rx="12"/>
+
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#123A52">30秒で決める3つの質問</text>
+
+  <!-- Q1 -->
+  <rect x="16" y="52" width="408" height="112" fill="#FFFFFF" rx="10" stroke="#CBD9E2" stroke-width="1.5"/>
+  <circle cx="44" cy="80" r="14" fill="#1E6E93"/>
+  <text x="44" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="68" y="86" font-size="17" font-weight="bold" fill="#123A52">楽天カードを持っている？</text>
+  <text x="36" y="116" font-size="16" fill="#2C6B47">はい　→　楽天証券</text>
+  <text x="36" y="142" font-size="16" fill="#7A5210">いいえ　→　質問2へ</text>
+
+  <!-- Q2 -->
+  <rect x="16" y="176" width="408" height="112" fill="#FFFFFF" rx="10" stroke="#CBD9E2" stroke-width="1.5"/>
+  <circle cx="44" cy="204" r="14" fill="#1E6E93"/>
+  <text x="44" y="210" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="68" y="210" font-size="17" font-weight="bold" fill="#123A52">三井住友カードは？</text>
+  <text x="36" y="240" font-size="16" fill="#2C6B47">はい　→　SBI証券</text>
+  <text x="36" y="266" font-size="16" fill="#7A5210">いいえ　→　質問3へ</text>
+
+  <!-- Q3 -->
+  <rect x="16" y="300" width="408" height="112" fill="#FFFFFF" rx="10" stroke="#CBD9E2" stroke-width="1.5"/>
+  <circle cx="44" cy="328" r="14" fill="#1E6E93"/>
+  <text x="44" y="334" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="68" y="334" font-size="17" font-weight="bold" fill="#123A52">普段の買い物は楽天？</text>
+  <text x="36" y="364" font-size="16" fill="#2C6B47">はい　→　楽天証券</text>
+  <text x="36" y="390" font-size="16" fill="#5C6763">全部いいえ　→　どちらでもいい</text>
+
+  <!-- 結論帯 -->
+  <rect x="16" y="424" width="408" height="44" fill="#EAF4ED" rx="8"/>
+  <text x="220" y="443" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F4D32">全部いいえなら、コインで決めていい</text>
+  <text x="220" y="461" text-anchor="middle" font-size="14" fill="#3C6B4E">あとから変えられます</text>
+</svg>
