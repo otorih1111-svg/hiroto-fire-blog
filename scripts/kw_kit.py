@@ -116,15 +116,39 @@ def _google_session():
     return AuthorizedSession(creds)
 
 
-def _gsc_query(session, body: dict) -> list[dict]:
+def _gsc_query(session, body: dict, attempts: int = 3) -> list[dict]:
+    """GSC APIを叩く。タイムアウト・5xx・429は指数バックオフで再試行する。
+
+    launchd実行はリトライがないと、GSC側が一時的に詰まっただけで
+    その週のツールが丸ごと生成されない（2026-07-14に発生）。
+    """
+    import requests.exceptions as _rex
+
     endpoint = (
         "https://searchconsole.googleapis.com/webmasters/v3/sites/"
         + urllib.parse.quote(SITE_URL, safe="")
         + "/searchAnalytics/query"
     )
-    resp = session.post(endpoint, json=body, timeout=30)
-    resp.raise_for_status()
-    return resp.json().get("rows", [])
+    last_err: Exception | None = None
+    for i in range(attempts):
+        try:
+            resp = session.post(endpoint, json=body, timeout=60)
+            # 一時的なサーバー側の不調とレート制限だけ再試行する
+            if resp.status_code in (429, 500, 502, 503, 504) and i < attempts - 1:
+                last_err = RuntimeError(f"HTTP {resp.status_code}")
+                time.sleep(2 ** i * 5)
+                continue
+            resp.raise_for_status()
+            return resp.json().get("rows", [])
+        except (_rex.Timeout, _rex.ConnectionError) as e:
+            last_err = e
+            if i < attempts - 1:
+                time.sleep(2 ** i * 5)
+                continue
+            raise
+    if last_err:
+        raise last_err
+    return []
 
 
 def fetch_gsc_queries(session, days: int = 90) -> list[dict]:
