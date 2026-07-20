@@ -3,7 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "prebuild": "node scripts/prepare_indexnow_key.mjs && node scripts/generate_redirects.mjs",
+    "prebuild": "node scripts/check_markdown.mjs && node scripts/prepare_indexnow_key.mjs && node scripts/generate_redirects.mjs",
+    "check:md": "node scripts/check_markdown.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "build:seo": "npm run build && npm run seo:notify",
