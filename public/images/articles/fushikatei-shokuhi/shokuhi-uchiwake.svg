@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="432" viewBox="0 0 440 432" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="440" height="432" fill="#FAF7F2" rx="12"/>
+
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#4A3520">外食代だけで、今の食費を超えていた</text>
+
+  <!-- Before -->
+  <rect x="16" y="52" width="408" height="126" fill="#FBEDEA" rx="10"/>
+  <rect x="16" y="52" width="7" height="126" fill="#B5503A" rx="3"/>
+  <text x="36" y="80" font-size="17" font-weight="bold" fill="#8A3B28">離婚前　外食だけで</text>
+  <text x="36" y="118" font-size="30" font-weight="bold" fill="#B5503A">月4〜5万円</text>
+  <text x="36" y="146" font-size="15" fill="#7A4234">コンビニは毎日300〜400円</text>
+  <text x="36" y="168" font-size="15" fill="#7A4234">明細を見れば分かることを、見ていなかった</text>
+
+  <!-- 矢印 -->
+  <text x="220" y="204" text-anchor="middle" font-size="20" fill="#8A7A66">↓</text>
+
+  <!-- After -->
+  <rect x="16" y="216" width="408" height="126" fill="#EDF4EE" rx="10"/>
+  <rect x="16" y="216" width="7" height="126" fill="#2E7D4F" rx="3"/>
+  <text x="36" y="244" font-size="17" font-weight="bold" fill="#1F5637">今　息子と2人の食費ぜんぶで</text>
+  <text x="36" y="282" font-size="30" font-weight="bold" fill="#2E7D4F">月40,000円</text>
+  <text x="36" y="310" font-size="15" fill="#2C5F42">自炊が中心。たまの外食は残した</text>
+  <text x="36" y="332" font-size="15" font-weight="bold" fill="#1F5637">息子のおかわりは削らないと決めた</text>
+
+  <text x="20" y="374" font-size="14.5" fill="#7A6B58">※ぼくの家計の実額です。年齢や地域で必要額は変わります。</text>
+  <text x="20" y="394" font-size="14.5" fill="#7A6B58">※現在の食費はマネーフォワードMEの集計から。</text>
+  <text x="20" y="414" font-size="14.5" fill="#7A6B58">※内訳の細かい配分までは記録していません。</text>
+</svg>
