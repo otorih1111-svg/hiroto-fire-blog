@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="474" viewBox="0 0 440 474" font-family="'Hiragino Sans', 'Yu Gothic', sans-serif">
+  <rect width="440" height="474" fill="#F7F6F3" rx="12"/>
+
+  <text x="20" y="34" font-size="20" font-weight="bold" fill="#3E3524">iDeCoをやめておく判断になる3条件</text>
+
+  <!-- 条件1 -->
+  <rect x="16" y="52" width="408" height="112" fill="#FBEDEA" rx="10"/>
+  <rect x="16" y="52" width="7" height="112" fill="#B5503A" rx="3"/>
+  <text x="36" y="80" font-size="17" font-weight="bold" fill="#8A3B28">1　急な出費が読めない</text>
+  <text x="36" y="110" font-size="16" fill="#7A4234">60歳まで1円も引き出せない</text>
+  <text x="36" y="136" font-size="16" fill="#7A4234">洗濯機が壊れて7万円飛んだ月がある</text>
+  <text x="36" y="158" font-size="14.5" fill="#96685C">→ 新NISAなら止められる・売れる</text>
+
+  <!-- 条件2 -->
+  <rect x="16" y="176" width="408" height="112" fill="#FBF4E6" rx="10"/>
+  <rect x="16" y="176" width="7" height="112" fill="#B5872A" rx="3"/>
+  <text x="36" y="204" font-size="17" font-weight="bold" fill="#7A5A14">2　積立額がまだ小さい</text>
+  <text x="36" y="234" font-size="16" fill="#8A6820">手数料は最低でも月171円かかる</text>
+  <text x="36" y="260" font-size="16" fill="#8A6820">月1万円の積立なら、その1.7%</text>
+  <text x="36" y="282" font-size="14.5" fill="#9C8258">→ 減っている年も確実に引かれる</text>
+
+  <!-- 条件3 -->
+  <rect x="16" y="300" width="408" height="112" fill="#EDF1F7" rx="10"/>
+  <rect x="16" y="300" width="7" height="112" fill="#3A6491" rx="3"/>
+  <text x="36" y="328" font-size="17" font-weight="bold" fill="#28466B">3　退職金の受け取り方が未定</text>
+  <text x="36" y="358" font-size="16" fill="#34527A">一時金で受け取る順番で税額が変わる</text>
+  <text x="36" y="384" font-size="16" fill="#34527A">調整期間は前年以前9年以内に延長済み</text>
+  <text x="36" y="406" font-size="14.5" fill="#5E7595">→ 順番を間違えると税金で損をする</text>
+
+  <rect x="16" y="424" width="408" height="34" fill="#EAF0EA" rx="8"/>
+  <text x="220" y="446" text-anchor="middle" font-size="15" font-weight="bold" fill="#2C5138">3つとも当てはまらないなら、やる価値は大きい</text>
+</svg>
