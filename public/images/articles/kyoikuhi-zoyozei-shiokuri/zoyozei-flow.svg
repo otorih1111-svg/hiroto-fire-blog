@@ -1,0 +1,41 @@
+<svg width="440" height="640" viewBox="0 0 440 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="教育費のお金に贈与税がかかるかの判断フロー">
+  <rect width="440" height="640" fill="#FFFFFF"/>
+  <text x="220" y="38" font-family="Hiragino Sans, sans-serif" font-size="21" font-weight="800" fill="#1F4D32" text-anchor="middle">教育費のお金、贈与税かかる？</text>
+
+  <!-- Q box -->
+  <rect x="30" y="60" width="380" height="64" rx="12" fill="#EAF4ED" stroke="#1F4D32" stroke-width="2"/>
+  <text x="220" y="87" font-family="Hiragino Sans, sans-serif" font-size="17" font-weight="700" fill="#1F4D32" text-anchor="middle">親や祖父母から</text>
+  <text x="220" y="110" font-family="Hiragino Sans, sans-serif" font-size="17" font-weight="700" fill="#1F4D32" text-anchor="middle">教育費・生活費のお金を渡す</text>
+
+  <!-- arrow -->
+  <path d="M220 124 L220 152" stroke="#1F4D32" stroke-width="3" marker-end="none"/>
+  <path d="M212 144 L220 156 L228 144" fill="none" stroke="#1F4D32" stroke-width="3"/>
+
+  <!-- Case 1: OK -->
+  <rect x="30" y="164" width="380" height="118" rx="12" fill="#EAF4ED"/>
+  <rect x="30" y="164" width="8" height="118" rx="4" fill="#2E7D4F"/>
+  <text x="56" y="196" font-family="Hiragino Sans, sans-serif" font-size="17" font-weight="800" fill="#2E7D4F">✓ 必要な都度、直接払う</text>
+  <text x="56" y="224" font-family="Hiragino Sans, sans-serif" font-size="15" fill="#333">学費の振込・毎月の仕送り・塾代など</text>
+  <text x="56" y="262" font-family="Hiragino Sans, sans-serif" font-size="16" font-weight="800" fill="#2E7D4F">→ 非課税（金額の上限なし）</text>
+
+  <!-- Case 2: NG -->
+  <rect x="30" y="298" width="380" height="118" rx="12" fill="#FDF0E7"/>
+  <rect x="30" y="298" width="8" height="118" rx="4" fill="#C0562F"/>
+  <text x="56" y="330" font-family="Hiragino Sans, sans-serif" font-size="17" font-weight="800" fill="#C0562F">✗ まとめて渡して、使わず残す</text>
+  <text x="56" y="358" font-family="Hiragino Sans, sans-serif" font-size="15" fill="#333">子ども名義で貯金・投資に回す など</text>
+  <text x="56" y="396" font-family="Hiragino Sans, sans-serif" font-size="16" font-weight="800" fill="#C0562F">→ 贈与税の対象になりうる</text>
+
+  <!-- arrow -->
+  <path d="M220 416 L220 444" stroke="#C0562F" stroke-width="3"/>
+  <path d="M212 436 L220 448 L228 436" fill="none" stroke="#C0562F" stroke-width="3"/>
+
+  <!-- 110万 box -->
+  <rect x="30" y="456" width="380" height="128" rx="12" fill="#FFF8E1"/>
+  <rect x="30" y="456" width="8" height="128" rx="4" fill="#B8860B"/>
+  <text x="56" y="488" font-family="Hiragino Sans, sans-serif" font-size="17" font-weight="800" fill="#8A6508">対象でも、年110万円以下なら</text>
+  <text x="56" y="516" font-family="Hiragino Sans, sans-serif" font-size="15" fill="#333">基礎控除の範囲内 → 税額ゼロ・申告不要</text>
+  <text x="56" y="544" font-family="Hiragino Sans, sans-serif" font-size="15" fill="#333">年110万円を超えたら → 翌年に申告が必要</text>
+  <text x="56" y="570" font-family="Hiragino Sans, sans-serif" font-size="13" fill="#666">※もらう人1人あたり・1年間の合計で判定</text>
+
+  <text x="220" y="618" font-family="Hiragino Sans, sans-serif" font-size="12" fill="#888" text-anchor="middle">出典：国税庁タックスアンサーNo.4405をもとに作成（2026年7月時点）</text>
+</svg>
